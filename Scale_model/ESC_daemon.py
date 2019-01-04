@@ -6,7 +6,7 @@ import subprocess
 os.system("sudo pigpiod")  # Launching GPIO library
 time.sleep(1)
 
-prpm = subprocess.Popen(['python', '/home/pi/esc/RPM_readout.py'])  # ESC daemon
+prpm = subprocess.Popen(['python', '/home/pi/Silverwing/esc/RPM_readout.py'])  # ESC daemon
 
 channel0 = 19  # pin 35
 channel1 = 18
@@ -29,7 +29,7 @@ rpm_power, kp, t0, steps, value = 0, 0.003, time.time(), 10, 0
 try:
     while True:
         p_value = value
-        with open('/home/pi/esc/target.esc', 'r') as e:
+        with open('/home/pi/Silverwing/esc/target.esc', 'r') as e:
             raw = e.read()
             try:
                 mode = raw.split(',')[0]
@@ -46,7 +46,7 @@ try:
             time.sleep(0.1)
 
         elif mode == 'rpm':
-            with open('/home/pi/esc/actual0.rpm', 'r') as d:
+            with open('/home/pi/Silverwing/esc/actual0.rpm', 'r') as d:
                 try:
                     rpm = float(d.read())
                 except ValueError:

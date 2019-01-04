@@ -11,7 +11,7 @@ def get_temp():
 
 
 def log_temp(c_temp):
-    with open('/home/pi/battery_tests/data/current.temp', 'w') as d:
+    with open('/home/pi/Silverwing/battery_tests/data/current.temp', 'w') as d:
         d.write('{!s},{!s}'.format(time.time(), c_temp))
 
 

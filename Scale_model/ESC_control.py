@@ -8,19 +8,19 @@ delta = d.DeltaComm()
 os.system("sudo pigpiod")  # Launching GPIO library
 time.sleep(1)
 
-pd = subprocess.Popen(['python', '/home/pi/esc/ESC_daemon.py'])
-pr = subprocess.Popen(['python', '/home/pi/esc/RPM_readout.py'])
+pd = subprocess.Popen(['python', '/home/pi/Silverwing/esc/ESC_daemon.py'])
+pr = subprocess.Popen(['python', '/home/pi/Silverwing/esc/RPM_readout.py'])
 
 time.sleep(1.)
 
 
 def set_rpm(rpm):
-    with open('/home/pi/esc/target.esc', 'w') as d:
+    with open('/home/pi/Silverwing/esc/target.esc', 'w') as d:
         d.write('rpm,{!s}'.format(int(rpm)))
 
 
 def set_power(dc):
-    with open('/home/pi/esc/target.esc', 'w') as d:
+    with open('/home/pi/Silverwing/esc/target.esc', 'w') as d:
         d.write('power,{!s}'.format(int(dc)))
 
 

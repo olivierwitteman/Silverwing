@@ -7,12 +7,12 @@ name = 'esc_left'
 
 
 def clear_log(filename):
-    with open('/home/pi/battery_tests/{!s}.log'.format(filename), 'w') as d:
+    with open('/home/pi/Silverwing/battery_tests/{!s}.log'.format(filename), 'w') as d:
         d.write('')
 
 
 def log(filename, timestamp, voltage, current):
-    with open('/home/pi/battery_tests/{!s}.log'.format(filename), 'a') as d:
+    with open('/home/pi/Silverwing/battery_tests/{!s}.log'.format(filename), 'a') as d:
         d.write('t{!s} U{!s} I{!s}\n'.format(timestamp, voltage, current))
 
 

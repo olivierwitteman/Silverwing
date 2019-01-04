@@ -7,9 +7,9 @@ import pigpio
 os.system("sudo pigpiod")  # Launching GPIO library
 time.sleep(1)
 
-path = '/home/pi/cfts'
+path = '/home/pi/Silverwing/cfts'
 
-pd = subprocess.Popen(['python', '/home/pi/esc/ESC_daemon.py'])
+pd = subprocess.Popen(['python', '/home/pi/Silverwing/esc/ESC_daemon.py'])
 
 delta = DeltaComm()
 
@@ -30,7 +30,7 @@ def set_angle(dc):
 
 
 def set_power(dc):
-    with open('/home/pi/esc/target.esc', 'w') as d:
+    with open('/home/pi/Silverwing/esc/target.esc', 'w') as d:
         d.write('power,{!s}'.format(int(dc)))
 
 

@@ -4,21 +4,21 @@ import subprocess
 import delta_sm3300 as d
 import pigpio
 
-path = '/home/pi/WaTT'
+path = '/home/pi/Silverwing/WaTT'
 # path = '.'
 
-pd = subprocess.Popen(['python', '/home/pi/esc/ESC_daemon.py'])  # ESC daemon
+pd = subprocess.Popen(['python', '/home/pi/Silverwing/esc/ESC_daemon.py'])  # ESC daemon
 
 delta = d.DeltaComm()  # Delta communication
 
 
 def read_rpm():
-    with open('/home/pi/esc/actual0.rpm', 'r') as rpm0file:
+    with open('/home/pi/Silverwing/esc/actual0.rpm', 'r') as rpm0file:
         try:
             rpm0 = float(rpm0file.read())
         except ValueError:
             rpm0 = 'Unknown'
-    with open('/home/pi/esc/actual1.rpm', 'r') as rpm1file:
+    with open('/home/pi/Silverwingesc/actual1.rpm', 'r') as rpm1file:
         try:
             rpm1 = float(rpm1file.read())
         except ValueError:
@@ -27,7 +27,7 @@ def read_rpm():
 
 
 def set_power(dc):
-    with open('/home/pi/esc/target.esc', 'w') as d:
+    with open('/home/pi/Silverwing/esc/target.esc', 'w') as d:
         d.write('power,{!s}'.format(int(dc)))
 
 
@@ -49,7 +49,7 @@ def get_prefix():
 
 
 def get_forces():
-    with open('/home/pi/WaTT/for.ces', 'r') as ffile:
+    with open('/home/pi/Silverwing/WaTT/for.ces', 'r') as ffile:
         try:
             fs = ffile.readline().split(',')
             f0 = float(fs[1])
@@ -76,7 +76,7 @@ try:
     delta.set_current(current)
     delta.set_state(1)
     day = int(input('Day (8-11): '))
-    with open(path + '/{!s}jan-Table1.csv'.format(day), 'r') as d:
+    with open(path + '/WaTT test matrix/{!s}jan-Table 1.csv'.format(day), 'r') as d:
         inputs = d.readlines()
 
         linenumber, id, r_pwr, deflection = [], [], [], []

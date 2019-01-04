@@ -26,9 +26,9 @@ try:
         rpm0 = get_tally(13)
         rpm1 = get_tally(16)
 
-        with open('/home/pi/esc/actual0.rpm', 'w') as d:
+        with open('/home/pi/Silverwing/esc/actual0.rpm', 'w') as d:
             d.write(str(rpm0))
-        with open('/home/pi/esc/actual1.rpm', 'w') as d:
+        with open('/home/pi/Silverwing/esc/actual1.rpm', 'w') as d:
             d.write(str(rpm1))
         # print('\rM0: {!s} RPM, M1: {!s} RPM'.format(rpm0, rpm1), end='')
 

@@ -27,12 +27,12 @@ print 'Maximum cell voltage: {!s}V\nMinimum cell voltage: {!s}V\nCells in series
 
 
 def log(timestamp, voltage, current, temperature=0.0, remark=''):
-    with open('/home/pi/battery_tests/data/{!s}.log'.format(name), 'a') as d:
+    with open('/home/pi/Silverwing/battery_tests/data/{!s}.log'.format(name), 'a') as d:
         d.write('t{!s} U{!s} I{!s} T{!s}, {!s}\n'.format(timestamp, voltage, current, temperature, remark))
 
 
 def temp_read():
-    with open('/home/pi/battery_tests/data/current.temp', 'r') as t:
+    with open('/home/pi/Silverwing/battery_tests/data/current.temp', 'r') as t:
         raw = t.read()
         try:
             t_f = float(raw.split(',')[0])

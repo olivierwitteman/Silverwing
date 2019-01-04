@@ -36,11 +36,11 @@ def set_rpm(rpm):
         e.write('rpm,{!s}'.format(int(rpm)))
 
 
-def log(day, n, t_id, timestamp, a_rpm0, a_rpm1, a_power, a_voltage, a_current, f0, f1, a0, b0, a1, b1, df):
-    with open('{!s}/WaTT_{!s}jan.log'.format(path, day), 'a') as logfile:
-        logfile.writelines('{!s},{!s},{!s},{!s},{!s},{!s},{!s},{!s},{!s},{!s},{!s},{!s},{!s},{!s},{!s}\n'.
+def log(day, n, t_id, timestamp, a_rpm0, a_rpm1, a_power, a_voltage, a_current, f0, f1, a0, b0, a1, b1, df0, df1):
+    with open('{!s}/Data/WaTT_{!s}jan.log'.format(path, day), 'a') as logfile:
+        logfile.writelines('{!s},{!s},{!s},{!s},{!s},{!s},{!s},{!s},{!s},{!s},{!s},{!s},{!s},{!s},{!s},{!s}\n'.
                            format(n, t_id, timestamp, a_rpm0, a_rpm1, a_power, a_voltage, a_current,
-                                  f0, f1, a0, b0, a1, b1, df))
+                                  f0, f1, a0, b0, a1, b1, df0, df1))
 
 
 def get_prefix():

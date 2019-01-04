@@ -3,12 +3,10 @@ import pigpio
 import time
 import subprocess
 
-# os.system("sudo killall pigpiod")
-# time.sleep(1)
 # os.system("sudo pigpiod")  # Launching GPIO library
 # time.sleep(2)
 
-prpm = subprocess.Popen(['python', '/home/pi/Silverwing/esc/RPM_readout.py'])  # ESC daemon
+# prpm = subprocess.Popen(['python', '/home/pi/Silverwing/esc/RPM_readout.py'])  # ESC daemon
 
 channel0 = 19  # pin 35
 channel1 = 18

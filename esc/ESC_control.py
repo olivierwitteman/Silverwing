@@ -5,8 +5,8 @@ import delta_sm3300 as d
 
 delta = d.DeltaComm()
 
-os.system("sudo pigpiod")  # Launching GPIO library
-time.sleep(1)
+# os.system("sudo pigpiod")  # Launching GPIO library
+# time.sleep(1)
 
 pd = subprocess.Popen(['python', '/home/pi/Silverwing/esc/ESC_daemon.py'])
 pr = subprocess.Popen(['python', '/home/pi/Silverwing/esc/RPM_readout.py'])

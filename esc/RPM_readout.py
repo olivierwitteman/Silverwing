@@ -3,7 +3,7 @@ import pigpio
 import time
 
 import os
-os.system("sudo pigpiod")  # Launching GPIO library
+# os.system("sudo pigpiod")  # Launching GPIO library
 time.sleep(1)
 
 pi = pigpio.pi()

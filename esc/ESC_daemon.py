@@ -5,8 +5,8 @@ import subprocess
 
 # os.system("sudo killall pigpiod")
 # time.sleep(1)
-os.system("sudo pigpiod")  # Launching GPIO library
-time.sleep(1)
+# os.system("sudo pigpiod")  # Launching GPIO library
+# time.sleep(2)
 
 prpm = subprocess.Popen(['python', '/home/pi/Silverwing/esc/RPM_readout.py'])  # ESC daemon
 

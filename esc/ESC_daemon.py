@@ -76,4 +76,5 @@ finally:
     pi.stop()
     prpm.terminate()
     os.system("sudo killall pigpiod")
+
     print '\nCleaned up'

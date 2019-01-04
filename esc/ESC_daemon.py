@@ -2,11 +2,34 @@ import os
 import pigpio
 import time
 import subprocess
+import commands
+
+
+# see if it is running already
+status, process = commands.getstatusoutput('sudo pidof pigpiod')
+
+if status:  #  it wasn't running, so start it
+    print "pigpiod was not running"
+    commands.getstatusoutput('sudo pigpiod')  # try to  start it
+    time.sleep(1)
+    # check it again
+    status, process = commands.getstatusoutput('sudo pidof pigpiod')
+
+if not status:  # if it was started successfully (or was already running)...
+    pigpiod_process = process
+    print "pigpiod is running, process ID is {} ".format(pigpiod_process)
+
+    try:
+        pi = pigpio.pi()  # local GPIO only
+    except Exception, e:
+        start_pigpiod_exception = str(e)
+        print "problem instantiating pi: {}".format(start_pigpiod_exception)
+
 
 # os.system("sudo pigpiod")  # Launching GPIO library
 # time.sleep(2)
 
-# prpm = subprocess.Popen(['python', '/home/pi/Silverwing/esc/RPM_readout.py'])  # ESC daemon
+prpm = subprocess.Popen(['python', '/home/pi/Silverwing/esc/RPM_readout.py'])  # ESC daemon
 
 channel0 = 19  # pin 35
 channel1 = 18

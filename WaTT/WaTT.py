@@ -18,7 +18,7 @@ def read_rpm():
             rpm0 = float(rpm0file.read())
         except ValueError:
             rpm0 = 'Unknown'
-    with open('/home/pi/Silverwingesc/actual1.rpm', 'r') as rpm1file:
+    with open('/home/pi/Silverwing/esc/actual1.rpm', 'r') as rpm1file:
         try:
             rpm1 = float(rpm1file.read())
         except ValueError:

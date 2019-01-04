@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="Updated paths">
-      <change beforePath="$PROJECT_DIR$/esc/RPM_readout.py" beforeDir="false" afterPath="$PROJECT_DIR$/esc/RPM_readout.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/esc/ESC_daemon.py" beforeDir="false" afterPath="$PROJECT_DIR$/esc/ESC_daemon.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,11 +21,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/esc/ESC_daemon.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="105">
+              <caret line="7" column="15" lean-forward="true" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -36,8 +36,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/esc/ESC_control.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="10" column="42" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="42" />
+            <state relative-caret-position="135">
+              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -45,11 +45,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/esc/RPM_readout.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="13" lean-forward="true" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+            <state relative-caret-position="165">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -163,7 +163,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Battery tests/Battery_testing.py" />
         <option value="$PROJECT_DIR$/Scale model/Servo_control.py" />
         <option value="$PROJECT_DIR$/Battery_tests/Battery_testing.py" />
         <option value="$PROJECT_DIR$/Scale_model/Servo_control.py" />
@@ -212,8 +211,9 @@
         <option value="$PROJECT_DIR$/Delta/Battery_tests/Temp_sens.py" />
         <option value="$PROJECT_DIR$/cfts/control.py" />
         <option value="$PROJECT_DIR$/WaTT/WaTT.py" />
-        <option value="$PROJECT_DIR$/esc/ESC_daemon.py" />
         <option value="$PROJECT_DIR$/esc/RPM_readout.py" />
+        <option value="$PROJECT_DIR$/esc/ESC_control.py" />
+        <option value="$PROJECT_DIR$/esc/ESC_daemon.py" />
       </list>
     </option>
   </component>
@@ -476,11 +476,26 @@
       <option name="project" value="LOCAL" />
       <updated>1546641061768</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Updated paths">
+      <created>1546641294961</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1546641294961</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Updated paths">
+      <created>1546641371120</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1546641371120</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="435" y="0" width="1226" height="1050" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23568465" />
       <window_info id="Structure" order="1" weight="0.25" />
@@ -805,16 +820,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/esc/ESC_control.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="10" column="42" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WaTT/WaTT.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -822,22 +827,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/esc/ESC_daemon.py">
+    <entry file="file://$PROJECT_DIR$/esc/RPM_readout.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="165">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/esc/ESC_control.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/esc/RPM_readout.py">
+    <entry file="file://$PROJECT_DIR$/esc/ESC_daemon.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="13" lean-forward="true" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        <state relative-caret-position="105">
+          <caret line="7" column="15" lean-forward="true" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
           <folding>
-            <element signature="e#0#37#0" expanded="true" />
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>

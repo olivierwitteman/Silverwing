@@ -43,6 +43,12 @@ def log(day, n, t_id, timestamp, a_rpm0, a_rpm1, a_power, a_voltage, a_current, 
                                   f0, f1, a0, b0, a1, b1, df0, df1))
 
 
+def readdf():
+    with open('{!s}/Data/WaTT_{!s}jan.log'.format(path, day), 'a') as logfile:
+        dfs = logfile.readline(0).split(',')
+    return dfs[9], dfs[10]
+
+
 def get_prefix():
     pr = time.strftime("%Y_%m_%d")
     return pr
@@ -92,13 +98,17 @@ try:
                 r_pwr = r_pwr[:i-1]
 
     line = -1
-    force_offset = get_forces()
-    df0, df1 = force_offset[0], force_offset[1]
     while True:
         try:
             line = int(input('Line number (1 to {!s}) / leave empty for next line: '.format(linenumber[-1]))) - 1
         except SyntaxError:
             line += 1
+
+        if line == 0:
+            force_offset = get_forces()
+            df0, df1 = force_offset[0], force_offset[1]
+        else:
+            df0, df1 = readdf()
 
         print('LineNumber: {!s}, ID: {!s}, Power: {!s}%\n\n'.format(linenumber[line], id[line], r_pwr[line]))
         set_power(r_pwr[line])
@@ -110,8 +120,6 @@ try:
         # f0, f1 = 0, 0
         log(day, linenumber[line], id[line], time.time(), a_rpm0, a_rpm1, delta.ask_power(), delta.ask_voltage(),
             delta.ask_current(), f0-df0, f1-df1, a0, b0, a1, b1, df0, df1)
-
-        # log(day, linenumber[line], id[line], time.time(), 0, 0, 0, 0, 0, 0, 0)
 
 finally:
     set_power(0)

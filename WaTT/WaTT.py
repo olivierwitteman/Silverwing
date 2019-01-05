@@ -44,9 +44,14 @@ def log(day, n, t_id, timestamp, a_rpm0, a_rpm1, a_power, a_voltage, a_current, 
 
 
 def readdf():
+    cal_lines = []
     with open('{!s}/Data/WaTT_{!s}jan.log'.format(path, day), 'a') as logfile:
-        dfs = logfile.readline(0).split(',')
-    return dfs[9], dfs[10]
+        dfs = logfile.readlines()
+    for i in range(len(dfs)):
+        if dfs[i].split(',')[0] == 0:
+            cal_lines.append(i)
+    lastcal = max(cal_lines)
+    return dfs[lastcal][9], dfs[lastcal][10]
 
 
 def get_prefix():
@@ -98,6 +103,7 @@ try:
                 r_pwr = r_pwr[:i-1]
 
     line = -1
+    print('To (re)calibrate load cells go to line 1 of the test matrix at any time')
     while True:
         try:
             line = int(input('Line number (1 to {!s}) / leave empty for next line: '.format(linenumber[-1]))) - 1
@@ -105,6 +111,7 @@ try:
             line += 1
 
         if line == 0:
+            print('Calibrating load cells, please do not touch anything and make sure V_inf = 0.')
             force_offset = get_forces()
             df0, df1 = force_offset[0], force_offset[1]
         else:

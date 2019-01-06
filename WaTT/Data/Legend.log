@@ -1,0 +1,16 @@
+n,t_id,timestamp,a_rpm0,a_rpm1,a_power,a_voltage,a_current,f0,f1,a0,b0,a1,b1,df0,df1
+
+n           = linenumber from test matrix
+t_id        = test ID from test matrix
+timestamp   = time since epoch [s]
+a_rpm0      = angular rotation motor 0 [rpm]
+a_rpm1      = angular rotation motor 1 [rpm]
+a_power     = total power at power supply (including losses in cables and system) [W]
+a_voltage   = supplied system voltage [V]
+a_current   = supplied system current [A]
+f0          = force on motor/load cell 0 [N]
+f1          = force on motor/load cell 1 [N]
+a0,b0       = load cell 0 base calibration parameters: f0 = 9.80665 * ((v0 - b0) * a0) with v0 as input voltage from conditioner device
+a1,b1       = load cell 1 base calibration parameters: f1 = 9.80665 * ((v1 - b1) * a1) with v1 as input voltage from conditioner device
+df0         = load cell 0 calibrated offset from last 0 measurement [N]
+df1         = load cell 1 calibrated offset from last 0 measurement [N]

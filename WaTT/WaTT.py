@@ -104,7 +104,7 @@ try:
                 r_pwr = r_pwr[:i-1]
 
     line = -1
-    print('\nTo (re)calibrate load cells go to line 1 of the test matrix at any time\n')
+    print('\nTo (re)calibrate load cells go to line {!s} of the test matrix at any time\n'.format(linenumber[0]))
     while True:
         try:
             line = int(input('Line number ({!s} to {!s}) / leave empty for next line: '.format(linenumber[0],

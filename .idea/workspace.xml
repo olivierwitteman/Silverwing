@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="Output legibility changes">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WaTT/WaTT.py" beforeDir="false" afterPath="$PROJECT_DIR$/WaTT/WaTT.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,8 +15,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/WaTT/WaTT.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="121" column="55" lean-forward="true" selection-start-line="121" selection-start-column="55" selection-end-line="121" selection-end-column="55" />
+            <state relative-caret-position="406">
+              <caret line="109" column="109" selection-start-line="109" selection-start-column="109" selection-end-line="109" selection-end-column="109" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -545,7 +544,21 @@
       <option name="project" value="LOCAL" />
       <updated>1546888796875</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Output legibility changes">
+      <created>1546889084800</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1546889084800</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Output legibility changes">
+      <created>1546889176399</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1546889176399</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -923,8 +936,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/WaTT/WaTT.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="121" column="55" lean-forward="true" selection-start-line="121" selection-start-column="55" selection-end-line="121" selection-end-column="55" />
+        <state relative-caret-position="406">
+          <caret line="109" column="109" selection-start-line="109" selection-start-column="109" selection-end-line="109" selection-end-column="109" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>

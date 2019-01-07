@@ -82,7 +82,7 @@ def get_forces():
 
 try:
     ymd = get_prefix()
-    voltage, current = 25.2, 75.
+    voltage, current = 12, 75.
     delta.set_voltage(voltage)
     print('Voltage set to {!s}\n'.format(delta.last_voltage()))
     delta.set_current(current)
@@ -146,4 +146,4 @@ finally:
     delta.set_state(0)
     pd.terminate()
     delta.close_connection()
-    print('\nPower switched off successfully ')
+    print('\n\nPower switched off successfully\n\n\n')

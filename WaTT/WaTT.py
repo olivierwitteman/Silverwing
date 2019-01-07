@@ -126,7 +126,8 @@ try:
         a_rpm0, a_rpm1 = read_rpm()
         print('W0: {!s} rpm, W1: {!s} rpm, P: {!s} W'.format(a_rpm0, a_rpm1, round(delta.ask_power(), 1)))
         f0, f1, a0, b0, a1, b1 = get_forces()
-        print('F0: {!s} N,   F1: {!s} N\n\n'.format(round(f0-df0, 1), round(f1-df1, 1)))
+        print('F0: {!s} N,   F1: {!s} N\n\n-------------------------------'
+              '----------------------------'.format(round(f0-df0, 1), round(f1-df1, 1)))
         # f0, f1 = 0, 0
         log(day, linenumber[line], id[line], time.time(), a_rpm0, a_rpm1, delta.ask_power(), delta.ask_voltage(),
             delta.ask_current(), f0-df0, f1-df1, a0, b0, a1, b1, df0, df1)

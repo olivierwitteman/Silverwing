@@ -52,7 +52,7 @@ def readdf(path, day):
             cal_lines.append(i)
     lastcal = max(cal_lines)
 
-    return float(dfs[lastcal].replace(';', ',').split(',')[9]), float(dfs[lastcal].replace(';', ',').split(',')[10])
+    return float(dfs[lastcal].replace(';', ',').split(',')[15]), float(dfs[lastcal].replace(';', ',').split(',')[16])
 
 
 def get_prefix():

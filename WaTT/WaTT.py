@@ -107,7 +107,8 @@ try:
     print('\nTo (re)calibrate load cells go to line 1 of the test matrix at any time\n')
     while True:
         try:
-            line = int(input('Line number (1 to {!s}) / leave empty for next line: '.format(linenumber[-1]))) - 1
+            line = int(input('Line number ({!s} to {!s}) / leave empty for next line: '.format(linenumber[0],
+                                                                                               linenumber[-1])))
         except SyntaxError:
             line += 1
 

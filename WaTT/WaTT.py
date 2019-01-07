@@ -104,7 +104,8 @@ try:
                 r_pwr = r_pwr[:i-1]
 
     line = -1
-    print('\nTo (re)calibrate load cells go to line {!s} of the test matrix at any time\n'.format(linenumber[0]))
+    print('\nTo (re)calibrate load cells go to line {!s} of the test matrix at any time\n------------------------------'
+          '-----------------------------\n'.format(linenumber[0]))
     while True:
         try:
             line = int(input('Line number ({!s} to {!s}) / leave empty for next line: '.format(linenumber[0],
@@ -117,7 +118,7 @@ try:
             time.sleep(1)
             force_offset = get_forces()
             df0, df1 = force_offset[0], force_offset[1]
-            print('Force offset at dF0: {!s}N, dF1: {!s}N\n\n'.format(df0, df1))
+            print('Force offset at dF0: {!s}N, dF1: {!s}N\n\n'.format(round(df0, 1), round(df1, 1)))
         else:
             df0, df1 = readdf(path, day)
 

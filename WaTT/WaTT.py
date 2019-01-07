@@ -113,6 +113,10 @@ try:
         except SyntaxError:
             line += 1
 
+        except IndexError:
+            print('\nEnd of test matrix reached\nCongrats on making it through!\n')
+            break
+
         if line == 0:
             print('\nCalibrating load cells, please do not touch anything and make sure V_inf = 0.')
             time.sleep(1)
@@ -142,3 +146,4 @@ finally:
     delta.set_state(0)
     pd.terminate()
     delta.close_connection()
+    print('\nSystem shut down gracefully')

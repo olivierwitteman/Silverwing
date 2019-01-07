@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="Added legend for output data">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="Added legend for output data" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,7 +10,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WaTT/WaTT.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
@@ -21,6 +19,15 @@
                 <element signature="e#0#9#0" expanded="true" />
                 <element signature="e#1462#1983#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/WaTT/WaTT test matrix/8jan-Table 1.csv">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="2" lean-forward="true" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -86,7 +93,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Battery_tests/Delta_control.py" />
         <option value="$PROJECT_DIR$/cfts/p_control.py" />
         <option value="$PROJECT_DIR$/Battery_tests/Delta_comm.py" />
         <option value="$PROJECT_DIR$/Battery_tests/Delta/Battery_testing.py" />
@@ -137,6 +143,7 @@
         <option value="$PROJECT_DIR$/WaTT/Data/test.log" />
         <option value="$PROJECT_DIR$/WaTT/Data/Legend.log" />
         <option value="$PROJECT_DIR$/WaTT/WaTT.py" />
+        <option value="$PROJECT_DIR$/WaTT/WaTT test matrix/8jan-Table 1.csv" />
       </list>
     </option>
   </component>
@@ -173,7 +180,7 @@
               <item name="Silverwing" type="b2602c69:ProjectViewProjectNode" />
               <item name="Silverwing" type="462c0819:PsiDirectoryNode" />
               <item name="WaTT" type="462c0819:PsiDirectoryNode" />
-              <item name="Data" type="462c0819:PsiDirectoryNode" />
+              <item name="WaTT test matrix" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Silverwing" type="b2602c69:ProjectViewProjectNode" />
@@ -536,8 +543,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="108" y="0" width="1553" height="1050" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1853786" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1853786" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -549,7 +557,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32985386" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="9" sideWeight="0.4929841" visible="true" weight="0.4572025" />
+      <window_info anchor="bottom" id="Python Console" order="9" sideWeight="0.4929841" visible="true" weight="0.4572025" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5070159" side_tool="true" weight="0.35508022" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -573,9 +581,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Added legend for output data" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Delta/Battery_tests/Data/SLPB9675175.log">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Delta/Battery_tests/Data/US18650VTC6.log">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="337">
@@ -909,6 +914,13 @@
             <element signature="e#0#9#0" expanded="true" />
             <element signature="e#1462#1983#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WaTT/WaTT test matrix/8jan-Table 1.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="2" lean-forward="true" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
         </state>
       </provider>
     </entry>

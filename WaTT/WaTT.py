@@ -48,12 +48,12 @@ def readdf(path, day):
     with open('{!s}/Data/WaTT_{!s}jan.log'.format(path, day), 'r') as logfile:
         dfs = logfile.readlines()
     for i in range(len(dfs)):
-        if int(dfs[i].split(',')[0]) == 0:
+        if int(dfs[i].split(',;')[0]) == 0:
             print 'check'
             cal_lines.append(i)
     lastcal = max(cal_lines)
 
-    return float(dfs[lastcal].split(',')[9]), float(dfs[lastcal].split(',')[10])
+    return float(dfs[lastcal].split(',;')[9]), float(dfs[lastcal].split(',;')[10])
 
 
 def get_prefix():
@@ -64,7 +64,7 @@ def get_prefix():
 def get_forces():
     with open('/home/pi/Silverwing/WaTT/for.ces', 'r') as ffile:
         try:
-            fs = ffile.readline().split(',')
+            fs = ffile.readline().split(',;')
             f0 = float(fs[1])
             f1 = float(fs[2])
             a0 = float(fs[3])
@@ -95,9 +95,9 @@ try:
         linenumber, id, r_pwr, deflection = [], [], [], []
         for i in range(2, len(inputs)):
             try:
-                linenumber.append(int(inputs[i].split(',')[0][:]))
-                id.append(str(inputs[i].split(',')[1][:].strip()))
-                r_pwr.append(int(inputs[i].split(',')[4][:].strip()))
+                linenumber.append(int(inputs[i].split(',;')[0][:]))
+                id.append(str(inputs[i].split(',;')[1][:].strip()))
+                r_pwr.append(int(inputs[i].split(',;')[4][:].strip()))
             except:
                 pass
                 linenumber = linenumber[:i-1]

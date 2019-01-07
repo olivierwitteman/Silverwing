@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="Added legend for output data" />
+    <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="Added legend for output data">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WaTT/WaTT.py" beforeDir="false" afterPath="$PROJECT_DIR$/WaTT/WaTT.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -10,20 +13,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/WaTT/WaTT.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="118" column="80" lean-forward="true" selection-start-line="118" selection-start-column="80" selection-end-line="118" selection-end-column="80" />
+            <state relative-caret-position="689">
+              <caret line="127" column="52" lean-forward="true" selection-start-line="127" selection-start-column="52" selection-end-line="127" selection-end-column="52" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
-                <element signature="e#1462#1983#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Delta/Delta_comm.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="29">
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WaTT/WaTT test matrix/8jan-Table 1.csv">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
@@ -55,9 +66,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>makel</find>
-      <find>rpm</find>
-      <find>nan</find>
       <find>set_method</find>
       <find>T-</find>
       <find>dischar</find>
@@ -85,6 +93,9 @@
       <find>lc</find>
       <find>delta = d.DeltaComm()</find>
       <find>/home/pi</find>
+      <find>split</find>
+      <find>split(',;'</find>
+      <find>split(',;</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -93,7 +104,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/cfts/p_control.py" />
         <option value="$PROJECT_DIR$/Battery_tests/Delta_comm.py" />
         <option value="$PROJECT_DIR$/Battery_tests/Delta/Battery_testing.py" />
         <option value="$PROJECT_DIR$/Delta/Battery_tests/t.py" />
@@ -142,8 +152,9 @@
         <option value="$PROJECT_DIR$/WaTT/Data/test.py" />
         <option value="$PROJECT_DIR$/WaTT/Data/test.log" />
         <option value="$PROJECT_DIR$/WaTT/Data/Legend.log" />
-        <option value="$PROJECT_DIR$/WaTT/WaTT.py" />
         <option value="$PROJECT_DIR$/WaTT/WaTT test matrix/8jan-Table 1.csv" />
+        <option value="$PROJECT_DIR$/WaTT/WaTT test matrix/test.py" />
+        <option value="$PROJECT_DIR$/WaTT/WaTT.py" />
       </list>
     </option>
   </component>
@@ -165,6 +176,11 @@
             <path>
               <item name="Silverwing" type="b2602c69:ProjectViewProjectNode" />
               <item name="Silverwing" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Silverwing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Silverwing" type="462c0819:PsiDirectoryNode" />
+              <item name="Delta" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Silverwing" type="b2602c69:ProjectViewProjectNode" />
@@ -222,28 +238,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.test (1)">
-    <configuration name="Analyze" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Silverwing" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Delta/Battery_tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Delta/Battery_tests/Analyze.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.test (2)">
     <configuration name="WaTT" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Silverwing" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -307,6 +302,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="test (2)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Silverwing" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/WaTT/WaTT test matrix" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/WaTT/WaTT test matrix/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Silverwing" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -329,19 +345,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.Analyze" />
       <item itemvalue="Python.read_RPM" />
       <item itemvalue="Python.test" />
       <item itemvalue="Python.WaTT" />
       <item itemvalue="Python.test (1)" />
+      <item itemvalue="Python.test (2)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.test (2)" />
         <item itemvalue="Python.test (1)" />
         <item itemvalue="Python.WaTT" />
         <item itemvalue="Python.test" />
         <item itemvalue="Python.read_RPM" />
-        <item itemvalue="Python.Analyze" />
       </list>
     </recent_temporary>
   </component>
@@ -538,7 +554,14 @@
       <option name="project" value="LOCAL" />
       <updated>1546877385530</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Added legend for output data">
+      <created>1546883721356</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1546883721356</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -549,7 +572,7 @@
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3277487" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32672232" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4929841" weight="0.41336116" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -557,7 +580,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32985386" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Python Console" order="9" sideWeight="0.4929841" visible="true" weight="0.4572025" />
+      <window_info anchor="bottom" id="Python Console" order="9" sideWeight="0.4929841" weight="0.4572025" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5070159" side_tool="true" weight="0.35508022" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -581,13 +604,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Added legend for output data" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Delta/Battery_tests/Data/US18650VTC6.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="86733" column="37" selection-start-line="86733" selection-start-column="37" selection-end-line="86733" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Delta/Battery_tests/Data/US18650VTC6_fp.log">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="142">
@@ -790,13 +806,6 @@
     <entry file="file://$PROJECT_DIR$/Delta/esc_left.log">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Delta/Delta_comm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1225">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Delta/Delta_control.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -906,21 +915,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WaTT/WaTT.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="118" column="80" lean-forward="true" selection-start-line="118" selection-start-column="80" selection-end-line="118" selection-end-column="80" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#1462#1983#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WaTT/WaTT test matrix/8jan-Table 1.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="2" lean-forward="true" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WaTT/WaTT test matrix/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Delta/Delta_comm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WaTT/WaTT.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="689">
+          <caret line="127" column="52" lean-forward="true" selection-start-line="127" selection-start-column="52" selection-end-line="127" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

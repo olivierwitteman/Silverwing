@@ -8,7 +8,7 @@ path = '/home/pi/Silverwing/WaTT'
 # path = '.'
 
 pd = subprocess.Popen(['python', '/home/pi/Silverwing/esc/ESC_daemon.py'])  # ESC daemon
-
+time.sleep(2)
 delta = d.DeltaComm()  # Delta communication
 
 
@@ -85,7 +85,7 @@ try:
     ymd = get_prefix()
     voltage, current = 25.2, 75.
     delta.set_voltage(voltage)
-    print('Voltage set to {!s}\n'.format(delta.ask_voltage()))
+    print('Voltage set to {!s}\n'.format(delta.last_voltage()))
     delta.set_current(current)
     delta.set_state(1)
     day = int(input('Day (8-11): '))
@@ -105,7 +105,7 @@ try:
                 r_pwr = r_pwr[:i-1]
 
     line = -1
-    print('To (re)calibrate load cells go to line 1 of the test matrix at any time')
+    print('\nTo (re)calibrate load cells go to line 1 of the test matrix at any time\n')
     while True:
         try:
             line = int(input('Line number (1 to {!s}) / leave empty for next line: '.format(linenumber[-1]))) - 1
@@ -113,7 +113,7 @@ try:
             line += 1
 
         if line == 0:
-            print('Calibrating load cells, please do not touch anything and make sure V_inf = 0.')
+            print('\nCalibrating load cells, please do not touch anything and make sure V_inf = 0.')
             force_offset = get_forces()
             df0, df1 = force_offset[0], force_offset[1]
             print('Force offset at dF0: {!s}N, dF1: {!s}N\n\n'.format(df0, df1))
@@ -125,7 +125,7 @@ try:
         time.sleep(3)
 
         a_rpm0, a_rpm1 = read_rpm()
-        print('W0: {!s} rpm, W1: {!s} rpm, P: {!s} W\n'.format(a_rpm0, a_rpm1, round(delta.ask_power(), 1)))
+        print('W0: {!s} rpm, W1: {!s} rpm, P: {!s} W'.format(a_rpm0, a_rpm1, round(delta.ask_power(), 1)))
         f0, f1, a0, b0, a1, b1 = get_forces()
         print('F0: {!s} N,   F1: {!s} N\n'.format(round(f0-df0, 1), round(f1-df1, 1)))
         # f0, f1 = 0, 0

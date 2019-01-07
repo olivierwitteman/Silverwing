@@ -146,4 +146,4 @@ finally:
     delta.set_state(0)
     pd.terminate()
     delta.close_connection()
-    print('\nSystem shut down gracefully')
+    print('\nPower switched off successfully ')

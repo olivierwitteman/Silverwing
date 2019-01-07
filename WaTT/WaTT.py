@@ -82,7 +82,7 @@ def get_forces():
 
 try:
     ymd = get_prefix()
-    voltage, current = 12, 75.
+    voltage, current = 25.0, 75.
     delta.set_voltage(voltage)
     print('Voltage set to {!s}\n'.format(delta.last_voltage()))
     delta.set_current(current)

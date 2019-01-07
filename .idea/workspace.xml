@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="Output legibility changes">
+    <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="Updated manual">
       <change beforePath="$PROJECT_DIR$/WaTT/WaTT.py" beforeDir="false" afterPath="$PROJECT_DIR$/WaTT/WaTT.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,8 +15,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/WaTT/WaTT.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="778">
-              <caret line="148" column="40" selection-start-line="148" selection-start-column="40" selection-end-line="148" selection-end-column="40" />
+            <state relative-caret-position="585">
+              <caret line="84" column="25" selection-start-line="84" selection-start-column="25" selection-end-line="84" selection-end-column="25" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -27,8 +27,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WaTT/WaTT test matrix/8jan-Table 1.csv">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
+            <state relative-caret-position="-1925">
               <caret line="380" column="43" lean-forward="true" selection-start-line="380" selection-start-column="43" selection-end-line="380" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WaTT/WaTT test matrix/9jan-Table 1.csv">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="385" column="49" lean-forward="true" selection-start-line="385" selection-start-column="49" selection-end-line="385" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -624,7 +633,28 @@
       <option name="project" value="LOCAL" />
       <updated>1546890181046</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Output legibility changes">
+      <created>1546891431126</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1546891431126</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Output legibility changes">
+      <created>1546891484080</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1546891484080</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Updated manual">
+      <created>1546891637506</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1546891637506</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -662,19 +692,12 @@
     <MESSAGE value="Updated matrices and manual added" />
     <MESSAGE value="Manual added" />
     <MESSAGE value="Untested release (check readdf() calibration function for correct behavior)" />
-    <MESSAGE value="Updated manual" />
     <MESSAGE value="Added legend for output data" />
     <MESSAGE value="Output legibility changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Output legibility changes" />
+    <MESSAGE value="Updated manual" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated manual" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Delta/Battery_tests/Data/US18650VTC6_fp.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="25077" selection-start-line="25077" selection-end-line="25077" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Delta/Battery_tests/Data/US18650VTC6_PCC.log">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="142">
@@ -995,15 +1018,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/WaTT/WaTT test matrix/8jan-Table 1.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
+        <state relative-caret-position="-1925">
           <caret line="380" column="43" lean-forward="true" selection-start-line="380" selection-start-column="43" selection-end-line="380" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WaTT/WaTT test matrix/9jan-Table 1.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="385" column="49" lean-forward="true" selection-start-line="385" selection-start-column="49" selection-end-line="385" selection-end-column="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/WaTT/WaTT.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="778">
-          <caret line="148" column="40" selection-start-line="148" selection-start-column="40" selection-end-line="148" selection-end-column="40" />
+        <state relative-caret-position="585">
+          <caret line="84" column="25" selection-start-line="84" selection-start-column="25" selection-end-line="84" selection-end-column="25" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>

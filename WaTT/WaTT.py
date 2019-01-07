@@ -114,6 +114,7 @@ try:
 
         if line == 0:
             print('\nCalibrating load cells, please do not touch anything and make sure V_inf = 0.')
+            time.sleep(1)
             force_offset = get_forces()
             df0, df1 = force_offset[0], force_offset[1]
             print('Force offset at dF0: {!s}N, dF1: {!s}N\n\n'.format(df0, df1))

@@ -43,9 +43,9 @@ def log(day, n, t_id, timestamp, a_rpm0, a_rpm1, a_power, a_voltage, a_current, 
                                   f0, f1, a0, b0, a1, b1, df0, df1))
 
 
-def readdf():
+def readdf(path, day):
     cal_lines = []
-    with open('./test.log', 'r') as logfile:
+    with open('{!s}/Data/WaTT_{!s}jan.log'.format(path, day), 'r') as logfile:
         dfs = logfile.readlines()
     for i in range(len(dfs)):
         if int(dfs[i].split(',')[0]) == 0:
@@ -118,7 +118,7 @@ try:
             df0, df1 = force_offset[0], force_offset[1]
             print('Force offset at dF0: {!s}N, dF1: {!s}N\n\n'.format(df0, df1))
         else:
-            df0, df1 = readdf()
+            df0, df1 = readdf(path, day)
 
         print('LineNumber: {!s}, ID: {!s}, Power: {!s}%\n\n'.format(linenumber[line], id[line], r_pwr[line]))
         set_power(r_pwr[line])

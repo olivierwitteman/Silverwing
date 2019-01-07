@@ -49,7 +49,6 @@ def readdf(path, day):
         dfs = logfile.readlines()
     for i in range(len(dfs)):
         if int(dfs[i].replace(';', ',').split(',')[0]) == 0:
-            print 'check'
             cal_lines.append(i)
     lastcal = max(cal_lines)
 

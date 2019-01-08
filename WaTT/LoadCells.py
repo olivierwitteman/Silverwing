@@ -46,11 +46,11 @@ lc = LoadCells()
 
 while True:
     f0s, f1s = [], []
-    for _ in range(10):
+    for _ in range(30):
         f0, f1 = lc.forces()
         f0s.append(f0)
         f1s.append(f1)
-        time.sleep(0.1)
+        time.sleep(0.05)
     f0 = sum(f0s)/len(f0s)
     f1 = sum(f1s)/len(f1s)
     lc.log(time.time(), f0, f1, lc.a0, lc.b0, lc.a1, lc.b1)

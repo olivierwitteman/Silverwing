@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="Updated manual">
+    <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="Increased sample time for load cells">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WaTT/LoadCells.py" beforeDir="false" afterPath="$PROJECT_DIR$/WaTT/LoadCells.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,8 +16,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WaTT/WaTT.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="13" lean-forward="true" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+            <state relative-caret-position="357">
+              <caret line="130" column="20" lean-forward="true" selection-start-line="130" selection-start-column="20" selection-end-line="130" selection-end-column="20" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -24,45 +25,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WaTT/WaTT test matrix/10jan-Table 1.csv">
-          <provider editor-type-id="csv-table-editor">
-            <state showInfoPanel="true" rowLines="3" />
-          </provider>
-          <provider selected="true" editor-type-id="csv-text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WaTT/WaTT test matrix/9jan-Table 1.csv">
-          <provider editor-type-id="csv-table-editor">
-            <state showInfoPanel="true" rowLines="3" />
-          </provider>
-          <provider selected="true" editor-type-id="csv-text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Delta/Battery_tests/Analyze.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1470">
-              <caret line="100" column="22" selection-start-line="100" selection-start-column="12" selection-end-line="100" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/WaTT/Data/Legend.log">
+        <entry file="file://$PROJECT_DIR$/WaTT/LoadCells.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cfts/control.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="9" column="16" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="16" />
+            <state relative-caret-position="465">
+              <caret line="52" column="24" lean-forward="true" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="24" />
+              <folding>
+                <element signature="e#66#77#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -147,7 +117,6 @@
         <option value="$PROJECT_DIR$/WaTT/WaTT_2019_01_03.log" />
         <option value="$PROJECT_DIR$/WaTT/WaTT_11jan.log" />
         <option value="$PROJECT_DIR$/WaTT/adc.py" />
-        <option value="$PROJECT_DIR$/WaTT/LoadCells.py" />
         <option value="$PROJECT_DIR$/Scale_model/ESC_daemon.py" />
         <option value="$PROJECT_DIR$/Scale_model/RPM_readout.py" />
         <option value="$PROJECT_DIR$/Scale_model/ESC_control.py" />
@@ -167,12 +136,13 @@
         <option value="$PROJECT_DIR$/WaTT/quick_plot.py" />
         <option value="$PROJECT_DIR$/WaTT/Data/quick_plot.py" />
         <option value="$PROJECT_DIR$/WaTT/WaTT.py" />
+        <option value="$PROJECT_DIR$/WaTT/LoadCells.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="7" />
-    <option name="width" value="1654" />
+    <option name="width" value="1578" />
     <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -192,17 +162,6 @@
             <path>
               <item name="Silverwing" type="b2602c69:ProjectViewProjectNode" />
               <item name="Silverwing" type="462c0819:PsiDirectoryNode" />
-              <item name="Delta" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Silverwing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Silverwing" type="462c0819:PsiDirectoryNode" />
-              <item name="Delta" type="462c0819:PsiDirectoryNode" />
-              <item name="Battery_tests" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Silverwing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Silverwing" type="462c0819:PsiDirectoryNode" />
               <item name="WaTT" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -210,12 +169,6 @@
               <item name="Silverwing" type="462c0819:PsiDirectoryNode" />
               <item name="WaTT" type="462c0819:PsiDirectoryNode" />
               <item name="Data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Silverwing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Silverwing" type="462c0819:PsiDirectoryNode" />
-              <item name="WaTT" type="462c0819:PsiDirectoryNode" />
-              <item name="WaTT test matrix" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Silverwing" type="b2602c69:ProjectViewProjectNode" />
@@ -685,7 +638,21 @@
       <option name="project" value="LOCAL" />
       <updated>1546894524582</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Increased settling time rpm">
+      <created>1546943504092</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1546943504093</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Increased sample time for load cells">
+      <created>1546956901335</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1546956901335</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TodoView">
@@ -698,10 +665,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="7" y="0" width="1654" height="1050" extended-state="0" />
+    <frame x="7" y="0" width="1578" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17391305" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18240206" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -745,16 +712,11 @@
     <MESSAGE value="Added legend for output data" />
     <MESSAGE value="Output legibility changes" />
     <MESSAGE value="Updated manual" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated manual" />
+    <MESSAGE value="Increased settling time rpm" />
+    <MESSAGE value="Increased sample time for load cells" />
+    <option name="LAST_COMMIT_MESSAGE" value="Increased sample time for load cells" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Delta/Battery_tests/Data/SS18650_30Q_fp.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="16539" column="30" selection-start-line="16539" selection-start-column="25" selection-end-line="16539" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Delta/Battery_tests/Data/US18650_VC7.log">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -910,16 +872,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/WaTT/Data/test.log" />
     <entry file="file://$PROJECT_DIR$/WaTT/Data/test.py" />
-    <entry file="file://$PROJECT_DIR$/esc/RPM_readout.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Delta/Battery_tests/Battery_testing.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -958,16 +910,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WaTT/LoadCells.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="21" column="30" lean-forward="true" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
-          <folding>
-            <element signature="e#66#77#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/esc/ESC_control.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -985,12 +927,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WaTT/WaTT test matrix/10jan-Table 1.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" rowLines="3" />
-      </provider>
-      <provider selected="true" editor-type-id="csv-text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/WaTT/WaTT test matrix/8jan-Table 1.csv">
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" rowLines="3" />
@@ -1003,16 +939,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="35" lean-forward="true" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WaTT/WaTT.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="13" lean-forward="true" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1044,17 +970,60 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/esc/RPM_readout.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WaTT/WaTT test matrix/10jan-Table 1.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/cfts/control.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="9" column="16" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="16" />
+        <state relative-caret-position="45">
+          <caret line="11" column="27" lean-forward="true" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/WaTT/Data/Legend.log">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+          <caret line="15" column="71" lean-forward="true" selection-start-line="15" selection-start-column="71" selection-end-line="15" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WaTT/Data/WaTT_9jan.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="74" selection-start-line="1" selection-start-column="62" selection-end-line="1" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WaTT/WaTT.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="130" column="20" lean-forward="true" selection-start-line="130" selection-start-column="20" selection-end-line="130" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WaTT/LoadCells.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="52" column="24" lean-forward="true" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="24" />
+          <folding>
+            <element signature="e#66#77#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

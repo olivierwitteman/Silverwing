@@ -128,7 +128,7 @@ try:
 
         print('LineNumber: {!s}, ID: {!s}, Power: {!s}%\n'.format(linenumber[line], id[line], r_pwr[line]))
         set_power(r_pwr[line])
-        time.sleep(3)
+        time.sleep(4)
 
         a_rpm0, a_rpm1 = read_rpm()
         print('W0: {!s} rpm, W1: {!s} rpm, P: {!s} W'.format(a_rpm0, a_rpm1, round(delta.ask_power(), 1)))

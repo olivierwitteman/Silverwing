@@ -46,7 +46,7 @@ lc = LoadCells()
 
 while True:
     f0s, f1s = [], []
-    for _ in range(10):
+    for _ in range(20):
         f0, f1 = lc.forces()
         f0s.append(f0)
         f1s.append(f1)

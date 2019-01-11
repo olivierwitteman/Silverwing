@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="Update for loadcells">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WaTT/WaTT test matrix/10jan-Table 1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/WaTT/WaTT test matrix/10jan-Table 1.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WaTT/WaTT test matrix/11jan-Table 1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/WaTT/WaTT test matrix/11jan-Table 1.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WaTT/WaTT test matrix/8jan-Table 1.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WaTT/WaTT test matrix/9jan-Table 1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/WaTT/WaTT test matrix/9jan-Table 1.csv" afterDir="false" />
-    </list>
+    <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="New quick test matrix for Quint" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +13,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/WaTT/WaTT.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="690">
-              <caret line="46" column="20" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
+            <state relative-caret-position="371">
+              <caret line="121" column="95" lean-forward="true" selection-start-line="121" selection-start-column="95" selection-end-line="121" selection-end-column="95" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -662,7 +656,14 @@
       <option name="project" value="LOCAL" />
       <updated>1547199597867</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="New quick test matrix for Quint">
+      <created>1547219631079</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1547219631079</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TodoView">
@@ -726,7 +727,8 @@
     <MESSAGE value="Increased sample time for load cells" />
     <MESSAGE value="Increased sample time for load cells to average 30 samples over 1.5s" />
     <MESSAGE value="Update for loadcells" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update for loadcells" />
+    <MESSAGE value="New quick test matrix for Quint" />
+    <option name="LAST_COMMIT_MESSAGE" value="New quick test matrix for Quint" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Delta/Battery_tests/Data/US18650_VC7_fp.log">
@@ -1035,8 +1037,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/WaTT/WaTT.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="46" column="20" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
+        <state relative-caret-position="371">
+          <caret line="121" column="95" lean-forward="true" selection-start-line="121" selection-start-column="95" selection-end-line="121" selection-end-column="95" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>

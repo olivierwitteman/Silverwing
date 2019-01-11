@@ -8,6 +8,7 @@ path = '/home/pi/Silverwing/WaTT'
 # path = '.'
 
 pd = subprocess.Popen(['python', '/home/pi/Silverwing/esc/ESC_daemon.py'])  # ESC daemon
+pf = subprocess.Popen(['python3', '/home/pi/Silverwing/WaTT/LoadCells.py'])  # ESC daemon
 time.sleep(2)
 delta = d.DeltaComm()  # Delta communication
 
@@ -145,5 +146,6 @@ finally:
     set_power(0)
     delta.set_state(0)
     pd.terminate()
+    pf.terminate()
     delta.close_connection()
     print('\n\nPower switched off successfully\n\n\n')

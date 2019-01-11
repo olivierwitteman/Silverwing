@@ -29,7 +29,7 @@ set_power(0)
 try:
     voltage, current = 25.2, 75.
     delta.set_voltage(voltage)
-    print 'Voltage set to {!s}'.format(delta.ask_voltage())
+    print 'Voltage set to {!s}'.format(delta.last_voltage())
     delta.set_current(current)
     delta.set_state(1)
 

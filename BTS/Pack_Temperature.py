@@ -69,7 +69,7 @@ while True:
 
     t_a = lc.ambient_temp()
 
-    print('T pack: {!s}C, T ambient: {!s}C'.format(round(t_av, 2), round(t_a, 2), end=""))
+    print('T pack: {!s}C, T ambient: {!s}C'.format(round(t_av, 5), round(t_a, 5), end=""))
     time.sleep(5)
 
 

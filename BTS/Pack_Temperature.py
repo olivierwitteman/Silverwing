@@ -39,7 +39,7 @@ class ADC:
             logfile.writelines('{!s},{!s},{!s},{!s},{!s},{!s},{!s}\n'.format(timestamp, f0, f1, a0, b0, a1, b1))
 
     def ambient_temp(self):
-        with open('/home/pi/Silverwing/battery_tests/data/current.temp', 'r') as t:
+        with open('/home/pi/battery_tests/data/current.temp', 'r') as t:
             raw = t.read()
             try:
                 t_f = float(raw.split(',')[0])

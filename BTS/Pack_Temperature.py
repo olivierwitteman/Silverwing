@@ -23,17 +23,16 @@ class ADC:
         # Create single-ended input on channel 0
         self.chan = [AnalogIn(ads, ADS.P0), AnalogIn(ads, ADS.P1), AnalogIn(ads, ADS.P2), AnalogIn(ads, ADS.P3)]
 
-    def calibration(self, v0, v1):
+    def calibration(self, v0):
         self.a0, self.b0 = -4.84931506849, 2.04
 
-        f0 = ((v0 - self.b0) * self.a0)
+        t0 = ((v0 - self.b0) * self.a0)
 
-
-        return t0
+        return v0
 
     def pack_temp(self, input0=2, input1=3):
         v0, v1 = lc.chan[input0].voltage, lc.chan[input1].voltage
-        return self.calibration(v0, v1)
+        return self.calibration(v0)
 
     def log(self, timestamp, f0, f1, a0, b0, a1, b1):
         with open('{!s}/for.ces'.format(path), 'w') as logfile:
@@ -65,12 +64,12 @@ while True:
         t = lc.pack_temp()
         ts.append(t)
         time.sleep(0.05)
-    t0 = sum(ts)/len(ts)
+    t_av = sum(ts)/len(ts)
     # lc.log(time.time(), f0, f1, lc.a0, lc.b0, lc.a1, lc.b1)
 
     t_a = lc.ambient_temp()
 
-    print('T pack: {!s}C, T ambient: {!s}C'.format(round(t0, 2), round(t_a, 2), end=""))
+    print('T pack: {!s}C, T ambient: {!s}C'.format(round(t_av, 2), round(t_a, 2), end=""))
     time.sleep(5)
 
 

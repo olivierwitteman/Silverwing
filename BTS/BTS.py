@@ -228,33 +228,35 @@ def discharge(c_rate, duration=0, status='empty', name='untitled'):
 
 def cycle():
     status = 'empty'
+    name = 'untitled'
     i = 1
     for c in crate_dischar:
         print('Discharge starts')
-        status = discharge(c[0], duration=c[1], status=status)
+        if c[0] > 0.:
+            print('Charging initiated')
+            charge(c[0], name=name)
+
+        elif c[0] < 0.:
+            print('Discharging initiated/continued')
+            status = discharge(c[0], duration=c[1], status=status, name=name)
+        else:
+            print('Error in input file')
+
         if i == len(crate_dischar):
             status = 'empty'
         if status != 'next':
             print('Charging starts in 1min')
-            time.sleep(60)
-            charge()
+            # time.sleep(60)
+            # charge()
             time.sleep(10)
         i += 1
 
 
 try:
     initiate_relay_control()
-    # matrix = read_matrix()
 
-    # c_rate = matrix[1]
-    # name = matrix[0]
-    c_rate = crate_dischar[0][0]
 
-    if c_rate > 0.:
-        pass
-        # charge(c_rate, name='untitled')
-    elif c_rate < 0.:
-        discharge(c_rate, duration=0, name='untitled')
+    cycle()
 
     # print('Sequence will start in 10s')
     # time.sleep(10)

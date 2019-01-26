@@ -218,6 +218,7 @@ def discharge(c_rate, duration=0, status='empty', name='untitled'):
         if i > 1:
             R += config[i]/ss[i][1]
         gp.output(ss[i][0], config[i])
+        print ss[i][0], config[i]
     time.sleep(1)
     status = delta_discharge(name, pack_minvolt, pack_maxvolt, current, R, duration, status=status)
     return status

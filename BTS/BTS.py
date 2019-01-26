@@ -7,6 +7,7 @@ delta = d.DeltaComm()
 pt = subprocess.Popen(['python3', '/home/pi/Silverwing/BTS/Pack_Temperature.py'])  # ESC daemon
 pat = subprocess.Popen(['python', '/home/pi/Silverwing/General/Temp_sens.py'])  # ESC daemon
 
+time.sleep(1)
 
 path = '/'
 filename = 'matrix.csv'
@@ -217,6 +218,7 @@ def discharge(c_rate, duration=0, status='empty', name='untitled'):
         if i > 1:
             R += config[i]/ss[i][1]
         gp.output(ss[i][0], config[i])
+    time.sleep(1)
     print(R)
     status = delta_discharge(name, pack_minvolt, pack_maxvolt, current, R, duration, status=status)
     return status

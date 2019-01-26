@@ -239,7 +239,7 @@ def cycle():
 
 try:
     initiate_relay_control()
-    matrix = read_matrix()
+    # matrix = read_matrix()
 
     # c_rate = matrix[1]
     # name = matrix[0]

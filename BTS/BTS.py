@@ -248,7 +248,7 @@ try:
 
     # c_rate = matrix[1]
     # name = matrix[0]
-    c_rate = crate_dischar[0]
+    c_rate = crate_dischar[0][0]
 
     if c_rate > 0.:
         pass

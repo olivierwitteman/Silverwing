@@ -39,22 +39,22 @@ class ADC:
         v0 = lc.chan[input0].voltage
         return self.calibration(v0)
 
-    def ambient_temp(self):
-        with open('/home/pi/Silverwing/General/ambient.temp', 'r') as t:
-            raw = t.read()
-            try:
-                t_f = float(raw.split(',')[0])
-                value = float(raw.split(',')[1])
-                t = time.time()
-                if t - t_f > 10.:
-                    value = 'Outdated'
-                t0 = time.time()
-            except:
-                value = 20
-                # if time.time() - t0 > 10.:
-                #     value = 'Outdated'
-
-            return value
+    # def ambient_temp(self):
+    #     with open('/home/pi/Silverwing/General/ambient.temp', 'r') as t:
+    #         raw = t.read()
+    #         try:
+    #             t_f = float(raw.split(',')[0])
+    #             value = float(raw.split(',')[1])
+    #             t = time.time()
+    #             if t - t_f > 10.:
+    #                 value = 'Outdated'
+    #             t0 = time.time()
+    #         except:
+    #             value = 20
+    #             # if time.time() - t0 > 10.:
+    #             #     value = 'Outdated'
+    #
+    #         return value
 
     def log_temp(self, c_temp):
         with open('/home/pi/Silverwing/BTS/data/pack.temp', 'w') as d:
@@ -72,7 +72,7 @@ while True:
         time.sleep(0.05)
     t_av = sum(ts)/len(ts)
     r_av = sum(rs)/len(rs)
-    t_a = lc.ambient_temp()
+    # t_a = lc.ambient_temp()
 
     lc.log_temp(t_av)
 

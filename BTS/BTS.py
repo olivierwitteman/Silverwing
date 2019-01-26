@@ -189,25 +189,25 @@ def discharge(c_rate, duration=0, status='empty', name='untitled'):
     pack_maxvolt = series*maxvolt
     current = c_rate*capacity*parallel
 
-    if 0.67 <= c_rate < 1.3:
+    if 0.67 <= -c_rate < 1.3:
         config = [0, 1, 1, 0, 0]
 
-    elif 1.3 <= c_rate < 1.95:
+    elif 1.3 <= -c_rate < 1.95:
         config = [0, 1, 1, 0, 0]
 
-    elif 1.95 <= c_rate < 3.54:
+    elif 1.95 <= -c_rate < 3.54:
         config = [0, 1, 1, 0, 0]
 
-    elif 3.54 <= c_rate < 4.2:
+    elif 3.54 <= -c_rate < 4.2:
         config = [0, 1, 1, 0, 0]
 
-    elif 4.2 <= c_rate < 4.84:
+    elif 4.2 <= -c_rate < 4.84:
         config = [0, 1, 1, 0, 0]
 
-    elif 4.84 <= c_rate < 5.5:
+    elif 4.84 <= -c_rate < 5.5:
         config = [0, 1, 1, 0, 0]
 
-    elif 5.5 <= c_rate < 9.15:
+    elif 5.5 <= -c_rate < 9.15:
         config = [0, 1, 1, 0, 0]
 
     else:

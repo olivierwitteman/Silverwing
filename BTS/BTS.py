@@ -149,6 +149,8 @@ def delta_discharge(name, minvolt, maxvolt, current, R, duration, status='empty'
 
         a_current = delta.ask_current()
         a_voltage = delta.ask_voltage()
+        print(a_current*R)
+        print(a_voltage)
         bat_voltage = a_current * R - a_voltage
         print(bat_voltage)
 

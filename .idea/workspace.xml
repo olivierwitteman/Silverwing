@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="cycling">
-      <change beforePath="$PROJECT_DIR$/Delta/Delta_comm.py" beforeDir="false" afterPath="$PROJECT_DIR$/Delta/Delta_comm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BTS/BTS.py" beforeDir="false" afterPath="$PROJECT_DIR$/BTS/BTS.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,15 +16,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BTS/BTS.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1857">
-              <caret line="23" column="56" lean-forward="true" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
+            <state relative-caret-position="42">
+              <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
                 <element signature="e#451#560#0" />
                 <element signature="e#967#1427#0" />
                 <element signature="e#1449#1457#0" />
-                <element signature="e#982#1551#0" />
-                <element signature="e#2387#2515#0" />
+                <element signature="e#3723#5308#0" />
               </folding>
             </state>
           </provider>
@@ -155,8 +155,8 @@
         <option value="$PROJECT_DIR$/Delta/Battery_tests/Battery_testing.py" />
         <option value="$PROJECT_DIR$/BTS/Pack_Temperature.py" />
         <option value="$PROJECT_DIR$/BTS/data/a.py" />
-        <option value="$PROJECT_DIR$/BTS/BTS.py" />
         <option value="$PROJECT_DIR$/Delta/Delta_comm.py" />
+        <option value="$PROJECT_DIR$/BTS/BTS.py" />
       </list>
     </option>
   </component>
@@ -379,20 +379,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532440488607</updated>
-    </task>
-    <task id="LOCAL-00068" summary="BTS">
-      <created>1548473324919</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1548473324919</updated>
-    </task>
-    <task id="LOCAL-00069" summary="BTS">
-      <created>1548473405089</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1548473405089</updated>
     </task>
     <task id="LOCAL-00070" summary="BTS">
       <created>1548473466987</created>
@@ -723,7 +709,21 @@
       <option name="project" value="LOCAL" />
       <updated>1548509741372</updated>
     </task>
-    <option name="localTasksCounter" value="117" />
+    <task id="LOCAL-00117" summary="cycling">
+      <created>1548510782949</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1548510782950</updated>
+    </task>
+    <task id="LOCAL-00118" summary="cycling">
+      <created>1548510876388</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1548510876388</updated>
+    </task>
+    <option name="localTasksCounter" value="119" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1115,15 +1115,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BTS/BTS.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1857">
-          <caret line="23" column="56" lean-forward="true" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
+        <state relative-caret-position="42">
+          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
             <element signature="e#451#560#0" />
             <element signature="e#967#1427#0" />
             <element signature="e#1449#1457#0" />
-            <element signature="e#982#1551#0" />
-            <element signature="e#2387#2515#0" />
+            <element signature="e#3723#5308#0" />
           </folding>
         </state>
       </provider>

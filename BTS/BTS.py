@@ -37,6 +37,8 @@ def initiate_relay_control():
         gp.setup(ss[i][0], gp.OUT)
         gp.output(ss[i][0], 0)
 
+    time.sleep(10)
+
 
 def read_matrix():
     with open(str(path+filename), 'r') as m:

@@ -98,8 +98,8 @@ def charge(crate_char, name='untitled'):
     delta.set_voltage(t_voltage)
     delta.set_current(t_current)
     print('\n\nCharging CC-CV with {!s}A at {!s}V\n\n'.format(round(t_current, 1), round(t_voltage, 1)))
-    gp.output(s1[0], 1)
-    gp.output(s2[0], 1)
+    gp.output(s1[0], 0)
+    gp.output(s2[0], 0)
     delta.set_state(1)
 
     t0 = time.time()
@@ -124,8 +124,8 @@ def charge(crate_char, name='untitled'):
 
     finally:
         delta.set_state(0)
-        gp.output(s2[0], 0)
-        gp.output(s1[0], 0)
+        gp.output(s2[0], 1)
+        gp.output(s1[0], 1)
         log(name, time.time(), 0., 0., -104, temperature=-104., remark='Charging completed/interrupted: {}'.format(name))
 
 

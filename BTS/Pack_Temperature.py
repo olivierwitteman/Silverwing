@@ -6,6 +6,7 @@ import board
 import busio
 import adafruit_ads1x15.ads1015 as ADS
 from adafruit_ads1x15.analog_in import AnalogIn
+import math
 
 # path = '.'
 path = '/home/pi/Silverwing/BTS'
@@ -24,10 +25,15 @@ class ADC:
         self.chan = [AnalogIn(ads, ADS.P0), AnalogIn(ads, ADS.P1), AnalogIn(ads, ADS.P2), AnalogIn(ads, ADS.P3)]
 
     def calibration(self, v0):
+        a = -0.8439588476E-3
+        b = 4.036819533E-4
+        c =-3.081516640E-7
 
         r = -v0*100./(v0-3.3)
 
-        return r
+        T = 1/(a + b*math.log(r) + c*(math.log(r))**3)
+
+        return T, r
 
     def pack_temp(self, input0=2):
         v0 = lc.chan[input0].voltage
@@ -58,17 +64,20 @@ class ADC:
 lc = ADC()
 
 while True:
-    ts = []
+    ts, rs = [], []
     for _ in range(10):
-        t = lc.pack_temp()
+        t, r = lc.pack_temp()
         ts.append(t)
+        rs.append(r)
         time.sleep(0.05)
     t_av = sum(ts)/len(ts)
+    r_av = sum(rs)/len(rs)
+
     # lc.log(time.time(), f0, f1, lc.a0, lc.b0, lc.a1, lc.b1)
 
     t_a = lc.ambient_temp()
 
-    print('T pack: {!s}C, T ambient: {!s}C'.format(round(t_av, 5), round(t_a, 5), end=""))
+    print('T pack: {!s}C, T ambient: {!s}C, R: {!s}kOhm'.format(round(t_av, 5), round(t_a, 5), round(r_av), end=""))
     time.sleep(5)
 
 

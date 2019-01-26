@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="Increased sensitivity">
+    <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="parantheses">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BTS/Pack_Temperature.py" beforeDir="false" afterPath="$PROJECT_DIR$/BTS/Pack_Temperature.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,8 +28,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BTS/Pack_Temperature.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="471">
-              <caret line="33" column="20" lean-forward="true" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
+            <state relative-caret-position="288">
+              <caret line="60" column="24" lean-forward="true" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="24" />
               <folding>
                 <element signature="e#66#77#0" expanded="true" />
               </folding>
@@ -80,7 +81,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>cycles</find>
       <find>-103</find>
       <find>-104</find>
       <find>t1539358331.26</find>
@@ -110,6 +110,7 @@
       <find>s1</find>
       <find>gp</find>
       <find>t0</find>
+      <find>temp</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -385,27 +386,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532440488607</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Updated paths">
-      <created>1546639705918</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1546639705918</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Updated paths">
-      <created>1546640734379</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1546640734379</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Updated paths">
-      <created>1546640943462</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1546640943462</updated>
     </task>
     <task id="LOCAL-00008" summary="Updated paths">
       <created>1546641061768</created>
@@ -729,7 +709,28 @@
       <option name="project" value="LOCAL" />
       <updated>1548461475954</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="Increased sensitivity">
+      <created>1548462175753</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1548462175753</updated>
+    </task>
+    <task id="LOCAL-00055" summary="parantheses">
+      <created>1548462267001</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1548462267001</updated>
+    </task>
+    <task id="LOCAL-00056" summary="parantheses">
+      <created>1548462594420</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1548462594420</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TodoView">
@@ -796,7 +797,8 @@
     <MESSAGE value="New quick test matrix for Quint" />
     <MESSAGE value="BTS" />
     <MESSAGE value="Increased sensitivity" />
-    <option name="LAST_COMMIT_MESSAGE" value="Increased sensitivity" />
+    <MESSAGE value="parantheses" />
+    <option name="LAST_COMMIT_MESSAGE" value="parantheses" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Delta/Battery_tests/Data/LG18650_HG2_fp_PCC.log">
@@ -1110,8 +1112,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BTS/Pack_Temperature.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
-          <caret line="33" column="20" lean-forward="true" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
+        <state relative-caret-position="288">
+          <caret line="60" column="24" lean-forward="true" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="24" />
           <folding>
             <element signature="e#66#77#0" expanded="true" />
           </folding>

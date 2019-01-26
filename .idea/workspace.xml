@@ -15,8 +15,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BTS/BTS.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="524">
-              <caret line="225" column="19" selection-start-line="225" selection-start-column="19" selection-end-line="225" selection-end-column="19" />
+            <state relative-caret-position="736">
+              <caret line="225" column="27" lean-forward="true" selection-start-line="225" selection-start-column="27" selection-end-line="225" selection-end-column="27" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
                 <element signature="e#451#560#0" />
@@ -364,27 +364,6 @@
       <option name="presentableId" value="Default" />
       <updated>1532440488607</updated>
     </task>
-    <task id="LOCAL-00045" summary="Increased sample time for load cells to average 30 samples over 1.5s">
-      <created>1546956978269</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1546956978269</updated>
-    </task>
-    <task id="LOCAL-00046" summary="Update for loadcells">
-      <created>1547199597867</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1547199597867</updated>
-    </task>
-    <task id="LOCAL-00047" summary="New quick test matrix for Quint">
-      <created>1547219631079</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1547219631079</updated>
-    </task>
     <task id="LOCAL-00048" summary="New quick test matrix for Quint">
       <created>1547223697672</created>
       <option name="number" value="00048" />
@@ -707,7 +686,28 @@
       <option name="project" value="LOCAL" />
       <updated>1548476590213</updated>
     </task>
-    <option name="localTasksCounter" value="94" />
+    <task id="LOCAL-00094" summary="BTS">
+      <created>1548476786028</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1548476786028</updated>
+    </task>
+    <task id="LOCAL-00095" summary="BTS">
+      <created>1548476801825</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1548476801825</updated>
+    </task>
+    <task id="LOCAL-00096" summary="BTS">
+      <created>1548476886731</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1548476886731</updated>
+    </task>
+    <option name="localTasksCounter" value="97" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1105,8 +1105,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BTS/BTS.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
-          <caret line="225" column="19" selection-start-line="225" selection-start-column="19" selection-end-line="225" selection-end-column="19" />
+        <state relative-caret-position="736">
+          <caret line="225" column="27" lean-forward="true" selection-start-line="225" selection-start-column="27" selection-end-line="225" selection-end-column="27" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
             <element signature="e#451#560#0" />

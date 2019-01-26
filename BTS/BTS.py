@@ -159,7 +159,7 @@ def delta_discharge(name, minvolt, maxvolt, current, R, duration, status='empty'
             a_temp = temp_ambient()
             c_temp = temp_pack()
 
-            log(name, time.time(), bat_voltage, a_current, a_temp, c_temp, a_temp)
+            log(name, time.time(), bat_voltage, -a_current, a_temp, c_temp)
             dt = time.time() - t0
             time.sleep(0.1)
 

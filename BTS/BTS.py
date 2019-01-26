@@ -144,6 +144,7 @@ def delta_discharge(name, minvolt, maxvolt, current, R, duration, status='empty'
         log(name, time.time(), 0., 0., a_temp, temperature=-101., remark='Discharging started: {}'.format(name))
 
         delta.set_state(1)
+        time.sleep(1)
 
         a_current = delta.ask_current()
         a_voltage = delta.ask_voltage()
@@ -252,8 +253,8 @@ try:
     elif c_rate < 0.:
         discharge(c_rate, duration=0, name='untitled')
 
-    print('Sequence will start in 10s')
-    time.sleep(10)
+    # print('Sequence will start in 10s')
+    # time.sleep(10)
     # cycle()
 
 finally:

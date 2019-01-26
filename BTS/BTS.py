@@ -19,7 +19,7 @@ s5 = 26, 0.622, 'R3'
 ss = [s1, s2, s3, s4, s5]
 
 
-crate_dischar = [(1., 0)]
+crate_dischar = [(-1., 0)]
 maxvolt = 4.2
 minvolt = 2.5
 capacity = 3.
@@ -241,8 +241,10 @@ try:
     initiate_relay_control()
     matrix = read_matrix()
 
-    c_rate = matrix[1]
-    name = matrix[0]
+    # c_rate = matrix[1]
+    # name = matrix[0]
+    c_rate = crate_dischar[0]
+
     if c_rate > 0.:
         pass
         # charge(c_rate, name='untitled')

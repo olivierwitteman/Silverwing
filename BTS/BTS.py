@@ -217,13 +217,13 @@ def discharge(c_rate, duration=0, status='empty', name='untitled'):
     else:
         config = [0, 0, 0, 0, 0]
 
-    R = R_sys
+    R_inv = 1./R_sys
     for i in range(len(ss)):
         if i > 1:
-            R += config[i]/ss[i][1]
-            print 'R: ', R
+            R_inv += config[i]/ss[i][1]
         gp.output(ss[i][0], abs(config[i]-1))
         print ss[i][0], config[i]
+        R = 1/R_inv
 
     time.sleep(1)
     status = delta_discharge(name, pack_minvolt, pack_maxvolt, current, R, duration, status=status)

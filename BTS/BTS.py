@@ -138,18 +138,17 @@ def delta_discharge(name, minvolt, maxvolt, current, R, duration, status='empty'
     a_temp = temp_ambient()
     c_temp = temp_pack()
 
-    delta.set_state(1)
-
-    a_current = delta.ask_current()
-    a_voltage = delta.ask_voltage()
-    bat_voltage = a_current*R - a_voltage
-
-
-
     try:
         if status != 'next':
             log(time.time(), 0., 0., temperature=-101., remark='Discharging started: {}'.format(name))
         log(time.time(), 0., 0., temperature=-101., remark='Discharging started: {}'.format(name))
+
+        delta.set_state(1)
+
+        print('check')
+        a_current = delta.ask_current()
+        a_voltage = delta.ask_voltage()
+        bat_voltage = a_current * R - a_voltage
 
         while dt < duration or duration == 0 and bat_voltage > minvolt:
 

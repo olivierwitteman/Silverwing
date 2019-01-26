@@ -137,8 +137,8 @@ def delta_discharge(name, minvolt, maxvolt, current, R, duration, status='empty'
 
     try:
         if status != 'next':
-            log(time.time(), 0., 0., temperature=-101., remark='Discharging started: {}'.format(name))
-        log(time.time(), 0., 0., temperature=-101., remark='Discharging started: {}'.format(name))
+            log(name, time.time(), 0., 0., a_temp, temperature=-101., remark='Discharging started: {}'.format(name))
+        log(name, time.time(), 0., 0., a_temp, temperature=-101., remark='Discharging started: {}'.format(name))
 
         delta.set_state(1)
 
@@ -176,7 +176,7 @@ def delta_discharge(name, minvolt, maxvolt, current, R, duration, status='empty'
 
     finally:
         if status != 'next':
-            log(time.time(), 0., 0., temperature=-102., remark='Discharging completed/interrupted: {}'.format(name))
+            log(name, time.time(), 0., 0., a_temp, temperature=-102., remark='Discharging completed/interrupted: {}'.format(name))
         delta.set_state(0)
         return status
 

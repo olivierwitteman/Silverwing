@@ -27,11 +27,11 @@ class ADC:
     def calibration(self, v0):
         a = -0.8439588476E-3
         b = 4.036819533E-4
-        c =-3.081516640E-7
+        c = -3.081516640E-7
 
-        r = -v0*100./(v0-3.3)
+        r = -v0*100e3/(v0-3.3)
 
-        T = 1/(a + b*math.log(r) + c*(math.log(r))**3)
+        T = 1./(a + b * math.log(r) + c * (math.log(r))**3) - 273.15
 
         return T, r
 

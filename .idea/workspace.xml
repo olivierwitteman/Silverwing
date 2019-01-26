@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="cycling">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Delta/Delta_comm.py" beforeDir="false" afterPath="$PROJECT_DIR$/Delta/Delta_comm.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,17 +15,25 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BTS/BTS.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1267">
-              <caret line="225" column="14" selection-start-line="225" selection-start-column="14" selection-end-line="225" selection-end-column="14" />
+            <state relative-caret-position="-1857">
+              <caret line="23" column="56" lean-forward="true" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
                 <element signature="e#451#560#0" />
                 <element signature="e#967#1427#0" />
                 <element signature="e#1449#1457#0" />
-                <element signature="e#1529#2783#0" />
                 <element signature="e#982#1551#0" />
                 <element signature="e#2387#2515#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Delta/Delta_comm.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="22" column="34" lean-forward="true" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -110,7 +118,6 @@
         <option value="$PROJECT_DIR$/Delta/Battery_tests/Data/US18650_VC7_PCC.log" />
         <option value="$PROJECT_DIR$/Delta/Battery_tests/Data/US18650_VC7_fp_PCC1.log" />
         <option value="$PROJECT_DIR$/Delta/Battery_tests/Data/LG18650_HG2_fp_PCC.log" />
-        <option value="$PROJECT_DIR$/Delta/Delta_comm.py" />
         <option value="$PROJECT_DIR$/Delta/Sample_plot.py" />
         <option value="$PROJECT_DIR$/Delta/Battery_tests/Analyze.py" />
         <option value="$PROJECT_DIR$/General/PL_Range.py" />
@@ -149,6 +156,7 @@
         <option value="$PROJECT_DIR$/BTS/Pack_Temperature.py" />
         <option value="$PROJECT_DIR$/BTS/data/a.py" />
         <option value="$PROJECT_DIR$/BTS/BTS.py" />
+        <option value="$PROJECT_DIR$/Delta/Delta_comm.py" />
       </list>
     </option>
   </component>
@@ -371,20 +379,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532440488607</updated>
-    </task>
-    <task id="LOCAL-00066" summary="BTS">
-      <created>1548473082661</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1548473082661</updated>
-    </task>
-    <task id="LOCAL-00067" summary="BTS">
-      <created>1548473218753</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1548473218753</updated>
     </task>
     <task id="LOCAL-00068" summary="BTS">
       <created>1548473324919</created>
@@ -715,7 +709,21 @@
       <option name="project" value="LOCAL" />
       <updated>1548509596138</updated>
     </task>
-    <option name="localTasksCounter" value="115" />
+    <task id="LOCAL-00115" summary="cycling">
+      <created>1548509663507</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1548509663507</updated>
+    </task>
+    <task id="LOCAL-00116" summary="cycling">
+      <created>1548509741372</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1548509741372</updated>
+    </task>
+    <option name="localTasksCounter" value="117" />
     <servers />
   </component>
   <component name="TodoView">
@@ -925,13 +933,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/WaTT/WaTT test matrix/test.py" />
-    <entry file="file://$PROJECT_DIR$/Delta/Delta_comm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Delta/Battery_tests/Analyze.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1470">
@@ -1090,11 +1091,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BTS/data/untitled.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-12732" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Delta/Battery_tests/Battery_testing.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="282">
@@ -1105,16 +1101,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/BTS/data/untitled.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-12732" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Delta/Delta_comm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="22" column="34" lean-forward="true" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/BTS/BTS.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1267">
-          <caret line="225" column="14" selection-start-line="225" selection-start-column="14" selection-end-line="225" selection-end-column="14" />
+        <state relative-caret-position="-1857">
+          <caret line="23" column="56" lean-forward="true" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
             <element signature="e#451#560#0" />
             <element signature="e#967#1427#0" />
             <element signature="e#1449#1457#0" />
-            <element signature="e#1529#2783#0" />
             <element signature="e#982#1551#0" />
             <element signature="e#2387#2515#0" />
           </folding>

@@ -21,7 +21,7 @@ s5 = 26, 0.622, 'R3'
 ss = [s1, s2, s3, s4, s5]
 
 
-crate_dischar = [(-6., 0)]
+crate_dischar = [(-6., 10), (-1, 10), (-3, 10), (1, 60)]
 maxvolt = 4.2
 minvolt = 2.5
 capacity = 3.

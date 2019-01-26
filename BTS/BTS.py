@@ -45,10 +45,6 @@ def read_matrix():
     return data
 
 
-def read_temperature():
-    return 0
-
-
 def log(name, timestamp, voltage, current, amb_temp, temperature=0.0, remark=''):
     with open('/home/pi/Silverwing/battery_tests/data/{!s}.log'.format(name), 'a') as d:
         d.write('t{!s} U{!s} I{!s} T{!s} T_a{!s}, {!s}\n'.format(timestamp, voltage, current, amb_temp, temperature, remark))
@@ -74,7 +70,7 @@ def temp_ambient():
 
 
 def temp_pack():
-    with open('/home/pi/Silverwing/BTS/pack.temp', 'r') as t:
+    with open('/home/pi/Silverwing/BTS/data/pack.temp', 'r') as t:
         raw = t.read()
         try:
             t_f = float(raw.split(',')[0])

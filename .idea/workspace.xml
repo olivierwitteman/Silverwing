@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="BTS">
+      <change afterPath="$PROJECT_DIR$/BTS/data/a.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Delta/Battery_tests/Battery_testing.py" beforeDir="false" afterPath="$PROJECT_DIR$/Delta/Battery_tests/Battery_testing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Delta/Battery_tests/Temp_sens.py" beforeDir="false" afterPath="$PROJECT_DIR$/General/Temp_sens.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,7 +47,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Delta/Battery_tests/Battery_testing.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="72">
@@ -56,6 +55,19 @@
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
                 <element signature="e#1793#2854#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/BTS/Pack_Temperature.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="900">
+              <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
+              <folding>
+                <element signature="e#66#77#0" expanded="true" />
+                <element signature="e#961#986#0" />
               </folding>
             </state>
           </provider>
@@ -110,7 +122,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Delta/Battery_tests/Data/NCR18650PF.log" />
         <option value="$PROJECT_DIR$/Delta/Battery_tests/Data/t.log" />
         <option value="$PROJECT_DIR$/Delta/Battery_tests/Data/SLPB9675175.log" />
         <option value="$PROJECT_DIR$/Delta/Battery_tests/Data/US18650VTC6_fp.log" />
@@ -158,9 +169,10 @@
         <option value="$PROJECT_DIR$/BTS/Calibrate.py" />
         <option value="$PROJECT_DIR$/BTS/cal.py" />
         <option value="$PROJECT_DIR$/Delta/Battery_tests/Temp_sens.py" />
-        <option value="$PROJECT_DIR$/BTS/Pack_Temperature.py" />
         <option value="$PROJECT_DIR$/BTS/BTS.py" />
         <option value="$PROJECT_DIR$/Delta/Battery_tests/Battery_testing.py" />
+        <option value="$PROJECT_DIR$/BTS/Pack_Temperature.py" />
+        <option value="$PROJECT_DIR$/BTS/data/a.py" />
       </list>
     </option>
   </component>
@@ -187,6 +199,12 @@
               <item name="Silverwing" type="b2602c69:ProjectViewProjectNode" />
               <item name="Silverwing" type="462c0819:PsiDirectoryNode" />
               <item name="BTS" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Silverwing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Silverwing" type="462c0819:PsiDirectoryNode" />
+              <item name="BTS" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Silverwing" type="b2602c69:ProjectViewProjectNode" />
@@ -219,11 +237,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/General" />
       <recent name="$PROJECT_DIR$/WaTT/WaTT test matrix" />
       <recent name="$PROJECT_DIR$/WaTT/Data" />
       <recent name="$PROJECT_DIR$/WaTT" />
       <recent name="$PROJECT_DIR$/esc" />
-      <recent name="$PROJECT_DIR$/cfts" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -371,20 +389,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532440488607</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Updated paths">
-      <created>1546642866576</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1546642866576</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Updated paths">
-      <created>1546644029559</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1546644029559</updated>
     </task>
     <task id="LOCAL-00017" summary="Updated matrices and manual added">
       <created>1546722437088</created>
@@ -715,7 +719,21 @@
       <option name="project" value="LOCAL" />
       <updated>1548472605651</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="BTS">
+      <created>1548472826710</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1548472826710</updated>
+    </task>
+    <task id="LOCAL-00065" summary="BTS">
+      <created>1548473009198</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1548473009198</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TodoView">
@@ -804,13 +822,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="BTS" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Delta/Battery_tests/Data/LG18650_HG2_fp_PCC.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="3817" column="30" selection-start-line="3817" selection-start-column="25" selection-end-line="3817" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Delta/Battery_tests/Data/US18650_VTC6_2_fp_cycle.log">
       <provider selected="true" editor-type-id="LargeFileEditor">
         <state relative-caret-position="840">
@@ -1083,19 +1094,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BTS/Pack_Temperature.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1098">
-          <caret line="82" lean-forward="true" selection-start-line="82" selection-end-line="82" />
-          <folding>
-            <element signature="e#66#77#0" expanded="true" />
-            <element signature="e#1290#1802#0" />
-            <element signature="e#1770#1906#0" />
-            <element signature="e#1888#1954#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/General/Temp_sens.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -1136,6 +1134,20 @@
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BTS/Pack_Temperature.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
+          <folding>
+            <element signature="e#66#77#0" expanded="true" />
+            <element signature="e#961#986#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BTS/data/a.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>

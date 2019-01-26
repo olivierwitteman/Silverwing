@@ -221,6 +221,7 @@ def discharge(c_rate, duration=0, status='empty', name='untitled'):
     for i in range(len(ss)):
         if i > 1:
             R_inv += config[i]/ss[i][1]
+            print(R_inv)
         gp.output(ss[i][0], abs(config[i]-1))
         # print ss[i][0], config[i]
         R = 1/R_inv + R_sys

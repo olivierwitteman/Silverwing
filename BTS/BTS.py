@@ -46,7 +46,7 @@ def read_matrix():
 
 
 def log(name, timestamp, voltage, current, amb_temp, temperature=0.0, remark=''):
-    with open('/home/pi/Silverwing/battery_tests/data/{!s}.log'.format(name), 'a') as d:
+    with open('/home/pi/Silverwing/BTS/data/{!s}.log'.format(name), 'a') as d:
         d.write('t{!s} U{!s} I{!s} T{!s} T_a{!s}, {!s}\n'.format(timestamp, voltage, current, amb_temp, temperature, remark))
 
 

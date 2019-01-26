@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="BTS">
-      <change beforePath="$PROJECT_DIR$/BTS/BTS.py" beforeDir="false" afterPath="$PROJECT_DIR$/BTS/BTS.py" afterDir="false" />
-    </list>
+    <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="BTS" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,15 +13,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BTS/BTS.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="433">
-              <caret line="147" column="20" selection-start-line="147" selection-start-column="20" selection-end-line="147" selection-end-column="20" />
+            <state relative-caret-position="501">
+              <caret line="72" column="43" selection-start-line="72" selection-start-column="43" selection-end-line="72" selection-end-column="43" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
                 <element signature="e#251#390#0" />
                 <element signature="e#451#560#0" />
-                <element signature="e#611#619#0" />
                 <element signature="e#757#949#0" />
-                <element signature="e#1449#1457#0" />
                 <element signature="e#1529#2783#0" />
                 <element signature="e#982#1551#0" />
                 <element signature="e#2387#2515#0" />
@@ -344,34 +340,6 @@
       <option name="presentableId" value="Default" />
       <updated>1532440488607</updated>
     </task>
-    <task id="LOCAL-00019" summary="Untested release (check readdf() calibration function for correct behavior)">
-      <created>1546723006359</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1546723006359</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Untested release (check readdf() calibration function for correct behavior)">
-      <created>1546723580995</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1546723580995</updated>
-    </task>
-    <task id="LOCAL-00021" summary="Untested release (check readdf() calibration function for correct behavior)">
-      <created>1546783365523</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1546783365523</updated>
-    </task>
-    <task id="LOCAL-00022" summary="Untested release (check readdf() calibration function for correct behavior)">
-      <created>1546783418883</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1546783418883</updated>
-    </task>
     <task id="LOCAL-00023" summary="Untested release (check readdf() calibration function for correct behavior)">
       <created>1546786038962</created>
       <option name="number" value="00023" />
@@ -687,7 +655,35 @@
       <option name="project" value="LOCAL" />
       <updated>1548473218753</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="BTS">
+      <created>1548473324919</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1548473324919</updated>
+    </task>
+    <task id="LOCAL-00069" summary="BTS">
+      <created>1548473405089</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1548473405089</updated>
+    </task>
+    <task id="LOCAL-00070" summary="BTS">
+      <created>1548473466987</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1548473466987</updated>
+    </task>
+    <task id="LOCAL-00071" summary="BTS">
+      <created>1548473548611</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1548473548611</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1086,15 +1082,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BTS/BTS.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="147" column="20" selection-start-line="147" selection-start-column="20" selection-end-line="147" selection-end-column="20" />
+        <state relative-caret-position="501">
+          <caret line="72" column="43" selection-start-line="72" selection-start-column="43" selection-end-line="72" selection-end-column="43" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
             <element signature="e#251#390#0" />
             <element signature="e#451#560#0" />
-            <element signature="e#611#619#0" />
             <element signature="e#757#949#0" />
-            <element signature="e#1449#1457#0" />
             <element signature="e#1529#2783#0" />
             <element signature="e#982#1551#0" />
             <element signature="e#2387#2515#0" />

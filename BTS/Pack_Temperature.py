@@ -32,6 +32,7 @@ class ADC:
 
     def pack_temp(self, input0=2, input1=3):
         v0, v1 = lc.chan[input0].voltage, lc.chan[input1].voltage
+        print v0, v1
         return self.calibration(v0)
 
     def log(self, timestamp, f0, f1, a0, b0, a1, b1):

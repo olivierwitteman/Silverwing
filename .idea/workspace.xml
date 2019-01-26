@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="BTS">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BTS/BTS.py" beforeDir="false" afterPath="$PROJECT_DIR$/BTS/BTS.py" afterDir="false" />
-    </list>
+    <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="BTS" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +13,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BTS/BTS.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="575">
-              <caret line="214" column="13" selection-start-line="214" selection-start-column="13" selection-end-line="214" selection-end-column="13" />
+            <state relative-caret-position="470">
+              <caret line="146" lean-forward="true" selection-start-line="146" selection-end-line="146" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
                 <element signature="e#251#390#0" />
@@ -175,6 +172,12 @@
               <item name="Silverwing" type="b2602c69:ProjectViewProjectNode" />
               <item name="Silverwing" type="462c0819:PsiDirectoryNode" />
               <item name="Delta" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Silverwing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Silverwing" type="462c0819:PsiDirectoryNode" />
+              <item name="Delta" type="462c0819:PsiDirectoryNode" />
+              <item name="Battery_tests" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Silverwing" type="b2602c69:ProjectViewProjectNode" />
@@ -359,20 +362,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532440488607</updated>
-    </task>
-    <task id="LOCAL-00026" summary="Added legend for output data">
-      <created>1546877385529</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1546877385530</updated>
-    </task>
-    <task id="LOCAL-00027" summary="Added legend for output data">
-      <created>1546883721356</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1546883721356</updated>
     </task>
     <task id="LOCAL-00028" summary="Added legend for output data">
       <created>1546888551680</created>
@@ -703,7 +692,21 @@
       <option name="project" value="LOCAL" />
       <updated>1548473990029</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="BTS">
+      <created>1548474130053</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1548474130054</updated>
+    </task>
+    <task id="LOCAL-00076" summary="BTS">
+      <created>1548474294243</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1548474294243</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1079,17 +1082,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Delta/Battery_tests/Battery_testing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="34" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-            <element signature="e#1793#2854#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/General/Temp_sens.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -1100,10 +1092,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Delta/Battery_tests/Battery_testing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-237">
+          <caret line="4" column="34" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/BTS/BTS.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="214" column="13" selection-start-line="214" selection-start-column="13" selection-end-line="214" selection-end-column="13" />
+        <state relative-caret-position="470">
+          <caret line="146" lean-forward="true" selection-start-line="146" selection-end-line="146" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
             <element signature="e#251#390#0" />

@@ -144,7 +144,7 @@ def delta_discharge(name, minvolt, maxvolt, current, R, duration, status='empty'
         log(name, time.time(), 0., 0., a_temp, temperature=-101., remark='Discharging started: {}'.format(name))
 
         delta.set_state(1)
-        time.sleep(1)
+        time.sleep(10)
 
         a_current = delta.ask_current()
         a_voltage = delta.ask_voltage()

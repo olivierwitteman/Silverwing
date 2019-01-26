@@ -217,9 +217,9 @@ def discharge(c_rate, duration=0, status='empty', name='untitled'):
     else:
         config = [0, 0, 0, 0, 0]
 
-    print config
     R_inv = 0.
     for i in range(len(ss)):
+        print i
         if i > 1.1:
 
             R_inv += config[i]/ss[i][1]

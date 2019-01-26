@@ -39,12 +39,8 @@ class ADC:
         v0 = lc.chan[input0].voltage
         return self.calibration(v0)
 
-    def log(self, timestamp, f0, f1, a0, b0, a1, b1):
-        with open('{!s}/for.ces'.format(path), 'w') as logfile:
-            logfile.writelines('{!s},{!s},{!s},{!s},{!s},{!s},{!s}\n'.format(timestamp, f0, f1, a0, b0, a1, b1))
-
     def ambient_temp(self):
-        with open('/home/pi/battery_tests/data/current.temp', 'r') as t:
+        with open('/home/pi/Silverwing/General/ambient.temp', 'r') as t:
             raw = t.read()
             try:
                 t_f = float(raw.split(',')[0])
@@ -60,6 +56,10 @@ class ADC:
 
             return value
 
+    def log_temp(self, c_temp):
+        with open('/home/pi/Silverwing/BTS/data/pack.temp', 'w') as d:
+            d.write('{!s},{!s}'.format(time.time(), c_temp))
+
 
 lc = ADC()
 
@@ -72,12 +72,11 @@ while True:
         time.sleep(0.05)
     t_av = sum(ts)/len(ts)
     r_av = sum(rs)/len(rs)
-
-    # lc.log(time.time(), f0, f1, lc.a0, lc.b0, lc.a1, lc.b1)
-
     t_a = lc.ambient_temp()
 
-    print('T pack: {!s}C, T ambient: {!s}C, R: {!s}kOhm'.format(round(t_av, 5), round(t_a, 5), round(r_av), end=""))
-    time.sleep(5)
+    lc.log_temp(t_av)
+
+    # print('T pack: {!s}C, T ambient: {!s}C, R: {!s}kOhm'.format(round(t_av, 5), round(t_a, 5), round(r_av), end=""))
+    time.sleep(1)
 
 

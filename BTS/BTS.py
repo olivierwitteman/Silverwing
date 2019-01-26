@@ -5,6 +5,7 @@ import subprocess
 delta = d.DeltaComm()
 
 pt = subprocess.Popen(['python3', '/home/pi/Silverwing/BTS/Pack_Temperature.py'])  # ESC daemon
+pat = subprocess.Popen(['python', '/home/pi/Silverwing/General/Temp_sens.py'])  # ESC daemon
 
 
 path = '/'
@@ -261,6 +262,7 @@ finally:
     gp.cleanup()
     delta.close_connection()
     pt.terminate()
+    pat.terminate()
 
 
 

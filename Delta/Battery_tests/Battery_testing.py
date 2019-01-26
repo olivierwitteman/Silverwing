@@ -2,6 +2,8 @@ import time
 import RPi.GPIO as gp
 import delta_sm3300 as d
 
+# TODO: Temp_sens moved to general
+
 delta = d.DeltaComm()
 
 safe_operation = False

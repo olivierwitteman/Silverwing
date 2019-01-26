@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="BTS">
-      <change beforePath="$PROJECT_DIR$/BTS/BTS.py" beforeDir="false" afterPath="$PROJECT_DIR$/BTS/BTS.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Delta/Battery_tests/Battery_testing.py" beforeDir="false" afterPath="$PROJECT_DIR$/Delta/Battery_tests/Battery_testing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Delta/Battery_tests/Temp_sens.py" beforeDir="false" afterPath="$PROJECT_DIR$/General/Temp_sens.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,18 +14,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BTS/BTS.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
-              <caret line="238" lean-forward="true" selection-start-line="238" selection-end-line="238" />
+            <state relative-caret-position="359">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
                 <element signature="e#251#390#0" />
                 <element signature="e#451#560#0" />
                 <element signature="e#611#619#0" />
                 <element signature="e#757#949#0" />
-                <element signature="e#967#1427#0" />
                 <element signature="e#1449#1457#0" />
                 <element signature="e#1529#2783#0" />
                 <element signature="e#982#1551#0" />
@@ -36,10 +37,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/General/Temp_sens.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="50" selection-start-line="13" selection-start-column="50" selection-end-line="13" selection-end-column="50" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Delta/Battery_tests/Battery_testing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="947">
-              <caret line="155" column="32" selection-start-line="155" selection-start-column="32" selection-end-line="155" selection-end-column="32" />
+            <state relative-caret-position="72">
+              <caret line="4" column="34" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
                 <element signature="e#1793#2854#0" />
@@ -59,7 +72,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>-103</find>
       <find>-104</find>
       <find>t1539358331.26</find>
       <find>t1539358331.42</find>
@@ -89,6 +101,7 @@
       <find>print</find>
       <find>s1</find>
       <find>gp</find>
+      <find>ambient</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -127,7 +140,6 @@
         <option value="$PROJECT_DIR$/Scale_model/RPM_readout.py" />
         <option value="$PROJECT_DIR$/Scale_model/ESC_control.py" />
         <option value="$PROJECT_DIR$/Delta/Delta_control.py" />
-        <option value="$PROJECT_DIR$/Delta/Battery_tests/Battery_testing.py" />
         <option value="$PROJECT_DIR$/cfts/control.py" />
         <option value="$PROJECT_DIR$/esc/RPM_readout.py" />
         <option value="$PROJECT_DIR$/esc/ESC_daemon.py" />
@@ -148,6 +160,7 @@
         <option value="$PROJECT_DIR$/Delta/Battery_tests/Temp_sens.py" />
         <option value="$PROJECT_DIR$/BTS/Pack_Temperature.py" />
         <option value="$PROJECT_DIR$/BTS/BTS.py" />
+        <option value="$PROJECT_DIR$/Delta/Battery_tests/Battery_testing.py" />
       </list>
     </option>
   </component>
@@ -179,12 +192,6 @@
               <item name="Silverwing" type="b2602c69:ProjectViewProjectNode" />
               <item name="Silverwing" type="462c0819:PsiDirectoryNode" />
               <item name="Delta" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Silverwing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Silverwing" type="462c0819:PsiDirectoryNode" />
-              <item name="Delta" type="462c0819:PsiDirectoryNode" />
-              <item name="Battery_tests" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Silverwing" type="b2602c69:ProjectViewProjectNode" />
@@ -364,27 +371,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532440488607</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Updated paths">
-      <created>1546641562070</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1546641562070</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Updated paths">
-      <created>1546641689795</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1546641689795</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Updated paths">
-      <created>1546642133319</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1546642133319</updated>
     </task>
     <task id="LOCAL-00015" summary="Updated paths">
       <created>1546642866576</created>
@@ -708,7 +694,28 @@
       <option name="project" value="LOCAL" />
       <updated>1548472245057</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="BTS">
+      <created>1548472284228</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1548472284228</updated>
+    </task>
+    <task id="LOCAL-00062" summary="BTS">
+      <created>1548472427576</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1548472427577</updated>
+    </task>
+    <task id="LOCAL-00063" summary="BTS">
+      <created>1548472605648</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1548472605651</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1076,16 +1083,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Delta/Battery_tests/Temp_sens.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="50" selection-start-line="13" selection-start-column="50" selection-end-line="13" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BTS/Pack_Temperature.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1098">
@@ -1099,34 +1096,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Delta/Battery_tests/Battery_testing.py">
+    <entry file="file://$PROJECT_DIR$/General/Temp_sens.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="947">
-          <caret line="155" column="32" selection-start-line="155" selection-start-column="32" selection-end-line="155" selection-end-column="32" />
+        <state relative-caret-position="195">
+          <caret line="13" column="50" selection-start-line="13" selection-start-column="50" selection-end-line="13" selection-end-column="50" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
-            <element signature="e#1793#2854#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BTS/BTS.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="238" lean-forward="true" selection-start-line="238" selection-end-line="238" />
+        <state relative-caret-position="359">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
             <element signature="e#251#390#0" />
             <element signature="e#451#560#0" />
             <element signature="e#611#619#0" />
             <element signature="e#757#949#0" />
-            <element signature="e#967#1427#0" />
             <element signature="e#1449#1457#0" />
             <element signature="e#1529#2783#0" />
             <element signature="e#982#1551#0" />
             <element signature="e#2387#2515#0" />
             <element signature="e#3476#5100#0" />
             <element signature="e#5215#6056#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Delta/Battery_tests/Battery_testing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="34" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#1793#2854#0" />
           </folding>
         </state>
       </provider>

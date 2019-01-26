@@ -37,7 +37,6 @@ def initiate_relay_control():
         gp.setup(ss[i][0], gp.OUT)
         gp.output(ss[i][0], 0)
 
-    time.sleep(10)
 
 
 def read_matrix():
@@ -219,7 +218,7 @@ def discharge(c_rate, duration=0, status='empty', name='untitled'):
     for i in range(len(ss)):
         if i > 1:
             R += config[i]/ss[i][1]
-        gp.output(ss[i][0], config[i])
+        gp.output(ss[i][0], abs(config[i]-1))
         print ss[i][0], config[i]
     time.sleep(1)
     status = delta_discharge(name, pack_minvolt, pack_maxvolt, current, R, duration, status=status)

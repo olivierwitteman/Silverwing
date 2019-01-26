@@ -15,11 +15,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BTS/BTS.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="590">
-              <caret line="222" column="17" selection-start-line="222" selection-start-column="17" selection-end-line="222" selection-end-column="17" />
+            <state relative-caret-position="345">
+              <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
                 <element signature="e#451#560#0" />
+                <element signature="e#967#1427#0" />
                 <element signature="e#1449#1457#0" />
                 <element signature="e#1529#2783#0" />
                 <element signature="e#982#1551#0" />
@@ -77,12 +78,12 @@
       <find>name</find>
       <find>t0</find>
       <find>temp</find>
-      <find>print</find>
       <find>s1</find>
       <find>gp</find>
       <find>ambient</find>
       <find>log</find>
       <find>outdated</find>
+      <find>print</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -363,27 +364,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532440488607</updated>
-    </task>
-    <task id="LOCAL-00054" summary="Increased sensitivity">
-      <created>1548462175753</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1548462175753</updated>
-    </task>
-    <task id="LOCAL-00055" summary="parantheses">
-      <created>1548462267001</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1548462267001</updated>
-    </task>
-    <task id="LOCAL-00056" summary="parantheses">
-      <created>1548462594420</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1548462594420</updated>
     </task>
     <task id="LOCAL-00057" summary="parantheses">
       <created>1548465264507</created>
@@ -707,7 +687,28 @@
       <option name="project" value="LOCAL" />
       <updated>1548477493580</updated>
     </task>
-    <option name="localTasksCounter" value="103" />
+    <task id="LOCAL-00103" summary="BTS">
+      <created>1548477652282</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1548477652282</updated>
+    </task>
+    <task id="LOCAL-00104" summary="BTS">
+      <created>1548477776507</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1548477776507</updated>
+    </task>
+    <task id="LOCAL-00105" summary="BTS">
+      <created>1548477829801</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1548477829802</updated>
+    </task>
+    <option name="localTasksCounter" value="106" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1105,11 +1106,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BTS/BTS.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="590">
-          <caret line="222" column="17" selection-start-line="222" selection-start-column="17" selection-end-line="222" selection-end-column="17" />
+        <state relative-caret-position="345">
+          <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
             <element signature="e#451#560#0" />
+            <element signature="e#967#1427#0" />
             <element signature="e#1449#1457#0" />
             <element signature="e#1529#2783#0" />
             <element signature="e#982#1551#0" />

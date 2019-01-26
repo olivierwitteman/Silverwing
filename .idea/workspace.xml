@@ -15,8 +15,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BTS/BTS.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="503">
-              <caret line="221" column="18" selection-start-line="221" selection-start-column="18" selection-end-line="221" selection-end-column="18" />
+            <state relative-caret-position="590">
+              <caret line="222" column="17" selection-start-line="222" selection-start-column="17" selection-end-line="222" selection-end-column="17" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
                 <element signature="e#451#560#0" />
@@ -364,27 +364,6 @@
       <option name="presentableId" value="Default" />
       <updated>1532440488607</updated>
     </task>
-    <task id="LOCAL-00051" summary="BTS">
-      <created>1548460397049</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1548460397049</updated>
-    </task>
-    <task id="LOCAL-00052" summary="Increased sensitivity">
-      <created>1548460726225</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1548460726225</updated>
-    </task>
-    <task id="LOCAL-00053" summary="Increased sensitivity">
-      <created>1548461475954</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1548461475954</updated>
-    </task>
     <task id="LOCAL-00054" summary="Increased sensitivity">
       <created>1548462175753</created>
       <option name="number" value="00054" />
@@ -707,7 +686,28 @@
       <option name="project" value="LOCAL" />
       <updated>1548477275265</updated>
     </task>
-    <option name="localTasksCounter" value="100" />
+    <task id="LOCAL-00100" summary="BTS">
+      <created>1548477393716</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1548477393716</updated>
+    </task>
+    <task id="LOCAL-00101" summary="BTS">
+      <created>1548477446315</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1548477446316</updated>
+    </task>
+    <task id="LOCAL-00102" summary="BTS">
+      <created>1548477493580</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1548477493580</updated>
+    </task>
+    <option name="localTasksCounter" value="103" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1105,8 +1105,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BTS/BTS.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="503">
-          <caret line="221" column="18" selection-start-line="221" selection-start-column="18" selection-end-line="221" selection-end-column="18" />
+        <state relative-caret-position="590">
+          <caret line="222" column="17" selection-start-line="222" selection-start-column="17" selection-end-line="222" selection-end-column="17" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
             <element signature="e#451#560#0" />

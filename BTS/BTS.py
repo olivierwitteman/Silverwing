@@ -132,8 +132,6 @@ def delta_discharge(name, minvolt, maxvolt, current, R, duration, status='empty'
     delta.set_voltage(maxvolt)
     delta.set_current(-current)
 
-    print(maxvolt, current)
-
     t0, dt = time.time(), 0
 
     a_temp = temp_ambient()
@@ -149,10 +147,8 @@ def delta_discharge(name, minvolt, maxvolt, current, R, duration, status='empty'
 
         a_current = delta.ask_current()
         a_voltage = delta.ask_voltage()
-        print(a_current*R)
-        print(a_voltage)
         bat_voltage = a_current * R - a_voltage
-        print(bat_voltage)
+        print 'battery voltage: ', bat_voltage
 
         while dt < duration or duration == 0 and bat_voltage > minvolt:
 
@@ -219,14 +215,11 @@ def discharge(c_rate, duration=0, status='empty', name='untitled'):
 
     R_inv = 0.
     for i in range(len(ss)):
-        print i
         if i > 1:
             R_inv += config[i]/ss[i][1]
-            print(R_inv)
         gp.output(ss[i][0], abs(config[i]-1))
         # print ss[i][0], config[i]
     R = 1/R_inv + R_sys
-    print(R)
 
     time.sleep(1)
     status = delta_discharge(name, pack_minvolt, pack_maxvolt, current, R, duration, status=status)

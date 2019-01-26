@@ -4,7 +4,7 @@ import delta_sm3300 as d
 import subprocess
 delta = d.DeltaComm()
 
-pt = subprocess.Popen(['python3', '/home/pi/Silverwing/Pack_Temperature.py'])  # ESC daemon
+pt = subprocess.Popen(['python3', '/home/pi/Silverwing/BTS/Pack_Temperature.py'])  # ESC daemon
 
 
 path = '/'

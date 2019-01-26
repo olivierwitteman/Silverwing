@@ -128,9 +128,11 @@ def charge(crate_char, name='untitled'):
 
 
 def delta_discharge(name, minvolt, maxvolt, current, R, duration, status='empty'):
-    print('delta_discharge')
     delta.set_voltage(maxvolt)
     delta.set_current(current)
+
+    print(maxvolt, current)
+
     t0, dt = time.time(), 0
 
     a_temp = temp_ambient()
@@ -142,7 +144,6 @@ def delta_discharge(name, minvolt, maxvolt, current, R, duration, status='empty'
         log(name, time.time(), 0., 0., a_temp, temperature=-101., remark='Discharging started: {}'.format(name))
 
         delta.set_state(1)
-
 
         a_current = delta.ask_current()
         a_voltage = delta.ask_voltage()
@@ -183,7 +184,6 @@ def delta_discharge(name, minvolt, maxvolt, current, R, duration, status='empty'
 
 
 def discharge(c_rate, duration=0, status='empty', name='untitled'):
-    print('discharge')
     pack_minvolt = series*minvolt
     pack_maxvolt = series*maxvolt
     current = c_rate*capacity*parallel
@@ -213,13 +213,11 @@ def discharge(c_rate, duration=0, status='empty', name='untitled'):
         config = [0, 0, 0, 0, 0]
 
     R = R_sys
-    print(R)
     for i in range(len(ss)):
         if i > 1:
             R += config[i]/ss[i][1]
         gp.output(ss[i][0], config[i])
     time.sleep(1)
-    print(R)
     status = delta_discharge(name, pack_minvolt, pack_maxvolt, current, R, duration, status=status)
     return status
 

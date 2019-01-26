@@ -24,11 +24,10 @@ class ADC:
         self.chan = [AnalogIn(ads, ADS.P0), AnalogIn(ads, ADS.P1), AnalogIn(ads, ADS.P2), AnalogIn(ads, ADS.P3)]
 
     def calibration(self, v0):
-        self.a0, self.b0 = -4.84931506849, 2.04
 
-        t0 = ((v0 - self.b0) * self.a0)
+        r = -v0*100./(v0-3.3)
 
-        return v0
+        return r
 
     def pack_temp(self, input0=2, input1=3):
         v0, v1 = lc.chan[input0].voltage, lc.chan[input1].voltage

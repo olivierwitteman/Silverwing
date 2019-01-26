@@ -151,7 +151,16 @@ def delta_discharge(name, minvolt, maxvolt, current, R, duration, status='empty'
         bat_voltage = a_current * R - a_voltage
         print 'battery voltage: ', bat_voltage
 
-        while dt < duration or duration == 0 and bat_voltage > minvolt:
+        while True:
+            if bat_voltage < minvolt:
+                print('Discharge completed')
+                status = 'discharged'
+                break
+
+            if duration != 0:
+                if dt > duration:
+                    status = 'next'
+                    break
 
             a_current = delta.ask_current()
             a_voltage = delta.ask_voltage()

@@ -14,8 +14,8 @@ filename = 'matrix.csv'
 
 s1 = 5, 0, 'charging'
 s2 = 6, 0, 'contactor'
-s3 = 13, 3.34, 'R1'
-s4 = 19, 1.7, 'R2'
+s4 = 13, 3.34, 'R1'
+s3 = 19, 1.7, 'R2'
 s5 = 26, 0.622, 'R3'
 
 ss = [s1, s2, s3, s4, s5]

@@ -8,8 +8,6 @@ name = 'untitled'
 
 with open('{!s}{!s}.log'.format(path, name), 'r') as data:
     samples = data.readlines()
-
-    print len(samples)
     Us, Is, ts, tsa, tsp = [], [], [], [], []
     for i in range(len(samples)):
         try:

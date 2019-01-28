@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="BTS procedure">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BTS/BTS.py" beforeDir="false" afterPath="$PROJECT_DIR$/BTS/BTS.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BTS/BTS.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="492">
-              <caret line="124" column="22" selection-start-line="124" selection-start-column="22" selection-end-line="124" selection-end-column="22" />
+            <state relative-caret-position="375">
+              <caret line="25" column="13" lean-forward="true" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
                 <element signature="e#3699#5589#0" />
@@ -348,27 +349,6 @@
       <option name="presentableId" value="Default" />
       <updated>1532440488607</updated>
     </task>
-    <task id="LOCAL-00078" summary="BTS">
-      <created>1548474520988</created>
-      <option name="number" value="00078" />
-      <option name="presentableId" value="LOCAL-00078" />
-      <option name="project" value="LOCAL" />
-      <updated>1548474520988</updated>
-    </task>
-    <task id="LOCAL-00079" summary="BTS">
-      <created>1548474712554</created>
-      <option name="number" value="00079" />
-      <option name="presentableId" value="LOCAL-00079" />
-      <option name="project" value="LOCAL" />
-      <updated>1548474712554</updated>
-    </task>
-    <task id="LOCAL-00080" summary="BTS">
-      <created>1548474792874</created>
-      <option name="number" value="00080" />
-      <option name="presentableId" value="LOCAL-00080" />
-      <option name="project" value="LOCAL" />
-      <updated>1548474792874</updated>
-    </task>
     <task id="LOCAL-00081" summary="BTS">
       <created>1548475289979</created>
       <option name="number" value="00081" />
@@ -691,7 +671,28 @@
       <option name="project" value="LOCAL" />
       <updated>1548695124923</updated>
     </task>
-    <option name="localTasksCounter" value="127" />
+    <task id="LOCAL-00127" summary="BTS procedure">
+      <created>1548695223550</created>
+      <option name="number" value="00127" />
+      <option name="presentableId" value="LOCAL-00127" />
+      <option name="project" value="LOCAL" />
+      <updated>1548695223550</updated>
+    </task>
+    <task id="LOCAL-00128" summary="BTS procedure">
+      <created>1548695344853</created>
+      <option name="number" value="00128" />
+      <option name="presentableId" value="LOCAL-00128" />
+      <option name="project" value="LOCAL" />
+      <updated>1548695344853</updated>
+    </task>
+    <task id="LOCAL-00129" summary="BTS procedure">
+      <created>1548695606763</created>
+      <option name="number" value="00129" />
+      <option name="presentableId" value="LOCAL-00129" />
+      <option name="project" value="LOCAL" />
+      <updated>1548695606764</updated>
+    </task>
+    <option name="localTasksCounter" value="130" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1086,8 +1087,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BTS/BTS.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="124" column="22" selection-start-line="124" selection-start-column="22" selection-end-line="124" selection-end-column="22" />
+        <state relative-caret-position="375">
+          <caret line="25" column="13" lean-forward="true" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
             <element signature="e#3699#5589#0" />

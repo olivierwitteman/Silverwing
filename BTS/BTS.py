@@ -230,6 +230,10 @@ def discharge(c_rate, duration=0, status='empty', name='untitled'):
 
     time.sleep(1)
     status = delta_discharge(name, pack_minvolt, pack_maxvolt, current, R, duration, status=status)
+
+    for i in range(len(ss)):
+        gp.output(ss[i][0], 1)
+    time.sleep(0.1)
     return status
 
 

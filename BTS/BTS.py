@@ -22,7 +22,7 @@ ss = [s1, s2, s3, s4, s5]
 
 
 # crate_dischar = [(-6., 10), (-1, 10), (-3, 10), (1, 60)]
-crate_dischar = [(1., 0)]
+crate_dischar = [(-9., 10)]
 maxvolt = 4.2
 minvolt = 2.5
 capacity = 3.
@@ -237,9 +237,8 @@ def discharge(c_rate, duration=0, status='empty', name='untitled'):
     return status
 
 
-def cycle():
+def cycle(name='untitled'):
     status = 'empty'
-    name = 'final_test'
     i = 1
     for c in crate_dischar:
         print('Discharge starts')
@@ -257,15 +256,17 @@ def cycle():
             status = 'empty'
         if status != 'next':
             print('Charging starts in 1min')
-            # time.sleep(60)
-            # charge()
+            time.sleep(60)
+            charge(0.7, name)
             time.sleep(10)
         i += 1
 
 
 try:
+    testname = 'BTS_1'
     initiate_relay_control()
-    cycle()
+    # charge(0.7, name=testname)
+    cycle(name=testname)
 
     # print('Sequence will start in 10s')
     # time.sleep(10)

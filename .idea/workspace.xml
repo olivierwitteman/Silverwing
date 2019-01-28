@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="BTS procedure">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BTS/BTS.py" beforeDir="false" afterPath="$PROJECT_DIR$/BTS/BTS.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,10 +15,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BTS/BTS.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="40" selection-start-line="40" selection-end-line="40" />
+            <state relative-caret-position="492">
+              <caret line="124" column="22" selection-start-line="124" selection-start-column="22" selection-end-line="124" selection-end-column="22" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
+                <element signature="e#3699#5589#0" />
               </folding>
             </state>
           </provider>
@@ -121,9 +122,9 @@
         <option value="$PROJECT_DIR$/BTS/Pack_Temperature.py" />
         <option value="$PROJECT_DIR$/BTS/data/a.py" />
         <option value="$PROJECT_DIR$/Delta/Delta_comm.py" />
-        <option value="$PROJECT_DIR$/BTS/BTS.py" />
         <option value="$PROJECT_DIR$/Delta/Sample_plot.py" />
         <option value="$PROJECT_DIR$/BTS/data/Sample_plot.py" />
+        <option value="$PROJECT_DIR$/BTS/BTS.py" />
       </list>
     </option>
   </component>
@@ -346,34 +347,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532440488607</updated>
-    </task>
-    <task id="LOCAL-00074" summary="BTS">
-      <created>1548473990029</created>
-      <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1548473990029</updated>
-    </task>
-    <task id="LOCAL-00075" summary="BTS">
-      <created>1548474130053</created>
-      <option name="number" value="00075" />
-      <option name="presentableId" value="LOCAL-00075" />
-      <option name="project" value="LOCAL" />
-      <updated>1548474130054</updated>
-    </task>
-    <task id="LOCAL-00076" summary="BTS">
-      <created>1548474294243</created>
-      <option name="number" value="00076" />
-      <option name="presentableId" value="LOCAL-00076" />
-      <option name="project" value="LOCAL" />
-      <updated>1548474294243</updated>
-    </task>
-    <task id="LOCAL-00077" summary="BTS">
-      <created>1548474423418</created>
-      <option name="number" value="00077" />
-      <option name="presentableId" value="LOCAL-00077" />
-      <option name="project" value="LOCAL" />
-      <updated>1548474423418</updated>
     </task>
     <task id="LOCAL-00078" summary="BTS">
       <created>1548474520988</created>
@@ -690,7 +663,35 @@
       <option name="project" value="LOCAL" />
       <updated>1548679663557</updated>
     </task>
-    <option name="localTasksCounter" value="123" />
+    <task id="LOCAL-00123" summary="BTS procedure">
+      <created>1548694948030</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1548694948030</updated>
+    </task>
+    <task id="LOCAL-00124" summary="BTS procedure">
+      <created>1548695047757</created>
+      <option name="number" value="00124" />
+      <option name="presentableId" value="LOCAL-00124" />
+      <option name="project" value="LOCAL" />
+      <updated>1548695047758</updated>
+    </task>
+    <task id="LOCAL-00125" summary="BTS procedure">
+      <created>1548695069491</created>
+      <option name="number" value="00125" />
+      <option name="presentableId" value="LOCAL-00125" />
+      <option name="project" value="LOCAL" />
+      <updated>1548695069491</updated>
+    </task>
+    <task id="LOCAL-00126" summary="BTS procedure">
+      <created>1548695124923</created>
+      <option name="number" value="00126" />
+      <option name="presentableId" value="LOCAL-00126" />
+      <option name="project" value="LOCAL" />
+      <updated>1548695124923</updated>
+    </task>
+    <option name="localTasksCounter" value="127" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1085,10 +1086,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BTS/BTS.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
+        <state relative-caret-position="492">
+          <caret line="124" column="22" selection-start-line="124" selection-start-column="22" selection-end-line="124" selection-end-column="22" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#3699#5589#0" />
           </folding>
         </state>
       </provider>

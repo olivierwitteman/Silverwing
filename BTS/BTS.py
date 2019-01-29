@@ -159,6 +159,15 @@ def delta_discharge(name, minvolt, maxvolt, current, R, duration, status='empty'
                     status = 'next'
                     break
 
+            elif -20. > c_temp > 60.:
+                print('Temperature threshold exceeded at {!s}'.format(c_temp))
+                status = 'temp'
+                break
+
+            else:
+                status = 'empty'
+                pass
+
             a_current = delta.ask_current()
             a_voltage = delta.ask_voltage()
             bat_voltage = a_current * R - a_voltage
@@ -170,19 +179,6 @@ def delta_discharge(name, minvolt, maxvolt, current, R, duration, status='empty'
             dt = time.time() - t0
             time.sleep(0.1)
 
-            if bat_voltage < minvolt:
-                print('Discharge completed')
-                status = 'discharged'
-                break
-
-            elif -20. > c_temp > 60.:
-                print('Temperature threshold exceeded at {!s}'.format(c_temp))
-                status = 'temp'
-                break
-
-            else:
-                status = 'empty'
-                pass
 
     finally:
         if status != 'next':

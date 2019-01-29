@@ -4,7 +4,7 @@ import sys
 
 path = './'
 # path = '/Users/olivierwitteman/Downloads/'
-name = 'untitled'
+name = 'BTS_1'
 
 with open('{!s}{!s}.log'.format(path, name), 'r') as data:
     samples = data.readlines()

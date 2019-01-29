@@ -1,3 +1,4 @@
+from __future__ import print_function
 import time
 import RPi.GPIO as gp
 import delta_sm3300 as d
@@ -74,7 +75,7 @@ def temp_ambient():
             t = time.time()
             if t - t_f > 10.:
                 value = 'Outdated temperature measurement'
-                print value
+                print(value)
             t0 = time.time()
         except:
             value = 20
@@ -122,6 +123,8 @@ def charge(crate_char, name='untitled'):
             a_temp = temp_ambient()
             c_temp = temp_pack()
 
+
+
             log(name, time.time(), c_voltage, c_current, a_temp, c_temp, a_temp)
             time.sleep(10.)
             if c_current < t_current/15. and time.time() - t0 > 22:
@@ -159,7 +162,6 @@ def delta_discharge(name, minvolt, maxvolt, current, R, duration, status='empty'
         a_current = delta.ask_current()
         a_voltage = delta.ask_voltage()
         bat_voltage = a_current * R - a_voltage
-        print 'battery voltage: ', bat_voltage
 
         while True:
             if bat_voltage < minvolt:
@@ -249,7 +251,7 @@ def cycle():
     status = 'empty'
     i = 1
     for c in crate_dischar:
-        print c
+        print(c)
         try:
             oldname = newname
         except NameError:
@@ -285,7 +287,7 @@ try:
 
 
 except:
-    print sys.exc_info()
+    print(sys.exc_info())
 
 finally:
     delta.set_state(0)

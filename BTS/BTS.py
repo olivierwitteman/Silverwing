@@ -291,13 +291,13 @@ def cycle():
 
 
 try:
+    initiate_relay_control()
     if len(sys.argv) > 1:
         if sys.argv[1] == 'charge':
             print('Manual charge')
             charge(0.7, 'manual charge')
             raise KeyboardInterrupt
 
-    initiate_relay_control()
     crate_dischar = read_matrix()
     charge(0.7, name=crate_dischar[0][2])
     cycle()

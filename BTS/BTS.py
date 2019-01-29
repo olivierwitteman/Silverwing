@@ -1,4 +1,3 @@
-from __future__ import print_function
 import time
 import RPi.GPIO as gp
 import delta_sm3300 as d
@@ -115,6 +114,7 @@ def charge(crate_char, name='untitled'):
     delta.set_state(1)
 
     t0 = time.time()
+    k = 0
 
     try:
         while True:
@@ -123,8 +123,11 @@ def charge(crate_char, name='untitled'):
             a_temp = temp_ambient()
             c_temp = temp_pack()
 
-            print('\rVoltage: {!s}, actual current: {!s}, power: {!s}' \
-                  .format(c_voltage, c_current, 0), end="")
+            k += 1
+            if k == 5:
+                print('\n\nVoltage: {!s}, actual current: {!s}, power: {!s}W\n\n' \
+                      .format(c_voltage, c_current, c_voltage*c_current))
+                k = 0
 
             log(name, time.time(), c_voltage, c_current, a_temp, c_temp, a_temp)
             time.sleep(10.)
@@ -163,10 +166,15 @@ def delta_discharge(name, minvolt, maxvolt, current, R, duration, status='empty'
         a_current = delta.ask_current()
         a_voltage = delta.ask_voltage()
         bat_voltage = a_current * R - a_voltage
+        k = 0
 
         while True:
-            print('\rVoltage: {!s}, actual current: {!s}, power: {!s}' \
-                  .format(a_voltage, a_current, a_voltage*a_current), end="")
+            k += 1
+            if k == 50:
+                print('\n\nVoltage: {!s}, actual current: {!s}, power: {!s}\n\n' \
+                      .format(a_voltage, a_current, a_voltage*a_current))
+                k = 0
+
             if bat_voltage < minvolt:
                 print('Discharge completed')
                 status = 'discharged'

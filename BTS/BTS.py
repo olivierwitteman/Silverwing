@@ -124,7 +124,7 @@ def charge(crate_char, name='untitled'):
             c_temp = temp_pack()
 
             print('\rVoltage: {!s}, actual current: {!s}, power: {!s}' \
-                  .format(c_voltage, c_current, c_voltage * c_current), end="")
+                  .format(c_voltage, c_current, 0), end="")
 
             log(name, time.time(), c_voltage, c_current, a_temp, c_temp, a_temp)
             time.sleep(10.)

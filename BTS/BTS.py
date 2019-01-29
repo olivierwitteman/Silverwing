@@ -172,7 +172,7 @@ def delta_discharge(name, minvolt, maxvolt, current, R, duration, status='empty'
             k += 1
             if k == 50:
                 print('\n\nVoltage: {!s}, actual current: {!s}, power: {!s}, Pack Temperature: {!s}, Ambient Temperature: {!s}\n\n' \
-                      .format(a_voltage, a_current, a_voltage*a_current, c_temp, a_temp))
+                      .format(bat_voltage, a_current, bat_voltage*a_current, c_temp, a_temp))
                 k = 0
 
             if bat_voltage < minvolt:

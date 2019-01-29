@@ -1,6 +1,7 @@
 import time
 import RPi.GPIO as gp
 import delta_sm3300 as d
+import sys
 import subprocess
 delta = d.DeltaComm()
 
@@ -9,8 +10,8 @@ pat = subprocess.Popen(['python', '/home/pi/Silverwing/General/Temp_sens.py'])  
 
 time.sleep(1)
 
-path = '/'
-filename = 'matrix.csv'
+path = './'
+filename = 'BTS.csv'
 
 s1 = 5, 0, 'charging'
 s2 = 6, 0, 'contactor'
@@ -21,8 +22,8 @@ s5 = 26, 0.622, 'R3'
 ss = [s1, s2, s3, s4, s5]
 
 
-# crate_dischar = [(-6., 10), (-1, 10), (-3, 10), (1, 60)]
-crate_dischar = [(0.7, 10)]
+# crate_dischar = [(-6., 10), (-1, 10), (-3, 10)]
+# crate_dischar = [(0.7, 10)]
 maxvolt = 4.2
 minvolt = 2.5
 capacity = 3.
@@ -41,9 +42,21 @@ def initiate_relay_control():
 
 def read_matrix():
     with open(str(path+filename), 'r') as m:
-        lines = m.readlines()
-    # TODO parse data
-    data = [(0., 0.)]
+        inputs = m.readlines()
+
+        id, duration, c_rate, data = [], [], [], []
+        for i in range(1, len(inputs)):
+            try:
+                id.append(str(inputs[i].replace(';', ',').split(',')[0][:]))
+                duration.append(int(inputs[i].replace(';', ',').split(',')[1][:].strip()))
+                c_rate.append(float(inputs[i].replace(';', ',').split(',')[2][:].strip()))
+                data.append((c_rate[-1], duration[-1], id[-1]))
+            except:
+                id = id[:i-1]
+                duration = duration[:i-1]
+                c_rate = c_rate[:i-1]
+    print('\n\nTest sequence: {!s}\n\n'.format(data))
+
     return data
 
 
@@ -65,8 +78,8 @@ def temp_ambient():
             t0 = time.time()
         except:
             value = 20
-            # if time.time() - t0 > 10.:
-            #     value = 'Outdated'
+            if time.time() - t0 > 10.:
+                value = 'Outdated'
 
         return value
 
@@ -83,8 +96,8 @@ def temp_pack():
             t0 = time.time()
         except:
             value = 20
-            # if time.time() - t0 > 10.:
-            #     value = 'Outdated'
+            if time.time() - t0 > 10.:
+                value = 'Outdated'
 
         return value
 
@@ -179,10 +192,10 @@ def delta_discharge(name, minvolt, maxvolt, current, R, duration, status='empty'
             dt = time.time() - t0
             time.sleep(0.1)
 
-
     finally:
         if status != 'next':
-            log(name, time.time(), 0., 0., a_temp, temperature=-102., remark='Discharging completed/interrupted: {}'.format(name))
+            log(name, time.time(), 0., 0., a_temp, temperature=-102., remark='Discharging completed/interrupted: {}'
+                                                                             ''.format(name))
         delta.set_state(0)
         return status
 
@@ -221,7 +234,6 @@ def discharge(c_rate, duration=0, status='empty', name='untitled'):
         if i > 1:
             R_inv += config[i]/ss[i][1]
         gp.output(ss[i][0], abs(config[i]-1))
-        # print ss[i][0], config[i]
     R = 1/R_inv + R_sys
 
     time.sleep(1)
@@ -233,40 +245,50 @@ def discharge(c_rate, duration=0, status='empty', name='untitled'):
     return status
 
 
-def cycle(name='untitled'):
+def cycle():
     status = 'empty'
     i = 1
     for c in crate_dischar:
+        print c
+        try:
+            oldname = newname
+        except NameError:
+            oldname = c[2]
+        newname = c[2]
         print('Discharge starts')
         if c[0] > 0.:
             print('Charging initiated')
-            charge(c[0], name=name)
+            charge(c[0], name=c[2])
 
         elif c[0] < 0.:
             print('Discharging initiated/continued')
-            status = discharge(c[0], duration=c[1], status=status, name=name)
+            status = discharge(c[0], duration=c[1], status=status, name=c[2])
         else:
-            print('Error in input file')
+            print('Error at c-rating in input file')
 
-        if i == len(crate_dischar):
+        if oldname != newname:
             status = 'empty'
+
         if status != 'next':
             print('Charging starts in 1min')
             time.sleep(60)
-            charge(0.7, name)
+            charge(0.7, c[2])
             time.sleep(10)
         i += 1
 
 
 try:
-    testname = 'BTS_1'
     initiate_relay_control()
-    # charge(0.7, name=testname)
-    cycle(name=testname)
 
-    # print('Sequence will start in 10s')
-    # time.sleep(10)
-    # cycle()
+    charge(0.7, name='test')
+
+    crate_dischar = read_matrix()
+
+    cycle()
+
+
+except:
+    print sys.exc_info()
 
 finally:
     delta.set_state(0)

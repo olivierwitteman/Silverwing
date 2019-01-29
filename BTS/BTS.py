@@ -10,7 +10,7 @@ pat = subprocess.Popen(['python', '/home/pi/Silverwing/General/Temp_sens.py'])  
 
 time.sleep(1)
 
-path = './'
+path = '/'
 filename = 'BTS.csv'
 
 s1 = 5, 0, 'charging'

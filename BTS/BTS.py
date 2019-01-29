@@ -280,7 +280,7 @@ def cycle():
 try:
     initiate_relay_control()
     crate_dischar = read_matrix()
-    charge(0.7, name='test')
+    charge(0.7, name=crate_dischar[0][2])
     cycle()
 
 

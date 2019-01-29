@@ -78,8 +78,8 @@ def temp_ambient():
             t0 = time.time()
         except:
             value = 20
-            if time.time() - t0 > 10.:
-                value = 'Outdated'
+            # if time.time() - t0 > 10.:
+            #     value = 'Outdated'
 
         return value
 
@@ -96,8 +96,8 @@ def temp_pack():
             t0 = time.time()
         except:
             value = 20
-            if time.time() - t0 > 10.:
-                value = 'Outdated'
+            # if time.time() - t0 > 10.:
+            #     value = 'Outdated'
 
         return value
 

@@ -123,7 +123,8 @@ def charge(crate_char, name='untitled'):
             a_temp = temp_ambient()
             c_temp = temp_pack()
 
-
+            print('\rVoltage: {!s}, actual current: {!s}, power: {!s}' \
+                  .format(c_voltage, c_current, c_voltage * c_current), end="")
 
             log(name, time.time(), c_voltage, c_current, a_temp, c_temp, a_temp)
             time.sleep(10.)
@@ -164,6 +165,8 @@ def delta_discharge(name, minvolt, maxvolt, current, R, duration, status='empty'
         bat_voltage = a_current * R - a_voltage
 
         while True:
+            print('\rVoltage: {!s}, actual current: {!s}, power: {!s}' \
+                  .format(a_voltage, a_current, a_voltage*a_current), end="")
             if bat_voltage < minvolt:
                 print('Discharge completed')
                 status = 'discharged'

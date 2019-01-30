@@ -13,13 +13,14 @@ R_battery = 0.013/4.
 with open('./BT-B-1_1.log', 'r') as data:
     samples = data.readlines()
 
-    Us, Is, ts, As, Ts, rmrk = [], [], [], [0.], []
+    Us, Is, ts, As, Tsp, Tsa, rmrk = [], [], [], [0.], [], [], []
     for i in range(len(samples)):
         try:
             Us.append(float(samples[i].split()[1][1:].strip()))
             ts.append(float(samples[i].split()[0][1:].strip()))
             Is.append(float(samples[i].split()[2][1:].strip()))
-            Ts.append(float(samples[i].split()[3][1:-2].strip()))
+            Tsp.append(float(samples[i].split()[3][1:-2].strip()))
+            Tsa.append(float(samples[i].split()[3][1:-2].strip()))
             try:
                 rmrk.append(str(samples[i].split()[6][:].strip()))
             except:

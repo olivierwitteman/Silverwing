@@ -5,13 +5,13 @@ import numpy as np
 '''OCV'''
 
 # nom_voltage = float(input('Nominal voltage of tested cell [V]: '))
-mode = 1
+mode = 0
 
 modes = ['reg', 'fp', 'cycle']
-# R_battery = 0.013
-R_battery = 0.0016
+R_battery = 0.013/4.
+# R_battery = 0.0016
 
-with open('./Data/US18650_VTC6_fp_dec.log', 'r') as data:
+with open('./data.log', 'r') as data:
     samples = data.readlines()
 
     Us, Is, ts, As, c_s_mark, d_s_mark, c_e_mark, d_e_mark, Ts, rmrk = [], [], [], [0.], [], [], [], [], [], []

@@ -308,7 +308,7 @@ except:
 
 finally:
     delta.set_state(0)
-    gp.output(s2[0], 0)
+    # gp.output(s2[0], 0)
     gp.cleanup()
     delta.close_connection()
     pt.terminate()

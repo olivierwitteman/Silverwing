@@ -25,9 +25,9 @@ class ADC:
         self.chan = [AnalogIn(ads, ADS.P0), AnalogIn(ads, ADS.P1), AnalogIn(ads, ADS.P2), AnalogIn(ads, ADS.P3)]
 
     def calibration(self, v0):
-        a = -0.8439588476E-3
-        b = 4.036819533E-4
-        c = -3.081516640E-7
+        a = -0.1809802231E-3
+        b = 3.319163836E-4
+        c = -1.868674690E-7
 
         r = -v0*100e3/(v0-3.3)
 

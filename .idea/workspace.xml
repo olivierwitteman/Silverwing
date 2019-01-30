@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="Matrix">
+    <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="Temp">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BTS/BTS.py" beforeDir="false" afterPath="$PROJECT_DIR$/BTS/BTS.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BTS/Pack_Temperature.py" beforeDir="false" afterPath="$PROJECT_DIR$/BTS/Pack_Temperature.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BTS/data/final_data/Analyze.py" beforeDir="false" afterPath="$PROJECT_DIR$/BTS/data/final_data/Analyze.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BTS/data/final_data/BT-B-1_1.log" beforeDir="false" afterPath="$PROJECT_DIR$/BTS/data/final_data/BT-B-1_1.log" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,8 +48,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BTS/Pack_Temperature.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
-              <caret line="84" column="19" selection-start-line="84" selection-start-column="19" selection-end-line="84" selection-end-column="19" />
+            <state relative-caret-position="1012">
+              <caret line="79" column="18" selection-start-line="79" selection-start-column="18" selection-end-line="79" selection-end-column="18" />
               <folding>
                 <element signature="e#25#36#0" expanded="true" />
               </folding>
@@ -398,27 +394,6 @@
       <option name="presentableId" value="Default" />
       <updated>1532440488607</updated>
     </task>
-    <task id="LOCAL-00104" summary="BTS">
-      <created>1548477776507</created>
-      <option name="number" value="00104" />
-      <option name="presentableId" value="LOCAL-00104" />
-      <option name="project" value="LOCAL" />
-      <updated>1548477776507</updated>
-    </task>
-    <task id="LOCAL-00105" summary="BTS">
-      <created>1548477829801</created>
-      <option name="number" value="00105" />
-      <option name="presentableId" value="LOCAL-00105" />
-      <option name="project" value="LOCAL" />
-      <updated>1548477829802</updated>
-    </task>
-    <task id="LOCAL-00106" summary="BTS">
-      <created>1548477906673</created>
-      <option name="number" value="00106" />
-      <option name="presentableId" value="LOCAL-00106" />
-      <option name="project" value="LOCAL" />
-      <updated>1548477906673</updated>
-    </task>
     <task id="LOCAL-00107" summary="BTS">
       <created>1548478049714</created>
       <option name="number" value="00107" />
@@ -741,7 +716,28 @@
       <option name="project" value="LOCAL" />
       <updated>1548848674693</updated>
     </task>
-    <option name="localTasksCounter" value="153" />
+    <task id="LOCAL-00153" summary="Temp">
+      <created>1548884570525</created>
+      <option name="number" value="00153" />
+      <option name="presentableId" value="LOCAL-00153" />
+      <option name="project" value="LOCAL" />
+      <updated>1548884570526</updated>
+    </task>
+    <task id="LOCAL-00154" summary="Temp">
+      <created>1548884662601</created>
+      <option name="number" value="00154" />
+      <option name="presentableId" value="LOCAL-00154" />
+      <option name="project" value="LOCAL" />
+      <updated>1548884662601</updated>
+    </task>
+    <task id="LOCAL-00155" summary="Temp">
+      <created>1548885107115</created>
+      <option name="number" value="00155" />
+      <option name="presentableId" value="LOCAL-00155" />
+      <option name="project" value="LOCAL" />
+      <updated>1548885107115</updated>
+    </task>
+    <option name="localTasksCounter" value="156" />
     <servers />
   </component>
   <component name="TodoView">
@@ -812,7 +808,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Updated paths" />
     <MESSAGE value="Updated matrices and manual added" />
     <MESSAGE value="Manual added" />
     <MESSAGE value="Untested release (check readdf() calibration function for correct behavior)" />
@@ -837,7 +832,8 @@
     <MESSAGE value="Load matrix" />
     <MESSAGE value="Printing stuff" />
     <MESSAGE value="Matrix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Matrix" />
+    <MESSAGE value="Temp" />
+    <option name="LAST_COMMIT_MESSAGE" value="Temp" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/WaTT/WaTT.log" />
@@ -1156,8 +1152,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BTS/Pack_Temperature.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="84" column="19" selection-start-line="84" selection-start-column="19" selection-end-line="84" selection-end-column="19" />
+        <state relative-caret-position="1012">
+          <caret line="79" column="18" selection-start-line="79" selection-start-column="18" selection-end-line="79" selection-end-column="18" />
           <folding>
             <element signature="e#25#36#0" expanded="true" />
           </folding>

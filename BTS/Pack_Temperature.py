@@ -90,7 +90,7 @@ try:
         # print(r_av)
         # print(lc.ambient_temp())
         # print('\n\n------\n\n')
-        print(v_av)
+        # print(v_av)
         time.sleep(1)
 
 finally:

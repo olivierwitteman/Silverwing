@@ -29,7 +29,8 @@ minvolt = 2.5
 capacity = 3.
 series = 6
 parallel = 4
-R_sys = 0.03
+# R_sys = 0.03
+R_sys = 0
 
 
 def initiate_relay_control():
@@ -62,7 +63,7 @@ def read_matrix():
 
 def log(name, timestamp, voltage, current, amb_temp, temperature=0.0, remark=''):
     with open('/home/pi/Silverwing/BTS/data/{!s}.log'.format(name), 'a') as d:
-        d.write('t{!s} U{!s} I{!s} T{!s} T_a{!s}, {!s}\n'.format(timestamp, voltage, current, amb_temp, temperature, remark))
+        d.write('t{!s} U{!s} I{!s} T_a{!s} T_p{!s}, {!s}\n'.format(timestamp, voltage, current, amb_temp, temperature, remark))
 
 
 def temp_ambient():

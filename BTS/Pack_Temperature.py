@@ -1,16 +1,16 @@
 # !!! Run as python3 !!!
-
-# from __future__ import print_function
 import time
 import board
 import busio
 import adafruit_ads1x15.ads1015 as ADS
 from adafruit_ads1x15.analog_in import AnalogIn
 import math
+import subprocess
+
 
 # path = '.'
 path = '/home/pi/Silverwing/BTS'
-
+pat = subprocess.Popen(['python', '/home/pi/Silverwing/General/Temp_sens.py'])  # ESC daemon
 
 class ADC:
 
@@ -39,22 +39,22 @@ class ADC:
         v0 = lc.chan[input0].voltage
         return self.calibration(v0)
 
-    # def ambient_temp(self):
-    #     with open('/home/pi/Silverwing/General/ambient.temp', 'r') as t:
-    #         raw = t.read()
-    #         try:
-    #             t_f = float(raw.split(',')[0])
-    #             value = float(raw.split(',')[1])
-    #             t = time.time()
-    #             if t - t_f > 10.:
-    #                 value = 'Outdated'
-    #             t0 = time.time()
-    #         except:
-    #             value = 20
-    #             # if time.time() - t0 > 10.:
-    #             #     value = 'Outdated'
-    #
-    #         return value
+    def ambient_temp(self):
+        with open('/home/pi/Silverwing/General/ambient.temp', 'r') as t:
+            raw = t.read()
+            try:
+                t_f = float(raw.split(',')[0])
+                value = float(raw.split(',')[1])
+                t = time.time()
+                if t - t_f > 10.:
+                    value = 'Outdated'
+                t0 = time.time()
+            except:
+                value = 20
+                # if time.time() - t0 > 10.:
+                #     value = 'Outdated'
+
+            return value
 
     def log_temp(self, c_temp):
         with open('/home/pi/Silverwing/BTS/data/pack.temp', 'w') as d:
@@ -63,20 +63,23 @@ class ADC:
 
 lc = ADC()
 
-while True:
-    ts, rs = [], []
-    for _ in range(10):
-        t, r = lc.pack_temp()
-        ts.append(t)
-        rs.append(r)
-        time.sleep(0.05)
-    t_av = sum(ts)/len(ts)
-    r_av = sum(rs)/len(rs)
-    # t_a = lc.ambient_temp()
+try:
+    while True:
+        ts, rs = [], []
+        for _ in range(10):
+            t, r = lc.pack_temp()
+            ts.append(t)
+            rs.append(r)
+            time.sleep(0.05)
+        t_av = sum(ts)/len(ts)
+        r_av = sum(rs)/len(rs)
+        # t_a = lc.ambient_temp()
 
-    lc.log_temp(t_av)
+        # lc.log_temp(t_av)
+        print(t_av)
+        print(lc.ambient_temp())
+        # print('T pack: {!s}C, T ambient: {!s}C, R: {!s}kOhm'.format(round(t_av, 5), round(t_a, 5), round(r_av), end=""))
+        time.sleep(1)
 
-    # print('T pack: {!s}C, T ambient: {!s}C, R: {!s}kOhm'.format(round(t_av, 5), round(t_a, 5), round(r_av), end=""))
-    time.sleep(1)
-
-
+finally:
+    pat.terminate()

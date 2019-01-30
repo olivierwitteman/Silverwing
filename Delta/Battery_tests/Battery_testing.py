@@ -131,7 +131,7 @@ def discharge(c_rate, duration=0, status='empty'):
                     status = 'discharged'
                     break
 
-                elif c_temp > 60.:
+                if c_temp > 60.:
                     print('Temperature threshold exceeded at {!s}'.format(c_temp))
                     status = 'temp'
                     break

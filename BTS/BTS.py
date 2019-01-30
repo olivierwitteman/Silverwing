@@ -185,7 +185,7 @@ def delta_discharge(name, minvolt, maxvolt, current, R, duration, status='empty'
                     status = 'next'
                     break
 
-            elif -20. > c_temp > 60.:
+            if c_temp > 60.:
                 print('Temperature threshold exceeded at {!s}'.format(c_temp))
                 status = 'temp'
                 break
@@ -286,7 +286,9 @@ def cycle():
             print('Charging starts in 1min')
             time.sleep(60)
             charge(0.7, c[2])
-            time.sleep(10)
+            if temp_pack() > 25:
+                print('Sleeping for 10 minutes')
+                time.sleep(600)
         i += 1
 
 
@@ -300,6 +302,11 @@ try:
 
     crate_dischar = read_matrix()
     charge(0.7, name=crate_dischar[0][2])
+
+    if temp_pack() > 25:
+        print('Sleeping for 10 minutes')
+        time.sleep(600)
+
     cycle()
 
 

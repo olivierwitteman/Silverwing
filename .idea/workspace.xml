@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="Temp">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BTS/BTS.py" beforeDir="false" afterPath="$PROJECT_DIR$/BTS/BTS.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BTS/Pack_Temperature.py" beforeDir="false" afterPath="$PROJECT_DIR$/BTS/Pack_Temperature.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,8 +16,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BTS/BTS.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="8" selection-start-line="8" selection-end-line="8" selection-end-column="92" />
+            <state relative-caret-position="1950">
+              <caret line="139" column="43" selection-start-line="139" selection-start-column="32" selection-end-line="139" selection-end-column="43" />
               <folding>
                 <element signature="e#677#816#0" />
               </folding>
@@ -48,10 +49,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BTS/Pack_Temperature.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1012">
-              <caret line="79" column="18" selection-start-line="79" selection-start-column="18" selection-end-line="79" selection-end-column="18" />
+            <state relative-caret-position="430">
+              <caret line="92" column="18" selection-start-line="92" selection-start-column="18" selection-end-line="92" selection-end-column="18" />
               <folding>
                 <element signature="e#25#36#0" expanded="true" />
+                <element signature="e#1031#1056#0" />
               </folding>
             </state>
           </provider>
@@ -80,7 +82,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>delta.</find>
       <find>delta</find>
       <find>lc</find>
       <find>delta = d.DeltaComm()</find>
@@ -110,6 +111,7 @@
       <find>j</find>
       <find>log</find>
       <find>0.03</find>
+      <find>ask_voltage</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -166,8 +168,8 @@
         <option value="$PROJECT_DIR$/Delta/Battery_tests/Analyze.py" />
         <option value="$PROJECT_DIR$/BTS/data/final_data/BT-B-1_1.log" />
         <option value="$PROJECT_DIR$/Delta/Battery_tests/Battery_testing.py" />
-        <option value="$PROJECT_DIR$/BTS/BTS.py" />
         <option value="$PROJECT_DIR$/BTS/data/final_data/Analyze.py" />
+        <option value="$PROJECT_DIR$/BTS/BTS.py" />
         <option value="$PROJECT_DIR$/BTS/Pack_Temperature.py" />
       </list>
     </option>
@@ -393,13 +395,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532440488607</updated>
-    </task>
-    <task id="LOCAL-00107" summary="BTS">
-      <created>1548478049714</created>
-      <option name="number" value="00107" />
-      <option name="presentableId" value="LOCAL-00107" />
-      <option name="project" value="LOCAL" />
-      <updated>1548478049714</updated>
     </task>
     <task id="LOCAL-00108" summary="BTS">
       <created>1548478108759</created>
@@ -737,7 +732,14 @@
       <option name="project" value="LOCAL" />
       <updated>1548885107115</updated>
     </task>
-    <option name="localTasksCounter" value="156" />
+    <task id="LOCAL-00156" summary="Temp">
+      <created>1548885809958</created>
+      <option name="number" value="00156" />
+      <option name="presentableId" value="LOCAL-00156" />
+      <option name="project" value="LOCAL" />
+      <updated>1548885809959</updated>
+    </task>
+    <option name="localTasksCounter" value="157" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1142,8 +1144,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BTS/BTS.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="8" selection-start-line="8" selection-end-line="8" selection-end-column="92" />
+        <state relative-caret-position="1950">
+          <caret line="139" column="43" selection-start-line="139" selection-start-column="32" selection-end-line="139" selection-end-column="43" />
           <folding>
             <element signature="e#677#816#0" />
           </folding>
@@ -1152,10 +1154,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BTS/Pack_Temperature.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1012">
-          <caret line="79" column="18" selection-start-line="79" selection-start-column="18" selection-end-line="79" selection-end-column="18" />
+        <state relative-caret-position="430">
+          <caret line="92" column="18" selection-start-line="92" selection-start-column="18" selection-end-line="92" selection-end-column="18" />
           <folding>
             <element signature="e#25#36#0" expanded="true" />
+            <element signature="e#1031#1056#0" />
           </folding>
         </state>
       </provider>

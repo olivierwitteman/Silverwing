@@ -38,7 +38,7 @@ class ADC:
 
     def pack_temp(self):
         v0 = lc.chan[2].voltage
-        v4 = lc.chan[3].voltage*23
+        v4 = lc.chan[0].voltage*23
         T, r = self.calibration(v0)
         return T, r, v4
 

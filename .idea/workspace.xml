@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="Temp">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BTS/BTS.py" beforeDir="false" afterPath="$PROJECT_DIR$/BTS/BTS.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BTS/Pack_Temperature.py" beforeDir="false" afterPath="$PROJECT_DIR$/BTS/Pack_Temperature.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,11 +13,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BTS/BTS.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1950">
-              <caret line="139" column="43" selection-start-line="139" selection-start-column="32" selection-end-line="139" selection-end-column="43" />
+            <state relative-caret-position="-2858">
+              <caret line="105" column="16" selection-start-line="105" selection-start-column="4" selection-end-line="105" selection-end-column="16" />
               <folding>
                 <element signature="e#677#816#0" />
               </folding>
@@ -46,11 +46,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BTS/Pack_Temperature.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
-              <caret line="92" column="18" selection-start-line="92" selection-start-column="18" selection-end-line="92" selection-end-column="18" />
+            <state relative-caret-position="499">
+              <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
               <folding>
                 <element signature="e#25#36#0" expanded="true" />
                 <element signature="e#1031#1056#0" />
@@ -82,7 +82,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>delta</find>
       <find>lc</find>
       <find>delta = d.DeltaComm()</find>
       <find>/home/pi</find>
@@ -112,6 +111,7 @@
       <find>log</find>
       <find>0.03</find>
       <find>ask_voltage</find>
+      <find>voltage_pack</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -169,8 +169,8 @@
         <option value="$PROJECT_DIR$/BTS/data/final_data/BT-B-1_1.log" />
         <option value="$PROJECT_DIR$/Delta/Battery_tests/Battery_testing.py" />
         <option value="$PROJECT_DIR$/BTS/data/final_data/Analyze.py" />
-        <option value="$PROJECT_DIR$/BTS/BTS.py" />
         <option value="$PROJECT_DIR$/BTS/Pack_Temperature.py" />
+        <option value="$PROJECT_DIR$/BTS/BTS.py" />
       </list>
     </option>
   </component>
@@ -395,41 +395,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532440488607</updated>
-    </task>
-    <task id="LOCAL-00108" summary="BTS">
-      <created>1548478108759</created>
-      <option name="number" value="00108" />
-      <option name="presentableId" value="LOCAL-00108" />
-      <option name="project" value="LOCAL" />
-      <updated>1548478108759</updated>
-    </task>
-    <task id="LOCAL-00109" summary="BTS">
-      <created>1548478184889</created>
-      <option name="number" value="00109" />
-      <option name="presentableId" value="LOCAL-00109" />
-      <option name="project" value="LOCAL" />
-      <updated>1548478184889</updated>
-    </task>
-    <task id="LOCAL-00110" summary="BTS">
-      <created>1548478222601</created>
-      <option name="number" value="00110" />
-      <option name="presentableId" value="LOCAL-00110" />
-      <option name="project" value="LOCAL" />
-      <updated>1548478222601</updated>
-    </task>
-    <task id="LOCAL-00111" summary="cycling">
-      <created>1548508464588</created>
-      <option name="number" value="00111" />
-      <option name="presentableId" value="LOCAL-00111" />
-      <option name="project" value="LOCAL" />
-      <updated>1548508464588</updated>
-    </task>
-    <task id="LOCAL-00112" summary="cycling">
-      <created>1548509156763</created>
-      <option name="number" value="00112" />
-      <option name="presentableId" value="LOCAL-00112" />
-      <option name="project" value="LOCAL" />
-      <updated>1548509156763</updated>
     </task>
     <task id="LOCAL-00113" summary="cycling">
       <created>1548509289667</created>
@@ -739,7 +704,42 @@
       <option name="project" value="LOCAL" />
       <updated>1548885809959</updated>
     </task>
-    <option name="localTasksCounter" value="157" />
+    <task id="LOCAL-00157" summary="Temp">
+      <created>1548886638523</created>
+      <option name="number" value="00157" />
+      <option name="presentableId" value="LOCAL-00157" />
+      <option name="project" value="LOCAL" />
+      <updated>1548886638523</updated>
+    </task>
+    <task id="LOCAL-00158" summary="Temp">
+      <created>1548886668688</created>
+      <option name="number" value="00158" />
+      <option name="presentableId" value="LOCAL-00158" />
+      <option name="project" value="LOCAL" />
+      <updated>1548886668688</updated>
+    </task>
+    <task id="LOCAL-00159" summary="Temp">
+      <created>1548886744642</created>
+      <option name="number" value="00159" />
+      <option name="presentableId" value="LOCAL-00159" />
+      <option name="project" value="LOCAL" />
+      <updated>1548886744642</updated>
+    </task>
+    <task id="LOCAL-00160" summary="Temp">
+      <created>1548886774963</created>
+      <option name="number" value="00160" />
+      <option name="presentableId" value="LOCAL-00160" />
+      <option name="project" value="LOCAL" />
+      <updated>1548886774963</updated>
+    </task>
+    <task id="LOCAL-00161" summary="Temp">
+      <created>1548887150279</created>
+      <option name="number" value="00161" />
+      <option name="presentableId" value="LOCAL-00161" />
+      <option name="project" value="LOCAL" />
+      <updated>1548887150279</updated>
+    </task>
+    <option name="localTasksCounter" value="162" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1105,6 +1105,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/BTS/data/final_data/BT-B-1_1.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/General/Title">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/Delta/Battery_tests/Battery_testing.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="565">
@@ -1115,22 +1125,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BTS/data/final_data/BT-B-1_1.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BTS/data/final_data/Analyze.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
           <caret line="80" column="28" lean-forward="true" selection-start-line="80" selection-start-column="28" selection-end-line="80" selection-end-column="28" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/General/Title">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/General/Temp_sens.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -1142,23 +1142,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BTS/BTS.py">
+    <entry file="file://$PROJECT_DIR$/BTS/Pack_Temperature.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1950">
-          <caret line="139" column="43" selection-start-line="139" selection-start-column="32" selection-end-line="139" selection-end-column="43" />
+        <state relative-caret-position="499">
+          <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
           <folding>
-            <element signature="e#677#816#0" />
+            <element signature="e#25#36#0" expanded="true" />
+            <element signature="e#1031#1056#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BTS/Pack_Temperature.py">
+    <entry file="file://$PROJECT_DIR$/BTS/BTS.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="92" column="18" selection-start-line="92" selection-start-column="18" selection-end-line="92" selection-end-column="18" />
+        <state relative-caret-position="-2858">
+          <caret line="105" column="16" selection-start-line="105" selection-start-column="4" selection-end-line="105" selection-end-column="16" />
           <folding>
-            <element signature="e#25#36#0" expanded="true" />
-            <element signature="e#1031#1056#0" />
+            <element signature="e#677#816#0" />
           </folding>
         </state>
       </provider>

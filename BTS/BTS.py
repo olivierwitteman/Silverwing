@@ -137,8 +137,8 @@ def charge(crate_char, name='untitled'):
 
     try:
         while True:
-            # c_voltage = delta.ask_voltage()
-            c_voltage = voltage_pack()
+            c_voltage = delta.ask_voltage()
+            # c_voltage = voltage_pack()
             c_current = delta.ask_current()
             a_temp = temp_ambient()
             c_temp = temp_pack()
@@ -184,8 +184,8 @@ def delta_discharge(name, minvolt, maxvolt, current, R, duration, status='empty'
         time.sleep(10)
 
         a_current = delta.ask_current()
-        # a_voltage = delta.ask_voltage()
-        a_voltage = voltage_pack()
+        a_voltage = delta.ask_voltage()
+        # a_voltage = voltage_pack()
         bat_voltage = a_current * R - a_voltage
         k = 0
 
@@ -216,8 +216,8 @@ def delta_discharge(name, minvolt, maxvolt, current, R, duration, status='empty'
                 pass
 
             a_current = delta.ask_current()
-            # a_voltage = delta.ask_voltage()
-            a_voltage = voltage_pack()
+            a_voltage = delta.ask_voltage()
+            # a_voltage = voltage_pack()
             bat_voltage = a_current * R - a_voltage
 
             a_temp = temp_ambient()

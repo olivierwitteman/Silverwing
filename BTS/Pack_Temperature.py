@@ -77,6 +77,7 @@ try:
 
         # lc.log_temp(t_av)
         print(t_av)
+        print(r_av)
         print(lc.ambient_temp())
         print('\n\n------\n\n')
         # print('T pack: {!s}C, T ambient: {!s}C, R: {!s}kOhm'.format(round(t_av, 5), round(t_a, 5), round(r_av), end=""))

@@ -8,7 +8,7 @@ delta = d.DeltaComm()
 pt = subprocess.Popen(['python3', '/home/pi/Silverwing/BTS/Pack_Temperature.py'])  # ESC daemon
 pat = subprocess.Popen(['python', '/home/pi/Silverwing/General/Temp_sens.py'])  # ESC daemon
 
-time.sleep(1)
+time.sleep(2)
 
 path = ''
 filename = 'BTS.csv'
@@ -103,6 +103,24 @@ def temp_pack():
         return value
 
 
+def voltage_pack():
+    with open('/home/pi/Silverwing/BTS/data/pack.voltage', 'r') as v:
+        raw = v.read()
+        try:
+            t_f = float(raw.split(',')[0])
+            value = float(raw.split(',')[1])
+            t = time.time()
+            if t - t_f > 10.:
+                value = 'Outdated'
+            t0 = time.time()
+        except:
+            value = 20
+            # if time.time() - t0 > 10.:
+            #     value = 'Outdated'
+
+        return value
+
+
 def charge(crate_char, name='untitled'):
     log(name, time.time(), 0., 0., -103, temperature=-103., remark='Charging started: {!s}'.format(name))
     delta.set_voltage(delta.ask_voltage())
@@ -119,7 +137,8 @@ def charge(crate_char, name='untitled'):
 
     try:
         while True:
-            c_voltage = delta.ask_voltage()
+            # c_voltage = delta.ask_voltage()
+            c_voltage = voltage_pack()
             c_current = delta.ask_current()
             a_temp = temp_ambient()
             c_temp = temp_pack()
@@ -165,7 +184,8 @@ def delta_discharge(name, minvolt, maxvolt, current, R, duration, status='empty'
         time.sleep(10)
 
         a_current = delta.ask_current()
-        a_voltage = delta.ask_voltage()
+        # a_voltage = delta.ask_voltage()
+        a_voltage = voltage_pack()
         bat_voltage = a_current * R - a_voltage
         k = 0
 
@@ -196,7 +216,8 @@ def delta_discharge(name, minvolt, maxvolt, current, R, duration, status='empty'
                 pass
 
             a_current = delta.ask_current()
-            a_voltage = delta.ask_voltage()
+            # a_voltage = delta.ask_voltage()
+            a_voltage = voltage_pack()
             bat_voltage = a_current * R - a_voltage
 
             a_temp = temp_ambient()

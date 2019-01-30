@@ -10,7 +10,8 @@ import subprocess
 
 # path = '.'
 path = '/home/pi/Silverwing/BTS'
-pat = subprocess.Popen(['python', '/home/pi/Silverwing/General/Temp_sens.py'])  # ESC daemon
+# pat = subprocess.Popen(['python', '/home/pi/Silverwing/General/Temp_sens.py'])  # ESC daemon
+
 
 class ADC:
 
@@ -35,53 +36,63 @@ class ADC:
 
         return T, r
 
-    def pack_temp(self, input0=2):
-        v0 = lc.chan[input0].voltage
-        return self.calibration(v0)
+    def pack_temp(self):
+        v0 = lc.chan[2].voltage
+        v4 = lc.chan[4].voltage*23
+        T, r = self.calibration(v0)
+        return T, r, v4
 
-    def ambient_temp(self):
-        with open('/home/pi/Silverwing/General/ambient.temp', 'r') as t:
-            raw = t.read()
-            try:
-                t_f = float(raw.split(',')[0])
-                value = float(raw.split(',')[1])
-                t = time.time()
-                if t - t_f > 10.:
-                    value = 'Outdated'
-                t0 = time.time()
-            except:
-                value = 20
-                # if time.time() - t0 > 10.:
-                #     value = 'Outdated'
-
-            return value
+    # def ambient_temp(self):
+    #     with open('/home/pi/Silverwing/General/ambient.temp', 'r') as t:
+    #         raw = t.read()
+    #         try:
+    #             t_f = float(raw.split(',')[0])
+    #             value = float(raw.split(',')[1])
+    #             t = time.time()
+    #             if t - t_f > 10.:
+    #                 value = 'Outdated'
+    #             t0 = time.time()
+    #         except:
+    #             value = 20
+    #             # if time.time() - t0 > 10.:
+    #             #     value = 'Outdated'
+    #
+    #         return value
 
     def log_temp(self, c_temp):
         with open('/home/pi/Silverwing/BTS/data/pack.temp', 'w') as d:
             d.write('{!s},{!s}'.format(time.time(), c_temp))
+
+    def log_voltage(self, voltage):
+        with open('/home/pi/Silverwing/BTS/data/pack.voltage', 'w') as d:
+            d.write('{!s},{!s}'.format(time.time(), voltage))
 
 
 lc = ADC()
 
 try:
     while True:
-        ts, rs = [], []
+        ts, rs, vs = [], [], []
         for _ in range(10):
-            t, r = lc.pack_temp()
+            t, r, v = lc.pack_temp()
             ts.append(t)
             rs.append(r)
+            vs.append(v)
             time.sleep(0.05)
         t_av = sum(ts)/len(ts)
         r_av = sum(rs)/len(rs)
+        v_av = sum(vs)/len(vs)
         # t_a = lc.ambient_temp()
 
-        # lc.log_temp(t_av)
-        print(t_av)
-        print(r_av)
-        print(lc.ambient_temp())
-        print('\n\n------\n\n')
-        # print('T pack: {!s}C, T ambient: {!s}C, R: {!s}kOhm'.format(round(t_av, 5), round(t_a, 5), round(r_av), end=""))
+        lc.log_temp(t_av)
+        lc.log_voltage(v_av)
+        # print(t_av)
+        # print(r_av)
+        # print(lc.ambient_temp())
+        # print('\n\n------\n\n')
+        print(v_av)
         time.sleep(1)
 
 finally:
-    pat.terminate()
+    # pat.terminate()
+    pass

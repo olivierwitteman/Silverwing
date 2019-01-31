@@ -40,7 +40,7 @@ class ADC:
         v0 = lc.chan[2].voltage
         v3 = lc.chan[3].voltage
         v1 = lc.chan[1].voltage
-        dv = abs(v3-v1)*33./503
+        dv = abs(v3-v1)*503./33.
 
         T, r = self.calibration(v0)
         return T, r, dv

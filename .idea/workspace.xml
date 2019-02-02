@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="Temp">
+    <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="Minor improvements">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BTS/BTS.py" beforeDir="false" afterPath="$PROJECT_DIR$/BTS/BTS.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BTS/data/BT-E-1800_1200-80_40-6.log" beforeDir="false" afterPath="$PROJECT_DIR$/BTS/data/final_data/BT-E-1800_1200-80_40-6.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BTS/data/final_data/Analyze.py" beforeDir="false" afterPath="$PROJECT_DIR$/BTS/data/final_data/Analyze.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Delta/Battery_tests/Analyze.py" beforeDir="false" afterPath="$PROJECT_DIR$/Delta/Battery_tests/Analyze.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,8 +15,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BTS/BTS.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="276" column="55" lean-forward="true" selection-start-line="276" selection-start-column="55" selection-end-line="276" selection-end-column="55" />
+            <state relative-caret-position="35">
+              <caret line="171" column="25" selection-start-line="171" selection-start-column="25" selection-end-line="171" selection-end-column="25" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
                 <element signature="e#677#816#0" />
@@ -353,13 +349,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532440488607</updated>
-    </task>
-    <task id="LOCAL-00118" summary="cycling">
-      <created>1548510876388</created>
-      <option name="number" value="00118" />
-      <option name="presentableId" value="LOCAL-00118" />
-      <option name="project" value="LOCAL" />
-      <updated>1548510876388</updated>
     </task>
     <task id="LOCAL-00119" summary="charging configuration">
       <created>1548513861567</created>
@@ -697,7 +686,14 @@
       <option name="project" value="LOCAL" />
       <updated>1548952584129</updated>
     </task>
-    <option name="localTasksCounter" value="167" />
+    <task id="LOCAL-00167" summary="Minor improvements">
+      <created>1549121741518</created>
+      <option name="number" value="00167" />
+      <option name="presentableId" value="LOCAL-00167" />
+      <option name="project" value="LOCAL" />
+      <updated>1549121741518</updated>
+    </task>
+    <option name="localTasksCounter" value="168" />
     <servers />
   </component>
   <component name="TodoView">
@@ -749,7 +745,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Updated matrices and manual added" />
     <MESSAGE value="Manual added" />
     <MESSAGE value="Untested release (check readdf() calibration function for correct behavior)" />
     <MESSAGE value="Added legend for output data" />
@@ -774,7 +769,8 @@
     <MESSAGE value="Printing stuff" />
     <MESSAGE value="Matrix" />
     <MESSAGE value="Temp" />
-    <option name="LAST_COMMIT_MESSAGE" value="Temp" />
+    <MESSAGE value="Minor improvements" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor improvements" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/WaTT/WaTT_2019_01_03.log" />
@@ -1095,8 +1091,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BTS/BTS.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="276" column="55" lean-forward="true" selection-start-line="276" selection-start-column="55" selection-end-line="276" selection-end-column="55" />
+        <state relative-caret-position="35">
+          <caret line="171" column="25" selection-start-line="171" selection-start-column="25" selection-end-line="171" selection-end-column="25" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
             <element signature="e#677#816#0" />

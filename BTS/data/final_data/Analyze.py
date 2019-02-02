@@ -7,10 +7,7 @@ import numpy as np
 # nom_voltage = float(input('Nominal voltage of tested cell [V]: '))
 mode = 0
 
-# R_battery = 0.013*1.5.
-# R_battery = 0.0016
-R_battery = -0.25
-R_battery = 0.03
+R_battery = 0.0
 
 path = './'
 # path = '/Users/olivierwitteman/Downloads/'
@@ -34,8 +31,8 @@ with open('{!s}{!s}.log'.format(path, name), 'r') as data:
             Us.append(float(samples[i].split()[1][1:].strip()))
             ts.append(float(samples[i].split()[0][1:].strip()))
             Is.append(float(samples[i].split()[2][1:].strip()))
-            Tsp.append(float(samples[i].split()[3][1:-2].strip()))
-            Tsa.append(float(samples[i].split()[4][1:-2].strip()))
+            Tsp.append(float(samples[i].split()[3][3:-2].strip()))
+            Tsa.append(float(samples[i].split()[4][3:-2].strip()))
             try:
                 rmrk.append(str(samples[i].split()[6][:].strip()))
             except:
@@ -58,8 +55,6 @@ with open('{!s}{!s}.log'.format(path, name), 'r') as data:
             Us, ts, Is, Tsp, Tsa, As = remove_last([Us, ts, Is, Tsp, Tsa, As])
             pass
 
-
-
 maxlength = min(len(Us), len(ts), len(Is), len(Tsp), len(Tsa), len(As))
 Us = Us[:maxlength]
 ts = ts[:maxlength]
@@ -70,7 +65,7 @@ As = As[:maxlength]
 
 As = [-x + max(As) for x in As]
 
-fig, ax1 = plt.subplots()
+fig, ax1 = plt.subplots(figsize=(10, 6.25))
 colors = ['b', 'g', 'r', 'c', 'm', 'y', 'k', 'r', 'g', 'c']
 
 # start, stop = ts.index(d_s_mark[0]) + 1, ts.index(d_e_mark[0]) - 1
@@ -130,7 +125,5 @@ plt.title('ID: {!s}, charged CC-CV at 0.7C with cutoff at 0.05C'.format(name))
 ax1.legend(loc=0)
 
 ax1.grid(True)
+plt.savefig('./{!s}.png'.format(name), dpi=250, format='png')  # Use eps for LaTeX, other options: png, pdf, ps, eps
 plt.show()
-plt.savefig('./{!s}_placeholder'.format(name), dpi=255, format='png')  # Use eps for LaTeX, other options: png, pdf, ps, eps
-
-

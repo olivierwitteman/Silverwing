@@ -147,8 +147,9 @@ def charge(crate_char, name='untitled'):
 
             k += 1
             if k == 5:
-                print('\n\nVoltage: {!s}, actual current: {!s}, power: {!s}W\n\n' \
-                      .format(c_voltage, c_current, c_voltage*c_current))
+                print(
+                    '\n\nVoltage: {!s}, actual current: {!s}, power: {!s}, Pack Temperature: {!s}, Ambient Temperature: '
+                    '{!s}\n\n'.format(c_voltage, c_current, c_voltage * c_current, c_temp, a_temp))
                 k = 0
 
             log(name, time.time(), c_voltage, c_current, a_temp, c_temp, a_temp)
@@ -239,32 +240,38 @@ def delta_discharge(name, minvolt, maxvolt, current, R, duration, status='empty'
 
 def discharge(c_rate, duration=0, status='empty', name='untitled'):
     pack_minvolt = series*minvolt
-    pack_maxvolt = series*maxvolt
-
     current = c_rate*capacity*parallel
 
     if 0.67 <= -c_rate < 1.3:
+        dr = 0
         config = [0, 1, 1, 0, 0]
 
     elif 1.3 <= -c_rate < 1.95:
+        dr = -0.05
         config = [0, 1, 0, 1, 0]
 
     elif 1.95 <= -c_rate < 3.54:
+        dr = -0.045
         config = [0, 1, 1, 1, 0]
 
     elif 3.54 <= -c_rate < 4.2:
+        dr = 0.04
         config = [0, 1, 0, 0, 1]
 
     elif 4.2 <= -c_rate < 4.84:
+        dr = -0.035
         config = [0, 1, 1, 0, 1]
 
     elif 4.84 <= -c_rate < 5.5:
+        dr = -0.033
         config = [0, 1, 0, 1, 1]
 
     elif 5.5 <= -c_rate < 9.15:
+        dr = -0.03
         config = [0, 1, 1, 1, 1]
 
     else:
+        dr = 0
         config = [0, 0, 0, 0, 0]
 
     R_inv = 0.
@@ -272,8 +279,7 @@ def discharge(c_rate, duration=0, status='empty', name='untitled'):
         if i > 1:
             R_inv += config[i]/ss[i][1]
         gp.output(ss[i][0], abs(config[i]-1))
-    R = 1/R_inv + R_0 + R_tb
-
+    R = 1/R_inv + R_0 + R_tb + dr
 
     V_ps_max = R * current - pack_minvolt
     time.sleep(1)

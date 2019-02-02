@@ -30,7 +30,8 @@ capacity = 3.
 series = 6
 parallel = 4
 # R_sys = 0.03
-R_sys = 0
+R_0 = 0.0172
+R_tb = 6.*0.0128/4.
 
 
 def initiate_relay_control():
@@ -61,9 +62,10 @@ def read_matrix():
     return data
 
 
-def log(name, timestamp, voltage, current, amb_temp, temperature=0.0, remark=''):
+def log(name, timestamp, voltage, current, amb_temp, temperature=0.0, R=0, remark=''):
     with open('/home/pi/Silverwing/BTS/data/{!s}.log'.format(name), 'a') as d:
-        d.write('t{!s} U{!s} I{!s} T_a{!s} T_p{!s}, {!s}\n'.format(timestamp, voltage, current, amb_temp, temperature, remark))
+        d.write('t{!s} U{!s} I{!s} T_a{!s} T_p{!s} R{!s}, {!s}\n'.format(timestamp, voltage, current, amb_temp,
+                                                                         temperature, R, remark))
 
 
 def temp_ambient():
@@ -177,8 +179,8 @@ def delta_discharge(name, minvolt, maxvolt, current, R, duration, status='empty'
 
     try:
         if status != 'next':
-            log(name, time.time(), 0., 0., a_temp, temperature=-101., remark='Discharging started: {}'.format(name))
-        log(name, time.time(), 0., 0., a_temp, temperature=-101., remark='Discharging started: {}'.format(name))
+            log(name, time.time(), 0., 0., a_temp, temperature=-101., R=R, remark='Discharging started: {}'.format(name))
+        log(name, time.time(), 0., 0., a_temp, temperature=-101., R=R, remark='Discharging started: {}'.format(name))
 
         delta.set_state(1)
         time.sleep(10)
@@ -223,13 +225,13 @@ def delta_discharge(name, minvolt, maxvolt, current, R, duration, status='empty'
             a_temp = temp_ambient()
             c_temp = temp_pack()
 
-            log(name, time.time(), bat_voltage, -a_current, a_temp, c_temp)
+            log(name, time.time(), bat_voltage, -a_current, a_temp, c_temp, R=R)
             dt = time.time() - t0
             time.sleep(0.1)
 
     finally:
         if status != 'next':
-            log(name, time.time(), 0., 0., a_temp, temperature=-102., remark='Discharging completed/interrupted: {}'
+            log(name, time.time(), 0., 0., a_temp, temperature=-102., R=R, remark='Discharging completed/interrupted: {}'
                                                                              ''.format(name))
         delta.set_state(0)
         return status
@@ -238,6 +240,7 @@ def delta_discharge(name, minvolt, maxvolt, current, R, duration, status='empty'
 def discharge(c_rate, duration=0, status='empty', name='untitled'):
     pack_minvolt = series*minvolt
     pack_maxvolt = series*maxvolt
+
     current = c_rate*capacity*parallel
 
     if 0.67 <= -c_rate < 1.3:
@@ -269,10 +272,12 @@ def discharge(c_rate, duration=0, status='empty', name='untitled'):
         if i > 1:
             R_inv += config[i]/ss[i][1]
         gp.output(ss[i][0], abs(config[i]-1))
-    R = 1/R_inv + R_sys
+    R = 1/R_inv + R_0 + R_tb
 
+
+    V_ps_max = R * current - pack_minvolt
     time.sleep(1)
-    status = delta_discharge(name, pack_minvolt, pack_maxvolt, current, R, duration, status=status)
+    status = delta_discharge(name, pack_minvolt, V_ps_max, current, R, duration, status=status)
 
     for i in range(len(ss)):
         gp.output(ss[i][0], 1)

@@ -7,20 +7,29 @@ import numpy as np
 # nom_voltage = float(input('Nominal voltage of tested cell [V]: '))
 mode = 0
 
-# R_battery = 0.013/4.
+# R_battery = 0.013*1.5.
 # R_battery = 0.0016
-R_battery = -0.56
+R_battery = -0.25
+R_battery = 0.03
 
 path = './'
 # path = '/Users/olivierwitteman/Downloads/'
-name = 'BT-B-1_1'
+# name = 'BT-B-1_1'
+name = 'BT-E-1800_1200-80_40-6'
+
+
+def remove_last(array):
+    new_array = []
+    for j in range(len(array)):
+        new_array.append(array[j][:-1])
+    return new_array
 
 
 with open('{!s}{!s}.log'.format(path, name), 'r') as data:
     samples = data.readlines()
 
     Us, Is, ts, As, Tsp, Tsa, rmrk = [], [], [], [0.], [], [], []
-    for i in range(len(samples)):
+    for i in np.arange(0, len(samples), 10):
         try:
             Us.append(float(samples[i].split()[1][1:].strip()))
             ts.append(float(samples[i].split()[0][1:].strip()))
@@ -36,14 +45,20 @@ with open('{!s}{!s}.log'.format(path, name), 'r') as data:
                 dt = ts[-1] - ts[-2]
                 As.append(float(As[-1] + Is[-1] * dt/3600.))
 
+            if Tsp[-1] < -100:
+                Us, ts, Is, Tsp, Tsa, As = remove_last([Us, ts, Is, Tsp, Tsa, As])
+
         except:
-            Us = Us[:-1]
-            ts = ts[:-1]
-            Is = Is[:-1]
-            Tsp = Tsp[:-1]
-            Tsa = Tsa[:-1]
-            As = As[:-1]
+            # Us = Us[:-1]
+            # ts = ts[:-1]
+            # Is = Is[:-1]
+            # Tsp = Tsp[:-1]
+            # Tsa = Tsa[:-1]
+            # As = As[:-1]
+            Us, ts, Is, Tsp, Tsa, As = remove_last([Us, ts, Is, Tsp, Tsa, As])
             pass
+
+
 
 maxlength = min(len(Us), len(ts), len(Is), len(Tsp), len(Tsa), len(As))
 Us = Us[:maxlength]
@@ -65,22 +80,20 @@ caps = []
 R_sys = 0.0
 R_total = R_sys + R_battery
 
-
-
 ax2 = ax1.twinx()
 ax2.grid()
 
 endurance = round((ts[-1]-ts[0])/60., 1)
-n = 25  # the larger n is, the smoother curve will be
+n = 1  # the larger n is, the smoother curve will be
 
 
 dOCV = np.array([R_total * -x for x in Is[:]])
 OCV = np.array(Us[:]) + dOCV
 
-av_current = -np.average(Is)
+av_current = round(-np.average(Is), 1)
 av_voltage = np.average(OCV)
 
-# smooth_Us = lfilter([1.0 / n] * n, 1, Us[start:stop])
+# smooth_Us = lfilter([1.0 / n] * n, 1, Us[start:stop])[1:]
 smooth_Us = lfilter([1.0 / n] * n, 1, OCV)
 smooth_Is = -lfilter([1.0 / n] * n, 1, Is[:])
 smooth_Tsp = lfilter([1.0 / n] * n, 1, Tsp[:])
@@ -112,10 +125,12 @@ ax2.set_ylim(0, 80)
 ax1.plot(np.nan, np.nan, ls=':', label='Current', c='k', lw=2.)
 ax1.plot(np.nan, np.nan, ls='-.', label='Temperature', c='k', lw=1.5)
 
-plt.title('Battery: {!s}, charged CC-CV at 0.7C with cutoff at 0.07C (2hrs)'.format(name))
+plt.title('ID: {!s}, charged CC-CV at 0.7C with cutoff at 0.05C'.format(name))
 
 ax1.legend(loc=0)
 
 ax1.grid(True)
 plt.show()
+plt.savefig('./{!s}_placeholder'.format(name), dpi=255, format='png')  # Use eps for LaTeX, other options: png, pdf, ps, eps
+
 

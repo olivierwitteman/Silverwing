@@ -11,7 +11,7 @@ modes = ['reg', 'fp', 'cycle']
 R_battery = 0.013/4.
 # R_battery = 0.0016
 
-with open('./data.log', 'r') as data:
+with open('./Data/US18650VTC6_fp.log', 'r') as data:
     samples = data.readlines()
 
     Us, Is, ts, As, c_s_mark, d_s_mark, c_e_mark, d_e_mark, Ts, rmrk = [], [], [], [0.], [], [], [], [], [], []
@@ -64,11 +64,13 @@ if modes[mode] != 'cycle':
     ax2 = ax1.twinx()
     ax2.grid()
 
-for j in range(len(d_s_mark)):  # '-1!!!!!!!!!!'
-# for j in lst:
+
+lst = [0]
+# for j in range(len(d_s_mark)):  # '-1!!!!!!!!!!'
+for j in lst:
     start, stop = ts.index(d_s_mark[j])+1, ts.index(d_e_mark[j])-1
     endurance = round((d_e_mark[j] - d_s_mark[j])/60., 1)
-    n = 25  # the larger n is, the smoother curve will be
+    n = 10  # the larger n is, the smoother curve will be
 
     av_voltage = round(sum(Us[start:stop]) / (stop-start), 1)
     av_current = -round(sum(Is[start:stop]) / (stop - start))
@@ -91,6 +93,7 @@ for j in range(len(d_s_mark)):  # '-1!!!!!!!!!!'
     if modes[mode] == 'reg':
         ax1.plot(As_i, smooth_Us, c=colors[j], ls='-', label='I_avg = {!s}A, E_extracted = {!s}Wh'.
                  format(av_current, actual_energy))
+
     elif modes[mode] == 'fp':
         ax1.plot(As_i, smooth_Us, c=colors[j], ls='-', label='I_avg = {!s}A, E_extracted = {!s}Wh, endurance = {!s}min'.
                  format(av_current, actual_energy, endurance))
@@ -104,9 +107,9 @@ for j in range(len(d_s_mark)):  # '-1!!!!!!!!!!'
         ax1.set_xlim(0, max(caps))
         ax1.set_ylim(2.0, 4.5)
         ax2.set_ylim(0, 80)
-        if j == len(d_s_mark)-1:
-            ax1.plot(np.nan, np.nan, ls=':', label='Current', c='k', lw=2.)
-            ax1.plot(np.nan, np.nan, ls='-.', label='Temperature', c='k', lw=1.5)
+        # if j == len(d_s_mark)-1:
+        ax1.plot(np.nan, np.nan, ls=':', label='Current', c='k', lw=2.)
+        ax1.plot(np.nan, np.nan, ls='-.', label='Temperature', c='k', lw=1.5)
 
     else:
         if j == len(d_s_mark)-1:
@@ -115,7 +118,7 @@ for j in range(len(d_s_mark)):  # '-1!!!!!!!!!!'
                                                    'profile'.format(len(caps)))
             ax1.set_ylim(0.9*caps[-1], 1.1*caps[0])
 
-plt.title('Battery: {!s}, charged CC-CV at 1C with cutoff at 0.07C (1.5hrs)'.format(rmrk[0]))
+# plt.title('Battery: {!s}, charged CC-CV at 1C with cutoff at 0.07C'.format(rmrk[0]))
 
 ax1.legend(loc=0)
 

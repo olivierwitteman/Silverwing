@@ -32,6 +32,8 @@ parallel = 4
 # R_sys = 0.03
 R_0 = 0.0172
 R_tb = 6.*0.0128/4.
+target_temp = 22.
+maxtemp = 75.
 
 
 def initiate_relay_control():
@@ -209,7 +211,7 @@ def delta_discharge(name, minvolt, maxvolt, current, R, duration, status='empty'
                     status = 'next'
                     break
 
-            if c_temp > 60.:
+            if c_temp > maxtemp:
                 print('Temperature threshold exceeded at {!s}'.format(c_temp))
                 status = 'temp'
                 break
@@ -319,9 +321,12 @@ def cycle():
             print('Charging starts in 1min')
             time.sleep(60)
             charge(0.7, c[2])
-            if temp_pack() > 25:
-                print('Sleeping for 10 minutes')
-                time.sleep(600)
+
+            while temp_pack() > target_temp:
+                print('Pack temperature: {!s} deg C\nCooling down to target of {!s} deg C'.format(temp_pack(),
+                                                                                                  target_temp))
+                time.sleep(60)
+
         i += 1
 
 
@@ -336,9 +341,10 @@ try:
     crate_dischar = read_matrix()
     charge(0.7, name=crate_dischar[0][2])
 
-    if temp_pack() > 25:
-        print('Sleeping for 10 minutes')
-        time.sleep(600)
+    while temp_pack() > target_temp:
+        print('Pack temperature: {!s} deg C\nCooling down to target of {!s} deg C'.format(temp_pack(),
+                                                                                          target_temp))
+        time.sleep(60)
 
     cycle()
 

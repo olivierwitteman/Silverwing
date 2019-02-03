@@ -10,7 +10,7 @@ delta = d.DeltaComm()
 
 safe_operation = True
 capacity = 3.0
-crate_dischar = [(6.5, 80), (1.68, 1080), (6.5, 40), (1.68, 0)]
+crate_dischar = [(6., 80), (1.71, 1080), (6., 40), (1.71, 0)]
 # crate_dischar = [(6., 0), (5., 0), (4., 0), (3., 0), (2., 0), (1., 0)]
 # (C, duration [s]) duration=0 for full discharge
 name = 'US18650_VTC6_fp_feb'

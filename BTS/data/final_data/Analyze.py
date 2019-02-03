@@ -7,7 +7,8 @@ import numpy as np
 # nom_voltage = float(input('Nominal voltage of tested cell [V]: '))
 mode = 0
 
-R_battery = 0.0
+# R_battery = 0.0
+R_battery = 6.*0.0128/4.
 
 path = './'
 # path = '/Users/olivierwitteman/Downloads/'
@@ -15,45 +16,56 @@ path = './'
 name = 'BT-E-1800_1200-80_40-6'
 
 
-def remove_last(array):
-    new_array = []
-    for j in range(len(array)):
-        new_array.append(array[j][:-1])
-    return new_array
+def remove_last(Us, ts, Is, Tsp, Tsa, As):
+
+    Us = Us[:-2]
+    ts = ts[:-2]
+    Is = Is[:-2]
+    Tsp = Tsp[:-2]
+    Tsa = Tsa[:-2]
+    As = As[:-2]
+
+    # new_array = []
+    # print array
+    #
+    # for j in range(len(array)):
+    #     new_array.append([array[j][:-2]])
+    #
+    # print new_array
+    # return new_array
+
+    return Us, ts, Is, Tsp, Tsa, As
 
 
 with open('{!s}{!s}.log'.format(path, name), 'r') as data:
     samples = data.readlines()
-
     Us, Is, ts, As, Tsp, Tsa, rmrk = [], [], [], [0.], [], [], []
-    for i in np.arange(0, len(samples), 10):
-        try:
-            Us.append(float(samples[i].split()[1][1:].strip()))
-            ts.append(float(samples[i].split()[0][1:].strip()))
-            Is.append(float(samples[i].split()[2][1:].strip()))
-            Tsp.append(float(samples[i].split()[3][3:-2].strip()))
-            Tsa.append(float(samples[i].split()[4][3:-2].strip()))
-            try:
-                rmrk.append(str(samples[i].split()[6][:].strip()))
-            except:
-                pass
 
-            if i > 0:
-                dt = ts[-1] - ts[-2]
-                As.append(float(As[-1] + Is[-1] * dt/3600.))
+for i in np.arange(0, len(samples), 10):
+    try:
+        Us.append(float(samples[i].split()[1][1:].strip()))
+        ts.append(float(samples[i].split()[0][1:].strip()))
+        Is.append(float(samples[i].split()[2][1:].strip()))
+        # print(float(samples[i].split()[3][3:-2].strip()))
+        Tsa.append(float(samples[i].split()[3][3:].strip()))
+        # print(float(samples[i].split()[4][3:-2].strip()))
+        Tsp.append(float(samples[i].split()[4][3:].strip()))
 
-            if Tsp[-1] < -100:
-                Us, ts, Is, Tsp, Tsa, As = remove_last([Us, ts, Is, Tsp, Tsa, As])
+        if i > 1:
+            dt = ts[-1] - ts[-2]
+            As.append(float(As[-1] + Is[-1] * dt / 3600.))
 
-        except:
-            # Us = Us[:-1]
-            # ts = ts[:-1]
-            # Is = Is[:-1]
-            # Tsp = Tsp[:-1]
-            # Tsa = Tsa[:-1]
-            # As = As[:-1]
-            Us, ts, Is, Tsp, Tsa, As = remove_last([Us, ts, Is, Tsp, Tsa, As])
-            pass
+        if Is[-1] > 0 or Tsp[-1] < -100. or Tsa[-1] < -100.:
+            # print(len(Us))
+            raise KeyboardInterrupt
+
+    except:
+        # print('ass\n\n\n')
+        # print('Us: ', len(Us))
+        Us, ts, Is, Tsp, Tsa, As = remove_last(Us, ts, Is, Tsp, Tsa, As)
+        # print('Us: ', len(Us))
+        pass
+
 
 maxlength = min(len(Us), len(ts), len(Is), len(Tsp), len(Tsa), len(As))
 Us = Us[:maxlength]
@@ -79,7 +91,7 @@ ax2 = ax1.twinx()
 ax2.grid()
 
 endurance = round((ts[-1]-ts[0])/60., 1)
-n = 1  # the larger n is, the smoother curve will be
+n = 3  # the larger n is, the smoother curve will be
 
 
 dOCV = np.array([R_total * -x for x in Is[:]])
@@ -107,7 +119,7 @@ ax1.plot(As_i, smooth_Us, c=colors[0], ls='-', label='I_avg = {!s}A, E_extracted
 
 
 ax2.plot(As_i, smooth_Tsp, c=colors[0], ls='-.', label='{!s}A [T]'.format(av_current))
-ax2.plot(As_i, smooth_Tsa, c=colors[0], ls='-.', label='{!s}A [T]'.format(av_current))
+# ax2.plot(As_i, smooth_Tsa, c=colors[0], ls='-.', label='{!s}A [T]'.format(av_current))
 
 ax2.plot(As_i, smooth_Is, c=colors[0], ls=':', label='{!s}A [A]'.format(av_current), lw=2.)
 ax1.set_xlabel('Capacity [Ah]')

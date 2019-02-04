@@ -32,7 +32,7 @@ parallel = 4
 # R_sys = 0.03
 R_0 = 0.0172
 R_tb = 6.*0.0128/4.
-target_temp = 22.
+target_temp = 25.
 maxtemp = 75.
 
 

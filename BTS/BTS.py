@@ -30,7 +30,10 @@ capacity = 3.
 series = 6
 parallel = 4
 # R_sys = 0.03
-R_sys = 0
+R_0 = 0.0172
+R_tb = 6.*0.0128/4.
+target_temp = 25.
+maxtemp = 75.
 
 
 def initiate_relay_control():
@@ -61,9 +64,10 @@ def read_matrix():
     return data
 
 
-def log(name, timestamp, voltage, current, amb_temp, temperature=0.0, remark=''):
+def log(name, timestamp, voltage, current, amb_temp, temperature=0.0, R=0, remark=''):
     with open('/home/pi/Silverwing/BTS/data/{!s}.log'.format(name), 'a') as d:
-        d.write('t{!s} U{!s} I{!s} T_a{!s} T_p{!s}, {!s}\n'.format(timestamp, voltage, current, amb_temp, temperature, remark))
+        d.write('t{!s} U{!s} I{!s} T_a{!s} T_p{!s} R{!s}, {!s}\n'.format(timestamp, voltage, current, amb_temp,
+                                                                         temperature, R, remark))
 
 
 def temp_ambient():
@@ -145,8 +149,9 @@ def charge(crate_char, name='untitled'):
 
             k += 1
             if k == 5:
-                print('\n\nVoltage: {!s}, actual current: {!s}, power: {!s}W\n\n' \
-                      .format(c_voltage, c_current, c_voltage*c_current))
+                print(
+                    '\n\nVoltage: {!s}, actual current: {!s}, power: {!s}, Pack Temperature: {!s}, Ambient Temperature: '
+                    '{!s}\n\n'.format(c_voltage, c_current, c_voltage * c_current, c_temp, a_temp))
                 k = 0
 
             log(name, time.time(), c_voltage, c_current, a_temp, c_temp, a_temp)
@@ -177,8 +182,8 @@ def delta_discharge(name, minvolt, maxvolt, current, R, duration, status='empty'
 
     try:
         if status != 'next':
-            log(name, time.time(), 0., 0., a_temp, temperature=-101., remark='Discharging started: {}'.format(name))
-        log(name, time.time(), 0., 0., a_temp, temperature=-101., remark='Discharging started: {}'.format(name))
+            log(name, time.time(), 0., 0., a_temp, temperature=-101., R=R, remark='Discharging started: {}'.format(name))
+        log(name, time.time(), 0., 0., a_temp, temperature=-101., R=R, remark='Discharging started: {}'.format(name))
 
         delta.set_state(1)
         time.sleep(10)
@@ -206,7 +211,7 @@ def delta_discharge(name, minvolt, maxvolt, current, R, duration, status='empty'
                     status = 'next'
                     break
 
-            if c_temp > 60.:
+            if c_temp > maxtemp:
                 print('Temperature threshold exceeded at {!s}'.format(c_temp))
                 status = 'temp'
                 break
@@ -223,13 +228,13 @@ def delta_discharge(name, minvolt, maxvolt, current, R, duration, status='empty'
             a_temp = temp_ambient()
             c_temp = temp_pack()
 
-            log(name, time.time(), bat_voltage, -a_current, a_temp, c_temp)
+            log(name, time.time(), bat_voltage, -a_current, a_temp, c_temp, R=R)
             dt = time.time() - t0
             time.sleep(0.1)
 
     finally:
         if status != 'next':
-            log(name, time.time(), 0., 0., a_temp, temperature=-102., remark='Discharging completed/interrupted: {}'
+            log(name, time.time(), 0., 0., a_temp, temperature=-102., R=R, remark='Discharging completed/interrupted: {}'
                                                                              ''.format(name))
         delta.set_state(0)
         return status
@@ -237,31 +242,38 @@ def delta_discharge(name, minvolt, maxvolt, current, R, duration, status='empty'
 
 def discharge(c_rate, duration=0, status='empty', name='untitled'):
     pack_minvolt = series*minvolt
-    pack_maxvolt = series*maxvolt
     current = c_rate*capacity*parallel
 
     if 0.67 <= -c_rate < 1.3:
+        dr = 0
         config = [0, 1, 1, 0, 0]
 
     elif 1.3 <= -c_rate < 1.95:
+        dr = -0.05
         config = [0, 1, 0, 1, 0]
 
     elif 1.95 <= -c_rate < 3.54:
+        dr = -0.045
         config = [0, 1, 1, 1, 0]
 
     elif 3.54 <= -c_rate < 4.2:
+        dr = 0.04
         config = [0, 1, 0, 0, 1]
 
     elif 4.2 <= -c_rate < 4.84:
+        dr = -0.035
         config = [0, 1, 1, 0, 1]
 
     elif 4.84 <= -c_rate < 5.5:
+        dr = -0.033
         config = [0, 1, 0, 1, 1]
 
     elif 5.5 <= -c_rate < 9.15:
+        dr = -0.03
         config = [0, 1, 1, 1, 1]
 
     else:
+        dr = 0
         config = [0, 0, 0, 0, 0]
 
     R_inv = 0.
@@ -269,10 +281,11 @@ def discharge(c_rate, duration=0, status='empty', name='untitled'):
         if i > 1:
             R_inv += config[i]/ss[i][1]
         gp.output(ss[i][0], abs(config[i]-1))
-    R = 1/R_inv + R_sys
+    R = 1/R_inv + R_0 + R_tb + dr
 
+    V_ps_max = R * current - pack_minvolt
     time.sleep(1)
-    status = delta_discharge(name, pack_minvolt, pack_maxvolt, current, R, duration, status=status)
+    status = delta_discharge(name, pack_minvolt, V_ps_max, current, R, duration, status=status)
 
     for i in range(len(ss)):
         gp.output(ss[i][0], 1)
@@ -308,9 +321,12 @@ def cycle():
             print('Charging starts in 1min')
             time.sleep(60)
             charge(0.7, c[2])
-            if temp_pack() > 25:
-                print('Sleeping for 10 minutes')
-                time.sleep(600)
+
+            while temp_pack() > target_temp:
+                print('Pack temperature: {!s} deg C\nCooling down to target of {!s} deg C'.format(temp_pack(),
+                                                                                                  target_temp))
+                time.sleep(60)
+
         i += 1
 
 
@@ -325,9 +341,10 @@ try:
     crate_dischar = read_matrix()
     charge(0.7, name=crate_dischar[0][2])
 
-    if temp_pack() > 25:
-        print('Sleeping for 10 minutes')
-        time.sleep(600)
+    while temp_pack() > target_temp:
+        print('Pack temperature: {!s} deg C\nCooling down to target of {!s} deg C'.format(temp_pack(),
+                                                                                          target_temp))
+        time.sleep(60)
 
     cycle()
 

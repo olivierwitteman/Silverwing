@@ -38,9 +38,12 @@ class ADC:
 
     def pack_temp(self):
         v0 = lc.chan[2].voltage
-        v4 = lc.chan[3].voltage*23
+        v3 = lc.chan[3].voltage
+        v1 = lc.chan[1].voltage
+        dv = abs(v3-v1)*503./33.
+
         T, r = self.calibration(v0)
-        return T, r, v4
+        return T, r, dv
 
     # def ambient_temp(self):
     #     with open('/home/pi/Silverwing/General/ambient.temp', 'r') as t:

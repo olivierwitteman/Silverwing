@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="Temp">
+    <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="Matrix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BTS/BTS.py" beforeDir="false" afterPath="$PROJECT_DIR$/BTS/BTS.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BTS/data/BT-E-1800_1200-80_40-6.5.log" beforeDir="false" afterPath="$PROJECT_DIR$/BTS/data/final_data/BT-E-1800_1200-80_40-6.5.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BTS/data/final_data/Crate_Temp.py" beforeDir="false" afterPath="$PROJECT_DIR$/BTS/data/final_data/Crate_Temp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Delta/Battery_tests/Data/US18650_VTC6_fp_feb.log" beforeDir="false" afterPath="$PROJECT_DIR$/BTS/data/final_data/US18650_VTC6_fp_feb.log" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,13 +15,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BTS/BTS.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2858">
-              <caret line="105" column="16" selection-start-line="105" selection-start-column="4" selection-end-line="105" selection-end-column="16" />
+            <state relative-caret-position="120">
+              <caret line="8" selection-start-line="8" selection-end-line="8" selection-end-column="92" />
               <folding>
+                <element signature="e#0#11#0" expanded="true" />
                 <element signature="e#677#816#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BTS/Pack_Temperature.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1335">
+              <caret line="89" column="25" selection-start-line="89" selection-start-column="25" selection-end-line="89" selection-end-column="25" />
+              <folding>
+                <element signature="e#25#36#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -28,8 +43,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Delta/Battery_tests/Battery_testing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="565">
-              <caret line="109" column="33" selection-start-line="109" selection-start-column="33" selection-end-line="109" selection-end-column="33" />
+            <state relative-caret-position="180">
+              <caret line="12" column="56" selection-start-line="12" selection-start-column="56" selection-end-line="12" selection-end-column="56" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -38,34 +53,21 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BTS/data/final_data/Analyze.py">
+        <entry file="file://$PROJECT_DIR$/Delta/Battery_tests/Analyze.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="80" column="28" lean-forward="true" selection-start-line="80" selection-start-column="28" selection-end-line="80" selection-end-column="28" />
+            <state relative-caret-position="517">
+              <caret line="126" selection-start-line="13" selection-end-line="126" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BTS/Pack_Temperature.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/BTS/data/final_data/Crate_Temp.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="499">
-              <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
+            <state relative-caret-position="214">
+              <caret line="210" column="16" selection-start-line="210" selection-start-column="16" selection-end-line="210" selection-end-column="16" />
               <folding>
-                <element signature="e#25#36#0" expanded="true" />
-                <element signature="e#1031#1056#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/General/Temp_sens.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="50" selection-start-line="13" selection-start-column="50" selection-end-line="13" selection-end-column="50" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
+                <element signature="e#0#18#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -82,13 +84,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>lc</find>
-      <find>delta = d.DeltaComm()</find>
-      <find>/home/pi</find>
-      <find>split</find>
-      <find>split(',;'</find>
-      <find>split(',;</find>
-      <find>,</find>
       <find>check</find>
       <find>temp</find>
       <find>s1</find>
@@ -100,18 +95,25 @@
       <find>name=</find>
       <find>#</find>
       <find>t0</find>
-      <find>-101</find>
       <find>-103</find>
-      <find>print</find>
       <find>s2</find>
       <find>102</find>
       <find>ss</find>
       <find>temp_pa</find>
       <find>j</find>
-      <find>log</find>
       <find>0.03</find>
       <find>ask_voltage</find>
       <find>voltage_pack</find>
+      <find>R</find>
+      <find>R_sys</find>
+      <find>-101</find>
+      <find>-102</find>
+      <find>end</find>
+      <find>print</find>
+      <find>set_ylim</find>
+      <find>log</find>
+      <find>ax1</find>
+      <find>ax2</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -120,11 +122,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Scale_model/ESC_comm_1.py" />
-        <option value="$PROJECT_DIR$/Delta/Battery_tests/Data/SS18650_30Q_fp_cycle.log" />
-        <option value="$PROJECT_DIR$/Delta/Battery_tests/Data/US18650_VC7_fp.log" />
-        <option value="$PROJECT_DIR$/Delta/Battery_tests/Data/US18650_VC7_PCC.log" />
-        <option value="$PROJECT_DIR$/Delta/Battery_tests/Data/US18650_VC7_fp_PCC1.log" />
         <option value="$PROJECT_DIR$/Delta/Battery_tests/Data/LG18650_HG2_fp_PCC.log" />
         <option value="$PROJECT_DIR$/General/PL_Range.py" />
         <option value="$PROJECT_DIR$/General/Asymmetrical_Loading.py" />
@@ -165,19 +162,24 @@
         <option value="$PROJECT_DIR$/General/plot_template.py" />
         <option value="$PROJECT_DIR$/BTS/test.py" />
         <option value="$PROJECT_DIR$/BTS/data/BT-B-1_1.log" />
-        <option value="$PROJECT_DIR$/Delta/Battery_tests/Analyze.py" />
         <option value="$PROJECT_DIR$/BTS/data/final_data/BT-B-1_1.log" />
-        <option value="$PROJECT_DIR$/Delta/Battery_tests/Battery_testing.py" />
-        <option value="$PROJECT_DIR$/BTS/data/final_data/Analyze.py" />
         <option value="$PROJECT_DIR$/BTS/Pack_Temperature.py" />
+        <option value="$PROJECT_DIR$/Delta/Battery_tests/Analyze.py" />
+        <option value="$PROJECT_DIR$/BTS/data/BT-E-1800_1200-80_40-6.log" />
         <option value="$PROJECT_DIR$/BTS/BTS.py" />
+        <option value="$PROJECT_DIR$/BTS/say_ass.py" />
+        <option value="$PROJECT_DIR$/BTS/data/final_data/BT-E-1800_1200-80_40-6.log" />
+        <option value="$PROJECT_DIR$/BTS/data/final_data/Analyze.py" />
+        <option value="$PROJECT_DIR$/Delta/Battery_tests/Battery_testing.py" />
+        <option value="$PROJECT_DIR$/BTS/BTS.csv" />
+        <option value="$PROJECT_DIR$/BTS/data/final_data/Crate_Temp.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="89" />
+    <option name="x" value="94" />
     <option name="width" value="1282" />
-    <option name="height" value="946" />
+    <option name="height" value="1010" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -200,23 +202,20 @@
             <path>
               <item name="Silverwing" type="b2602c69:ProjectViewProjectNode" />
               <item name="Silverwing" type="462c0819:PsiDirectoryNode" />
-              <item name="Delta" type="462c0819:PsiDirectoryNode" />
+              <item name="BTS" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Silverwing" type="b2602c69:ProjectViewProjectNode" />
               <item name="Silverwing" type="462c0819:PsiDirectoryNode" />
-              <item name="Delta" type="462c0819:PsiDirectoryNode" />
-              <item name="Battery_tests" type="462c0819:PsiDirectoryNode" />
+              <item name="BTS" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="final_data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Silverwing" type="b2602c69:ProjectViewProjectNode" />
               <item name="Silverwing" type="462c0819:PsiDirectoryNode" />
               <item name="General" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Silverwing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Silverwing" type="462c0819:PsiDirectoryNode" />
-              <item name="WaTT" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Silverwing" type="b2602c69:ProjectViewProjectNode" />
@@ -239,15 +238,15 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/BTS/data/final_data" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/BTS/data/final_data" />
       <recent name="$PROJECT_DIR$/BTS/data" />
       <recent name="$PROJECT_DIR$/General" />
       <recent name="$PROJECT_DIR$/WaTT/WaTT test matrix" />
       <recent name="$PROJECT_DIR$/WaTT/Data" />
-      <recent name="$PROJECT_DIR$/WaTT" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/BTS/data/final_data" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -262,7 +261,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Analyze (1)">
+  <component name="RunManager" selected="Python.Crate_Temp">
     <configuration name="Analyze (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Silverwing" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -305,7 +304,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="BTS" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Crate_Temp" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Silverwing" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/BTS/data/final_data" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BTS/data/final_data/Crate_Temp.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="say_ass" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Silverwing" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -317,28 +337,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BTS/BTS.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="plot_template" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Silverwing" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/General" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/General/plot_template.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BTS/say_ass.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -369,19 +368,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.plot_template" />
-      <item itemvalue="Python.BTS" />
       <item itemvalue="Python.test" />
       <item itemvalue="Python.Analyze" />
       <item itemvalue="Python.Analyze (1)" />
+      <item itemvalue="Python.say_ass" />
+      <item itemvalue="Python.Crate_Temp" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Crate_Temp" />
         <item itemvalue="Python.Analyze (1)" />
+        <item itemvalue="Python.say_ass" />
         <item itemvalue="Python.Analyze" />
         <item itemvalue="Python.test" />
-        <item itemvalue="Python.BTS" />
-        <item itemvalue="Python.plot_template" />
       </list>
     </recent_temporary>
   </component>
@@ -395,139 +394,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532440488607</updated>
-    </task>
-    <task id="LOCAL-00113" summary="cycling">
-      <created>1548509289667</created>
-      <option name="number" value="00113" />
-      <option name="presentableId" value="LOCAL-00113" />
-      <option name="project" value="LOCAL" />
-      <updated>1548509289667</updated>
-    </task>
-    <task id="LOCAL-00114" summary="cycling">
-      <created>1548509596138</created>
-      <option name="number" value="00114" />
-      <option name="presentableId" value="LOCAL-00114" />
-      <option name="project" value="LOCAL" />
-      <updated>1548509596138</updated>
-    </task>
-    <task id="LOCAL-00115" summary="cycling">
-      <created>1548509663507</created>
-      <option name="number" value="00115" />
-      <option name="presentableId" value="LOCAL-00115" />
-      <option name="project" value="LOCAL" />
-      <updated>1548509663507</updated>
-    </task>
-    <task id="LOCAL-00116" summary="cycling">
-      <created>1548509741372</created>
-      <option name="number" value="00116" />
-      <option name="presentableId" value="LOCAL-00116" />
-      <option name="project" value="LOCAL" />
-      <updated>1548509741372</updated>
-    </task>
-    <task id="LOCAL-00117" summary="cycling">
-      <created>1548510782949</created>
-      <option name="number" value="00117" />
-      <option name="presentableId" value="LOCAL-00117" />
-      <option name="project" value="LOCAL" />
-      <updated>1548510782950</updated>
-    </task>
-    <task id="LOCAL-00118" summary="cycling">
-      <created>1548510876388</created>
-      <option name="number" value="00118" />
-      <option name="presentableId" value="LOCAL-00118" />
-      <option name="project" value="LOCAL" />
-      <updated>1548510876388</updated>
-    </task>
-    <task id="LOCAL-00119" summary="charging configuration">
-      <created>1548513861567</created>
-      <option name="number" value="00119" />
-      <option name="presentableId" value="LOCAL-00119" />
-      <option name="project" value="LOCAL" />
-      <updated>1548513861567</updated>
-    </task>
-    <task id="LOCAL-00120" summary="Plotting">
-      <created>1548515986954</created>
-      <option name="number" value="00120" />
-      <option name="presentableId" value="LOCAL-00120" />
-      <option name="project" value="LOCAL" />
-      <updated>1548515986954</updated>
-    </task>
-    <task id="LOCAL-00121" summary="BTS procedue">
-      <created>1548679561567</created>
-      <option name="number" value="00121" />
-      <option name="presentableId" value="LOCAL-00121" />
-      <option name="project" value="LOCAL" />
-      <updated>1548679561572</updated>
-    </task>
-    <task id="LOCAL-00122" summary="BTS procedure">
-      <created>1548679663556</created>
-      <option name="number" value="00122" />
-      <option name="presentableId" value="LOCAL-00122" />
-      <option name="project" value="LOCAL" />
-      <updated>1548679663557</updated>
-    </task>
-    <task id="LOCAL-00123" summary="BTS procedure">
-      <created>1548694948030</created>
-      <option name="number" value="00123" />
-      <option name="presentableId" value="LOCAL-00123" />
-      <option name="project" value="LOCAL" />
-      <updated>1548694948030</updated>
-    </task>
-    <task id="LOCAL-00124" summary="BTS procedure">
-      <created>1548695047757</created>
-      <option name="number" value="00124" />
-      <option name="presentableId" value="LOCAL-00124" />
-      <option name="project" value="LOCAL" />
-      <updated>1548695047758</updated>
-    </task>
-    <task id="LOCAL-00125" summary="BTS procedure">
-      <created>1548695069491</created>
-      <option name="number" value="00125" />
-      <option name="presentableId" value="LOCAL-00125" />
-      <option name="project" value="LOCAL" />
-      <updated>1548695069491</updated>
-    </task>
-    <task id="LOCAL-00126" summary="BTS procedure">
-      <created>1548695124923</created>
-      <option name="number" value="00126" />
-      <option name="presentableId" value="LOCAL-00126" />
-      <option name="project" value="LOCAL" />
-      <updated>1548695124923</updated>
-    </task>
-    <task id="LOCAL-00127" summary="BTS procedure">
-      <created>1548695223550</created>
-      <option name="number" value="00127" />
-      <option name="presentableId" value="LOCAL-00127" />
-      <option name="project" value="LOCAL" />
-      <updated>1548695223550</updated>
-    </task>
-    <task id="LOCAL-00128" summary="BTS procedure">
-      <created>1548695344853</created>
-      <option name="number" value="00128" />
-      <option name="presentableId" value="LOCAL-00128" />
-      <option name="project" value="LOCAL" />
-      <updated>1548695344853</updated>
-    </task>
-    <task id="LOCAL-00129" summary="BTS procedure">
-      <created>1548695606763</created>
-      <option name="number" value="00129" />
-      <option name="presentableId" value="LOCAL-00129" />
-      <option name="project" value="LOCAL" />
-      <updated>1548695606764</updated>
-    </task>
-    <task id="LOCAL-00130" summary="Charge that B">
-      <created>1548697358221</created>
-      <option name="number" value="00130" />
-      <option name="presentableId" value="LOCAL-00130" />
-      <option name="project" value="LOCAL" />
-      <updated>1548697358221</updated>
-    </task>
-    <task id="LOCAL-00131" summary="Charge that B">
-      <created>1548699450001</created>
-      <option name="number" value="00131" />
-      <option name="presentableId" value="LOCAL-00131" />
-      <option name="project" value="LOCAL" />
-      <updated>1548699450001</updated>
     </task>
     <task id="LOCAL-00132" summary="Charge that B">
       <created>1548699592986</created>
@@ -739,7 +605,140 @@
       <option name="project" value="LOCAL" />
       <updated>1548887150279</updated>
     </task>
-    <option name="localTasksCounter" value="162" />
+    <task id="LOCAL-00162" summary="Temp">
+      <created>1548888079056</created>
+      <option name="number" value="00162" />
+      <option name="presentableId" value="LOCAL-00162" />
+      <option name="project" value="LOCAL" />
+      <updated>1548888079056</updated>
+    </task>
+    <task id="LOCAL-00163" summary="Temp">
+      <created>1548888228563</created>
+      <option name="number" value="00163" />
+      <option name="presentableId" value="LOCAL-00163" />
+      <option name="project" value="LOCAL" />
+      <updated>1548888228564</updated>
+    </task>
+    <task id="LOCAL-00164" summary="Temp">
+      <created>1548952242487</created>
+      <option name="number" value="00164" />
+      <option name="presentableId" value="LOCAL-00164" />
+      <option name="project" value="LOCAL" />
+      <updated>1548952242487</updated>
+    </task>
+    <task id="LOCAL-00165" summary="Temp">
+      <created>1548952331701</created>
+      <option name="number" value="00165" />
+      <option name="presentableId" value="LOCAL-00165" />
+      <option name="project" value="LOCAL" />
+      <updated>1548952331703</updated>
+    </task>
+    <task id="LOCAL-00166" summary="Temp">
+      <created>1548952584129</created>
+      <option name="number" value="00166" />
+      <option name="presentableId" value="LOCAL-00166" />
+      <option name="project" value="LOCAL" />
+      <updated>1548952584129</updated>
+    </task>
+    <task id="LOCAL-00167" summary="Minor improvements">
+      <created>1549121741518</created>
+      <option name="number" value="00167" />
+      <option name="presentableId" value="LOCAL-00167" />
+      <option name="project" value="LOCAL" />
+      <updated>1549121741518</updated>
+    </task>
+    <task id="LOCAL-00168" summary="Minor improvements">
+      <created>1549122249066</created>
+      <option name="number" value="00168" />
+      <option name="presentableId" value="LOCAL-00168" />
+      <option name="project" value="LOCAL" />
+      <updated>1549122249066</updated>
+    </task>
+    <task id="LOCAL-00169" summary="Minor improvements">
+      <created>1549122442646</created>
+      <option name="number" value="00169" />
+      <option name="presentableId" value="LOCAL-00169" />
+      <option name="project" value="LOCAL" />
+      <updated>1549122442646</updated>
+    </task>
+    <task id="LOCAL-00170" summary="Minor improvements">
+      <created>1549129502209</created>
+      <option name="number" value="00170" />
+      <option name="presentableId" value="LOCAL-00170" />
+      <option name="project" value="LOCAL" />
+      <updated>1549129502209</updated>
+    </task>
+    <task id="LOCAL-00171" summary="!! Increased maximum temperature !!">
+      <created>1549195948280</created>
+      <option name="number" value="00171" />
+      <option name="presentableId" value="LOCAL-00171" />
+      <option name="project" value="LOCAL" />
+      <updated>1549195948280</updated>
+    </task>
+    <task id="LOCAL-00172" summary="!! Increased maximum temperature !!">
+      <created>1549196037601</created>
+      <option name="number" value="00172" />
+      <option name="presentableId" value="LOCAL-00172" />
+      <option name="project" value="LOCAL" />
+      <updated>1549196037601</updated>
+    </task>
+    <task id="LOCAL-00173" summary="Next">
+      <created>1549205013065</created>
+      <option name="number" value="00173" />
+      <option name="presentableId" value="LOCAL-00173" />
+      <option name="project" value="LOCAL" />
+      <updated>1549205013066</updated>
+    </task>
+    <task id="LOCAL-00174" summary="Matrix">
+      <created>1549222041099</created>
+      <option name="number" value="00174" />
+      <option name="presentableId" value="LOCAL-00174" />
+      <option name="project" value="LOCAL" />
+      <updated>1549222041099</updated>
+    </task>
+    <task id="LOCAL-00175" summary="Matrix">
+      <created>1549223672193</created>
+      <option name="number" value="00175" />
+      <option name="presentableId" value="LOCAL-00175" />
+      <option name="project" value="LOCAL" />
+      <updated>1549223672193</updated>
+    </task>
+    <task id="LOCAL-00176" summary="Matrix">
+      <created>1549223724192</created>
+      <option name="number" value="00176" />
+      <option name="presentableId" value="LOCAL-00176" />
+      <option name="project" value="LOCAL" />
+      <updated>1549223724192</updated>
+    </task>
+    <task id="LOCAL-00177" summary="Matrix">
+      <created>1549223771175</created>
+      <option name="number" value="00177" />
+      <option name="presentableId" value="LOCAL-00177" />
+      <option name="project" value="LOCAL" />
+      <updated>1549223771175</updated>
+    </task>
+    <task id="LOCAL-00178" summary="Matrix">
+      <created>1549228200478</created>
+      <option name="number" value="00178" />
+      <option name="presentableId" value="LOCAL-00178" />
+      <option name="project" value="LOCAL" />
+      <updated>1549228200478</updated>
+    </task>
+    <task id="LOCAL-00179" summary="Matrix">
+      <created>1549232810545</created>
+      <option name="number" value="00179" />
+      <option name="presentableId" value="LOCAL-00179" />
+      <option name="project" value="LOCAL" />
+      <updated>1549232810545</updated>
+    </task>
+    <task id="LOCAL-00180" summary="Matrix">
+      <created>1549232822335</created>
+      <option name="number" value="00180" />
+      <option name="presentableId" value="LOCAL-00180" />
+      <option name="project" value="LOCAL" />
+      <updated>1549232822335</updated>
+    </task>
+    <option name="localTasksCounter" value="181" />
     <servers />
   </component>
   <component name="TodoView">
@@ -752,46 +751,27 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="89" y="0" width="1282" height="946" extended-state="0" />
+    <frame x="94" y="0" width="1282" height="1010" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31720856" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.31720856" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32672232" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4929841" visible="true" weight="0.24824356" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4929841" visible="true" weight="0.3017429" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32985386" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32959184" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32897604" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32959184" />
-      <window_info anchor="bottom" id="Python Console" order="9" sideWeight="0.4929841" weight="0.19555035" />
+      <window_info anchor="bottom" id="Python Console" order="9" sideWeight="0.4929841" weight="0.1949891" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5070159" side_tool="true" weight="0.35508022" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19512194" />
-      <window_info id="Structure" order="1" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32672232" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4929841" weight="0.41313" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32985386" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32985386" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Python Console" order="9" sideWeight="0.4929841" visible="true" weight="0.19628647" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5070159" side_tool="true" weight="0.35508022" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout-to-restore>
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.log" />
@@ -810,9 +790,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Updated matrices and manual added" />
-    <MESSAGE value="Manual added" />
-    <MESSAGE value="Untested release (check readdf() calibration function for correct behavior)" />
     <MESSAGE value="Added legend for output data" />
     <MESSAGE value="Output legibility changes" />
     <MESSAGE value="Updated manual" />
@@ -833,32 +810,14 @@
     <MESSAGE value="Example plot template" />
     <MESSAGE value="Load matrix" />
     <MESSAGE value="Printing stuff" />
-    <MESSAGE value="Matrix" />
     <MESSAGE value="Temp" />
-    <option name="LAST_COMMIT_MESSAGE" value="Temp" />
+    <MESSAGE value="Minor improvements" />
+    <MESSAGE value="!! Increased maximum temperature !!" />
+    <MESSAGE value="Next" />
+    <MESSAGE value="Matrix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Matrix" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/WaTT/WaTT.log" />
-    <entry file="file://$PROJECT_DIR$/WaTT/WaTT_2019_01_03.log" />
-    <entry file="file://$PROJECT_DIR$/WaTT/WaTT_11jan.log" />
-    <entry file="file://$PROJECT_DIR$/WaTT/8jan-Table 1.csv" />
-    <entry file="file://$PROJECT_DIR$/Scale_model/Servo_control.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Delta/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Delta/Manual_control.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -1019,17 +978,6 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/General/Title.png" />
-    <entry file="file://$PROJECT_DIR$/General/plot_template.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="45" column="12" lean-forward="true" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-            <element signature="e#205#411#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BTS/data/untitled.log">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="74910">
@@ -1074,16 +1022,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BTS/BTS.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="30" lean-forward="true" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="30" />
-        </state>
-      </provider>
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BTS/data/BT-B-1_1.log">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -1091,46 +1029,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BTS/data/BT-E-1800_1200-80_40-6.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="56" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Delta/Battery_tests/Analyze.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1533">
-          <caret line="117" column="48" lean-forward="true" selection-start-line="117" selection-start-column="48" selection-end-line="117" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BTS/data/final_data/BT-B-1_1.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/General/Title">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Delta/Battery_tests/Battery_testing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="565">
-          <caret line="109" column="33" selection-start-line="109" selection-start-column="33" selection-end-line="109" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BTS/data/final_data/Analyze.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="80" column="28" lean-forward="true" selection-start-line="80" selection-start-column="28" selection-end-line="80" selection-end-column="28" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/General/Temp_sens.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -1142,23 +1042,125 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BTS/Pack_Temperature.py">
+    <entry file="file://$PROJECT_DIR$/BTS/data/final_data/BT-B-1_1_placeholder.eps">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BTS/data/final_data/OLD_BT-B-1_1.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="499">
-          <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
-          <folding>
-            <element signature="e#25#36#0" expanded="true" />
-            <element signature="e#1031#1056#0" />
-          </folding>
+        <state relative-caret-position="591">
+          <caret line="34229" column="57" lean-forward="true" selection-start-line="34229" selection-start-column="57" selection-end-line="34229" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BTS/data/final_data/OLD_BT-E-1800_1200-80_40-6.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="591">
+          <caret line="11351" column="99" selection-start-line="11351" selection-start-column="99" selection-end-line="11351" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BTS/data/final_data/OLD_MAX60_BT-E-1800_1200-80_40-6.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BTS/data/final_data/BT-E-1800_1200-80_40-6.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BTS/say_ass.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="55" selection-start-line="3" selection-start-column="55" selection-end-line="3" selection-end-column="55" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BTS/BTS.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2858">
-          <caret line="105" column="16" selection-start-line="105" selection-start-column="4" selection-end-line="105" selection-end-column="16" />
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="8" selection-end-line="8" selection-end-column="92" />
           <folding>
+            <element signature="e#0#11#0" expanded="true" />
             <element signature="e#677#816#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BTS/data/final_data/BT-E-1800_1200-80_40-6.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BTS/Pack_Temperature.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1335">
+          <caret line="89" column="25" selection-start-line="89" selection-start-column="25" selection-end-line="89" selection-end-column="25" />
+          <folding>
+            <element signature="e#25#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BTS/BTS.csv">
+      <provider editor-type-id="csv-text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="41" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="41" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="0">
+          <column index="0" width="277" />
+          <column index="1" width="161" />
+          <column index="2" width="100" />
+          <column index="3" width="100" />
+          <column index="4" width="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BTS/data/final_data/Analyze.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="74" column="21" lean-forward="true" selection-start-line="74" selection-start-column="21" selection-end-line="74" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+            <element signature="e#346#534#0" />
+            <marker date="1549218659185" expanded="false" signature="515:654" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Delta/Battery_tests/Battery_testing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="56" selection-start-line="12" selection-start-column="56" selection-end-line="12" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Delta/Battery_tests/Analyze.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="517">
+          <caret line="126" selection-start-line="13" selection-end-line="126" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/General/plot_template.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-21">
+          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BTS/data/final_data/Crate_Temp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="210" column="16" selection-start-line="210" selection-start-column="16" selection-end-line="210" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>

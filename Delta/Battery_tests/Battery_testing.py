@@ -1,18 +1,20 @@
 import time
 import RPi.GPIO as gp
 import delta_sm3300 as d
+import subprocess
 
 # TODO: Temp_sens moved to general
+pat = subprocess.Popen(['python', '/home/pi/Silverwing/General/Temp_sens.py'])  # ESC daemon
 
 delta = d.DeltaComm()
 
-safe_operation = False
+safe_operation = True
 capacity = 3.0
-crate_dischar = [(8.37, 10), (8.37, 20), (9.44, 15), (4.74, 15), (1.71, 1100), (1.42, 15), (9.44, 15), (7.35, 10), (0., 60), (1.71, 0)]
+crate_dischar = [(6., 80), (1.71, 1080), (6., 40), (1.71, 0)]
 # crate_dischar = [(6., 0), (5., 0), (4., 0), (3., 0), (2., 0), (1., 0)]
 # (C, duration [s]) duration=0 for full discharge
-name = 'US18650_VTC6_fp_dec'
-minvolt = 2.8  # OCV
+name = 'US18650_VTC6_fp_feb'
+minvolt = 2.5  # OCV
 R_sys = 0.03
 
 pin = 4
@@ -29,12 +31,12 @@ print 'Maximum cell voltage: {!s}V\nMinimum cell voltage: {!s}V\nCells in series
 
 
 def log(timestamp, voltage, current, temperature=0.0, remark=''):
-    with open('/home/pi/Silverwing/battery_tests/data/{!s}.log'.format(name), 'a') as d:
+    with open('/home/pi/Silverwing/Delta/Battery_tests/Data/{!s}.log'.format(name), 'a') as d:
         d.write('t{!s} U{!s} I{!s} T{!s}, {!s}\n'.format(timestamp, voltage, current, temperature, remark))
 
 
 def temp_read():
-    with open('/home/pi/Silverwing/battery_tests/data/current.temp', 'r') as t:
+    with open('/home/pi/Silverwing/General/ambient.temp', 'r') as t:
         raw = t.read()
         try:
             t_f = float(raw.split(',')[0])
@@ -49,7 +51,6 @@ def temp_read():
             #     value = 'Outdated'
 
         return value
-
 
 def charge():
     log(time.time(), 0., 0., temperature=-103., remark='Charging started: {}'.format(name))
@@ -176,3 +177,4 @@ finally:
     delta.close_connection()
     gp.output(pin, 0)
     gp.cleanup()
+    pat.terminate()

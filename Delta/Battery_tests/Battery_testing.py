@@ -13,7 +13,7 @@ capacity = 3.0
 crate_dischar = [(6., 80), (1.71, 1080), (6., 40), (1.71, 0)]
 # crate_dischar = [(6., 0), (5., 0), (4., 0), (3., 0), (2., 0), (1., 0)]
 # (C, duration [s]) duration=0 for full discharge
-name = 'US18650_VTC6_fp_feb'
+name = 'VTC6_vacuum_insulated_PCC'
 minvolt = 2.5  # OCV
 R_sys = 0.03
 

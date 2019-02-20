@@ -8,9 +8,9 @@ import numpy as np
 mode = 0
 
 modes = ['reg', 'fp', 'cycle']
-R_battery = 0.013/4.
+# R_battery = 0.013/4.
 # R_battery = 0.0016
-
+R_battery = 0
 with open('./Data/US18650VTC6_fp.log', 'r') as data:
     samples = data.readlines()
 
@@ -44,6 +44,9 @@ with open('./Data/US18650VTC6_fp.log', 'r') as data:
 
         except:
             pass
+
+print(np.average(Us))
+
 
 As = [-x + max(As) for x in As]
 

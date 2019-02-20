@@ -8,7 +8,7 @@ pat = subprocess.Popen(['python', '/home/pi/Silverwing/General/Temp_sens.py'])  
 
 delta = d.DeltaComm()
 
-safe_operation = True
+safe_operation = False
 capacity = 3.0
 crate_dischar = [(6., 80), (1.71, 1080), (6., 40), (1.71, 0)]
 # crate_dischar = [(6., 0), (5., 0), (4., 0), (3., 0), (2., 0), (1., 0)]
@@ -127,7 +127,7 @@ def discharge(c_rate, duration=0, status='empty'):
 
                 time.sleep(dt)
 
-                if abs((c_voltage/series - minv)) < 0.1 and c_current > t_current/3.:
+                if abs((c_voltage/series - minv)) < 0.1 and c_current > t_current/2.:
                     print('Discharge completed')
                     status = 'discharged'
                     break

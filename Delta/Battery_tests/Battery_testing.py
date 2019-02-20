@@ -73,7 +73,7 @@ def charge():
             if c_current < t_current/15. and time.time() - t0 > 22:
                 print('Charging complete')
                 break
-            elif 0. > c_temp > 60.:
+            elif 0. > c_temp > 100.:
                 print('Temperature threshold exceeded at {!s}'.format(c_temp))
                 delta.set_state(0)
                 time.sleep(60)

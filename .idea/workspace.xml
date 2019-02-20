@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="Matrix">
+    <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="matrix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Delta/Battery_tests/Battery_testing.py" beforeDir="false" afterPath="$PROJECT_DIR$/Delta/Battery_tests/Battery_testing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Delta/Battery_tests/Analyze.py" beforeDir="false" afterPath="$PROJECT_DIR$/Delta/Battery_tests/Analyze.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,14 +13,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Delta/Battery_tests/Battery_testing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="75" column="33" selection-start-line="75" selection-start-column="33" selection-end-line="75" selection-end-column="33" />
+            <state relative-caret-position="195">
+              <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Delta/Battery_tests/Analyze.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -120,11 +129,11 @@
         <option value="$PROJECT_DIR$/General/Plot_Torque_Speed.py" />
         <option value="$PROJECT_DIR$/General/Plot_Motor_Thermal.py" />
         <option value="$PROJECT_DIR$/BTS/data/final_data/Analyze.py" />
-        <option value="$PROJECT_DIR$/Delta/Battery_tests/Analyze.py" />
         <option value="$PROJECT_DIR$/BTS/data/final_data/Crate_Temp.py" />
         <option value="$PROJECT_DIR$/General/PCC.py" />
         <option value="$PROJECT_DIR$/BTS/BTS.csv" />
         <option value="$PROJECT_DIR$/Delta/Battery_tests/Battery_testing.py" />
+        <option value="$PROJECT_DIR$/Delta/Battery_tests/Analyze.py" />
       </list>
     </option>
   </component>
@@ -155,6 +164,13 @@
               <item name="Silverwing" type="462c0819:PsiDirectoryNode" />
               <item name="Delta" type="462c0819:PsiDirectoryNode" />
               <item name="Battery_tests" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Silverwing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Silverwing" type="462c0819:PsiDirectoryNode" />
+              <item name="Delta" type="462c0819:PsiDirectoryNode" />
+              <item name="Battery_tests" type="462c0819:PsiDirectoryNode" />
+              <item name="Data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Silverwing" type="b2602c69:ProjectViewProjectNode" />
@@ -205,7 +221,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Crate_Temp">
+  <component name="RunManager" selected="Python.Analyze">
     <configuration name="Analyze (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Silverwing" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -320,9 +336,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Analyze" />
         <item itemvalue="Python.Crate_Temp" />
         <item itemvalue="Python.PCC" />
-        <item itemvalue="Python.Analyze" />
         <item itemvalue="Python.Analyze (1)" />
         <item itemvalue="Python.Plot_Motor_Thermal" />
       </list>
@@ -338,27 +354,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532440488607</updated>
-    </task>
-    <task id="LOCAL-00135" summary="Example plot template">
-      <created>1548793240318</created>
-      <option name="number" value="00135" />
-      <option name="presentableId" value="LOCAL-00135" />
-      <option name="project" value="LOCAL" />
-      <updated>1548793240318</updated>
-    </task>
-    <task id="LOCAL-00136" summary="Load matrix">
-      <created>1548793520073</created>
-      <option name="number" value="00136" />
-      <option name="presentableId" value="LOCAL-00136" />
-      <option name="project" value="LOCAL" />
-      <updated>1548793520073</updated>
-    </task>
-    <task id="LOCAL-00137" summary="Load matrix">
-      <created>1548793570578</created>
-      <option name="number" value="00137" />
-      <option name="presentableId" value="LOCAL-00137" />
-      <option name="project" value="LOCAL" />
-      <updated>1548793570578</updated>
     </task>
     <task id="LOCAL-00138" summary="Load matrix">
       <created>1548793644809</created>
@@ -682,7 +677,28 @@
       <option name="project" value="LOCAL" />
       <updated>1550685180244</updated>
     </task>
-    <option name="localTasksCounter" value="184" />
+    <task id="LOCAL-00184" summary="Matrix">
+      <created>1550685944959</created>
+      <option name="number" value="00184" />
+      <option name="presentableId" value="LOCAL-00184" />
+      <option name="project" value="LOCAL" />
+      <updated>1550685944959</updated>
+    </task>
+    <task id="LOCAL-00185" summary="max temp increased">
+      <created>1550686090777</created>
+      <option name="number" value="00185" />
+      <option name="presentableId" value="LOCAL-00185" />
+      <option name="project" value="LOCAL" />
+      <updated>1550686090777</updated>
+    </task>
+    <task id="LOCAL-00186" summary="matrix">
+      <created>1550688831256</created>
+      <option name="number" value="00186" />
+      <option name="presentableId" value="LOCAL-00186" />
+      <option name="project" value="LOCAL" />
+      <updated>1550688831256</updated>
+    </task>
+    <option name="localTasksCounter" value="187" />
     <servers />
   </component>
   <component name="TodoView">
@@ -698,12 +714,12 @@
     <frame x="0" y="0" width="1282" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31720856" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.31720856" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32570806" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4929841" weight="0.24183007" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4929841" visible="true" weight="0.24112734" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -734,8 +750,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Added legend for output data" />
-    <MESSAGE value="Output legibility changes" />
     <MESSAGE value="Updated manual" />
     <MESSAGE value="Increased settling time rpm" />
     <MESSAGE value="Increased sample time for load cells" />
@@ -759,7 +773,9 @@
     <MESSAGE value="!! Increased maximum temperature !!" />
     <MESSAGE value="Next" />
     <MESSAGE value="Matrix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Matrix" />
+    <MESSAGE value="max temp increased" />
+    <MESSAGE value="matrix" />
+    <option name="LAST_COMMIT_MESSAGE" value="matrix" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/WaTT/WaTT test matrix/test.py" />
@@ -1166,13 +1182,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Delta/Battery_tests/Analyze.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BTS/data/final_data/Analyze.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="371">
@@ -1186,25 +1195,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BTS/data/final_data/BT-E-1800_1200-80_40-6_PCC.png">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BTS/data/final_data/BT-E-1800_1200-80_40-6.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BTS/BTS.csv">
-      <provider editor-type-id="csv-text-editor">
-        <state relative-caret-position="465">
-          <caret line="32" column="41" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="0">
-          <column index="0" width="277" />
-          <column index="1" width="161" />
-          <column index="2" width="100" />
-          <column index="3" width="100" />
-          <column index="4" width="100" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BTS/BTS.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -1226,13 +1216,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/BTS/data/final_data/BT-E-1800_1200-80_40-6.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BTS/BTS.csv">
+      <provider editor-type-id="csv-text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="41" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="0">
+          <column index="0" width="277" />
+          <column index="1" width="161" />
+          <column index="2" width="100" />
+          <column index="3" width="100" />
+          <column index="4" width="100" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Delta/Battery_tests/Battery_testing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="75" column="33" selection-start-line="75" selection-start-column="33" selection-end-line="75" selection-end-column="33" />
+        <state relative-caret-position="195">
+          <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Delta/Battery_tests/Analyze.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
         </state>
       </provider>
     </entry>

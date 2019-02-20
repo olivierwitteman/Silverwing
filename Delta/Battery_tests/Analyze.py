@@ -5,13 +5,14 @@ import numpy as np
 '''OCV'''
 
 # nom_voltage = float(input('Nominal voltage of tested cell [V]: '))
-mode = 0
+mode = 1
 
 modes = ['reg', 'fp', 'cycle']
 # R_battery = 0.013/4.
 # R_battery = 0.0016
 R_battery = 0
-with open('./Data/US18650VTC6_fp.log', 'r') as data:
+filename = 'VTC6_vacuum_insulated_PCC'
+with open('./Data/{!s}.log'.format(filename), 'r') as data:
     samples = data.readlines()
 
     Us, Is, ts, As, c_s_mark, d_s_mark, c_e_mark, d_e_mark, Ts, rmrk = [], [], [], [0.], [], [], [], [], [], []
@@ -58,7 +59,7 @@ av_current = abs(round(sum(Is[start:stop]) / (stop - start), 1))
 av_voltage = round(sum(Us[start:stop]) / (stop - start), 1)
 caps = []
 
-R_sys = 0.008
+R_sys = 0.03
 R_total = R_sys + R_battery
 
 # print R_sys
@@ -126,4 +127,5 @@ for j in lst:
 ax1.legend(loc=0)
 
 ax1.grid(True)
+plt.savefig('./{!s}.png'.format(filename))
 plt.show()

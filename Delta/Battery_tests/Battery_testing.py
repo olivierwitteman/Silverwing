@@ -10,10 +10,10 @@ delta = d.DeltaComm()
 
 safe_operation = False
 capacity = 3.0
-crate_dischar = [(6., 80), (1.71, 1080), (6., 40), (1.71, 0)]
-# crate_dischar = [(6., 0), (5., 0), (4., 0), (3., 0), (2., 0), (1., 0)]
+# crate_dischar = [(6., 80), (1.71, 1080), (6., 40), (1.71, 0)]
+crate_dischar = [(6., 0)]
 # (C, duration [s]) duration=0 for full discharge
-name = 'VTC6_vacuum_insulated_PCC'
+name = 'VTC6_vacuum_insulated_PCC_hard_discharge'
 minvolt = 2.5  # OCV
 R_sys = 0.03
 
@@ -51,6 +51,7 @@ def temp_read():
             #     value = 'Outdated'
 
         return value
+
 
 def charge():
     log(time.time(), 0., 0., temperature=-103., remark='Charging started: {}'.format(name))

@@ -5,13 +5,13 @@ import numpy as np
 '''OCV'''
 
 # nom_voltage = float(input('Nominal voltage of tested cell [V]: '))
-mode = 1
+mode = 0
 
 modes = ['reg', 'fp', 'cycle']
 # R_battery = 0.013/4.
 # R_battery = 0.0016
 R_battery = 0
-filename = 'VTC6_vacuum_insulated_PCC'
+filename = 'VTC6_vacuum_insulated_PCC_hard_discharge'
 with open('./Data/{!s}.log'.format(filename), 'r') as data:
     samples = data.readlines()
 

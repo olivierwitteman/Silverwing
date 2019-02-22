@@ -17,7 +17,7 @@ path = './'
 # path = '/Users/olivierwitteman/Downloads/'
 # name = 'BT-B-1_1'
 # name = 'BT-E-1800_1200-80_40-6_PCC'
-name = 'US18650_VTC6_fp_feb'
+name = 'disch_BT-E-1200_800-80_40-8'
 
 
 def butter_lowpass(cutoff, fs, order=5):
@@ -67,7 +67,7 @@ for i in np.arange(0, len(samples), 1):
         # print(float(samples[i].split()[3][3:-2].strip()))
         # Tsa.append(float(samples[i].split()[3][3:].strip()))
         # print(float(samples[i].split()[4][3:-2].strip()))
-        Tsp.append(float(samples[i].split()[3][1:-2].strip()))
+        Tsp.append(float(samples[i].split()[4][3:-2].strip()))
 
         # if Tsp[-1] < -100.:
         #     raise KeyboardInterrupt
@@ -165,8 +165,8 @@ label1 = 'I_avg = {!s}A, E_extracted = {!s}Wh, endurance = {!s}min'\
 # ax2.plot(As_i, smooth_Is, c=colors[0], ls=':', label='{!s}A [A]'.format(av_current), lw=2.)
 
 ax1.set_xlim(0, 1.02*max(caps))
-ax1.set_ylim(0, 7)
-ax2.set_ylim(20, 45)
+ax1.set_ylim(0, 28)
+ax2.set_ylim(10, 75)
 
 # ax1.plot(np.nan, np.nan, ls=':', label='Current', c='k', lw=2.)
 ax1.plot(np.nan, np.nan, ls='-.', label='Temperature', c='r')
@@ -184,5 +184,5 @@ ax2.tick_params(labelsize=14)
 plt.tight_layout()
 
 ax1.grid(True)
-plt.savefig('./{!s}.eps'.format(name), dpi=255, format='eps')  # Use eps for LaTeX, other options: png, pdf, ps, eps
+plt.savefig('./{!s}.png'.format(name), dpi=255, format='png')  # Use eps for LaTeX, other options: png, pdf, ps, eps
 plt.show()

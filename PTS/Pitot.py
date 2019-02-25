@@ -7,4 +7,4 @@ DEVICE_REG_MODE1 = 0x00
 DEVICE_REG_LEDOUT0 = 0x1d
 
 
-bus.read_word_data(DEVICE_ADDRESS, '')
+print(bus.read_word_data(DEVICE_ADDRESS, DEVICE_REG_MODE1))

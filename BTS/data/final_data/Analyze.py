@@ -16,8 +16,8 @@ width = 7.5
 path = './'
 # path = '/Users/olivierwitteman/Downloads/'
 # name = 'BT-B-1_1'
-# name = 'BT-E-1800_1200-80_40-6_PCC'
 name = 'disch_BT-E-1200_800-80_40-8'
+# name = 'disch_BT-E-1800_1200-80_40-6_PCC'
 
 
 def butter_lowpass(cutoff, fs, order=5):

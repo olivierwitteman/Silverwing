@@ -10,14 +10,9 @@ DEVICE_REG_MODE1 = 0
 DEVICE_REG_MODE2 = 1
 
 
-def cas(qc, p0):
-    v = 0.51 * 661.4788 * math.sqrt(5.*((qc/p0 + 1.)**(2./7.) - 1.))
-    return v
-
-
 def u(q, temp, p):
-    rho = (p+1e-3)/(287.*temp)
-    # rho = 1.225
+    # rho = (p+1e-3)/(287.*temp)
+    rho = 1.225
     print('rho: {!s}'.format(rho))
     airspeed = math.sqrt(2.*abs(q)/rho)
     return airspeed
@@ -35,6 +30,10 @@ def poll_q(delta=0.):
     # print min(lst), max(lst)
     p3 = p3s[int(len(p3s) / 2.)]
     p4 = p4s[int(len(p3s) / 2.)]
+
+    print p3
+    print p4
+
 
     p0 = p3s[int(len(p3s) / 2)] * 3386.389  # Pa
     q = abs(p3 - p4) * 3386.389 - delta #* 6894.757/1000.

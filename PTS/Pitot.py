@@ -16,7 +16,7 @@ def cas(qc, p0):
 
 
 def u(q, rho):
-    airspeed = math.sqrt(2*q/rho)
+    airspeed = math.sqrt(2. * q/rho)
 
 
 def q(dq=0):
@@ -29,6 +29,7 @@ def q(dq=0):
     print sum(lst) / len(lst), lst[int(len(lst) / 2)]
 
     q = abs(max(lst) - lst[int(len(lst) / 2)]) - dq
+    return q
 
 
 try:

@@ -29,8 +29,10 @@ def poll_q(delta=0.):
     print min(lst), max(lst)
     print sum(lst) / len(lst), lst[int(len(lst) / 2.)]
 
-    p0 = lst[int(len(lst) / 2)]
+    p0 = lst[int(len(lst) / 2)]  # inch mercury
     q = (abs(max(lst) - p0))/1000. - delta
+
+    p0 = p0 * 3386.389/100
 
     return q, p0
 
@@ -46,6 +48,7 @@ try:
 
     while True:
         q = poll_q(delta=dq)
+        print('p0'.format(q[1]))
         print('airspeed: {!s}\n\n'.format(u(q[0], temp=10., p=q[1])))
         # print(bus.read_word_data(DEVICE_ADDRESS, DEVICE_REG_MODE2))
         time.sleep(1)

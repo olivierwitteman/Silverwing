@@ -11,7 +11,7 @@ DEVICE_REG_MODE2 = 1
 
 
 def cas(qc, p0):
-    v = 661.4788 * math.sqrt(5.*((qc/p0 + 1.)**(2./7.) - 1))
+    v = 0.51 * 661.4788 * math.sqrt(5.*((qc/p0 + 1.)**(2./7.) - 1))
     return v
 
 

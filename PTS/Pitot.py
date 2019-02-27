@@ -11,7 +11,7 @@ DEVICE_REG_MODE2 = 1
 
 
 def cas(qc, p0):
-    v = 0.51 * 661.4788 * math.sqrt(5.*((qc/p0 + 1.)**(2./7.) - 1))
+    v = 0.51 * 661.4788 * math.sqrt(5.*((qc/p0 + 1.)**(2./7.) - 1.))
     return v
 
 
@@ -20,16 +20,16 @@ def u(q, rho):
     return airspeed
 
 
-def poll_q(dq=0):
+def poll_q(dq=0.):
     lst = []
-    for i in range(64):
+    for i in range(128):
         lst.append(bus.read_word_data(DEVICE_ADDRESS, i))
 
     lst.sort()
     print min(lst), max(lst)
-    print sum(lst) / len(lst), lst[int(len(lst) / 2)]
+    print sum(lst) / len(lst), lst[int(len(lst) / 2.)]
 
-    q = (abs(max(lst) - lst[int(len(lst) / 2)]) - dq)/1000
+    q = (abs(max(lst) - lst[int(len(lst) / 2)]) - dq)/1000.
     return q
 
 

@@ -15,19 +15,27 @@ def cas(qc, p0):
     return v
 
 
+def u(q, rho):
+    airspeed = math.sqrt(2*q/rho)
+
+
+def q(dq=0):
+    lst = []
+    for i in range(64):
+        lst.append(bus.read_word_data(DEVICE_ADDRESS, i))
+
+    lst.sort()
+    print min(lst), max(lst)
+    print sum(lst) / len(lst), lst[int(len(lst) / 2)]
+
+    q = abs(max(lst) - lst[int(len(lst) / 2)]) - dq
+
+
 try:
+    dq = q()
     while True:
-        lst = []
-        for i in range(64):
-            lst.append(bus.read_word_data(DEVICE_ADDRESS, i))
-
-        lst.sort()
-        print min(lst), max(lst)
-        print sum(lst)/len(lst), lst[int(len(lst)/2)]
-
-        q = abs(max(lst)-lst[int(len(lst)/2)])
-
-        print(cas(q/1000., lst[int(len(lst)/2)]/1000.))
+        q = q()
+        print(u(q, 1.225))
         # print(bus.read_word_data(DEVICE_ADDRESS, DEVICE_REG_MODE2))
         print('\n\n')
         time.sleep(1)

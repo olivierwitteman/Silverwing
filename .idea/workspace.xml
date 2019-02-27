@@ -15,8 +15,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PTS/Pitot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="25" lean-forward="true" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+            <state relative-caret-position="210">
+              <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -128,7 +128,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1396" />
+    <option name="width" value="1282" />
     <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -137,6 +137,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -162,7 +163,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -327,13 +327,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532440488607</updated>
-    </task>
-    <task id="LOCAL-00146" summary="Printing stuff">
-      <created>1548797319259</created>
-      <option name="number" value="00146" />
-      <option name="presentableId" value="LOCAL-00146" />
-      <option name="project" value="LOCAL" />
-      <updated>1548797319259</updated>
     </task>
     <task id="LOCAL-00147" summary="Matrix">
       <created>1548801525129</created>
@@ -671,7 +664,14 @@
       <option name="project" value="LOCAL" />
       <updated>1551112496160</updated>
     </task>
-    <option name="localTasksCounter" value="195" />
+    <task id="LOCAL-00195" summary="i2c">
+      <created>1551112963698</created>
+      <option name="number" value="00195" />
+      <option name="presentableId" value="LOCAL-00195" />
+      <option name="project" value="LOCAL" />
+      <updated>1551112963698</updated>
+    </task>
+    <option name="localTasksCounter" value="196" />
     <servers />
   </component>
   <component name="TodoView">
@@ -684,15 +684,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1396" height="1050" extended-state="0" />
+    <frame x="0" y="390" width="1282" height="1050" extended-state="1" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29090908" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.31720856" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32570806" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4929841" visible="true" weight="0.24112734" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4929841" weight="0.24112734" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -914,11 +914,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/General/tempdata.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
-        </state>
-      </provider>
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3">
           <column index="0" width="100" />
@@ -1053,6 +1048,11 @@
           <column index="129" width="100" />
         </state>
       </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BTS/data/final_data/Crate_Temp.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -1085,9 +1085,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BTS/data/final_data/BT-E-1800_1200-80_40-6_PCC.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/BTS/data/final_data/BT-E-1800_1200-80_40-6_PCC.png" />
     <entry file="file://$PROJECT_DIR$/General/Temp_sens.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -1098,12 +1096,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BTS/data/final_data/BT-E-1800_1200-80_40-6.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Delta/Battery_tests/VTC6_vacuum_insulated_PCC.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/BTS/data/final_data/BT-E-1800_1200-80_40-6.png" />
+    <entry file="file://$PROJECT_DIR$/Delta/Battery_tests/VTC6_vacuum_insulated_PCC.png" />
     <entry file="file://$PROJECT_DIR$/Delta/Battery_tests/Analyze.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -1139,11 +1133,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BTS/BTS.csv">
-      <provider editor-type-id="csv-text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="0">
           <column index="0" width="277" />
@@ -1151,6 +1140,11 @@
           <column index="2" width="100" />
           <column index="3" width="100" />
           <column index="4" width="100" />
+        </state>
+      </provider>
+      <provider editor-type-id="csv-text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -1199,8 +1193,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PTS/Pitot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="25" lean-forward="true" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+        <state relative-caret-position="210">
+          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>

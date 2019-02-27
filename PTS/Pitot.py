@@ -48,7 +48,7 @@ try:
 
     while True:
         q = poll_q(delta=dq)
-        print('p0'.format(q[1]))
+        print('p0: {!s}'.format(q[1]))
         print('airspeed: {!s}\n\n'.format(u(q[0], temp=10., p=q[1])))
         # print(bus.read_word_data(DEVICE_ADDRESS, DEVICE_REG_MODE2))
         time.sleep(1)

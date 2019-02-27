@@ -20,7 +20,7 @@ def u(q, rho):
     return airspeed
 
 
-def poll_q(dq=0.):
+def poll_q(delta=0.):
     lst = []
     for i in range(128):
         lst.append(bus.read_word_data(DEVICE_ADDRESS, i))
@@ -29,7 +29,7 @@ def poll_q(dq=0.):
     print min(lst), max(lst)
     print sum(lst) / len(lst), lst[int(len(lst) / 2.)]
 
-    q = (abs(max(lst) - lst[int(len(lst) / 2)]) - dq)/1000.
+    q = (abs(max(lst) - lst[int(len(lst) / 2)]) - delta)/1000.
     return q
 
 

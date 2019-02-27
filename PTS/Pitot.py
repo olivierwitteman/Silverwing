@@ -48,7 +48,7 @@ try:
     for _ in range(50):
         dqs.append(poll_q()[0])
 
-    dq = sum(dqs)/len(dqs)
+    dq = dqs.sort()[int(len(dqs/2))]
 
     print('dq: {!s}'.format(dq))
 

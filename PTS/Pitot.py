@@ -25,7 +25,7 @@ def u(q, temp, p):
 
 def poll_q(delta=0.):
     p3s, p4s = [], []
-    for i in range(16):
+    for i in range(50):
         block = bus.read_i2c_block_data(0x28, 0, 4)
         p3s.append(block[0])
         p4s.append(block[1])
@@ -36,8 +36,8 @@ def poll_q(delta=0.):
     p3 = p3s[int(len(p3s) / 2.)]
     p4 = p4s[int(len(p3s) / 2.)]
 
-    p0 = p3s[int(len(p3s) / 2)] * 3386.389/1000.  # inch mercury
-    q = abs(p3 - p4) - delta #* 6894.757/1000.
+    p0 = p3s[int(len(p3s) / 2)] * 3386.389  # Pa
+    q = abs(p3 - p4) * 3386.389 - delta #* 6894.757/1000.
     # q = (abs(min(lst) - p0)) * 3386.389/1000. - delta
 
     return q, p0

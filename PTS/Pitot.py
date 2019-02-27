@@ -29,7 +29,7 @@ def poll_q(delta=0.):
     print min(lst), max(lst)
     print sum(lst) / len(lst), lst[int(len(lst) / 2.)]
 
-    q = (abs(max(lst) - lst[int(len(lst) / 2)]) - delta)/1000.
+    q = (abs(max(lst) - lst[int(len(lst) / 2)]))/1000. - delta
     return q
 
 

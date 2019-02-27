@@ -15,8 +15,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PTS/Pitot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="48" column="65" selection-start-line="48" selection-start-column="65" selection-end-line="48" selection-end-column="65" />
+            <state relative-caret-position="38">
+              <caret line="18" column="44" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -329,41 +329,6 @@
       <option name="presentableId" value="Default" />
       <updated>1532440488607</updated>
     </task>
-    <task id="LOCAL-00169" summary="Minor improvements">
-      <created>1549122442646</created>
-      <option name="number" value="00169" />
-      <option name="presentableId" value="LOCAL-00169" />
-      <option name="project" value="LOCAL" />
-      <updated>1549122442646</updated>
-    </task>
-    <task id="LOCAL-00170" summary="Minor improvements">
-      <created>1549129502209</created>
-      <option name="number" value="00170" />
-      <option name="presentableId" value="LOCAL-00170" />
-      <option name="project" value="LOCAL" />
-      <updated>1549129502209</updated>
-    </task>
-    <task id="LOCAL-00171" summary="!! Increased maximum temperature !!">
-      <created>1549195948280</created>
-      <option name="number" value="00171" />
-      <option name="presentableId" value="LOCAL-00171" />
-      <option name="project" value="LOCAL" />
-      <updated>1549195948280</updated>
-    </task>
-    <task id="LOCAL-00172" summary="!! Increased maximum temperature !!">
-      <created>1549196037601</created>
-      <option name="number" value="00172" />
-      <option name="presentableId" value="LOCAL-00172" />
-      <option name="project" value="LOCAL" />
-      <updated>1549196037601</updated>
-    </task>
-    <task id="LOCAL-00173" summary="Next">
-      <created>1549205013065</created>
-      <option name="number" value="00173" />
-      <option name="presentableId" value="LOCAL-00173" />
-      <option name="project" value="LOCAL" />
-      <updated>1549205013066</updated>
-    </task>
     <task id="LOCAL-00174" summary="Matrix">
       <created>1549222041099</created>
       <option name="number" value="00174" />
@@ -672,7 +637,42 @@
       <option name="project" value="LOCAL" />
       <updated>1551259145119</updated>
     </task>
-    <option name="localTasksCounter" value="218" />
+    <task id="LOCAL-00218" summary="i2c">
+      <created>1551259496297</created>
+      <option name="number" value="00218" />
+      <option name="presentableId" value="LOCAL-00218" />
+      <option name="project" value="LOCAL" />
+      <updated>1551259496297</updated>
+    </task>
+    <task id="LOCAL-00219" summary="i2c">
+      <created>1551259604017</created>
+      <option name="number" value="00219" />
+      <option name="presentableId" value="LOCAL-00219" />
+      <option name="project" value="LOCAL" />
+      <updated>1551259604017</updated>
+    </task>
+    <task id="LOCAL-00220" summary="i2c">
+      <created>1551259664985</created>
+      <option name="number" value="00220" />
+      <option name="presentableId" value="LOCAL-00220" />
+      <option name="project" value="LOCAL" />
+      <updated>1551259664985</updated>
+    </task>
+    <task id="LOCAL-00221" summary="i2c">
+      <created>1551259697609</created>
+      <option name="number" value="00221" />
+      <option name="presentableId" value="LOCAL-00221" />
+      <option name="project" value="LOCAL" />
+      <updated>1551259697609</updated>
+    </task>
+    <task id="LOCAL-00222" summary="i2c">
+      <created>1551259727850</created>
+      <option name="number" value="00222" />
+      <option name="presentableId" value="LOCAL-00222" />
+      <option name="project" value="LOCAL" />
+      <updated>1551259727850</updated>
+    </task>
+    <option name="localTasksCounter" value="223" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1194,8 +1194,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PTS/Pitot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="48" column="65" selection-start-line="48" selection-start-column="65" selection-end-line="48" selection-end-column="65" />
+        <state relative-caret-position="38">
+          <caret line="18" column="44" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>

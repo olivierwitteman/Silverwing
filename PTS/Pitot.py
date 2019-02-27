@@ -15,8 +15,8 @@ def cas(qc, p0):
     return v
 
 
-def u(q, rho):
-    airspeed = math.sqrt(2. * abs(q)/rho)
+def u(q, temp, p):
+    airspeed = math.sqrt(2. * abs(q)/(p/(287.15*temp)))
     return airspeed
 
 
@@ -29,8 +29,10 @@ def poll_q(delta=0.):
     print min(lst), max(lst)
     print sum(lst) / len(lst), lst[int(len(lst) / 2.)]
 
-    q = (abs(max(lst) - lst[int(len(lst) / 2)]))/1000. - delta
-    return q
+    p0 = lst[int(len(lst) / 2)]
+    q = (abs(max(lst) - p0))/1000. - delta
+
+    return q, p0
 
 
 try:
@@ -44,7 +46,7 @@ try:
 
     while True:
         q = poll_q(delta=dq)
-        print('airspeed: {!s}\n\n'.format(u(q, 1.225)))
+        print('airspeed: {!s}\n\n'.format(u(q[0], temp=10., p=q[1])))
         # print(bus.read_word_data(DEVICE_ADDRESS, DEVICE_REG_MODE2))
         time.sleep(1)
 

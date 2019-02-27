@@ -10,7 +10,7 @@ DEVICE_REG_MODE2 = 1
 
 try:
     while True:
-        for i in range(8):
+        for i in range(16):
             print(bus.read_word_data(DEVICE_ADDRESS, i))
         # print(bus.read_word_data(DEVICE_ADDRESS, DEVICE_REG_MODE2))
         print('\n\n')

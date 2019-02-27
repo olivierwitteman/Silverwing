@@ -29,8 +29,8 @@ def poll_q(delta=0.):
     p4s.sort(), p3s.sort()
 
     # print min(lst), max(lst)
-    p3 = p3s[int(len(p3s) / 2.)]
-    p4 = p4s[int(len(p3s) / 2.)]
+    p3 = sum(p3s[int(len(p3s) / 5.): int(len(p3s) * 4. / 5.)])/len(p3s)
+    p4 = sum(p4s[int(len(p4s) / 5.): int(len(p4s) * 4. / 5.)])/len(p4s)
 
     print p3
     print p4

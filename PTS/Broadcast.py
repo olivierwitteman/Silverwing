@@ -25,8 +25,9 @@ conn, addr = connect()
 
 try:
     while True:
-        a, b, c, d = block = bus.read_i2c_block_data(0x28, 0, 4)
-        conn.sendall('t{!s},a{!s},b{!s},c{!s},d{!s}'.format(time.time(), a, b, c, d))
+        a, b, c, d = bus.read_i2c_block_data(0x28, 0, 4)
+        print a
+        conn.sendall('a{!s},b{!s},c{!s},d{!s}'.format(time.time(), a, b, c, d))
 
 finally:
     conn.close()

@@ -28,7 +28,7 @@ def poll_q(delta=0.):
     for i in range(16):
         lst.append(bus.read_word_data(DEVICE_ADDRESS, i))
 
-    block = bus.read_i2c_block_data(28, 0, 4)
+    block = bus.read_i2c_block_data(0x28, 0, 4)
     print(block)
 
     lst.sort()

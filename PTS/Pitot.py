@@ -28,7 +28,7 @@ def poll_q(delta=0.):
     for i in range(128):
         lst.append(bus.read_word_data(DEVICE_ADDRESS, i))
 
-    print(bus.read_block_data(DEVICE_ADDRESS, 0))
+    print(bus.read_i2c_block_data(DEVICE_ADDRESS,0))
 
     lst.sort()
     print min(lst), max(lst)

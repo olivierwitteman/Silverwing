@@ -20,11 +20,11 @@ def u(q, temp, p):
 
 def poll_q(delta=0.):
     p3s, p4s = [], []
-    for i in range(50):
+    for i in range(100):
         block = bus.read_i2c_block_data(0x28, 0, 4)
         p3s.append(float(block[0]))
         p4s.append(float(block[1]))
-        time.sleep(0.002)
+        time.sleep(0.001)
 
     p4s.sort(), p3s.sort()
 
@@ -57,7 +57,7 @@ try:
         print('p0: {!s}, q: {!s}'.format(q[1], q[0]))
         print('airspeed: {!s}\n\n'.format(u(q[0], temp=290., p=q[1])))
         # print(bus.read_word_data(DEVICE_ADDRESS, DEVICE_REG_MODE2))
-        time.sleep(1)
+        time.sleep(0.5)
 
 finally:
     print('\nDone\n')

@@ -25,7 +25,9 @@ try:
         print min(lst), max(lst)
         print sum(lst)/len(lst), lst[int(len(lst)/2)]
 
-        print(cas(max(lst)/1000., lst[int(len(lst)/2)]/1000.))
+        q = abs(max(lst)-lst[int(len(lst)/2)])
+
+        print(cas(q/1000., lst[int(len(lst)/2)]/1000.))
         # print(bus.read_word_data(DEVICE_ADDRESS, DEVICE_REG_MODE2))
         print('\n\n')
         time.sleep(1)

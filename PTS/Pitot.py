@@ -16,9 +16,9 @@ def cas(qc, p0):
 
 
 def u(q, temp, p):
-    rho = (p+1e-3)/(287.*temp)
+    # rho = (p+1e-3)/(287.*temp)
+    rho = 1.225
     print('rho: {!s}'.format(rho))
-    # rho = 1.225
     airspeed = math.sqrt(2.*abs(q)/rho)
     return airspeed
 
@@ -36,7 +36,8 @@ def poll_q(delta=0.):
     print sum(lst) / len(lst), lst[int(len(lst) / 2.)]
 
     p0 = lst[int(len(lst) / 2)] * 3386.389/1000.  # inch mercury
-    q = (abs(min(lst) - p0)) * 3386.389/1000. - delta
+    q = abs(max(lst) - min(lst)) * 6894.757
+    # q = (abs(min(lst) - p0)) * 3386.389/1000. - delta
 
     return q, p0
 

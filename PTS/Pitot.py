@@ -16,7 +16,7 @@ def cas(qc, p0):
 
 
 def u(q, temp, p):
-    airspeed = math.sqrt(2. * abs(q)/(p/(287.15*temp)))
+    airspeed = math.sqrt(2. * abs(q)/(p+1e-3/(287.15*temp)))
     return airspeed
 
 

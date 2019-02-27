@@ -13,8 +13,8 @@ while True:
     s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
     s.connect(ap)
     while True:
-        time.sleep(0.2)
-        data = s.recv(8)
+        time.sleep(0.8)
+        data = s.recv(1024).split()
         print data
         if not data:
             print 'Data format error'

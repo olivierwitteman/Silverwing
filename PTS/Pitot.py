@@ -10,8 +10,13 @@ DEVICE_REG_MODE2 = 1
 
 try:
     while True:
+        lst = []
         for i in range(64):
-            print(bus.read_word_data(DEVICE_ADDRESS, i))
+            lst.append(bus.read_word_data(DEVICE_ADDRESS, i))
+
+        lst.sort()
+        print min(lst), max(lst)
+        print sum(lst)/len(lst), lst[int(len(lst)/2)]
         # print(bus.read_word_data(DEVICE_ADDRESS, DEVICE_REG_MODE2))
         print('\n\n')
         time.sleep(1)

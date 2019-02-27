@@ -28,6 +28,8 @@ def poll_q(delta=0.):
     for i in range(128):
         lst.append(bus.read_word_data(DEVICE_ADDRESS, i))
 
+        print(bus.read_block_data(DEVICE_ADDRESS, i))
+
     lst.sort()
     print min(lst), max(lst)
     print sum(lst) / len(lst), lst[int(len(lst) / 2.)]

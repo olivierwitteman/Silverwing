@@ -24,6 +24,7 @@ def poll_q(delta=0.):
         block = bus.read_i2c_block_data(0x28, 0, 4)
         p3s.append(block[0])
         p4s.append(block[1])
+        time.sleep(0.01)
 
     p4s.sort(), p3s.sort()
 

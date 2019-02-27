@@ -20,7 +20,7 @@ def u(q, rho):
     return airspeed
 
 
-def q(dq=0):
+def poll_q(dq=0):
     lst = []
     for i in range(64):
         lst.append(bus.read_word_data(DEVICE_ADDRESS, i))
@@ -34,9 +34,9 @@ def q(dq=0):
 
 
 try:
-    dq = q()
+    dq = poll_q()
     while True:
-        q = q()
+        q = poll_q()
         print(u(q, 1.225))
         # print(bus.read_word_data(DEVICE_ADDRESS, DEVICE_REG_MODE2))
         print('\n\n')

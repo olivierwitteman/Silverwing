@@ -32,7 +32,7 @@ def poll_q(delta=0.):
     p0 = lst[int(len(lst) / 2)]  # inch mercury
     q = (abs(max(lst) - p0))/1000. - delta
 
-    p0 = p0 * 3386.389/100
+    p0 = p0 * 3386.389/1000.
 
     return q, p0
 

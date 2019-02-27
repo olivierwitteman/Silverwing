@@ -37,7 +37,7 @@ def poll_q(delta=0.):
     p4 = p4s[int(len(p3s) / 2.)]
 
     p0 = p3s[int(len(p3s) / 2)] * 3386.389/1000.  # inch mercury
-    q = abs(p3 - p4) #* 6894.757/1000.
+    q = abs(p3 - p4) - delta #* 6894.757/1000.
     # q = (abs(min(lst) - p0)) * 3386.389/1000. - delta
 
     return q, p0

@@ -34,7 +34,12 @@ def poll_q(delta=0.):
 
 
 try:
-    dq = poll_q()
+    dqs = []
+    for _ in range(10):
+        dqs.append(poll_q())
+
+    dq = sum(dqs)/len(dqs)
+
     print('dq: {!s}'.format(dq))
 
     while True:

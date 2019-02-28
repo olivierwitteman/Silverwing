@@ -28,7 +28,7 @@ try:
         a, b, c, d = bus.read_i2c_block_data(0x28, 0, 4)
         print a
         conn.sendall('a{!s},b{!s},c{!s},d{!s}'.format(a, b, c, d))
-        time.sleep(1)
+        time.sleep(0.1)
 
 finally:
     conn.close()

@@ -24,7 +24,7 @@ try:
         s.connect(ap)
         t0 = time.time()
         while True:
-            time.sleep(0.8)
+            time.sleep(0.03)
             data = s.recv(1024).split(',')
             print data[0][1:]
             if not data:
@@ -58,6 +58,7 @@ try:
 finally:
     with open('./data{!s}.dump'.format(time.time()), 'w') as d:
         d.write(str(tlst+alst+blst+clst+dlst))
+    plt.show()
 
 
 

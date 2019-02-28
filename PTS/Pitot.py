@@ -20,7 +20,7 @@ def u(q, temp, p):
 def poll_q(delta=0.):
     p3s, p4s = [], []
     for i in range(100):
-        block = bus.read_i2c_block_data(0x28, 0, 14)
+        block = bus.read_i2c_block_data(0x28, 0, 64)
         print(block)
         p3s.append(float(block[0]))
         p4s.append(float(block[1]))

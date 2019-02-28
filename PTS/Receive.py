@@ -23,6 +23,7 @@ try:
         s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
         s.connect(ap)
         t0 = time.time()
+        tplot = time.time()
         while True:
             time.sleep(0.03)
             data = s.recv(1024).split(',')
@@ -43,10 +44,12 @@ try:
                     ax2.plot(tlst, clst)
                     ax3.plot(tlst, dlst)
 
-                    plt.pause(0.01)
+                    if time.time() - tplot > 2:
+                        plt.pause(0.01)
+                        tplot = time.time()
                 except KeyboardInterrupt:
-                    break
                     print 'Ctr+c again to kill'
+                    break
                     time.sleep(1)
                 except:
                     trim = min(len(tlst), len(alst), len(blst), len(clst), len(dlst))

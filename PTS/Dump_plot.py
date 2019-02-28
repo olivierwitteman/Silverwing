@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import math
-
+import struct
 
 def u(q):
     # rho = (p+1e-3)/(287.*temp)

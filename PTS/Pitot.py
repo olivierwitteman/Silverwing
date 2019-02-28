@@ -21,7 +21,11 @@ def poll_q(delta=0.):
     p3s, p4s = [], []
     for i in range(100):
         block = bus.read_i2c_block_data(0x28, 0, 32)
+        block2 = []
+        for j in range(32):
+            block2.append(bus.read_word_data(DEVICE_ADDRESS, j))
         print(block)
+        print(block2)
         p3s.append(float(block[0]))
         p4s.append(float(block[1]))
         time.sleep(0.001)

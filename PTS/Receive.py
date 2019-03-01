@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 plots = {}
 plotlst = {}
 for i in range(32):
-    plots[str(i)] = plt.subplot(2, 2, i+1)
+    plots[str(i)] = plt.subplot(4, 8, i+1)
 
 
 try:
@@ -33,7 +33,7 @@ try:
         while True:
             time.sleep(0.03)
             data = s.recv(1024).split(',')
-            print data[0][1:]
+            print data[:][:]
             if not data:
                 print 'Data format error'
                 break
@@ -44,10 +44,11 @@ try:
 
                     for i in range(32):
                         try:
-                            plotlst[str(i)].append(data[i])
+                            plotlst[str(i)].append(int(data[i]))
+                            print(data[i])
                         except:
                             plotlst[str(i)] = []
-                        plots[str(i)].plot(tlst, alst)
+                        plots[str(i)].plot(tlst, plotlst[str(i)])
 
                     if time.time() - tplot > 2:
                         plt.pause(0.01)

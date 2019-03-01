@@ -24,7 +24,7 @@ def poll_q(delta=0.):
     for i in range(100):
         block = bus.read_i2c_block_data(0x28, 0, 32)
         # block2 = bus.read_i2c_word(0x28, 0, 32)
-        print(struct.unpack('H', bytearray(block)[0:2]))
+        # print(struct.unpack('l', bytearray(block)[0:8]))
         # print(struct.unpack())
         p3s.append(float(block[0]))
         p4s.append(float(block[1]))

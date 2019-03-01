@@ -5,19 +5,25 @@ __email__ = "olivier@2001.net"
 import socket, time
 import matplotlib.pyplot as plt
 
+plots = {}
+plotlst = {}
+for i in range(32):
+    plots[str(i)] = plt.subplot(2, 2, i+1)
+
+
 try:
     while True:
         tlst, alst, blst, clst, dlst = [], [], [], [], []
         ap = ('olipi.local', 50002)
 
-        ax0 = plt.subplot(221)
-        ax0.set_ylabel('Parameter a')
-        ax1 = plt.subplot(222)
-        ax1.set_ylabel('Parameter b')
-        ax2 = plt.subplot(223)
-        ax2.set_ylabel('Parameter c')
-        ax3 = plt.subplot(224)
-        ax3.set_ylabel('Parameter d')
+        # ax0 = plt.subplot(4, 8, i)
+        # ax0.set_ylabel('Parameter a')
+        # ax1 = plt.subplot(222)
+        # ax1.set_ylabel('Parameter b')
+        # ax2 = plt.subplot(223)
+        # ax2.set_ylabel('Parameter c')
+        # ax3 = plt.subplot(224)
+        # ax3.set_ylabel('Parameter d')
 
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
@@ -34,15 +40,14 @@ try:
             else:
                 try:
                     tlst.append(time.time()-t0)
-                    alst.append(float(data[0][1:]))
-                    blst.append(float(data[1][1:]))
-                    clst.append(float(data[2][1:]))
-                    dlst.append(float(data[3][1:]))
+                    alst.append(float(data[0]))
 
-                    ax0.plot(tlst, alst)
-                    ax1.plot(tlst, blst)
-                    ax2.plot(tlst, clst)
-                    ax3.plot(tlst, dlst)
+                    for i in range(32):
+                        try:
+                            plotlst[str(i)].append(data[i])
+                        except:
+                            plotlst[str(i)] = []
+                        plots[str(i)].plot(tlst, alst)
 
                     if time.time() - tplot > 2:
                         plt.pause(0.01)
@@ -55,9 +60,7 @@ try:
                     trim = min(len(tlst), len(alst), len(blst), len(clst), len(dlst))
                     tlst = tlst[:trim]
                     alst = alst[:trim]
-                    blst = blst[:trim]
-                    clst = clst[:trim]
-                    dlst = dlst[:trim]
+
 finally:
     with open('./data{!s}.dump'.format(time.time()), 'w') as d:
         d.write(str(tlst+alst+blst+clst+dlst))

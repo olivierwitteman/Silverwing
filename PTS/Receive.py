@@ -33,7 +33,7 @@ try:
         while True:
             time.sleep(0.03)
             data = s.recv(1024).split(',')
-            print data[:][:]
+            print data
             if not data:
                 print 'Data format error'
                 break

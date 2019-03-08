@@ -8,12 +8,12 @@ pat = subprocess.Popen(['python', '/home/pi/Silverwing/General/Temp_sens.py'])  
 
 delta = d.DeltaComm()
 
-safe_operation = True
+safe_operation = False
 capacity = 3.0
-crate_dischar = [(6., 80), (1.71, 1080), (6., 40), (1.71, 0)]
-# crate_dischar = [(6., 0), (5., 0), (4., 0), (3., 0), (2., 0), (1., 0)]
+# crate_dischar = [(6., 80), (1.71, 1080), (6., 40), (1.71, 0)]
+crate_dischar = [(6., 0)]
 # (C, duration [s]) duration=0 for full discharge
-name = 'US18650_VTC6_fp_feb'
+name = 'VTC6_vacuum_insulated_PCC_hard_discharge'
 minvolt = 2.5  # OCV
 R_sys = 0.03
 
@@ -51,6 +51,7 @@ def temp_read():
             #     value = 'Outdated'
 
         return value
+
 
 def charge():
     log(time.time(), 0., 0., temperature=-103., remark='Charging started: {}'.format(name))
@@ -127,12 +128,12 @@ def discharge(c_rate, duration=0, status='empty'):
 
                 time.sleep(dt)
 
-                if abs((c_voltage/series - minv)) < 0.1 and c_current > t_current/3.:
+                if abs((c_voltage/series - minv)) < 0.1 and c_current > t_current/2.:
                     print('Discharge completed')
                     status = 'discharged'
                     break
 
-                if c_temp > 60.:
+                if c_temp > 100.:
                     print('Temperature threshold exceeded at {!s}'.format(c_temp))
                     status = 'temp'
                     break

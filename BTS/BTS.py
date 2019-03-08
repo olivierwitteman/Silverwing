@@ -33,7 +33,7 @@ parallel = 4
 R_0 = 0.0172
 R_tb = 6.*0.0128/4.
 target_temp = 25.
-maxtemp = 75.
+maxtemp = 90.
 
 
 def initiate_relay_control():
@@ -126,7 +126,7 @@ def voltage_pack():
 
 
 def charge(crate_char, name='untitled'):
-    log(name, time.time(), 0., 0., -103, temperature=-103., remark='Charging started: {!s}'.format(name))
+    # log(name, time.time(), 0., 0., -103, temperature=-103., remark='Charging started: {!s}'.format(name))
     delta.set_voltage(delta.ask_voltage())
     t_current = crate_char * capacity * parallel
     t_voltage = maxvolt * series
@@ -150,7 +150,8 @@ def charge(crate_char, name='untitled'):
             k += 1
             if k == 5:
                 print(
-                    '\n\nVoltage: {!s}, actual current: {!s}, power: {!s}, Pack Temperature: {!s}, Ambient Temperature: '
+                    '\n\nVoltage: {!s}, actual current: {!s}, power: {!s}, Pack Temperature: {!s}'
+                    ', Ambient Temperature: '
                     '{!s}\n\n'.format(c_voltage, c_current, c_voltage * c_current, c_temp, a_temp))
                 k = 0
 
@@ -168,7 +169,7 @@ def charge(crate_char, name='untitled'):
     finally:
         delta.set_state(0)
         gp.output(s1[0], 1)
-        log(name, time.time(), 0., 0., -104, temperature=-104., remark='Charging completed/interrupted: {}'.format(name))
+        # log(name, time.time(), 0., 0., -104, temperature=-104., remark='Charging completed/interrupted: {}'.format(name))
 
 
 def delta_discharge(name, minvolt, maxvolt, current, R, duration, status='empty'):
@@ -182,8 +183,10 @@ def delta_discharge(name, minvolt, maxvolt, current, R, duration, status='empty'
 
     try:
         if status != 'next':
-            log(name, time.time(), 0., 0., a_temp, temperature=-101., R=R, remark='Discharging started: {}'.format(name))
-        log(name, time.time(), 0., 0., a_temp, temperature=-101., R=R, remark='Discharging started: {}'.format(name))
+            pass
+            # log(name, time.time(), 0., 0., a_temp, temperature=-101., R=R, remark='Discharging started:
+            # {}'.format(name))
+        # log(name, time.time(), 0., 0., a_temp, temperature=-101., R=R, remark='Discharging started: {}'.format(name))
 
         delta.set_state(1)
         time.sleep(10)
@@ -197,8 +200,9 @@ def delta_discharge(name, minvolt, maxvolt, current, R, duration, status='empty'
         while True:
             k += 1
             if k == 50:
-                print('\n\nVoltage: {!s}, actual current: {!s}, power: {!s}, Pack Temperature: {!s}, Ambient Temperature: {!s}\n\n' \
-                      .format(bat_voltage, a_current, bat_voltage*a_current, c_temp, a_temp))
+                print('\n\nVoltage: {!s}, actual current: {!s}, power: {!s}, Pack Temperature: {!s},'
+                      ' Ambient Temperature: {!s}\n\n'.format(bat_voltage,
+                                                              a_current, bat_voltage*a_current, c_temp, a_temp))
                 k = 0
 
             if bat_voltage < minvolt:
@@ -234,8 +238,9 @@ def delta_discharge(name, minvolt, maxvolt, current, R, duration, status='empty'
 
     finally:
         if status != 'next':
-            log(name, time.time(), 0., 0., a_temp, temperature=-102., R=R, remark='Discharging completed/interrupted: {}'
-                                                                             ''.format(name))
+            pass
+            # log(name, time.time(), 0., 0., a_temp, temperature=-102., R=R,
+            #     remark='Discharging completed/interrupted: {}'.format(name))
         delta.set_state(0)
         return status
 
@@ -342,6 +347,8 @@ try:
     charge(0.7, name=crate_dischar[0][2])
 
     while temp_pack() > target_temp:
+        log(crate_dischar[0][2], time.time(), delta.ask_voltage(), 0, temp_ambient(), temp_pack(), remark='Cooling')
+
         print('Pack temperature: {!s} deg C\nCooling down to target of {!s} deg C'.format(temp_pack(),
                                                                                           target_temp))
         time.sleep(60)

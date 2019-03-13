@@ -32,7 +32,7 @@ try:
         tplot = time.time()
         while True:
             time.sleep(0.03)
-            data = s.recv(1024).split(',')
+            data = list(list(s.recv(1024).split(',')))
             print data
             if not data:
                 print 'Data format error'

@@ -89,7 +89,7 @@ try:
 
         lc.log_temp(t_av)
         lc.log_voltage(v_av)
-        print(t_av)
+        # print(t_av)
         # print(r_av)
         # print(lc.ambient_temp())
         # print('\n\n------\n\n')

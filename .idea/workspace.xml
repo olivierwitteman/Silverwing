@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="i2c">
-      <change afterPath="$PROJECT_DIR$/Cooling/Radiator_Sizing.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/General/tempdata.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Silverwing.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Silverwing.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="test matrix BTS">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BTS/BTS.csv" beforeDir="false" afterPath="$PROJECT_DIR$/BTS/BTS.csv" afterDir="false" />
     </list>
@@ -30,7 +26,19 @@
           </provider>
           <provider selected="true" editor-type-id="csv-text-editor">
             <state relative-caret-position="60">
-              <caret line="4" column="33" lean-forward="true" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
+              <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BTS/BTS.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -138,7 +146,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+  <component name="ProjectFrameBounds">
     <option name="width" value="1282" />
     <option name="height" value="1050" />
   </component>
@@ -333,13 +341,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532440488607</updated>
-    </task>
-    <task id="LOCAL-00239" summary="i2c">
-      <created>1551269622455</created>
-      <option name="number" value="00239" />
-      <option name="presentableId" value="LOCAL-00239" />
-      <option name="project" value="LOCAL" />
-      <updated>1551269622455</updated>
     </task>
     <task id="LOCAL-00240" summary="i2c">
       <created>1551269651363</created>
@@ -677,7 +678,14 @@
       <option name="project" value="LOCAL" />
       <updated>1552396360752</updated>
     </task>
-    <option name="localTasksCounter" value="288" />
+    <task id="LOCAL-00288" summary="test matrix BTS">
+      <created>1552929745751</created>
+      <option name="number" value="00288" />
+      <option name="presentableId" value="LOCAL-00288" />
+      <option name="project" value="LOCAL" />
+      <updated>1552929745752</updated>
+    </task>
+    <option name="localTasksCounter" value="289" />
     <servers />
   </component>
   <component name="TodoView">
@@ -690,15 +698,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1282" height="1050" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16877638" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22204599" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32570806" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4929841" visible="true" weight="0.23469388" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4929841" visible="true" weight="0.2400835" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -729,7 +736,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Increased sample time for load cells" />
     <MESSAGE value="Increased sample time for load cells to average 30 samples over 1.5s" />
     <MESSAGE value="Update for loadcells" />
     <MESSAGE value="New quick test matrix for Quint" />
@@ -754,7 +760,8 @@
     <MESSAGE value="asshat" />
     <MESSAGE value="matrix" />
     <MESSAGE value="i2c" />
-    <option name="LAST_COMMIT_MESSAGE" value="i2c" />
+    <MESSAGE value="test matrix BTS" />
+    <option name="LAST_COMMIT_MESSAGE" value="test matrix BTS" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/General/Title.png" />
@@ -1215,7 +1222,7 @@
       </provider>
       <provider selected="true" editor-type-id="csv-text-editor">
         <state relative-caret-position="60">
-          <caret line="4" column="33" lean-forward="true" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
+          <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
         </state>
       </provider>
     </entry>

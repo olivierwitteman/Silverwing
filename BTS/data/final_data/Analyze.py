@@ -11,12 +11,13 @@ mode = 0
 # R_battery = 0.0
 R_battery = 6.*0.0128/4.
 textsize = 17.5
-width = 7.5
+# width = 7.5
+width = 10.
 
 path = './'
 # path = '/Users/olivierwitteman/Downloads/'
 # name = 'BT-B-1_1'
-name = 'disch_BT-E-1200_800-80_40-8'
+name = 'disch_BT-E-840_588-70_35_84_78_PCC'
 # name = 'disch_BT-E-1800_1200-80_40-6_PCC'
 
 
@@ -166,7 +167,7 @@ label1 = 'I_avg = {!s}A, E_extracted = {!s}Wh, endurance = {!s}min'\
 
 ax1.set_xlim(0, 1.02*max(caps))
 ax1.set_ylim(0, 28)
-ax2.set_ylim(10, 75)
+ax2.set_ylim(10, 85)
 
 # ax1.plot(np.nan, np.nan, ls=':', label='Current', c='k', lw=2.)
 ax1.plot(np.nan, np.nan, ls='-.', label='Temperature', c='r')

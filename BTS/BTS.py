@@ -33,7 +33,7 @@ parallel = 4
 R_0 = 0.0172
 R_tb = 6.*0.0128/4.
 target_temp = 25.
-maxtemp = 90.
+maxtemp = 75.
 
 
 def initiate_relay_control():

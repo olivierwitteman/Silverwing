@@ -157,7 +157,7 @@ def charge(crate_char, name='untitled'):
 
             log(name, time.time(), c_voltage, c_current, a_temp, c_temp, a_temp)
             time.sleep(10.)
-            if c_current < t_current/15. and time.time() - t0 > 22:
+            if c_current < t_current/10. and time.time() - t0 > 22:
                 print('Charging complete')
                 break
             elif 0. > c_temp > 60.:

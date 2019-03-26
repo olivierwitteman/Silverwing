@@ -10,15 +10,18 @@ mode = 0
 
 # R_battery = 0.0
 R_battery = 6.*0.0128/4.
+# R_battery = 0
 textsize = 17.5
 # width = 7.5
 width = 10.
 
 path = './'
-# path = '/Users/olivierwitteman/Downloads/'
-# name = 'BT-B-1_1'
-name = 'disch_BT-E-840_588-70_35_84_78_PCC'
+# name = 'disch_BT-E-840_588-70_35_84_78_PCC'
 # name = 'disch_BT-E-1800_1200-80_40-6_PCC'
+# name = 'disch_BT-P-121000_46000-70_35_800_PCC'
+# name = 'disch_BT-E-1200_800-80_40-8'
+# name = 'disch_BT-E-1800_1200-80_40-6.5'
+name = 'disch_BT-B-1_1'
 
 
 def butter_lowpass(cutoff, fs, order=5):
@@ -185,5 +188,6 @@ ax2.tick_params(labelsize=14)
 plt.tight_layout()
 
 ax1.grid(True)
-plt.savefig('./{!s}.png'.format(name), dpi=255, format='png')  # Use eps for LaTeX, other options: png, pdf, ps, eps
+plt.title(name)
+plt.savefig('./Results/{!s}.png'.format(name), dpi=255, format='png')  # Use eps for LaTeX, other options: png, pdf, ps, eps
 plt.show()

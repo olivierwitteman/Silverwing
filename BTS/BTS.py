@@ -21,7 +21,6 @@ s5 = 26, 0.622, 'R3'
 
 ss = [s1, s2, s3, s4, s5]
 
-
 # crate_dischar = [(-6., 10), (-1, 10), (-3, 10)]
 # crate_dischar = [(0.7, 10)]
 maxvolt = 4.2
@@ -83,8 +82,6 @@ def temp_ambient():
             t0 = time.time()
         except:
             value = 20
-            # if time.time() - t0 > 10.:
-            #     value = 'Outdated'
 
         return value
 
@@ -101,8 +98,6 @@ def temp_pack():
             t0 = time.time()
         except:
             value = 20
-            # if time.time() - t0 > 10.:
-            #     value = 'Outdated'
 
         return value
 
@@ -119,14 +114,10 @@ def voltage_pack():
             t0 = time.time()
         except:
             value = 20
-            # if time.time() - t0 > 10.:
-            #     value = 'Outdated'
-
         return value
 
 
 def charge(crate_char, name='untitled'):
-    # log(name, time.time(), 0., 0., -103, temperature=-103., remark='Charging started: {!s}'.format(name))
     delta.set_voltage(delta.ask_voltage())
     t_current = crate_char * capacity * parallel
     t_voltage = maxvolt * series
@@ -169,7 +160,6 @@ def charge(crate_char, name='untitled'):
     finally:
         delta.set_state(0)
         gp.output(s1[0], 1)
-        # log(name, time.time(), 0., 0., -104, temperature=-104., remark='Charging completed/interrupted: {}'.format(name))
 
 
 def delta_discharge(name, minvolt, maxvolt, current, R, duration, status='empty'):
@@ -184,10 +174,6 @@ def delta_discharge(name, minvolt, maxvolt, current, R, duration, status='empty'
     try:
         if status != 'next':
             pass
-            # log(name, time.time(), 0., 0., a_temp, temperature=-101., R=R, remark='Discharging started:
-            # {}'.format(name))
-        # log(name, time.time(), 0., 0., a_temp, temperature=-101., R=R, remark='Discharging started: {}'.format(name))
-
         delta.set_state(1)
         time.sleep(10)
 
@@ -239,8 +225,6 @@ def delta_discharge(name, minvolt, maxvolt, current, R, duration, status='empty'
     finally:
         if status != 'next':
             pass
-            # log(name, time.time(), 0., 0., a_temp, temperature=-102., R=R,
-            #     remark='Discharging completed/interrupted: {}'.format(name))
         delta.set_state(0)
         return status
 
@@ -331,7 +315,6 @@ def cycle():
                 print('Pack temperature: {!s} deg C\nCooling down to target of {!s} deg C'.format(temp_pack(),
                                                                                                   target_temp))
                 time.sleep(60)
-
         i += 1
 
 
@@ -361,7 +344,6 @@ except:
 
 finally:
     delta.set_state(0)
-    # gp.output(s2[0], 0)
     gp.cleanup()
     delta.close_connection()
     pt.terminate()

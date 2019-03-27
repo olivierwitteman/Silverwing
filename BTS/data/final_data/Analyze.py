@@ -22,6 +22,7 @@ path = './'
 # name = 'disch_BT-E-1200_800-80_40-8'
 # name = 'disch_BT-E-1800_1200-80_40-6.5'
 name = 'disch_BT-B-1_1'
+name = 'disch_BT-P-121000_46000-70_35_800_ADDCELLS'
 
 
 def butter_lowpass(cutoff, fs, order=5):

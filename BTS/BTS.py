@@ -33,6 +33,7 @@ R_0 = 0.0172
 R_tb = 6.*0.0128/4.
 target_temp = 25.
 maxtemp = 75.
+v_nom = 3.7
 
 
 def initiate_relay_control():
@@ -150,6 +151,7 @@ def charge(crate_char, name='untitled'):
             time.sleep(10.)
             if c_current < t_current/10. and time.time() - t0 > 22:
                 print('Charging complete')
+                status = 'charged'
                 break
             elif 0. > c_temp > 60.:
                 print('Temperature threshold exceeded at {!s}'.format(c_temp))
@@ -160,11 +162,16 @@ def charge(crate_char, name='untitled'):
     finally:
         delta.set_state(0)
         gp.output(s1[0], 1)
+        return status
 
 
 def delta_discharge(name, minvolt, maxvolt, current, R, duration, status='empty'):
+    # deltavolt = maxvolt + R * abs(current) * 1.5
+    # delta.set_voltage(deltavolt)
     delta.set_voltage(maxvolt)
     delta.set_current(-current)
+
+    req_power = series * v_nom * current
 
     t0, dt = time.time(), 0
 
@@ -215,6 +222,12 @@ def delta_discharge(name, minvolt, maxvolt, current, R, duration, status='empty'
             # a_voltage = voltage_pack()
             bat_voltage = a_current * R - a_voltage
 
+            power = bat_voltage * a_current
+            dp = power - req_power
+
+            current -= dp/bat_voltage
+            delta.set_current(-current)
+
             a_temp = temp_ambient()
             c_temp = temp_pack()
 
@@ -233,7 +246,7 @@ def discharge(c_rate, duration=0, status='empty', name='untitled'):
     pack_minvolt = series*minvolt
     current = c_rate*capacity*parallel
 
-    if 0.67 <= -c_rate < 1.3:
+    if 0. <= -c_rate < 1.3:
         dr = 0
         config = [0, 1, 1, 0, 0]
 
@@ -266,6 +279,7 @@ def discharge(c_rate, duration=0, status='empty', name='untitled'):
         config = [0, 0, 0, 0, 0]
 
     R_inv = 0.
+
     for i in range(len(ss)):
         if i > 1:
             R_inv += config[i]/ss[i][1]
@@ -295,7 +309,7 @@ def cycle():
         print('Discharge starts')
         if c[0] > 0.:
             print('Charging initiated')
-            charge(c[0], name=c[2])
+            status = charge(c[0], name=c[2])
 
         elif c[0] < 0.:
             print('Discharging initiated/continued')
@@ -306,10 +320,10 @@ def cycle():
         if oldname != newname:
             status = 'empty'
 
-        if status != 'next':
+        if status != 'next' or 'charged':
             print('Charging starts in 1min')
             time.sleep(60)
-            charge(0.7, c[2])
+            status = charge(0.7, c[2])
 
             while temp_pack() > target_temp:
                 print('Pack temperature: {!s} deg C\nCooling down to target of {!s} deg C'.format(temp_pack(),
@@ -323,11 +337,11 @@ try:
     if len(sys.argv) > 1:
         if sys.argv[1] == 'charge':
             print('Manual charge')
-            charge(0.7, 'manual charge')
+            print(charge(0.7, 'manual charge'))
             raise KeyboardInterrupt
 
     crate_dischar = read_matrix()
-    charge(0.7, name=crate_dischar[0][2])
+    print(charge(0.7, name=crate_dischar[0][2]))
 
     while temp_pack() > target_temp:
         log(crate_dischar[0][2], time.time(), delta.ask_voltage(), 0, temp_ambient(), temp_pack(), remark='Cooling')

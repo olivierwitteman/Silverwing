@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="test matrix BTS (ADDCELLS)">
-      <change afterPath="$PROJECT_DIR$/BTS/data/final_data/disch_BT-P-121000_46000-70_35_800_ADDCELLS.log" afterDir="false" />
+    <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="test matrix BTS (PCC)">
+      <change afterPath="$PROJECT_DIR$/BTS/data/final_data/disch_BT-P-121000_46000-70_35_800_PCC_2.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BTS/BTS.csv" beforeDir="false" afterPath="$PROJECT_DIR$/BTS/BTS.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BTS/BTS.py" beforeDir="false" afterPath="$PROJECT_DIR$/BTS/BTS.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BTS/data/final_data/Analyze.py" beforeDir="false" afterPath="$PROJECT_DIR$/BTS/data/final_data/Analyze.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BTS/data/final_data/disch_BT-P-121000_46000-70_35_800_PCC.log" beforeDir="false" afterPath="$PROJECT_DIR$/BTS/data/final_data/disch_BT-P-121000_46000-70_35_800_PCC_1.log" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,7 +16,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BTS/BTS.csv">
           <provider editor-type-id="csv-table-editor">
             <state showInfoPanel="true" fixedHeaders="false" rowLines="0">
@@ -35,16 +35,33 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BTS/data/final_data/Analyze.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BTS/data/final_data/disch_BT-P-121000_46000-70_35_800_PCC_2.log">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="167745">
+              <caret line="11183" column="65" selection-start-line="11183" selection-start-column="65" selection-end-line="11183" selection-end-column="65" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BTS/BTS.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="428">
-              <caret line="316" column="30" selection-start-line="316" selection-start-column="30" selection-end-line="316" selection-end-column="30" />
+            <state relative-caret-position="4350">
+              <caret line="290" column="61" lean-forward="true" selection-start-line="290" selection-start-column="61" selection-end-line="290" selection-end-column="61" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
-                <element signature="e#1708#1992#0" />
-                <element signature="e#2019#2521#0" />
-                <element signature="e#2545#2992#0" />
-                <element signature="e#3019#3469#0" />
               </folding>
             </state>
           </provider>
@@ -99,7 +116,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/esc/ESC_daemon.py" />
         <option value="$PROJECT_DIR$/WaTT/Data/WaTT_8jan.log" />
         <option value="$PROJECT_DIR$/WaTT/Data/test.py" />
         <option value="$PROJECT_DIR$/WaTT/Data/test.log" />
@@ -147,14 +163,15 @@
         <option value="$PROJECT_DIR$/BTS/data/final_data/disch_BT-E-840_588-70_35_84_78_PCC.log" />
         <option value="$PROJECT_DIR$/BTS/data/disch_BT-P-121000_46000-70_35_800_PCC.log" />
         <option value="$PROJECT_DIR$/BTS/data/final_data/disch_BT-E-1800_1200-80_40-6.5.log" />
-        <option value="$PROJECT_DIR$/BTS/BTS.py" />
-        <option value="$PROJECT_DIR$/BTS/data/final_data/Analyze.py" />
         <option value="$PROJECT_DIR$/BTS/data/final_data/disch_BT-P-121000_46000-70_35_800_ADDCELLS.log" />
+        <option value="$PROJECT_DIR$/BTS/data/final_data/BT-P-121000_46000-70_35_800_PCC_2.log" />
+        <option value="$PROJECT_DIR$/BTS/data/final_data/Analyze.py" />
+        <option value="$PROJECT_DIR$/BTS/BTS.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1282" />
+    <option name="width" value="1396" />
     <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -180,6 +197,13 @@
               <item name="Silverwing" type="462c0819:PsiDirectoryNode" />
               <item name="BTS" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Silverwing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Silverwing" type="462c0819:PsiDirectoryNode" />
+              <item name="BTS" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="final_data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Silverwing" type="b2602c69:ProjectViewProjectNode" />
@@ -354,13 +378,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532440488607</updated>
-    </task>
-    <task id="LOCAL-00247" summary="i2c">
-      <created>1551272350790</created>
-      <option name="number" value="00247" />
-      <option name="presentableId" value="LOCAL-00247" />
-      <option name="project" value="LOCAL" />
-      <updated>1551272350790</updated>
     </task>
     <task id="LOCAL-00248" summary="i2c">
       <created>1551272421579</created>
@@ -698,7 +715,14 @@
       <option name="project" value="LOCAL" />
       <updated>1553603389952</updated>
     </task>
-    <option name="localTasksCounter" value="296" />
+    <task id="LOCAL-00296" summary="test matrix BTS (PCC)">
+      <created>1553698371126</created>
+      <option name="number" value="00296" />
+      <option name="presentableId" value="LOCAL-00296" />
+      <option name="project" value="LOCAL" />
+      <updated>1553698371126</updated>
+    </task>
+    <option name="localTasksCounter" value="297" />
     <servers />
   </component>
   <component name="TodoView">
@@ -711,14 +735,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1282" height="1050" extended-state="0" />
+    <frame x="0" y="0" width="1396" height="1050" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.35051546" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32145455" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32570806" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4924663" visible="true" weight="0.2400835" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4924663" weight="0.2400835" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -749,7 +774,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Update for loadcells" />
     <MESSAGE value="New quick test matrix for Quint" />
     <MESSAGE value="Increased sensitivity" />
     <MESSAGE value="parantheses" />
@@ -774,23 +798,10 @@
     <MESSAGE value="i2c" />
     <MESSAGE value="test matrix BTS" />
     <MESSAGE value="test matrix BTS (ADDCELLS)" />
-    <option name="LAST_COMMIT_MESSAGE" value="test matrix BTS (ADDCELLS)" />
+    <MESSAGE value="test matrix BTS (PCC)" />
+    <option name="LAST_COMMIT_MESSAGE" value="test matrix BTS (PCC)" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/BTS/data/final_data/OLD_BT-E-1800_1200-80_40-6.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="591">
-          <caret line="11351" column="99" selection-start-line="11351" selection-start-column="99" selection-end-line="11351" selection-end-column="99" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BTS/data/final_data/OLD_MAX60_BT-E-1800_1200-80_40-6.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/General/plot_template.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-21">
@@ -1161,7 +1172,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BTS/data/final_data/disch_BT-P-121000_46000-70_35_800_PCC.log">
+    <entry file="file://$PROJECT_DIR$/BTS/data/final_data/disch_BT-P-121000_46000-70_35_800_PCC_1.log">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171735">
           <caret line="11449" selection-start-line="11449" selection-end-line="11449" />
@@ -1182,16 +1193,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BTS/data/final_data/Analyze.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="50" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BTS/data/final_data/disch_BT-P-121000_46000-70_35_800_ADDCELLS.log">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="613">
@@ -1199,17 +1200,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BTS/BTS.py">
+    <entry file="file://$PROJECT_DIR$/BTS/data/BT-P-121000_46000-70_35_800_PCC.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="316" column="30" selection-start-line="316" selection-start-column="30" selection-end-line="316" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-            <element signature="e#1708#1992#0" />
-            <element signature="e#2019#2521#0" />
-            <element signature="e#2545#2992#0" />
-            <element signature="e#3019#3469#0" />
-          </folding>
+        <state relative-caret-position="397">
+          <caret line="18422" column="40" selection-start-line="18422" selection-start-column="40" selection-end-line="18422" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -1226,6 +1220,33 @@
       <provider selected="true" editor-type-id="csv-text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BTS/data/final_data/Analyze.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BTS/data/final_data/disch_BT-P-121000_46000-70_35_800_PCC_2.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167745">
+          <caret line="11183" column="65" selection-start-line="11183" selection-start-column="65" selection-end-line="11183" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BTS/BTS.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4350">
+          <caret line="290" column="61" lean-forward="true" selection-start-line="290" selection-start-column="61" selection-end-line="290" selection-end-column="61" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

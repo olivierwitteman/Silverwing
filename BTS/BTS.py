@@ -226,9 +226,10 @@ def delta_discharge(name, minvolt, maxvolt, current, R, duration, status='empty'
             power = bat_voltage * a_current
             dp = power - req_power
 
-            current -= dp/bat_voltage
+            current += dp/bat_voltage
+            setcurrent = max(0., min(-current, maxcurrent))
             print('dp: {!s} W, current: {!s} A'.format(round(dp, 1), round(current, 2)))
-            delta.set_current(min(-current, maxcurrent))
+            delta.set_current(setcurrent)
 
             a_temp = temp_ambient()
             c_temp = temp_pack()

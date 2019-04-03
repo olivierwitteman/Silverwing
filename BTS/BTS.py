@@ -31,7 +31,7 @@ parallel = 4
 # R_sys = 0.03
 R_0 = 0.0172
 R_tb = 6.*0.0128/4.
-target_temp = 45.
+target_temp = 25.
 maxtemp = 75.
 v_nom = 3.7
 maxcurrent = 110.
@@ -228,7 +228,7 @@ def delta_discharge(name, minvolt, maxvolt, current, R, duration, status='empty'
 
             current += dp/bat_voltage
             setcurrent = max(0., min(-current, maxcurrent))
-            print('dp: {!s} W, current: {!s} A'.format(round(dp, 1), round(current, 2)))
+            # print('dp: {!s} W, current: {!s} A'.format(round(dp, 1), round(current, 2)))
             delta.set_current(setcurrent)
 
             a_temp = temp_ambient()

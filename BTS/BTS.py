@@ -31,9 +31,10 @@ parallel = 4
 # R_sys = 0.03
 R_0 = 0.0172
 R_tb = 6.*0.0128/4.
-target_temp = 25.
+target_temp = 45.
 maxtemp = 75.
 v_nom = 3.7
+maxcurrent = 110.
 
 
 def initiate_relay_control():
@@ -226,7 +227,8 @@ def delta_discharge(name, minvolt, maxvolt, current, R, duration, status='empty'
             dp = power - req_power
 
             current -= dp/bat_voltage
-            delta.set_current(-current)
+            print('dp: {!s} W, current: {!s} A'.format(round(dp, 1), round(current, 2)))
+            delta.set_current(min(-current, maxcurrent))
 
             a_temp = temp_ambient()
             c_temp = temp_pack()

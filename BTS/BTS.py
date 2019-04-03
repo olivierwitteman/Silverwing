@@ -172,7 +172,7 @@ def delta_discharge(name, minvolt, maxvolt, current, R, duration, status='empty'
     delta.set_voltage(maxvolt)
     delta.set_current(-current)
 
-    req_power = series * v_nom * current
+    req_power = series * v_nom * -current
 
     t0, dt = time.time(), 0
 

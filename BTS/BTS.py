@@ -323,7 +323,7 @@ def cycle():
         if oldname != newname:
             status = 'empty'
 
-        if status != 'next' or 'charged':
+        if status is not 'next' and not 'charged':
             print('Charging starts in 1min')
             time.sleep(60)
             status = charge(0.7, c[2])

@@ -155,12 +155,14 @@ ax1.scatter(np.nan, np.nan, label='$t$ = {!s} mins'.format(endurance))
 ax1.plot(As_i, OCV, c=colors[0], ls='-', label='Voltage')
 ax2.plot(As_i, Tsp_butter, c='r', ls='-.', label='Temperature'.format(av_current))
 # ax2.plot(As_i, smooth_Is, c='g', ls=':', label='Current'.format(av_current), lw=2.)
-ax2.plot(As_i, -np.array(Is), c='g', ls=':', label='Current'.format(av_current), lw=2.)
+ax2.plot(As_i, -np.array(Is)*np.array(OCV)/24., c='g', ls=':', label='Current'.format(av_current), lw=2.)
+
+ax2.plot(As_i, )
 
 
 ax1.set_xlabel('Capacity [Ah]', fontsize=textsize)
 ax1.set_ylabel('Voltage [V]', fontsize=textsize)
-ax2.set_ylabel('Temperature [deg C], Current [A]', fontsize=textsize)
+ax2.set_ylabel('Temperature [deg C], Power/cell [W]', fontsize=textsize)
 
 label1 = 'I_avg = {!s}A, E_extracted = {!s}Wh, endurance = {!s}min'\
     .format(av_current, actual_energy, endurance)
@@ -174,9 +176,9 @@ label1 = 'I_avg = {!s}A, E_extracted = {!s}Wh, endurance = {!s}min'\
 
 ax1.set_xlim(0, 1.02*max(caps))
 ax1.set_ylim(0, 28)
-ax2.set_ylim(10, 110)
+ax2.set_ylim(15, 100)
 
-# ax1.plot(np.nan, np.nan, ls=':', label='Current', c='k', lw=2.)
+ax1.plot(np.nan, np.nan, ls=':', label='Power/cell', c='g', lw=2.)
 ax1.plot(np.nan, np.nan, ls='-.', label='Temperature', c='r')
 
 # plt.title('ID: {!s}, charged CC-CV at 0.7C with cutoff at 0.05C'.format(name))

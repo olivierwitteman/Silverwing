@@ -18,11 +18,12 @@ width = 10.
 path = './'
 # name = 'disch_BT-E-840_588-70_35_84_78_PCC'
 # name = 'disch_BT-E-1800_1200-80_40-6_PCC'
-name = 'disch_BT-P-121000_46000-70_35_800_PCC_2'
+# name = 'disch_BT-P-121000_46000-70_35_800_PCC_2'
 # name = 'disch_BT-E-1200_800-80_40-8'
 # name = 'disch_BT-E-1800_1200-80_40-6.5'
 # name = 'disch_BT-B-1_1'
 # name = 'disch_BT-P-121000_46000-70_35_800_ADDCELLS'
+name = 'disch_BT-CP-EMRAX-66.5_26.5_PCC'
 
 
 def butter_lowpass(cutoff, fs, order=5):
@@ -150,14 +151,16 @@ c = np.array(smooth_Is)/capacity
 
 ax1.scatter(np.nan, np.nan, label='$E$ = {!s} Wh'.format(actual_energy))
 ax1.scatter(np.nan, np.nan, label='$t$ = {!s} mins'.format(endurance))
-ax1.plot(As_i, smooth_Us, c=colors[0], ls='-', label='Voltage')
+# ax1.plot(As_i, smooth_Us, c=colors[0], ls='-', label='Voltage')
+ax1.plot(As_i, OCV, c=colors[0], ls='-', label='Voltage')
 ax2.plot(As_i, Tsp_butter, c='r', ls='-.', label='Temperature'.format(av_current))
-ax1.plot(As_i, c, c='g', ls=':', label='C-rate'.format(av_current), lw=2.)
+# ax2.plot(As_i, smooth_Is, c='g', ls=':', label='Current'.format(av_current), lw=2.)
+ax2.plot(As_i, -np.array(Is), c='g', ls=':', label='Current'.format(av_current), lw=2.)
 
 
 ax1.set_xlabel('Capacity [Ah]', fontsize=textsize)
-ax1.set_ylabel('Voltage [V], Disch. Rate', fontsize=textsize)
-ax2.set_ylabel('Temperature [deg C]', fontsize=textsize)
+ax1.set_ylabel('Voltage [V]', fontsize=textsize)
+ax2.set_ylabel('Temperature [deg C], Current [A]', fontsize=textsize)
 
 label1 = 'I_avg = {!s}A, E_extracted = {!s}Wh, endurance = {!s}min'\
     .format(av_current, actual_energy, endurance)
@@ -171,7 +174,7 @@ label1 = 'I_avg = {!s}A, E_extracted = {!s}Wh, endurance = {!s}min'\
 
 ax1.set_xlim(0, 1.02*max(caps))
 ax1.set_ylim(0, 28)
-ax2.set_ylim(10, 85)
+ax2.set_ylim(10, 110)
 
 # ax1.plot(np.nan, np.nan, ls=':', label='Current', c='k', lw=2.)
 ax1.plot(np.nan, np.nan, ls='-.', label='Temperature', c='r')

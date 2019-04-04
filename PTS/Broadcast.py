@@ -26,7 +26,7 @@ conn, addr = connect()
 try:
     while True:
         a = bus.read_i2c_block_data(0x28, 0, 32)
-        print a
+        print(a)
         conn.sendall('{!s}'.format(a))
         time.sleep(0.1)
 

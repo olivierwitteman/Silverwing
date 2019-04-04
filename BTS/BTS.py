@@ -167,10 +167,8 @@ def charge(crate_char, name='untitled'):
 
 
 def delta_discharge(name, minvolt, maxvolt, current, R, duration, status='empty'):
-    deltavolt = maxvolt + R * abs(current) * 1.5
-    delta.set_voltage(deltavolt)
-    # delta.set_voltage(maxvolt)
-    # delta.set_current(-current)
+    delta.set_voltage(maxvolt*1.5)
+    delta.set_current(-current)
 
     req_power = series * v_nom * -current
 

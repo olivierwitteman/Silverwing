@@ -35,6 +35,7 @@ target_temp = 25.
 maxtemp = 75.
 v_nom = 3.7
 maxcurrent = 110.
+inputtype = 'P'
 
 
 def initiate_relay_control():
@@ -308,15 +309,23 @@ def cycle():
             oldname = c[2]
         newname = c[2]
         print('Discharge starts')
-        if c[0] > 0.:
-            print('Charging initiated')
-            status = charge(c[0], name=c[2])
+        # if c[0] > 0.:
+        #     print('Charging initiated')
+        #     if inputtype == 'C':
+        #         status = charge(c[0], name=c[2])
+        #     else:
+        #         status = charge(c[0]/(v_nom*capacity), name=c[2])
+        #
+        # elif c[0] < 0.:
 
-        elif c[0] < 0.:
-            print('Discharging initiated/continued')
-            status = discharge(c[0], duration=c[1], status=status, name=c[2])
+        print('Discharging initiated/continued')
+        if inputtype == 'C':
+            status = discharge(-abs(c[0]), duration=c[1], status=status, name=c[2])
         else:
-            print('Error at c-rating in input file')
+            status = discharge(-abs(c[0]/(v_nom*capacity)), duration=c[1], status=status, name=c[2])
+
+        # else:
+        #     print('Error at c-rating in input file')
 
         if oldname != newname:
             status = 'empty'

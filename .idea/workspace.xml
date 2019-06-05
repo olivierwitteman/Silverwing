@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="fuck">
-      <change afterPath="$PROJECT_DIR$/BTS/data/final_data/disch_BT-CP-CUSTOM-70.5_25_PCC.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BTS/data/final_data/disch_BT-CP-EMRAX-66.5_26.5_PCC_short.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cooling/PM100DZ_Losses.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BTS/BTS.csv" beforeDir="false" afterPath="$PROJECT_DIR$/BTS/BTS.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BTS/BTS.py" beforeDir="false" afterPath="$PROJECT_DIR$/BTS/BTS.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BTS/data/final_data/Analyze.py" beforeDir="false" afterPath="$PROJECT_DIR$/BTS/data/final_data/Analyze.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slack/slackbot.py" beforeDir="false" afterPath="$PROJECT_DIR$/Slack/slackbot.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,14 +17,9 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BTS/BTS.csv">
-          <provider selected="true" editor-type-id="csv-text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
-            </state>
-          </provider>
-          <provider editor-type-id="csv-table-editor">
+          <provider selected="true" editor-type-id="csv-table-editor">
             <state showInfoPanel="true" fixedHeaders="false" rowLines="0">
               <column index="0" width="277" />
               <column index="1" width="161" />
@@ -32,13 +28,27 @@
               <column index="4" width="100" />
             </state>
           </provider>
+          <provider editor-type-id="csv-text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BTS/data/final_data/disch_BT-CP-EMRAX-66.5_26.5_PCC_short.log">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BTS/data/final_data/Analyze.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
+            <state relative-caret-position="675">
+              <caret line="48" column="16" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -47,17 +57,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BTS/data/final_data/disch_BT-CP-CUSTOM-70.5_25_PCC.log">
+        <entry file="file://$PROJECT_DIR$/Slack/slackbot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-169187" />
+            <state relative-caret-position="135">
+              <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Cooling/PM100DZ_Losses.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="25" column="36" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
+            </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BTS/BTS.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="323" column="35" selection-start-line="323" selection-start-column="35" selection-end-line="323" selection-end-column="35" />
+            <state relative-caret-position="3345">
+              <caret line="227" column="59" selection-start-line="227" selection-start-column="59" selection-end-line="227" selection-end-column="59" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -68,7 +89,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PTS/Broadcast.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
+            <state relative-caret-position="390">
               <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
               <folding>
                 <element signature="e#82#95#0" expanded="true" />
@@ -79,15 +100,13 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BTS/data/BT-CP-EMRAX-66.5_26.5_PCC.log">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-172862" />
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BTS/data/final_data/disch_BT-CP-EMRAX-66.5_26.5_PCC.log">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="843">
+            <state relative-caret-position="162285">
               <caret line="10819" selection-start-line="10819" selection-end-line="10819" />
             </state>
           </provider>
@@ -142,14 +161,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/WaTT/Data/test.log" />
-        <option value="$PROJECT_DIR$/WaTT/Data/Legend.log" />
         <option value="$PROJECT_DIR$/WaTT/WaTT test matrix/8jan-Table 1.csv" />
         <option value="$PROJECT_DIR$/WaTT/WaTT test matrix/test.py" />
         <option value="$PROJECT_DIR$/WaTT/quick_plot.py" />
         <option value="$PROJECT_DIR$/WaTT/LoadCells.py" />
         <option value="$PROJECT_DIR$/WaTT/Data/quick_plot.py" />
-        <option value="$PROJECT_DIR$/Slack/slackbot.py" />
         <option value="$PROJECT_DIR$/esc/ESC_control.py" />
         <option value="$PROJECT_DIR$/WaTT/WaTT.py" />
         <option value="$PROJECT_DIR$/BTS/Calibrate.py" />
@@ -191,14 +207,19 @@
         <option value="$PROJECT_DIR$/BTS/data/final_data/disch_BT-CP-EMRAX-66.5_26.5_PCC.log" />
         <option value="$PROJECT_DIR$/PTS/Broadcast.py" />
         <option value="$PROJECT_DIR$/BTS/data/final_data/disch_BT-CP-CUSTOM-70.5_25_PCC.log" />
+        <option value="$PROJECT_DIR$/BTS/data/final_data/disch_BT-CP-EMRAX-66.5_26.5_PCC_short.log" />
         <option value="$PROJECT_DIR$/BTS/data/final_data/Analyze.py" />
         <option value="$PROJECT_DIR$/BTS/BTS.py" />
+        <option value="$PROJECT_DIR$/Slack/slackbot.py" />
+        <option value="$PROJECT_DIR$/Cooling/PM100DZ_Losses.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="201" />
+    <option name="y" value="241" />
     <option name="width" value="1396" />
-    <option name="height" value="1050" />
+    <option name="height" value="1199" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -206,6 +227,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -216,35 +238,17 @@
             <path>
               <item name="Silverwing" type="b2602c69:ProjectViewProjectNode" />
               <item name="Silverwing" type="462c0819:PsiDirectoryNode" />
-              <item name="BTS" type="462c0819:PsiDirectoryNode" />
+              <item name="Cooling" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Silverwing" type="b2602c69:ProjectViewProjectNode" />
               <item name="Silverwing" type="462c0819:PsiDirectoryNode" />
-              <item name="BTS" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Silverwing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Silverwing" type="462c0819:PsiDirectoryNode" />
-              <item name="BTS" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="final_data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Silverwing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Silverwing" type="462c0819:PsiDirectoryNode" />
-              <item name="PTS" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Silverwing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+              <item name="Slack" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -276,7 +280,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Analyze">
+  <component name="RunManager" selected="Python.PM100DZ_Losses">
     <configuration name="Analyze" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Silverwing" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -290,6 +294,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BTS/data/final_data/Analyze.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="PM100DZ_Losses" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Silverwing" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Cooling" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Cooling/PM100DZ_Losses.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -340,7 +365,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Receive" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="slackbot" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Silverwing" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -348,32 +373,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PTS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Slack" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PTS/Receive.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="testplot" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Silverwing" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PTS" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PTS/testplot.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Slack/slackbot.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -386,16 +390,16 @@
       <item itemvalue="Python.Analyze" />
       <item itemvalue="Python.Plot_Motor_Thermal" />
       <item itemvalue="Python.Radiator_Sizing" />
-      <item itemvalue="Python.Receive" />
-      <item itemvalue="Python.testplot" />
+      <item itemvalue="Python.slackbot" />
+      <item itemvalue="Python.PM100DZ_Losses" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.PM100DZ_Losses" />
+        <item itemvalue="Python.slackbot" />
         <item itemvalue="Python.Analyze" />
         <item itemvalue="Python.Plot_Motor_Thermal" />
         <item itemvalue="Python.Radiator_Sizing" />
-        <item itemvalue="Python.Receive" />
-        <item itemvalue="Python.testplot" />
       </list>
     </recent_temporary>
   </component>
@@ -409,13 +413,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532440488607</updated>
-    </task>
-    <task id="LOCAL-00257" summary="i2c">
-      <created>1551278611561</created>
-      <option name="number" value="00257" />
-      <option name="presentableId" value="LOCAL-00257" />
-      <option name="project" value="LOCAL" />
-      <updated>1551278611561</updated>
     </task>
     <task id="LOCAL-00258" summary="i2c">
       <created>1551278657261</created>
@@ -753,7 +750,14 @@
       <option name="project" value="LOCAL" />
       <updated>1554372444107</updated>
     </task>
-    <option name="localTasksCounter" value="306" />
+    <task id="LOCAL-00306" summary="fuck">
+      <created>1554459519523</created>
+      <option name="number" value="00306" />
+      <option name="presentableId" value="LOCAL-00306" />
+      <option name="project" value="LOCAL" />
+      <updated>1554459519523</updated>
+    </task>
+    <option name="localTasksCounter" value="307" />
     <servers />
   </component>
   <component name="TodoView">
@@ -766,22 +770,21 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1396" height="1050" extended-state="0" />
-    <editor active="true" />
+    <frame x="201" y="241" width="1396" height="1199" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.32145455" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.38763636" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32570806" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4924663" visible="true" weight="0.2400835" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4924663" visible="true" weight="0.33423668" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32985386" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32881" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.41544884" />
-      <window_info anchor="bottom" id="Python Console" order="9" sideWeight="0.4929841" weight="0.21398747" />
+      <window_info anchor="bottom" id="Python Console" order="9" sideWeight="0.4929841" weight="0.2131888" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5075337" side_tool="true" weight="0.2400835" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -833,26 +836,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="fuck" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/BTS/data/final_data/US18650_VTC6_fp_feb.log">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/General/Plot_Torque_Speed.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="13" lean-forward="true" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BTS/data/final_data/Crate_Temp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3720">
-          <caret line="248" selection-start-line="248" selection-end-line="248" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BTS/data/final_data/BT-E-1800_1200-80_40-6.log" />
     <entry file="file://$PROJECT_DIR$/General/PCC.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -990,11 +973,6 @@
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/General/tempdata.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="27">
-          <caret line="2" column="455" selection-start-line="2" selection-start-column="448" selection-end-line="2" selection-end-column="455" />
-        </state>
-      </provider>
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3">
           <column index="0" width="100" />
@@ -1129,6 +1107,11 @@
           <column index="129" width="100" />
         </state>
       </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="27">
+          <caret line="2" column="455" selection-start-line="2" selection-start-column="448" selection-end-line="2" selection-end-column="455" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/General/Plot_Motor_Thermal.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -1221,37 +1204,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BTS/data/final_data/disch_BT-CP-EMRAX-66.5_26.5_PCC.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="843">
-          <caret line="10819" selection-start-line="10819" selection-end-line="10819" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BTS/data/BT-CP-EMRAX-66.5_26.5_PCC.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-172862" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PTS/Broadcast.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
-          <folding>
-            <element signature="e#82#95#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BTS/data/final_data/disch_BT-CP-CUSTOM-70.5_25_PCC.log">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-169187" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/BTS/BTS.csv">
+      <provider selected="true" editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="0">
+          <column index="0" width="277" />
+          <column index="1" width="161" />
+          <column index="2" width="100" />
+          <column index="3" width="100" />
+          <column index="4" width="100" />
+        </state>
+      </provider>
+      <provider editor-type-id="csv-text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BTS/data/final_data/disch_BT-CP-EMRAX-66.5_26.5_PCC_short.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/BTS/data/final_data/Analyze.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
+        <state relative-caret-position="675">
+          <caret line="48" column="16" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
@@ -1260,27 +1244,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BTS/BTS.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="323" column="35" selection-start-line="323" selection-start-column="35" selection-end-line="323" selection-end-column="35" />
+        <state relative-caret-position="3345">
+          <caret line="227" column="59" selection-start-line="227" selection-start-column="59" selection-end-line="227" selection-end-column="59" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BTS/BTS.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+    <entry file="file://$PROJECT_DIR$/PTS/Broadcast.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
+          <folding>
+            <element signature="e#82#95#0" expanded="true" />
+          </folding>
         </state>
       </provider>
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="0">
-          <column index="0" width="277" />
-          <column index="1" width="161" />
-          <column index="2" width="100" />
-          <column index="3" width="100" />
-          <column index="4" width="100" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BTS/data/BT-CP-EMRAX-66.5_26.5_PCC.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BTS/data/final_data/disch_BT-CP-EMRAX-66.5_26.5_PCC.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162285">
+          <caret line="10819" selection-start-line="10819" selection-end-line="10819" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Slack/slackbot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cooling/PM100DZ_Losses.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="36" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
         </state>
       </provider>
     </entry>

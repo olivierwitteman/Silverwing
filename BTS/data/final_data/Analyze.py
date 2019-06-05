@@ -24,7 +24,9 @@ path = './'
 # name = 'disch_BT-B-1_1'
 # name = 'disch_BT-P-121000_46000-70_35_800_ADDCELLS'
 # name = 'disch_BT-CP-EMRAX-66.5_26.5_PCC'
-name = 'disch_BT-CP-CUSTOM-70.5_25_PCC'
+name = 'disch_BT-CP-EMRAX-66.5_26.5_PCC_short'
+# name = 'disch_BT-CP-CUSTOM-70.5_25_PCC'
+# name = 'disch_BT-CP-CUSTOM-70.5_25_PCC_short'
 
 
 def butter_lowpass(cutoff, fs, order=5):
@@ -88,7 +90,6 @@ for i in np.arange(0, len(samples), 1):
                 raise KeyboardInterrupt
 
     except:
-        # print('ass\n\n\n')
         Tsa = [0, 0]
         Us, ts, Is, Tsp, Tsa, As = remove_last(Us, ts, Is, Tsp, Tsa, As)
         pass

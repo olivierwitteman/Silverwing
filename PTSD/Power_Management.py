@@ -28,6 +28,7 @@ def precharge():
         delta.set_current(I_max)
     else:
         delta.set_state(0)
+        print('\n\nPrecharging failed\n\n')
         precharged = False
         raise KeyboardInterrupt
     return precharged

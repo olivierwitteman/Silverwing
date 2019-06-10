@@ -120,20 +120,24 @@ class DeltaComm:
         print("temperature (C): ", self.temp)
 
     def sink(self):
-        self.send(str.encode(b"SYSTem:POWersink present?\n"))
+        self.send(str.encode("SYSTem:POWersink present?\n"))
         response = self.srvsock.recv(4096)
         return response
 
     def set_method(self, method='Remote'):  # 'Remote' or 'Local'
-        self.send(str.encode(b"SYSTem:REMote:CV[:STAtus] {!s}\n".format(method)))
-        self.send(str.encode(b"SYSTem:REMote:CC[:STAtus] {!s}\n".format(method)))
+        self.send(str.encode("SYSTem:REMote:CV[:STAtus] {!s}\n".format(method)))
+        self.send(str.encode("SYSTem:REMote:CC[:STAtus] {!s}\n".format(method)))
         print('Method set to {!s}'.format(method))
 
     def ask_method(self):
-        self.send(str.encode(b"SYSTem:REMote:CV[:STAtus]?\n"))
+        self.send(str.encode("SYSTem:REMote:CV[:STAtus]?\n"))
         cv_method = self.srvsock.recv(4096)
         print(cv_method)
-        self.send(str.encode(b"SYSTem:REMote:CC[:STAtus]?\n"))
+        self.send(str.encode("SYSTem:REMote:CC[:STAtus]?\n"))
         cc_method = self.srvsock.recv(4096)
         return cv_method, cc_method
+
+    def enable_watchdog(self):
+        timeout = 1000
+        msg = 'SYSTem: COMmunicate:WATchdog < sp > SET,\n'.format(timeout)
 

@@ -14,7 +14,7 @@ if V_set > 60.:
     time.sleep(5.)
     print('Engaging HV')
 
-pre_I = 1.
+pre_I = 2.
 # I = 15000./V
 I_max = 5.5
 

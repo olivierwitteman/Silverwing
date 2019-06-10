@@ -16,7 +16,7 @@ if V_set > 60.:
 
 pre_I = 2.5
 # I = 15000./V
-I_max = 5.5
+I_max = 11.
 
 precharged = False
 

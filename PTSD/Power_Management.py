@@ -25,6 +25,7 @@ def precharge():
     time.sleep(2.5)
     if abs(delta.ask_voltage() - V_set) < 40.:
         precharged = True
+        delta.set_current(I_max)
     else:
         delta.set_state(0)
         precharged = False

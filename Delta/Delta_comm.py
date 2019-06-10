@@ -28,7 +28,8 @@ class DeltaComm:
         self.srvsock.send(message)
 
     def set_state(self, state):
-        self.send(b"OUTP "+ bytes(state) + b"\n")
+        msg = "OUTP "+ str(state) + "\n"
+        self.send(msg.encode('ascii'))
         print('State set to {!s}'.format(bool(self.ask_state())))
 
     def ask_state(self):

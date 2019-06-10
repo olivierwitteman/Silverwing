@@ -37,6 +37,7 @@ def monitor():
     while True:
         print('\rVoltage: {!s}, actual current: {!s}, power: {!s}' \
           .format(delta.ask_voltage(), delta.ask_current(), delta.ask_power()), end='')
+        time.sleep(0.2)
 
 
 try:

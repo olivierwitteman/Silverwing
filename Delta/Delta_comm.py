@@ -10,7 +10,8 @@ class DeltaComm:
         try:
             self.open_connection()
         except socket.error:
-            self.IP = "192.168.2.86"
+            # self.IP = "192.168.2.86"
+            self.IP = "192.168.2.96"
             self.open_connection()
         # self.set_method()
 
@@ -78,7 +79,7 @@ class DeltaComm:
     def discharge(self, current, minvolt, mincurrent):
         setcurrent = current
         self.current = abs(current)
-        print 'discharge'
+        print('discharge')
         self.set_voltage(self.ask_voltage())
         step = 0.1
         try:
@@ -90,7 +91,7 @@ class DeltaComm:
                         voltage = self.ask_voltage()
                         if self.ask_current() >= current:
                             self.set_voltage(voltage-step*self.delta_current())
-                            print "check: ", self.delta_current()
+                            print("check: ", self.delta_current())
                             time.sleep(0.001*self.series)
                         elif self.ask_current() < current:
                             self.set_voltage(voltage+step*self.delta_current())
@@ -102,7 +103,7 @@ class DeltaComm:
                             self.data_aq("discharge")
                             self.plot()
                         self.set_state(0)
-                        print 'Battery is empty'
+                        print('Battery is empty')
                         current = 0
                 except socket.timeout:
                     self.open_connection()
@@ -111,11 +112,11 @@ class DeltaComm:
             self.finalplot(setcurrent)
             self.finalsave('discharge')
             avgvolt = float(sum(self.vlst)/len(self.vlst))
-            print "temperature (C): ", self.temp
-            print "Capacity (Ah): ", round(self.caplst[-1], 2)
-            print "Average Voltage (V): ", round(avgvolt, 2)
+            print("temperature (C): {!s}".format(self.temp))
+            print("Capacity (Ah): {!s}".format(round(self.caplst[-1], 2)))
+            print("Average Voltage (V): {!s}".format(round(avgvolt, 2)))
 
-        print "temperature (C): ", self.temp
+        print("temperature (C): ", self.temp)
 
     def sink(self):
         self.send(str.encode(b"SYSTem:POWersink present?\n"))
@@ -125,12 +126,12 @@ class DeltaComm:
     def set_method(self, method='Remote'):  # 'Remote' or 'Local'
         self.send(str.encode(b"SYSTem:REMote:CV[:STAtus] {!s}\n".format(method)))
         self.send(str.encode(b"SYSTem:REMote:CC[:STAtus] {!s}\n".format(method)))
-        print 'Method set to {!s}'.format(method)
+        print('Method set to {!s}'.format(method))
 
     def ask_method(self):
         self.send(str.encode(b"SYSTem:REMote:CV[:STAtus]?\n"))
         cv_method = self.srvsock.recv(4096)
-        print cv_method
+        print(cv_method)
         self.send(str.encode(b"SYSTem:REMote:CC[:STAtus]?\n"))
         cc_method = self.srvsock.recv(4096)
         return cv_method, cc_method

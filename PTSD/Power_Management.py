@@ -14,7 +14,7 @@ if V_set > 60.:
     time.sleep(5.)
     print('Engaging HV')
 
-pre_I = 2.
+pre_I = 2.5
 # I = 15000./V
 I_max = 5.5
 
@@ -26,7 +26,7 @@ def precharge():
     delta.set_voltage(V_set)
     delta.set_current(pre_I)
     delta.set_state(1)
-    time.sleep(2.5)
+    time.sleep(3.)
     if abs(delta.ask_voltage() - V_set) < 40.:
         precharged = True
         delta.set_current(I_max)

@@ -40,8 +40,13 @@ def precharge():
 
 def monitor():
     while True:
+        vlst, ilst, plst = [], [], []
+        for _ in range(10):
+            vlst.append(delta.ask_voltage())
+            ilst.append(delta.ask_current())
+            plst.append(delta.ask_power())
         print('\rVoltage: {!s}, actual current: {!s}, power: {!s}' \
-          .format(delta.ask_voltage(), delta.ask_current(), delta.ask_power()), end='')
+          .format(round(sum(vlst)/len(vlst), 2), round(sum(ilst)/len(ilst), 2), round(sum(plst)/len(plst)), 2), end='')
         time.sleep(0.2)
 
 

@@ -23,11 +23,11 @@ gp.setwarnings(False)
 gp.setup(pin, gp.OUT)
 
 if not safe_operation:
-    print '\n\nWARNING, lowered cutoff voltage to allow for higher discharge rate. Do not leave this process ' \
-          'unattended.\n\nBattery degradation will be accelerated in this mode.'
+    print('\n\nWARNING, lowered cutoff voltage to allow for higher discharge rate. Do not leave this process ' \
+          'unattended.\n\nBattery degradation will be accelerated in this mode.')
 maxvolt, series, parallel, crate_char = 4.2, 1, 1, 1.
-print 'Maximum cell voltage: {!s}V\nMinimum cell voltage: {!s}V\nCells in series: {!s}\nCells in parallel: {!s}\n' \
-      'Discharge rate: {!s}C\nCharge rate: {!s}C'.format(maxvolt, minvolt, series, parallel, crate_dischar, crate_char)
+print('Maximum cell voltage: {!s}V\nMinimum cell voltage: {!s}V\nCells in series: {!s}\nCells in parallel: {!s}\n' \
+      'Discharge rate: {!s}C\nCharge rate: {!s}C'.format(maxvolt, minvolt, series, parallel, crate_dischar, crate_char))
 
 
 def log(timestamp, voltage, current, temperature=0.0, remark=''):
@@ -94,7 +94,7 @@ def discharge(c_rate, duration=0, status='empty'):
     else:
         minv = minvolt + t_current * R_sys
 
-    print 'Cutoff voltage: {!s}V'.format(minv)
+    print('Cutoff voltage: {!s}V'.format(minv))
 
     c_voltage = delta.ask_voltage()
     set_voltage = c_voltage
@@ -148,7 +148,7 @@ def discharge(c_rate, duration=0, status='empty'):
             delta.set_state(0)
             return status
     else:
-        print 'Voltage too low'
+        print('Voltage too low')
         return 'low voltage'
 
 

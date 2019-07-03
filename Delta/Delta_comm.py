@@ -138,6 +138,8 @@ class DeltaComm:
         return cv_method, cc_method
 
     def enable_watchdog(self):
-        timeout = 1000
-        msg = 'SYSTem: COMmunicate:WATchdog < sp > SET,\n'.format(timeout)
+        timeout = 5000
+        msg = 'SYSTem: COMmunicate:WATchdog SET,{!s}\n'.format(timeout)
+        self.send(msg.encode('ascii'))
+        print('Watchdog set with timeout of {!s}s'.format(round(timeout/1000.), 2))
 

@@ -1,5 +1,4 @@
 import time
-import sys
 import delta_sm3300 as d
 
 delta = d.DeltaComm()
@@ -14,11 +13,14 @@ if V_set > 60.:
     time.sleep(5.)
     print('Engaging HV')
 
-pre_I = 2.5
+pre_I = 5.
 # I = 15000./V
 I_max = 11.
 
-precharged = False
+
+def log(voltage, current, power):
+    with open('./power.csv', 'a') as a:
+        a.write('{!s}'.format(time.time(), voltage, current, power))
 
 
 def precharge():
@@ -26,7 +28,16 @@ def precharge():
     delta.set_voltage(V_set)
     delta.set_current(pre_I)
     delta.set_state(1)
-    time.sleep(3.)
+
+    t0_pre, t = time.time(), time.time()
+
+    while t - t0_pre < 3.:
+        print('\rVoltage: {!s}, actual current: {!s}, power: {!s}'.format(round(delta.ask_voltage(), 2),
+                                                                          round(delta.ask_current(), 2),
+                                                                          round(delta.ask_power(), 2), end=''))
+        time.sleep(0.1)
+        t = time.time()
+
     if abs(delta.ask_voltage() - V_set) < 40.:
         precharged = True
         delta.set_current(I_max)
@@ -45,8 +56,12 @@ def monitor():
             vlst.append(delta.ask_voltage())
             ilst.append(delta.ask_current())
             plst.append(delta.ask_power())
-        print('\rVoltage: {!s}, actual current: {!s}, power: {!s}' \
-          .format(round(sum(vlst)/len(vlst), 2), round(sum(ilst)/len(ilst), 2), round(sum(plst)/len(plst)), 2), end='')
+        u = sum(vlst)/len(vlst)
+        i = sum(ilst)/len(ilst)
+        p = sum(plst)/len(plst)
+        print('\rVoltage: {!s}, actual current: {!s}, power: {!s}'
+              .format(round(u, 2), round(i, 2), round(p, 2), end=''))
+        log(u, i, p)
         time.sleep(0.2)
 
 

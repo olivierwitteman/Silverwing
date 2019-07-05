@@ -51,7 +51,7 @@ def precharge():
 
 def discharge():
     delta.set_state(0)
-    print('Discharging...')
+    print('\nDischarging...\n')
     while delta.ask_voltage() > 10.:
         vlst, ilst, plst = [], [], []
         for _ in range(10):
@@ -63,6 +63,8 @@ def discharge():
         p = sum(plst) / len(plst)
 
         log(u, i, p)
+
+    print('\nSuccessfully discharged.\n')
 
 
 def monitor():

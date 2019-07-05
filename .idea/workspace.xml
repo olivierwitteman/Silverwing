@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="Inverter losses">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Delta/Battery_tests/Battery_testing.py" beforeDir="false" afterPath="$PROJECT_DIR$/Delta/Battery_tests/Battery_testing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Delta/Delta_comm.py" beforeDir="false" afterPath="$PROJECT_DIR$/Delta/Delta_comm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PTSD/Power_Management.py" beforeDir="false" afterPath="$PROJECT_DIR$/PTSD/Power_Management.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Slack/slackbot.py" beforeDir="false" afterPath="$PROJECT_DIR$/Slack/slackbot.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,20 +12,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PTSD/Power_Management.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Slack/slackbot.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="97">
+              <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -177,12 +164,12 @@
         <option value="$PROJECT_DIR$/Delta/Delta_comm.py" />
         <option value="$PROJECT_DIR$/PTSD/logtest.py" />
         <option value="$PROJECT_DIR$/Delta/Battery_tests/Battery_testing.py" />
-        <option value="$PROJECT_DIR$/PTSD/Power_Management.py" />
         <option value="$PROJECT_DIR$/Slack/slackbot.py" />
+        <option value="$PROJECT_DIR$/PTSD/Power_Management.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
     <option name="width" value="1680" />
     <option name="height" value="1050" />
   </component>
@@ -191,25 +178,7 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Silverwing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Silverwing" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Silverwing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Silverwing" type="462c0819:PsiDirectoryNode" />
-              <item name="Slack" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
@@ -373,20 +342,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532440488607</updated>
-    </task>
-    <task id="LOCAL-00269" summary="i2c">
-      <created>1551286677953</created>
-      <option name="number" value="00269" />
-      <option name="presentableId" value="LOCAL-00269" />
-      <option name="project" value="LOCAL" />
-      <updated>1551286677953</updated>
-    </task>
-    <task id="LOCAL-00270" summary="i2c">
-      <created>1551347907497</created>
-      <option name="number" value="00270" />
-      <option name="presentableId" value="LOCAL-00270" />
-      <option name="project" value="LOCAL" />
-      <updated>1551347907497</updated>
     </task>
     <task id="LOCAL-00271" summary="i2c">
       <created>1551353588918</created>
@@ -717,7 +672,21 @@
       <option name="project" value="LOCAL" />
       <updated>1560246583804</updated>
     </task>
-    <option name="localTasksCounter" value="318" />
+    <task id="LOCAL-00318" summary="Inverter losses">
+      <created>1562183126596</created>
+      <option name="number" value="00318" />
+      <option name="presentableId" value="LOCAL-00318" />
+      <option name="project" value="LOCAL" />
+      <updated>1562183126597</updated>
+    </task>
+    <task id="LOCAL-00319" summary="Inverter losses">
+      <created>1562348519353</created>
+      <option name="number" value="00319" />
+      <option name="presentableId" value="LOCAL-00319" />
+      <option name="project" value="LOCAL" />
+      <updated>1562348519354</updated>
+    </task>
+    <option name="localTasksCounter" value="320" />
     <servers />
   </component>
   <component name="TodoView">
@@ -730,7 +699,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="2560" height="1440" extended-state="6" />
+    <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info auto_hide="true" content_ui="combo" id="Project" order="0" weight="0.11658133" />
@@ -1221,13 +1190,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PTSD/Power_Management.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Delta/Battery_tests/Battery_testing.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2205">
@@ -1267,8 +1229,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Slack/slackbot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        <state>
+          <caret column="30" selection-start-column="30" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PTSD/Power_Management.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
         </state>
       </provider>
     </entry>

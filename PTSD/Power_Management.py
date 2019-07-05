@@ -79,7 +79,7 @@ def monitor():
         p = sum(plst)/len(plst)
         print('\rVoltage: {!s}, actual current: {!s}, power: {!s}'
               .format(round(u, 2), round(i, 2), round(p, 2), end=''))
-        log(u, i, p)
+        # log(u, i, p)
         time.sleep(0.2)
 
 
@@ -89,7 +89,6 @@ try:
 
 
 finally:
-    delta.set_state(0)
     discharge()
     delta.close_connection()
 

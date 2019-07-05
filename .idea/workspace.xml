@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="Inverter losses">
+    <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="Safety">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PTSD/Power_Management.py" beforeDir="false" afterPath="$PROJECT_DIR$/PTSD/Power_Management.py" afterDir="false" />
     </list>
@@ -16,8 +16,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PTSD/Power_Management.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="34" column="11" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
+            <state relative-caret-position="615">
+              <caret line="82" column="20" lean-forward="true" selection-start-line="82" selection-start-column="20" selection-end-line="82" selection-end-column="20" />
+              <folding>
+                <element signature="e#397#501#0" />
+                <element signature="e#525#1338#0" />
+                <element signature="e#1384#1813#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -344,27 +349,6 @@
       <option name="presentableId" value="Default" />
       <updated>1532440488607</updated>
     </task>
-    <task id="LOCAL-00272" summary="i2c">
-      <created>1551353626289</created>
-      <option name="number" value="00272" />
-      <option name="presentableId" value="LOCAL-00272" />
-      <option name="project" value="LOCAL" />
-      <updated>1551353626290</updated>
-    </task>
-    <task id="LOCAL-00273" summary="i2c">
-      <created>1551353673011</created>
-      <option name="number" value="00273" />
-      <option name="presentableId" value="LOCAL-00273" />
-      <option name="project" value="LOCAL" />
-      <updated>1551353673011</updated>
-    </task>
-    <task id="LOCAL-00274" summary="i2c">
-      <created>1551353710602</created>
-      <option name="number" value="00274" />
-      <option name="presentableId" value="LOCAL-00274" />
-      <option name="project" value="LOCAL" />
-      <updated>1551353710602</updated>
-    </task>
     <task id="LOCAL-00275" summary="i2c">
       <created>1551353834630</created>
       <option name="number" value="00275" />
@@ -687,7 +671,28 @@
       <option name="project" value="LOCAL" />
       <updated>1562349341913</updated>
     </task>
-    <option name="localTasksCounter" value="321" />
+    <task id="LOCAL-00321" summary="Inverter losses">
+      <created>1562349992417</created>
+      <option name="number" value="00321" />
+      <option name="presentableId" value="LOCAL-00321" />
+      <option name="project" value="LOCAL" />
+      <updated>1562349992417</updated>
+    </task>
+    <task id="LOCAL-00322" summary="Safety">
+      <created>1562350093572</created>
+      <option name="number" value="00322" />
+      <option name="presentableId" value="LOCAL-00322" />
+      <option name="project" value="LOCAL" />
+      <updated>1562350093572</updated>
+    </task>
+    <task id="LOCAL-00323" summary="Safety">
+      <created>1562355166768</created>
+      <option name="number" value="00323" />
+      <option name="presentableId" value="LOCAL-00323" />
+      <option name="project" value="LOCAL" />
+      <updated>1562355166768</updated>
+    </task>
+    <option name="localTasksCounter" value="324" />
     <servers />
   </component>
   <component name="TodoView">
@@ -739,7 +744,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="parantheses" />
     <MESSAGE value="BTS" />
     <MESSAGE value="cycling" />
     <MESSAGE value="charging configuration" />
@@ -764,7 +768,8 @@
     <MESSAGE value="test matrix BTS (PCC)" />
     <MESSAGE value="fuck" />
     <MESSAGE value="Inverter losses" />
-    <option name="LAST_COMMIT_MESSAGE" value="Inverter losses" />
+    <MESSAGE value="Safety" />
+    <option name="LAST_COMMIT_MESSAGE" value="Safety" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Delta/Battery_tests/VTC6_vacuum_insulated_PCC.png" />
@@ -1237,8 +1242,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PTSD/Power_Management.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="34" column="11" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
+        <state relative-caret-position="615">
+          <caret line="82" column="20" lean-forward="true" selection-start-line="82" selection-start-column="20" selection-end-line="82" selection-end-column="20" />
+          <folding>
+            <element signature="e#397#501#0" />
+            <element signature="e#525#1338#0" />
+            <element signature="e#1384#1813#0" />
+          </folding>
         </state>
       </provider>
     </entry>

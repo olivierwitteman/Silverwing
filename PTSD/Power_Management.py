@@ -32,9 +32,9 @@ def precharge():
     t0_pre, t = time.time(), time.time()
 
     while t - t0_pre < 3.:
-        print('\rVoltage: {!s}, actual current: {!s}, power: {!s}'.format(round(delta.ask_voltage(), 2),
-                                                                          round(delta.ask_current(), 2),
-                                                                          round(delta.ask_power(), 2), end=''))
+        # print('\rVoltage: {!s}, actual current: {!s}, power: {!s}'.format(round(delta.ask_voltage(), 2),
+        #                                                                   round(delta.ask_current(), 2),
+        #                                                                   round(delta.ask_power(), 2), end=''))
         time.sleep(0.1)
         t = time.time()
 
@@ -47,6 +47,22 @@ def precharge():
         precharged = False
         raise KeyboardInterrupt
     return precharged
+
+
+def discharge():
+    delta.set_state(0)
+    print('Discharging...')
+    while delta.ask_voltage() > 10.:
+        vlst, ilst, plst = [], [], []
+        for _ in range(10):
+            vlst.append(delta.ask_voltage())
+            ilst.append(delta.ask_current())
+            plst.append(delta.ask_power())
+        u = sum(vlst) / len(vlst)
+        i = sum(ilst) / len(ilst)
+        p = sum(plst) / len(plst)
+
+        log(u, i, p)
 
 
 def monitor():
@@ -72,5 +88,6 @@ try:
 
 finally:
     delta.set_state(0)
+    discharge()
     delta.close_connection()
 

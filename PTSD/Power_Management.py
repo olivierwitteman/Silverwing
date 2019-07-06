@@ -1,6 +1,5 @@
 import time
 import delta_sm3300 as d
-
 delta = d.DeltaComm()
 
 print('Ctr+C anytime to switch off power')
@@ -35,6 +34,7 @@ def precharge():
         print('\rVoltage: {!s}, actual current: {!s}, power: {!s}'.format(round(delta.ask_voltage(), 2),
                                                                           round(delta.ask_current(), 2),
                                                                           round(delta.ask_power(), 2), end=''))
+
         time.sleep(0.1)
         t = time.time()
 
@@ -74,11 +74,13 @@ def monitor():
             vlst.append(delta.ask_voltage())
             ilst.append(delta.ask_current())
             plst.append(delta.ask_power())
+
         u = sum(vlst)/len(vlst)
         i = sum(ilst)/len(ilst)
         p = sum(plst)/len(plst)
-        print('\rVoltage: {!s}, actual current: {!s}, power: {!s}'
-              .format(round(u, 2), round(i, 2), round(p, 2), end=''))
+
+        print('\rVoltage: {!s}, actual current: {!s}, power: {!s}'.format(round(u, 2), round(i, 2), round(p, 2)), end='')
+
         log(u, i, p)
         time.sleep(0.2)
 

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="Safety">
+      <change afterPath="$PROJECT_DIR$/PTSD/Data/PlotData.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PTSD/Power_Management.py" beforeDir="false" afterPath="$PROJECT_DIR$/PTSD/Power_Management.py" afterDir="false" />
     </list>
@@ -16,13 +17,34 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PTSD/Power_Management.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="82" column="20" lean-forward="true" selection-start-line="82" selection-start-column="20" selection-end-line="82" selection-end-column="20" />
+            <state relative-caret-position="180">
+              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
               <folding>
+                <element signature="e#0#11#0" expanded="true" />
                 <element signature="e#397#501#0" />
-                <element signature="e#525#1338#0" />
-                <element signature="e#1384#1813#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PTSD/Data/logger_inv1.csv">
+          <provider editor-type-id="csv-text-editor" />
+          <provider selected="true" editor-type-id="csv-table-editor">
+            <state showInfoPanel="true" fixedHeaders="true" rowLines="0">
+              <column index="0" width="100" />
+              <column index="1" width="148" />
+              <column index="2" width="50" />
+              <column index="3" width="1341" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PTSD/Data/PlotData.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="31" selection-start-column="31" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -121,7 +143,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/WaTT/quick_plot.py" />
         <option value="$PROJECT_DIR$/WaTT/LoadCells.py" />
         <option value="$PROJECT_DIR$/WaTT/Data/quick_plot.py" />
         <option value="$PROJECT_DIR$/esc/ESC_control.py" />
@@ -171,6 +192,7 @@
         <option value="$PROJECT_DIR$/PTSD/logtest.py" />
         <option value="$PROJECT_DIR$/Delta/Battery_tests/Battery_testing.py" />
         <option value="$PROJECT_DIR$/Slack/slackbot.py" />
+        <option value="$PROJECT_DIR$/PTSD/Data/PlotData.py" />
         <option value="$PROJECT_DIR$/PTSD/Power_Management.py" />
       </list>
     </option>
@@ -184,7 +206,31 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Silverwing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Silverwing" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Silverwing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Silverwing" type="462c0819:PsiDirectoryNode" />
+              <item name="PTSD" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Silverwing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Silverwing" type="462c0819:PsiDirectoryNode" />
+              <item name="PTSD" type="462c0819:PsiDirectoryNode" />
+              <item name="Data" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
@@ -215,7 +261,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.slackbot">
+  <component name="RunManager" selected="Python.Power_Management">
     <configuration name="Analyze" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Silverwing" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -330,8 +376,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.slackbot" />
         <item itemvalue="Python.Power_Management" />
+        <item itemvalue="Python.slackbot" />
         <item itemvalue="Python.logtest" />
         <item itemvalue="Python.PM100DZ_Losses" />
         <item itemvalue="Python.Analyze" />
@@ -348,13 +394,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532440488607</updated>
-    </task>
-    <task id="LOCAL-00275" summary="i2c">
-      <created>1551353834630</created>
-      <option name="number" value="00275" />
-      <option name="presentableId" value="LOCAL-00275" />
-      <option name="project" value="LOCAL" />
-      <updated>1551353834631</updated>
     </task>
     <task id="LOCAL-00276" summary="i2c">
       <created>1551354561271</created>
@@ -692,7 +731,14 @@
       <option name="project" value="LOCAL" />
       <updated>1562355166768</updated>
     </task>
-    <option name="localTasksCounter" value="324" />
+    <task id="LOCAL-00324" summary="Safety">
+      <created>1562356037106</created>
+      <option name="number" value="00324" />
+      <option name="presentableId" value="LOCAL-00324" />
+      <option name="project" value="LOCAL" />
+      <updated>1562356037106</updated>
+    </task>
+    <option name="localTasksCounter" value="325" />
     <servers />
   </component>
   <component name="TodoView">
@@ -708,12 +754,12 @@
     <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info auto_hide="true" content_ui="combo" id="Project" order="0" weight="0.11658133" />
+      <window_info auto_hide="true" content_ui="combo" id="Project" order="0" weight="0.11633514" />
       <window_info id="Structure" order="1" weight="0.24954791" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32570806" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4924663" weight="0.33357665" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4924663" visible="true" weight="0.33265308" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -772,14 +818,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Safety" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Delta/Battery_tests/VTC6_vacuum_insulated_PCC.png" />
-    <entry file="file://$PROJECT_DIR$/Delta/Battery_tests/Analyze.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BTS/data/final_data/Results/disch_BT-E-1200_800-80_40-8.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -1240,14 +1278,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/PTSD/Data/logger_inv1.csv">
+      <provider editor-type-id="csv-text-editor" />
+      <provider selected="true" editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="true" rowLines="0">
+          <column index="0" width="100" />
+          <column index="1" width="148" />
+          <column index="2" width="50" />
+          <column index="3" width="1341" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PTSD/Data/PlotData.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="31" selection-start-column="31" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/PTSD/Power_Management.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="82" column="20" lean-forward="true" selection-start-line="82" selection-start-column="20" selection-end-line="82" selection-end-column="20" />
+        <state relative-caret-position="180">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
           <folding>
+            <element signature="e#0#11#0" expanded="true" />
             <element signature="e#397#501#0" />
-            <element signature="e#525#1338#0" />
-            <element signature="e#1384#1813#0" />
           </folding>
         </state>
       </provider>

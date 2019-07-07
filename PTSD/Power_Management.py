@@ -41,7 +41,7 @@ def precharge():
     if abs(delta.ask_voltage() - V_set) < 40.:
         precharged = True
         delta.set_current(I_max)
-        print('\r', end='')
+        print('\r\n\n\n', end='')
     else:
         delta.set_state(0)
         print('\n\nPrecharging failed\n\n')

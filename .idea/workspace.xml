@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="Safety">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PTSD/Data/StaticPlot.py" beforeDir="false" afterPath="$PROJECT_DIR$/PTSD/Data/StaticPlot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PTSD/Power_Management.py" beforeDir="false" afterPath="$PROJECT_DIR$/PTSD/Power_Management.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PTSD/Data/LivePlot.py" beforeDir="false" afterPath="$PROJECT_DIR$/PTSD/Data/LivePlot.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,8 +16,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PTSD/Power_Management.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="767">
-              <caret line="65" column="21" selection-start-line="65" selection-start-column="21" selection-end-line="65" selection-end-column="21" />
+            <state relative-caret-position="890">
+              <caret line="67" column="22" selection-start-line="67" selection-start-column="22" selection-end-line="67" selection-end-column="22" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
                 <element signature="e#397#501#0" />
@@ -72,11 +71,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PTSD/Data/LivePlot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" selection-start-line="15" selection-end-line="16" selection-end-column="35" />
+            <state relative-caret-position="87">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -84,14 +83,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PTSD/Data/StaticPlot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-              <folding>
-                <element signature="e#0#31#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="45">
+              <caret line="3" selection-start-line="3" selection-end-line="4" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -217,9 +213,9 @@
         <option value="$PROJECT_DIR$/PTSD/Data/loggerCommands_18.csv" />
         <option value="$PROJECT_DIR$/PTSD/Data/PlotData.py" />
         <option value="$PROJECT_DIR$/PTSD/Data/DataPlot.py" />
-        <option value="$PROJECT_DIR$/PTSD/Data/LivePlot.py" />
-        <option value="$PROJECT_DIR$/PTSD/Power_Management.py" />
         <option value="$PROJECT_DIR$/PTSD/Data/StaticPlot.py" />
+        <option value="$PROJECT_DIR$/PTSD/Power_Management.py" />
+        <option value="$PROJECT_DIR$/PTSD/Data/LivePlot.py" />
       </list>
     </option>
   </component>
@@ -434,20 +430,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532440488607</updated>
-    </task>
-    <task id="LOCAL-00290" summary="test matrix BTS">
-      <created>1552933355825</created>
-      <option name="number" value="00290" />
-      <option name="presentableId" value="LOCAL-00290" />
-      <option name="project" value="LOCAL" />
-      <updated>1552933355825</updated>
-    </task>
-    <task id="LOCAL-00291" summary="test matrix BTS">
-      <created>1552934140745</created>
-      <option name="number" value="00291" />
-      <option name="presentableId" value="LOCAL-00291" />
-      <option name="project" value="LOCAL" />
-      <updated>1552934140745</updated>
     </task>
     <task id="LOCAL-00292" summary="test matrix BTS">
       <created>1553197551339</created>
@@ -778,7 +760,21 @@
       <option name="project" value="LOCAL" />
       <updated>1562509449326</updated>
     </task>
-    <option name="localTasksCounter" value="339" />
+    <task id="LOCAL-00339" summary="Safety">
+      <created>1562510647771</created>
+      <option name="number" value="00339" />
+      <option name="presentableId" value="LOCAL-00339" />
+      <option name="project" value="LOCAL" />
+      <updated>1562510647771</updated>
+    </task>
+    <task id="LOCAL-00340" summary="Safety">
+      <created>1562512344145</created>
+      <option name="number" value="00340" />
+      <option name="presentableId" value="LOCAL-00340" />
+      <option name="project" value="LOCAL" />
+      <updated>1562512344145</updated>
+    </task>
+    <option name="localTasksCounter" value="341" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1382,10 +1378,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/PTSD/Data/StaticPlot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="4" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/PTSD/Power_Management.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="767">
-          <caret line="65" column="21" selection-start-line="65" selection-start-column="21" selection-end-line="65" selection-end-column="21" />
+        <state relative-caret-position="890">
+          <caret line="67" column="22" selection-start-line="67" selection-start-column="22" selection-end-line="67" selection-end-column="22" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
             <element signature="e#397#501#0" />
@@ -1395,17 +1398,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PTSD/Data/LivePlot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" selection-start-line="15" selection-end-line="16" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PTSD/Data/StaticPlot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
+        <state relative-caret-position="87">
           <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />

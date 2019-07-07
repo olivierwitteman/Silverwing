@@ -11,7 +11,7 @@ path = './'
 # filename = str(input('filename: '))
 # filename = 'loggerCommands_inv2'
 
-list_of_files = glob.glob('./*.csv') # * means all if need specific format then *.csv
+list_of_files = glob.glob('{!s}*.csv'.format(path)) # * means all if need specific format then *.csv
 latest_file = max(list_of_files, key=os.path.getctime)
 
 steps = 10

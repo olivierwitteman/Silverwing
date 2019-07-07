@@ -1,14 +1,19 @@
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy.signal import lfilter
-
+import glob
+import os
 
 path = './'
 filename = 'loggerCommands_18'
 # filename = 'loggerCommands_inv2'
+
+list_of_files = glob.glob('./*.csv') # * means all if need specific format then *.csv
+latest_file = max(list_of_files, key=os.path.getctime)
+
 steps = 20
 
-with open('{!s}{!s}.csv'.format(path, filename), 'r') as data:
+with open('{!s}{!s}'.format(path, latest_file), 'r') as data:
     samples = data.readlines()
     timestamp, rel_time, data_id, p_mech, dc_current, ac_current, ac_voltage, dc_voltage, set_speed, feedback_speed,\
     timestamp_feedback_speed, set_torque, feedback_torque, timestamp_feedback_torque, PCB_temperature, \
@@ -76,7 +81,8 @@ dc_current = lfilter([1.0 / n] * n, 1, dc_current)
 
 
 width = 10.
-colors = ['b', 'g', 'r', 'c', 'm', 'y', 'k', 'r', 'g', 'c']
+colors = 2 * ['b', 'g', 'r', 'c', 'm', 'y', 'k', 'r', 'g', 'c']
+linestyles = ['-', '--', '-.', ':']
 fig, ax1 = plt.subplots(figsize=(width, width/1.6))
 ax2 = ax1.twinx()
 ax2.grid()
@@ -97,8 +103,15 @@ ax2.plot(timestamp, set_speed, label='set speed [rpm]', c=colors[6])
 ax2.plot(timestamp, feedback_speed, label='feedback speed [rpm]', c=colors[7])
 ax1.plot(timestamp, set_torque, label='set torque [Nm]', c=colors[8])
 ax1.plot(timestamp, feedback_torque, label='feedback torque [Nm]', c=colors[9])
-# ax1.plot(timestamp, )
-
+ax1.plot(timestamp, PCB_temperature, label='PCB temperature [deg C]', c=colors[10], linestyle=linestyles[1])
+ax1.plot(timestamp, motor_temperature, label='Motor temperature [deg C]', c=colors[11], linestyle=linestyles[1])
+ax1.plot(timestamp, inv_temp_A, label='Inverter temperature terminal A [deg C]', c=colors[12], linestyle=linestyles[1])
+ax1.plot(timestamp, inv_temp_B, label='Inverter temperature terminal B [deg C]', c=colors[13], linestyle=linestyles[1])
+ax1.plot(timestamp, inv_temp_C, label='Inverter temperature terminal C [deg C]', c=colors[14], linestyle=linestyles[1])
+ax1.plot(timestamp, ain1, label='Analog input 1 [V]', c=colors[15], linestyle=linestyles[1])
+ax1.plot(timestamp, ain2, label='Analog input 2 [V]', c=colors[16], linestyle=linestyles[1])
+ax1.plot(timestamp, ain3, label='Analog input 3 [V]', c=colors[17], linestyle=linestyles[1])
+ax1.plot(timestamp, ain4, label='Analog input 4 [V]', c=colors[18], linestyle=linestyles[1])
 
 ax1.legend(loc='upper left')
 ax2.legend(loc='upper right')

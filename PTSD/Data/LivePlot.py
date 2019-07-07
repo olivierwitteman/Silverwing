@@ -2,12 +2,18 @@ import matplotlib.pyplot as plt
 import numpy as np
 from scipy.signal import lfilter
 import time
+import glob
+import os
 
 path = './'
 
 # filename = 'loggerCommands_18'
-filename = str(input('filename: '))
+# filename = str(input('filename: '))
 # filename = 'loggerCommands_inv2'
+
+list_of_files = glob.glob('./*.csv') # * means all if need specific format then *.csv
+latest_file = max(list_of_files, key=os.path.getctime)
+
 steps = 10
 
 lastline = 0
@@ -32,7 +38,7 @@ while True:
     PCB_temperature, motor_temperature, ain1, ain2, ain3, ain4, inv_temp_A, inv_temp_B, inv_temp_C = \
         [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], []
 
-    with open('{!s}{!s}.csv'.format(path, filename), 'r') as data:
+    with open('{!s}{!s}'.format(path, latest_file), 'r') as data:
         samples = data.readlines()[1:]
 
     # lastline += len(samples)

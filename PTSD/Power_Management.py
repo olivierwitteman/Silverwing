@@ -65,6 +65,7 @@ def discharge():
         print('\rVoltage: {!s}, actual current: {!s}, power: {!s}'.format(round(u, 2), round(i, 2), round(p, 2)),
               end='')
         log(u, i, p)
+        time.sleep(0.2)
 
     print('\nSuccessfully discharged.\n')
 

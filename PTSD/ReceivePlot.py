@@ -15,7 +15,7 @@ for i in range(32):
 try:
     while True:
         tlst, alst, blst, clst, dlst = [], [], [], [], []
-        ap = ('olipi.local', 50002)
+        ap = ('silverpi.local', 50002)
 
         # ax0 = plt.subplot(4, 8, i)
         # ax0.set_ylabel('Parameter a')

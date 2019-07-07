@@ -8,12 +8,14 @@ import time
 path = './'
 filename = 'tempdata'
 
+
 def connect():
     ap = ('', 50002)
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
     s.bind(ap)
     s.listen(1)
+    print('Connected')
     return s.accept()
 
 

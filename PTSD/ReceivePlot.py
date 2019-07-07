@@ -66,7 +66,7 @@ try:
                     alst = alst[:trim]
 
 finally:
-    with open('./data{!s}.dump'.format(time.time()), 'w') as d:
+    with open('./datadump/data{!s}.dump'.format(time.time()), 'w') as d:
         d.write(str(tlst+alst+blst+clst+dlst))
     plt.show()
 

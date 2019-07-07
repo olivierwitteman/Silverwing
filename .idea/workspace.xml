@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="Safety">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PTSD/Broadcast.py" beforeDir="false" afterPath="$PROJECT_DIR$/PTSD/Broadcast.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PTSD/ReceivePlot.py" beforeDir="false" afterPath="$PROJECT_DIR$/PTSD/ReceivePlot.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,11 +39,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PTSD/Broadcast.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="36" selection-start-line="36" selection-end-line="36" />
+            <state relative-caret-position="180">
+              <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
               <folding>
                 <element signature="e#82#95#0" expanded="true" />
               </folding>
@@ -49,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PTSD/ReceivePlot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+            <state relative-caret-position="187">
+              <caret line="17" column="29" lean-forward="true" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="29" />
               <folding>
                 <element signature="e#65#78#0" expanded="true" />
               </folding>
@@ -204,9 +206,9 @@
         <option value="$PROJECT_DIR$/PTSD/Data/PlotData.py" />
         <option value="$PROJECT_DIR$/PTS/Receive.py" />
         <option value="$PROJECT_DIR$/PTS/Broadcast.py" />
-        <option value="$PROJECT_DIR$/PTSD/Broadcast.py" />
         <option value="$PROJECT_DIR$/PTSD/tempdata.csv" />
         <option value="$PROJECT_DIR$/PTSD/ReceivePlot.py" />
+        <option value="$PROJECT_DIR$/PTSD/Broadcast.py" />
       </list>
     </option>
   </component>
@@ -414,27 +416,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532440488607</updated>
-    </task>
-    <task id="LOCAL-00280" summary="i2c">
-      <created>1551362584132</created>
-      <option name="number" value="00280" />
-      <option name="presentableId" value="LOCAL-00280" />
-      <option name="project" value="LOCAL" />
-      <updated>1551362584132</updated>
-    </task>
-    <task id="LOCAL-00281" summary="i2c">
-      <created>1551427313199</created>
-      <option name="number" value="00281" />
-      <option name="presentableId" value="LOCAL-00281" />
-      <option name="project" value="LOCAL" />
-      <updated>1551427313199</updated>
-    </task>
-    <task id="LOCAL-00282" summary="i2c">
-      <created>1551428333527</created>
-      <option name="number" value="00282" />
-      <option name="presentableId" value="LOCAL-00282" />
-      <option name="project" value="LOCAL" />
-      <updated>1551428333527</updated>
     </task>
     <task id="LOCAL-00283" summary="i2c">
       <created>1551428496837</created>
@@ -758,7 +739,28 @@
       <option name="project" value="LOCAL" />
       <updated>1562499260844</updated>
     </task>
-    <option name="localTasksCounter" value="329" />
+    <task id="LOCAL-00329" summary="Safety">
+      <created>1562499641622</created>
+      <option name="number" value="00329" />
+      <option name="presentableId" value="LOCAL-00329" />
+      <option name="project" value="LOCAL" />
+      <updated>1562499641622</updated>
+    </task>
+    <task id="LOCAL-00330" summary="Safety">
+      <created>1562499693726</created>
+      <option name="number" value="00330" />
+      <option name="presentableId" value="LOCAL-00330" />
+      <option name="project" value="LOCAL" />
+      <updated>1562499693726</updated>
+    </task>
+    <task id="LOCAL-00331" summary="Safety">
+      <created>1562499876570</created>
+      <option name="number" value="00331" />
+      <option name="presentableId" value="LOCAL-00331" />
+      <option name="project" value="LOCAL" />
+      <updated>1562499876570</updated>
+    </task>
+    <option name="localTasksCounter" value="332" />
     <servers />
   </component>
   <component name="TodoView">
@@ -779,7 +781,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3255102" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4924663" visible="true" weight="0.33265308" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4924663" visible="true" weight="0.33265308" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1354,22 +1356,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PTSD/Broadcast.py">
+    <entry file="file://$PROJECT_DIR$/PTSD/ReceivePlot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        <state relative-caret-position="187">
+          <caret line="17" column="29" lean-forward="true" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="29" />
           <folding>
-            <element signature="e#82#95#0" expanded="true" />
+            <element signature="e#65#78#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PTSD/ReceivePlot.py">
+    <entry file="file://$PROJECT_DIR$/PTSD/Broadcast.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+        <state relative-caret-position="180">
+          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
           <folding>
-            <element signature="e#65#78#0" expanded="true" />
+            <element signature="e#82#95#0" expanded="true" />
           </folding>
         </state>
       </provider>

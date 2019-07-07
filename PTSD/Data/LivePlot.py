@@ -5,8 +5,8 @@ import time
 
 path = './'
 
-filename = 'loggerCommands_18'
-# filename = str(input('filename: '))
+# filename = 'loggerCommands_18'
+filename = str(input('filename: '))
 # filename = 'loggerCommands_inv2'
 steps = 10
 
@@ -22,7 +22,6 @@ ax2.grid()
 ax1.set_ylabel('Power, torque, current')
 # ax1.set_ylim([-2, 16])
 ax1.set_xlabel('Timestamp [s since epoch]')
-
 ax2.set_ylabel('Voltage, speed')
 
 while True:
@@ -38,7 +37,7 @@ while True:
 
     # lastline += len(samples)
 
-    for i in np.arange(-100, -1, steps):
+    for i in np.arange(-6000, -1, steps):
         # timestamp
         timestamp.append(float(samples[i].split(',')[0][:].strip()))
         # relative time

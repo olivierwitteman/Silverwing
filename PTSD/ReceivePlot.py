@@ -15,7 +15,7 @@ for i in range(32):
 try:
     while True:
         tlst, alst, blst, clst, dlst = [], [], [], [], []
-        ap = ('silverpi.local', 50002)
+        ap = ('SilverPi.local', 50002)
 
         # ax0 = plt.subplot(4, 8, i)
         # ax0.set_ylabel('Parameter a')
@@ -29,6 +29,7 @@ try:
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
         s.connect(ap)
+
         t0 = time.time()
         tplot = time.time()
 

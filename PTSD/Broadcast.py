@@ -26,6 +26,7 @@ def read_data():
 
 
 conn, addr = connect()
+print('connect_check')
 
 try:
     while True:

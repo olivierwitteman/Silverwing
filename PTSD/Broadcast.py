@@ -15,7 +15,6 @@ def connect():
     s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
     s.bind(ap)
     s.listen(1)
-    print('Connected')
     return s.accept()
 
 
@@ -31,7 +30,9 @@ conn, addr = connect()
 try:
     while True:
         a = read_data()
+        print(a)
         conn.sendall(bytes(a))
+        print('check')
         time.sleep(0.1)
 
 finally:

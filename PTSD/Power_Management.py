@@ -41,7 +41,7 @@ def precharge():
     if abs(delta.ask_voltage() - V_set) < 40.:
         precharged = True
         delta.set_current(I_max)
-        print('\r\n\n\n', end='')
+        print('\r', end='')
     else:
         delta.set_state(0)
         print('\n\nPrecharging failed\n\n')
@@ -69,6 +69,7 @@ def discharge():
 
 
 def monitor():
+    print('\n\n\n')
     while True:
         vlst, ilst, plst = [], [], []
         for _ in range(10):

@@ -38,7 +38,7 @@ while True:
 
     # lastline += len(samples)
 
-    for i in np.arange(-200, -1, steps):
+    for i in np.arange(-100, -1, steps):
         # timestamp
         timestamp.append(float(samples[i].split(',')[0][:].strip()))
         # relative time
@@ -97,11 +97,9 @@ while True:
 # while True:
 #     lastline, feedback_torque, dc_current = update_data(lastline=0)
 
-
-    print(len(timestamp))
-    # samplerate = round(len(timestamp)/(timestamp[-1] - timestamp[0])*1e3, 1)
-    # print('Sampled rate: {!s} Hz'.format(samplerate))
-    # print('Available sample rate: {!s} Hz'.format(round(samplerate*steps)))
+    samplerate = round(len(timestamp)/(timestamp[-1] - timestamp[0])*1e3, 1)
+    print('Sampled rate: {!s} Hz'.format(samplerate))
+    print('Available sample rate: {!s} Hz'.format(round(samplerate*steps)))
 
     # ax1.plot(timestamp, p_mech, label='Mechanical power [kW]', c=colors[0])
     # ax1.plot(timestamp, dc_current, label='DC current [I]', c=colors[1])

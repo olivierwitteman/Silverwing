@@ -5,15 +5,15 @@ import glob
 import os
 
 path = './'
-filename = 'loggerCommands_18'
+# filename = 'loggerCommands_18.csv'
 # filename = 'loggerCommands_inv2'
 
 list_of_files = glob.glob('./*.csv') # * means all if need specific format then *.csv
-latest_file = max(list_of_files, key=os.path.getctime)
+filename = max(list_of_files, key=os.path.getctime)
 
-steps = 20
+steps = 10
 
-with open('{!s}{!s}'.format(path, latest_file), 'r') as data:
+with open('{!s}{!s}'.format(path, filename), 'r') as data:
     samples = data.readlines()
     timestamp, rel_time, data_id, p_mech, dc_current, ac_current, ac_voltage, dc_voltage, set_speed, feedback_speed,\
     timestamp_feedback_speed, set_torque, feedback_torque, timestamp_feedback_torque, PCB_temperature, \
@@ -76,44 +76,75 @@ print('Available sample rate: {!s} Hz'.format(round(samplerate*steps)))
 
 
 n = 30
-feedback_torque = lfilter([1.0 / n] * n, 1, feedback_torque)
-dc_current = lfilter([1.0 / n] * n, 1, dc_current)
+dc_current_filt = lfilter([1.0 / n] * n, 1, dc_current)
+motor_temperature_filt = lfilter([1.0 / n] * n, 1, motor_temperature)
+PCB_temperature_filt = lfilter([1.0 / n] * n, 1, PCB_temperature)
+inv_temp_A_filt = lfilter([1.0 / n] * n, 1, inv_temp_A)
+inv_temp_B_filt = lfilter([1.0 / n] * n, 1, inv_temp_B)
+inv_temp_C_filt = lfilter([1.0 / n] * n, 1, inv_temp_C)
+feedback_torque_filt = lfilter([1.0 / n] * n, 1, feedback_torque)
+timestamp = np.array(timestamp)/1e3
 
 
-width = 10.
 colors = 2 * ['b', 'g', 'r', 'c', 'm', 'y', 'k', 'r', 'g', 'c']
 linestyles = ['-', '--', '-.', ':']
-fig, ax1 = plt.subplots(figsize=(width, width/1.6))
+
+fig, (ax1, ax3, ax5) = plt.subplots(3, 1, sharex=True)
 ax2 = ax1.twinx()
+ax4 = ax3.twinx()
+ax6 = ax5.twinx()
+
+ax1.grid()
 ax2.grid()
+ax3.grid()
+ax4.grid()
+ax5.grid()
+ax6.grid()
 
-ax1.set_ylabel('Power, torque, current')
-ax1.set_ylim([-2, 16])
-ax1.set_xlabel('Timestamp [s since epoch]')
+ax1.set_ylabel('voltage, current, speed')
+# ax1.set_ylim([-2, 16])
+ax3.set_ylabel('torque, temperature')
 
-ax2.set_ylabel('Voltage, speed')
+ax5.set_ylabel('analog input, power')
+ax5.set_xlabel('Time since epoch [s]')
 
+
+# Power usage
 # ax1.plot(timestamp, p_mech, label='Mechanical power [kW]', c=colors[0])
-ax1.plot(timestamp, dc_current, label='DC current [I]', c=colors[1])
-# ax1.plot(timestamp, ac_current, label='AC current [A]', c=colors[2])
-ax2.plot(timestamp, ac_voltage, label='AC voltage [V]', c=colors[3])
-ax2.plot(timestamp, dc_voltage, label='DC voltage [V]', c=colors[4])
-ax1.plot(timestamp, np.array(dc_current)*np.array(dc_voltage)/1000., label='Power [kW]', c=colors[5])
-ax2.plot(timestamp, set_speed, label='set speed [rpm]', c=colors[6])
-ax2.plot(timestamp, feedback_speed, label='feedback speed [rpm]', c=colors[7])
-ax1.plot(timestamp, set_torque, label='set torque [Nm]', c=colors[8])
-ax1.plot(timestamp, feedback_torque, label='feedback torque [Nm]', c=colors[9])
-ax1.plot(timestamp, PCB_temperature, label='PCB temperature [deg C]', c=colors[10], linestyle=linestyles[1])
-ax1.plot(timestamp, motor_temperature, label='Motor temperature [deg C]', c=colors[11], linestyle=linestyles[1])
-ax1.plot(timestamp, inv_temp_A, label='Inverter temperature terminal A [deg C]', c=colors[12], linestyle=linestyles[1])
-ax1.plot(timestamp, inv_temp_B, label='Inverter temperature terminal B [deg C]', c=colors[13], linestyle=linestyles[1])
-ax1.plot(timestamp, inv_temp_C, label='Inverter temperature terminal C [deg C]', c=colors[14], linestyle=linestyles[1])
-ax1.plot(timestamp, ain1, label='Analog input 1 [V]', c=colors[15], linestyle=linestyles[1])
-ax1.plot(timestamp, ain2, label='Analog input 2 [V]', c=colors[16], linestyle=linestyles[1])
-ax1.plot(timestamp, ain3, label='Analog input 3 [V]', c=colors[17], linestyle=linestyles[1])
-ax1.plot(timestamp, ain4, label='Analog input 4 [V]', c=colors[18], linestyle=linestyles[1])
+ax2.plot(timestamp, dc_current_filt, label='DC current (filtered) [I]', c=colors[1])
+# ax2.plot(timestamp, ac_current, label='AC current [A]', c=colors[2])
+ax1.plot(timestamp, ac_voltage, label='AC voltage [V]', c=colors[3])
+ax1.plot(timestamp, dc_voltage, label='DC voltage [V]', c=colors[4])
 
-ax1.legend(loc='upper left')
-ax2.legend(loc='upper right')
-plt.title(filename)
+ax2.set_ylim([0, 50])
+ax2.plot(timestamp, np.array(dc_current_filt)*np.array(dc_voltage)/1000., label='Power (filtered) [kW]', c=colors[5])
+
+
+# Speed and torque
+ax3.plot(timestamp, set_speed, label='set speed [rpm]', c=colors[6])
+ax3.plot(timestamp, feedback_speed, label='feedback speed [rpm]', c=colors[7])
+ax4.plot(timestamp, set_torque, label='set torque [Nm]', c=colors[8])
+# ax4.plot(timestamp, np.abs(feedback_torque), label='feedback torque [Nm]', c=colors[9])
+ax4.plot(timestamp, np.abs(feedback_torque_filt), label='feedback torque (filtered) [Nm]', c=colors[15])
+
+
+# Temperature
+ax5.set_ylim([15, 1.1*max(max(inv_temp_A), max(inv_temp_B), max(inv_temp_C), max(motor_temperature), max(PCB_temperature))])
+ax5.plot(timestamp, PCB_temperature_filt, label='Inv. PCB temp. (filtered) [deg C]', c=colors[10], linestyle=linestyles[1])
+ax5.plot(timestamp, motor_temperature_filt, label='Motor temp. (filtered) [deg C]', c=colors[11], linestyle=linestyles[1])
+ax5.plot(timestamp, inv_temp_A_filt, label='Inv. temp. A (filtered) [deg C]', c=colors[12], linestyle=linestyles[1])
+ax5.plot(timestamp, inv_temp_B_filt, label='Inv. temp. B (filtered) [deg C]', c=colors[13], linestyle=linestyles[1])
+ax5.plot(timestamp, inv_temp_C_filt, label='Inv. temp. C (filtered) [deg C]', c=colors[14], linestyle=linestyles[1])
+ax6.plot(timestamp, ain1, label='AIN 1 [V]', c=colors[15], linestyle=linestyles[1])
+ax6.plot(timestamp, ain2, label='AIN 2 [V]', c=colors[16], linestyle=linestyles[1])
+ax6.plot(timestamp, ain3, label='AIN 3 [V]', c=colors[17], linestyle=linestyles[1])
+ax6.plot(timestamp, ain4, label='AIN 4 [V]', c=colors[18], linestyle=linestyles[1])
+
+ax1.legend(loc='upper left', fontsize=5.)
+ax2.legend(loc='upper right', fontsize=5.)
+ax3.legend(loc='upper left', fontsize=5.) # loc='upper right'
+ax4.legend(loc='upper right', fontsize=5.)
+ax5.legend(loc='upper left', fontsize=5.)
+ax6.legend(loc='upper right', fontsize=5.)
+
 plt.show()

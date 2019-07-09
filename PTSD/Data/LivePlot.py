@@ -153,7 +153,7 @@ while True:
     ax6.plot(timestamp, ain5, label='AIN 5 [V]', c=colors[16], linestyle=linestyles[1])
     ax6.plot(timestamp, ain3, label='AIN 3 [V]', c=colors[17], linestyle=linestyles[1])
     ax6.plot(timestamp, ain4, label='AIN 4 [V]', c=colors[18], linestyle=linestyles[1])
-    # ax6.plot(timestamp, ain6, label='AIN 6 [V]', c=colors[19], linestyle=linestyles[1])
+    ax6.plot(timestamp, ain6, label='AIN 6 [V]', c=colors[19], linestyle=linestyles[1])
 
     if it == 1:
         fig.suptitle(latest_file)

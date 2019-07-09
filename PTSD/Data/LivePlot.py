@@ -51,16 +51,16 @@ while True:
     ax6.clear()
     timestamp, rel_time, data_id, p_mech, dc_current, ac_current, ac_voltage, dc_voltage, set_speed, feedback_speed, \
     timestamp_feedback_speed, set_torque, feedback_torque, timestamp_feedback_torque, PCB_temperature, \
-    motor_temperature, ain1, ain2, ain3, ain4, inv_temp_A, inv_temp_B, inv_temp_C = [], [], [], [], [], [], [], [], \
+    motor_temperature, ain1, ain5, ain3, ain4, ain6, inv_temp_A, inv_temp_B, inv_temp_C = [], [], [], [], [], [], [], [], \
                                                                                     [], [], [], [], [], [], [], [], \
-                                                                                    [], [], [], [], [], [], []
+                                                                                    [], [], [], [], [], [], [], []
 
     with open('{!s}{!s}'.format(path, latest_file), 'r') as data:
         samples = data.readlines()[1:]
 
     # lastline += len(samples)
 
-    for i in np.arange(-6000, -1, steps):
+    for i in np.arange(-12000, -1, steps):
         # timestamp
         timestamp.append(float(samples[i].split(',')[0][:].strip()))
         # relative time
@@ -101,12 +101,14 @@ while True:
         motor_temperature.append(float(samples[i].split(',')[18][:].strip()))
         # Analog input 1
         ain1.append(float(samples[i].split(',')[19][:].strip()))
-        # Analog input 2
-        ain2.append(float(samples[i].split(',')[20][:].strip()))
+        # Analog input 5
+        ain5.append(float(samples[i].split(',')[20][:].strip()))
         # Analog input 3
         ain3.append(float(samples[i].split(',')[21][:].strip()))
         # Analog input 4
         ain4.append(float(samples[i].split(',')[22][:].strip()))
+        # Analog input 6
+        ain6.append(float(samples[i].split(',')[23][:].strip()))
 
 
         n = 30
@@ -128,7 +130,7 @@ while True:
     ax1.plot(timestamp, ac_voltage, label='AC voltage [V]', c=colors[3])
     ax1.plot(timestamp, dc_voltage, label='DC voltage [V]', c=colors[4])
 
-    ax2.set_ylim([0, 50])
+    # ax2.set_ylim([0, 50])
     ax2.plot(timestamp, np.array(dc_current_filt) * np.array(dc_voltage) / 1000., label='Power (filtered) [kW]',
              c=colors[5])
 
@@ -140,8 +142,7 @@ while True:
     ax4.plot(timestamp, np.abs(feedback_torque_filt), label='feedback torque (filtered) [Nm]', c=colors[15])
 
     # Temperature
-    ax5.set_ylim([15, 1.1 * max(max(inv_temp_A), max(inv_temp_B), max(inv_temp_C), max(motor_temperature),
-                                max(PCB_temperature))])
+    ax5.set_ylim([20, 120])
     ax5.plot(timestamp, PCB_temperature_filt, label='Inv. PCB temp. (filtered) [deg C]', c=colors[10],
              linestyle=linestyles[1])
     ax5.plot(timestamp, motor_temperature_filt, label='Motor temp. (filtered) [deg C]', c=colors[11],
@@ -150,21 +151,18 @@ while True:
     ax5.plot(timestamp, inv_temp_B_filt, label='Inv. temp. B (filtered) [deg C]', c=colors[13], linestyle=linestyles[1])
     ax5.plot(timestamp, inv_temp_C_filt, label='Inv. temp. C (filtered) [deg C]', c=colors[14], linestyle=linestyles[1])
     ax6.plot(timestamp, ain1, label='AIN 1 [V]', c=colors[15], linestyle=linestyles[1])
-    ax6.plot(timestamp, ain2, label='AIN 2 [V]', c=colors[16], linestyle=linestyles[1])
+    ax6.plot(timestamp, ain5, label='AIN 5 [V]', c=colors[16], linestyle=linestyles[1])
     ax6.plot(timestamp, ain3, label='AIN 3 [V]', c=colors[17], linestyle=linestyles[1])
     ax6.plot(timestamp, ain4, label='AIN 4 [V]', c=colors[18], linestyle=linestyles[1])
+    ax6.plot(timestamp, ain6, label='AIN 6 [V]', c=colors[19], linestyle=linestyles[1])
 
     if it == 1:
-        print('check')
-
-        plt.title(latest_file)
+        fig.suptitle(latest_file)
     ax1.legend(loc='upper left', fontsize=5.)
     ax2.legend(loc='upper right', fontsize=5.)
     ax3.legend(loc='upper left', fontsize=5.)  # loc='upper right'
     ax4.legend(loc='upper right', fontsize=5.)
     ax5.legend(loc='upper left', fontsize=5.)
     ax6.legend(loc='upper right', fontsize=5.)
-
-
 
     plt.pause(1.)

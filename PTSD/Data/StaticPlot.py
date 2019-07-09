@@ -6,7 +6,7 @@ import os
 
 path = './'
 # filename = 'loggerCommands_18.csv'
-# filename = 'loggerCommands_inv2'
+# filename = 'loggerCommands_inv2.csv'
 
 list_of_files = glob.glob('./*.csv') # * means all if need specific format then *.csv
 filename = max(list_of_files, key=os.path.getctime)
@@ -70,11 +70,6 @@ for i in np.arange(1, len(samples), steps):
     ain4.append(float(samples[i].split(',')[22][:].strip()))
 
 
-samplerate = round(len(timestamp)/(timestamp[-1] - timestamp[0])*1e3, 1)
-print('Sampled rate: {!s} Hz'.format(samplerate))
-print('Available sample rate: {!s} Hz'.format(round(samplerate*steps)))
-
-
 n = 30
 dc_current_filt = lfilter([1.0 / n] * n, 1, dc_current)
 motor_temperature_filt = lfilter([1.0 / n] * n, 1, motor_temperature)
@@ -86,10 +81,17 @@ feedback_torque_filt = lfilter([1.0 / n] * n, 1, feedback_torque)
 timestamp = np.array(timestamp)/1e3
 
 
-colors = 2 * ['b', 'g', 'r', 'c', 'm', 'y', 'k', 'r', 'g', 'c']
+samplerate = round(len(timestamp)/(timestamp[-1] - timestamp[0]), 1)
+print('Sampled rate: {!s} Hz'.format(samplerate))
+print('Available sample rate: {!s} Hz'.format(round(samplerate*steps)))
+
+
+colors = 3 * ['b', 'g', 'c', 'm', 'y', 'k', 'r', 'g', 'c']
 linestyles = ['-', '--', '-.', ':']
 
-fig, (ax1, ax3, ax5) = plt.subplots(3, 1, sharex=True)
+width = 16.
+fig, (ax1, ax3, ax5) = plt.subplots(3, 1, sharex=True, figsize=(width, width/1.6))
+fig.suptitle(filename)
 ax2 = ax1.twinx()
 ax4 = ax3.twinx()
 ax6 = ax5.twinx()
@@ -129,22 +131,23 @@ ax4.plot(timestamp, np.abs(feedback_torque_filt), label='feedback torque (filter
 
 
 # Temperature
-ax5.set_ylim([15, 1.1*max(max(inv_temp_A), max(inv_temp_B), max(inv_temp_C), max(motor_temperature), max(PCB_temperature))])
+ax5.set_ylim([20., 120.])
 ax5.plot(timestamp, PCB_temperature_filt, label='Inv. PCB temp. (filtered) [deg C]', c=colors[10], linestyle=linestyles[1])
 ax5.plot(timestamp, motor_temperature_filt, label='Motor temp. (filtered) [deg C]', c=colors[11], linestyle=linestyles[1])
 ax5.plot(timestamp, inv_temp_A_filt, label='Inv. temp. A (filtered) [deg C]', c=colors[12], linestyle=linestyles[1])
 ax5.plot(timestamp, inv_temp_B_filt, label='Inv. temp. B (filtered) [deg C]', c=colors[13], linestyle=linestyles[1])
 ax5.plot(timestamp, inv_temp_C_filt, label='Inv. temp. C (filtered) [deg C]', c=colors[14], linestyle=linestyles[1])
-ax6.plot(timestamp, ain1, label='AIN 1 [V]', c=colors[15], linestyle=linestyles[1])
-ax6.plot(timestamp, ain2, label='AIN 2 [V]', c=colors[16], linestyle=linestyles[1])
-ax6.plot(timestamp, ain3, label='AIN 3 [V]', c=colors[17], linestyle=linestyles[1])
-ax6.plot(timestamp, ain4, label='AIN 4 [V]', c=colors[18], linestyle=linestyles[1])
+ax6.plot(timestamp, ain1, label='AIN 1 [V]', c=colors[15], linestyle=linestyles[0])
+ax6.plot(timestamp, ain2, label='AIN 2 [V]', c=colors[16], linestyle=linestyles[0])
+ax6.plot(timestamp, ain3, label='AIN 3 [V]', c=colors[17], linestyle=linestyles[0])
+ax6.plot(timestamp, ain4, label='AIN 4 [V]', c=colors[18], linestyle=linestyles[0])
 
-ax1.legend(loc='upper left', fontsize=5.)
-ax2.legend(loc='upper right', fontsize=5.)
-ax3.legend(loc='upper left', fontsize=5.) # loc='upper right'
-ax4.legend(loc='upper right', fontsize=5.)
-ax5.legend(loc='upper left', fontsize=5.)
-ax6.legend(loc='upper right', fontsize=5.)
+ax1.legend(loc='upper left', fontsize=7., bbox_to_anchor=(0., 1.18))
+ax2.legend(loc='upper right', fontsize=7., bbox_to_anchor=(1., 1.18))
+ax3.legend(loc='upper left', fontsize=7., bbox_to_anchor=(0., 1.18))
+ax4.legend(loc='upper right', fontsize=7., bbox_to_anchor=(1., 1.18))
+ax5.legend(loc='upper left', fontsize=7., bbox_to_anchor=(0., 1.18))
+ax6.legend(loc='upper right', fontsize=7., bbox_to_anchor=(1., 1.18))
 
+plt.savefig('./{!s}.png'.format(filename[:-4]), dpi=255, format='png')
 plt.show()

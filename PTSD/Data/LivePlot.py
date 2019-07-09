@@ -61,6 +61,7 @@ while True:
     # lastline += len(samples)
     for i in np.arange(max([-18000, it*-25*steps]), -1, steps):
         # timestamp
+
         timestamp.append(float(samples[i].split(',')[0][:].strip()))
         # relative time
         rel_time.append(float(samples[i].split(',')[1][:].strip()))

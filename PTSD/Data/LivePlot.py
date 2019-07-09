@@ -60,7 +60,7 @@ while True:
 
     # lastline += len(samples)
 
-    for i in np.arange(max(-6000, -90*it), -1, steps):
+    for i in np.arange(-6000, -1, steps):
         # timestamp
         timestamp.append(float(samples[i].split(',')[0][:].strip()))
         # relative time
@@ -119,7 +119,7 @@ while True:
         inv_temp_B_filt = lfilter([1.0 / n] * n, 1, inv_temp_B)
         inv_temp_C_filt = lfilter([1.0 / n] * n, 1, inv_temp_C)
         feedback_torque_filt = lfilter([1.0 / n] * n, 1, feedback_torque)
-        timestamp = list(np.array(timestamp) / 1e3)
+        timestamp = list(np.array(timestamp)-timestamp[-1] / 1e3)
 
     # return lastline, feedback_torque, dc_current
 

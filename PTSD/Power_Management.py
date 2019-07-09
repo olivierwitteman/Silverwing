@@ -31,7 +31,7 @@ def precharge():
     t0_pre, t = time.time(), time.time()
 
     while t - t0_pre < 3.:
-        print('\rVoltage: {!s}, actual current: {!s}, power: {!s}'.format(round(delta.ask_voltage(), 2),
+        print('\rPrecharge Voltage: {!s}, precharge current: {!s}, precharge power: {!s}'.format(round(delta.ask_voltage(), 2),
                                                                           round(delta.ask_current(), 2),
                                                                           round(delta.ask_power(), 2)), end='')
 

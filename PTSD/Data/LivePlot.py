@@ -143,12 +143,12 @@ while True:
     # Temperature
     ax5.set_ylim([20, 120])
     ax5.plot(timestamp, PCB_temperature_filt, label='Inv. PCB temp. (filtered) [deg C]', c=colors[10],
-             linestyle=linestyles[1])
+             linestyle=linestyles[3])
     ax5.plot(timestamp, motor_temperature_filt, label='Motor temp. (filtered) [deg C]', c=colors[11],
-             linestyle=linestyles[1])
-    ax5.plot(timestamp, inv_temp_A_filt, label='Inv. temp. A (filtered) [deg C]', c=colors[12], linestyle=linestyles[1])
-    ax5.plot(timestamp, inv_temp_B_filt, label='Inv. temp. B (filtered) [deg C]', c=colors[13], linestyle=linestyles[1])
-    ax5.plot(timestamp, inv_temp_C_filt, label='Inv. temp. C (filtered) [deg C]', c=colors[14], linestyle=linestyles[1])
+             linestyle=linestyles[3])
+    ax5.plot(timestamp, inv_temp_A_filt, label='Inv. temp. A (filtered) [deg C]', c=colors[12], linestyle=linestyles[3])
+    ax5.plot(timestamp, inv_temp_B_filt, label='Inv. temp. B (filtered) [deg C]', c=colors[13], linestyle=linestyles[3])
+    ax5.plot(timestamp, inv_temp_C_filt, label='Inv. temp. C (filtered) [deg C]', c=colors[14], linestyle=linestyles[3])
     ax6.plot(timestamp, ain1, label='AIN 1 [V]', c=colors[15], linestyle=linestyles[1])
     ax6.plot(timestamp, ain5, label='AIN 5 [V]', c=colors[16], linestyle=linestyles[1])
     ax6.plot(timestamp, ain3, label='AIN 3 [V]', c=colors[17], linestyle=linestyles[1])

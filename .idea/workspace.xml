@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="Changed analog inputs inverter">
+    <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="Can plot immediately now">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PTSD/Data/LivePlot.py" beforeDir="false" afterPath="$PROJECT_DIR$/PTSD/Data/LivePlot.py" afterDir="false" />
     </list>
@@ -25,20 +25,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PTSD/Data/LivePlot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="61" column="42" selection-start-line="61" selection-start-column="42" selection-end-line="61" selection-end-column="42" />
+            <state relative-caret-position="283">
+              <caret line="150" column="118" selection-start-line="150" selection-start-column="118" selection-end-line="150" selection-end-column="118" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PTSD/Data/loggerCommands_6.csv">
-          <provider selected="true" editor-type-id="LargeFileEditor">
-            <state relative-caret-position="15">
-              <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -54,7 +45,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>lw</find>
       <find>fontsize=</find>
       <find>fontsize=12</find>
       <find>.strip(','</find>
@@ -84,6 +74,7 @@
       <find>col</find>
       <find>ain6</find>
       <find>plot(timestamp</find>
+      <find>timestamp</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -139,9 +130,9 @@
         <option value="$PROJECT_DIR$/PTSD/Data/loggerCommands_18.csv" />
         <option value="$PROJECT_DIR$/PTSD/Data/PlotData.py" />
         <option value="$PROJECT_DIR$/PTSD/Data/DataPlot.py" />
-        <option value="$PROJECT_DIR$/PTSD/Power_Management.py" />
         <option value="$PROJECT_DIR$/companion-master/__main__.py" />
         <option value="$PROJECT_DIR$/PTSD/Data/StaticPlot.py" />
+        <option value="$PROJECT_DIR$/PTSD/Power_Management.py" />
         <option value="$PROJECT_DIR$/PTSD/Data/LivePlot.py" />
       </list>
     </option>
@@ -351,27 +342,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532440488607</updated>
-    </task>
-    <task id="LOCAL-00300" summary="test matrix BTS (PCC)">
-      <created>1554285747357</created>
-      <option name="number" value="00300" />
-      <option name="presentableId" value="LOCAL-00300" />
-      <option name="project" value="LOCAL" />
-      <updated>1554285747358</updated>
-    </task>
-    <task id="LOCAL-00301" summary="test matrix BTS (PCC)">
-      <created>1554286307626</created>
-      <option name="number" value="00301" />
-      <option name="presentableId" value="LOCAL-00301" />
-      <option name="project" value="LOCAL" />
-      <updated>1554286307626</updated>
-    </task>
-    <task id="LOCAL-00302" summary="fuck">
-      <created>1554294379574</created>
-      <option name="number" value="00302" />
-      <option name="presentableId" value="LOCAL-00302" />
-      <option name="project" value="LOCAL" />
-      <updated>1554294379575</updated>
     </task>
     <task id="LOCAL-00303" summary="fuck">
       <created>1554369225950</created>
@@ -695,7 +665,28 @@
       <option name="project" value="LOCAL" />
       <updated>1562678136330</updated>
     </task>
-    <option name="localTasksCounter" value="349" />
+    <task id="LOCAL-00349" summary="Changed analog inputs inverter">
+      <created>1562678663963</created>
+      <option name="number" value="00349" />
+      <option name="presentableId" value="LOCAL-00349" />
+      <option name="project" value="LOCAL" />
+      <updated>1562678663963</updated>
+    </task>
+    <task id="LOCAL-00350" summary="Can plot immediately now">
+      <created>1562678699406</created>
+      <option name="number" value="00350" />
+      <option name="presentableId" value="LOCAL-00350" />
+      <option name="project" value="LOCAL" />
+      <updated>1562678699406</updated>
+    </task>
+    <task id="LOCAL-00351" summary="Can plot immediately now">
+      <created>1562680651308</created>
+      <option name="number" value="00351" />
+      <option name="presentableId" value="LOCAL-00351" />
+      <option name="project" value="LOCAL" />
+      <updated>1562680651309</updated>
+    </task>
+    <option name="localTasksCounter" value="352" />
     <servers />
   </component>
   <component name="TodoView">
@@ -716,7 +707,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32463464" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4924663" visible="true" weight="0.36638832" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4924663" visible="true" weight="0.36638832" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -747,7 +738,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="cycling" />
     <MESSAGE value="charging configuration" />
     <MESSAGE value="Plotting" />
     <MESSAGE value="BTS procedue" />
@@ -772,7 +762,8 @@
     <MESSAGE value="Inverter losses" />
     <MESSAGE value="Safety" />
     <MESSAGE value="Changed analog inputs inverter" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed analog inputs inverter" />
+    <MESSAGE value="Can plot immediately now" />
+    <option name="LAST_COMMIT_MESSAGE" value="Can plot immediately now" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/General/Plot_Motor_Thermal.py">
@@ -1114,17 +1105,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PTSD/Power_Management.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="890">
-          <caret line="67" column="22" selection-start-line="67" selection-start-column="22" selection-end-line="67" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-            <element signature="e#397#501#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/companion-master/sensors/Emus/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1216,6 +1196,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/PTSD/Power_Management.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="33" column="77" selection-start-line="33" selection-start-column="77" selection-end-line="33" selection-end-column="77" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/PTSD/Data/loggerCommands_6.csv">
       <provider selected="true" editor-type-id="LargeFileEditor">
         <state relative-caret-position="15">
@@ -1225,8 +1215,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PTSD/Data/LivePlot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="61" column="42" selection-start-line="61" selection-start-column="42" selection-end-line="61" selection-end-column="42" />
+        <state relative-caret-position="283">
+          <caret line="150" column="118" selection-start-line="150" selection-start-column="118" selection-end-line="150" selection-end-column="118" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>

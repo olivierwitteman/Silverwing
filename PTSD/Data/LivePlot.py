@@ -59,8 +59,7 @@ while True:
         samples = data.readlines()[1:]
 
     # lastline += len(samples)
-
-    for i in np.arange(max(-6000, -it*100), -1, steps):
+    for i in np.arange(max([-6000, it*-100*steps]), -1, steps):
         # timestamp
         timestamp.append(float(samples[i].split(',')[0][:].strip()))
         # relative time
@@ -108,7 +107,7 @@ while True:
         # Analog input 4
         ain4.append(float(samples[i].split(',')[22][:].strip()))
         # Analog input 6
-        ain6.append(float(samples[i].split(',')[23][:].strip()))
+        # ain6.append(float(samples[i].split(',')[23][:].strip()))
 
 
         n = 30
@@ -119,8 +118,8 @@ while True:
         inv_temp_B_filt = lfilter([1.0 / n] * n, 1, inv_temp_B)
         inv_temp_C_filt = lfilter([1.0 / n] * n, 1, inv_temp_C)
         feedback_torque_filt = lfilter([1.0 / n] * n, 1, feedback_torque)
-        timestamp = list(np.array(timestamp)-timestamp[-1] / 1e3)
 
+    timestamp = list((np.array(timestamp)-timestamp[-1])/1e3)
     # return lastline, feedback_torque, dc_current
 
     # Power usage
@@ -154,7 +153,7 @@ while True:
     ax6.plot(timestamp, ain5, label='AIN 5 [V]', c=colors[16], linestyle=linestyles[1])
     ax6.plot(timestamp, ain3, label='AIN 3 [V]', c=colors[17], linestyle=linestyles[1])
     ax6.plot(timestamp, ain4, label='AIN 4 [V]', c=colors[18], linestyle=linestyles[1])
-    ax6.plot(timestamp, ain6, label='AIN 6 [V]', c=colors[19], linestyle=linestyles[1])
+    # ax6.plot(timestamp, ain6, label='AIN 6 [V]', c=colors[19], linestyle=linestyles[1])
 
     if it == 1:
         fig.suptitle(latest_file)

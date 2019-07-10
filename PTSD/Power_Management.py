@@ -2,10 +2,11 @@ import time
 import delta_sm3300 as d
 delta = d.DeltaComm()
 
-print('Ctr+C anytime to switch off power')
+print('\n\n!!! Ctr+C anytime to switch off power !!!\n\n')
 
 # V_set = 120.
-V_set = float(input('Voltage: '))
+V_set = float(input('Voltage [V] (0-650): '))
+I_max = float(input('Current [A] (0-11): '))
 
 if V_set > 60.:
     print('\n\nYou have entered a high voltage, make sure you follow the guidelines for safety!\n\n')
@@ -14,7 +15,7 @@ if V_set > 60.:
 
 pre_I = 5.
 # I = 15000./V
-I_max = 11.
+
 
 
 def log(voltage, current, power):
@@ -24,6 +25,7 @@ def log(voltage, current, power):
 
 def precharge():
     print('Precharging...')
+    delta.enable_watchdog()
     delta.set_voltage(V_set)
     delta.set_current(pre_I)
     delta.set_state(1)

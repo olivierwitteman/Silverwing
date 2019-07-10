@@ -86,7 +86,7 @@ print('Sampled rate: {!s} Hz'.format(samplerate))
 print('Available sample rate: {!s} Hz'.format(round(samplerate*steps)))
 
 
-colors = 3 * ['b', 'g', 'c', 'm', 'y', 'k', 'r', 'g', 'c']
+colors = 3 * ['b', 'g', 'c', 'm', 'y', 'k', 'g', 'c']
 linestyles = ['-', '--', '-.', ':']
 
 width = 16.
@@ -123,20 +123,20 @@ ax2.plot(timestamp, np.array(dc_current_filt)*np.array(dc_voltage)/1000., label=
 
 
 # Speed and torque
-ax3.plot(timestamp, set_speed, label='set speed [rpm]', c=colors[6])
-ax3.plot(timestamp, feedback_speed, label='feedback speed [rpm]', c=colors[7])
-ax4.plot(timestamp, set_torque, label='set torque [Nm]', c=colors[8])
+ax3.plot(timestamp, set_speed, label='set speed [rpm]', c=colors[1])
+ax3.plot(timestamp, feedback_speed, label='feedback speed [rpm]', c=colors[2])
+ax4.plot(timestamp, set_torque, label='set torque [Nm]', c=colors[3])
 # ax4.plot(timestamp, np.abs(feedback_torque), label='feedback torque [Nm]', c=colors[9])
-ax4.plot(timestamp, np.abs(feedback_torque_filt), label='feedback torque (filtered) [Nm]', c=colors[15])
+ax4.plot(timestamp, np.abs(feedback_torque_filt), label='feedback torque (filtered) [Nm]', c=colors[4])
 
 
 # Temperature
 ax5.set_ylim([20., 120.])
-ax5.plot(timestamp, PCB_temperature_filt, label='Inv. PCB temp. (filtered) [deg C]', c=colors[10], linestyle=linestyles[1])
-ax5.plot(timestamp, motor_temperature_filt, label='Motor temp. (filtered) [deg C]', c=colors[11], linestyle=linestyles[1])
-ax5.plot(timestamp, inv_temp_A_filt, label='Inv. temp. A (filtered) [deg C]', c=colors[12], linestyle=linestyles[1])
-ax5.plot(timestamp, inv_temp_B_filt, label='Inv. temp. B (filtered) [deg C]', c=colors[13], linestyle=linestyles[1])
-ax5.plot(timestamp, inv_temp_C_filt, label='Inv. temp. C (filtered) [deg C]', c=colors[14], linestyle=linestyles[1])
+ax5.plot(timestamp, PCB_temperature_filt, label='Inv. PCB temp. (filtered) [deg C]', c=colors[10], linestyle=linestyles[2])
+ax5.plot(timestamp, motor_temperature_filt, label='Motor temp. (filtered) [deg C]', c=colors[11], linestyle=linestyles[2])
+ax5.plot(timestamp, inv_temp_A_filt, label='Inv. temp. A (filtered) [deg C]', c=colors[12], linestyle=linestyles[2])
+ax5.plot(timestamp, inv_temp_B_filt, label='Inv. temp. B (filtered) [deg C]', c=colors[13], linestyle=linestyles[2])
+ax5.plot(timestamp, inv_temp_C_filt, label='Inv. temp. C (filtered) [deg C]', c=colors[14], linestyle=linestyles[2])
 ax6.plot(timestamp, ain1, label='AIN 1 [V]', c=colors[15], linestyle=linestyles[0])
 ax6.plot(timestamp, ain2, label='AIN 2 [V]', c=colors[16], linestyle=linestyles[0])
 ax6.plot(timestamp, ain3, label='AIN 3 [V]', c=colors[17], linestyle=linestyles[0])

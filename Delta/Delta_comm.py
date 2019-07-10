@@ -22,6 +22,7 @@ class DeltaComm:
 
     def close_connection(self):
         # self.set_method('Local')
+        self.set_state(0)
         self.srvsock.close()
 
     def send(self, message):
@@ -143,3 +144,7 @@ class DeltaComm:
         self.send(msg.encode('ascii'))
         print('Watchdog set with timeout of {!s}s'.format(round(timeout/1000.), 2))
 
+    def ask_watchdog(self):
+        self.send(str.encode("SYSTem: COMmunicate:WATchdog SET?\n"))
+        cv_method = self.srvsock.recv(4096)
+        print(cv_method)

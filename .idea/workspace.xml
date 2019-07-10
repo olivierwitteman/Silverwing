@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="Can plot immediately now">
+    <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="Added current input">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PTSD/Data/LivePlot.py" beforeDir="false" afterPath="$PROJECT_DIR$/PTSD/Data/LivePlot.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,11 +21,52 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PTSD/Data/StaticPlot.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="118" column="30" selection-start-line="118" selection-start-column="30" selection-end-line="118" selection-end-column="30" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PTSD/Power_Management.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="353">
+              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Delta/Delta_comm.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="50">
+              <caret line="117" column="19" lean-forward="true" selection-start-line="117" selection-start-column="19" selection-end-line="117" selection-end-column="19" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Delta/watchdog.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PTSD/Data/LivePlot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="150" column="118" selection-start-line="150" selection-start-column="118" selection-end-line="150" selection-end-column="118" />
+            <state relative-caret-position="1519">
+              <caret line="143" column="27" selection-start-line="143" selection-start-column="27" selection-end-line="143" selection-end-column="27" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -83,7 +123,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/BTS/data/Sample_plot.py" />
         <option value="$PROJECT_DIR$/General/plot_template.py" />
         <option value="$PROJECT_DIR$/BTS/test.py" />
         <option value="$PROJECT_DIR$/BTS/data/BT-B-1_1.log" />
@@ -131,9 +170,10 @@
         <option value="$PROJECT_DIR$/PTSD/Data/PlotData.py" />
         <option value="$PROJECT_DIR$/PTSD/Data/DataPlot.py" />
         <option value="$PROJECT_DIR$/companion-master/__main__.py" />
+        <option value="$PROJECT_DIR$/PTSD/Data/LivePlot.py" />
         <option value="$PROJECT_DIR$/PTSD/Data/StaticPlot.py" />
         <option value="$PROJECT_DIR$/PTSD/Power_Management.py" />
-        <option value="$PROJECT_DIR$/PTSD/Data/LivePlot.py" />
+        <option value="$PROJECT_DIR$/Delta/watchdog.py" />
       </list>
     </option>
   </component>
@@ -158,13 +198,12 @@
             <path>
               <item name="Silverwing" type="b2602c69:ProjectViewProjectNode" />
               <item name="Silverwing" type="462c0819:PsiDirectoryNode" />
-              <item name="PTSD" type="462c0819:PsiDirectoryNode" />
+              <item name="Delta" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Silverwing" type="b2602c69:ProjectViewProjectNode" />
               <item name="Silverwing" type="462c0819:PsiDirectoryNode" />
               <item name="PTSD" type="462c0819:PsiDirectoryNode" />
-              <item name="Data" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -209,7 +248,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.PlotData">
+  <component name="RunManager" selected="Python.StaticPlot">
     <configuration name="PlotData" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Silverwing" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -324,8 +363,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.PlotData" />
         <item itemvalue="Python.StaticPlot" />
+        <item itemvalue="Python.PlotData" />
         <item itemvalue="Python.__main__" />
         <item itemvalue="Python.linegenerator" />
         <item itemvalue="Python.ReceivePlot" />
@@ -342,27 +381,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532440488607</updated>
-    </task>
-    <task id="LOCAL-00303" summary="fuck">
-      <created>1554369225950</created>
-      <option name="number" value="00303" />
-      <option name="presentableId" value="LOCAL-00303" />
-      <option name="project" value="LOCAL" />
-      <updated>1554369225954</updated>
-    </task>
-    <task id="LOCAL-00304" summary="fuck">
-      <created>1554369887497</created>
-      <option name="number" value="00304" />
-      <option name="presentableId" value="LOCAL-00304" />
-      <option name="project" value="LOCAL" />
-      <updated>1554369887497</updated>
-    </task>
-    <task id="LOCAL-00305" summary="fuck">
-      <created>1554372444106</created>
-      <option name="number" value="00305" />
-      <option name="presentableId" value="LOCAL-00305" />
-      <option name="project" value="LOCAL" />
-      <updated>1554372444107</updated>
     </task>
     <task id="LOCAL-00306" summary="fuck">
       <created>1554459519523</created>
@@ -686,7 +704,28 @@
       <option name="project" value="LOCAL" />
       <updated>1562680651309</updated>
     </task>
-    <option name="localTasksCounter" value="352" />
+    <task id="LOCAL-00352" summary="Changed linetype and color">
+      <created>1562681391971</created>
+      <option name="number" value="00352" />
+      <option name="presentableId" value="LOCAL-00352" />
+      <option name="project" value="LOCAL" />
+      <updated>1562681391971</updated>
+    </task>
+    <task id="LOCAL-00353" summary="Changed linetype and color">
+      <created>1562681458937</created>
+      <option name="number" value="00353" />
+      <option name="presentableId" value="LOCAL-00353" />
+      <option name="project" value="LOCAL" />
+      <updated>1562681458938</updated>
+    </task>
+    <task id="LOCAL-00354" summary="Added current input">
+      <created>1562763938025</created>
+      <option name="number" value="00354" />
+      <option name="presentableId" value="LOCAL-00354" />
+      <option name="project" value="LOCAL" />
+      <updated>1562763938025</updated>
+    </task>
+    <option name="localTasksCounter" value="355" />
     <servers />
   </component>
   <component name="TodoView">
@@ -700,9 +739,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1328" height="1050" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info auto_hide="true" content_ui="combo" id="Project" order="0" weight="0.32517216" />
+      <window_info active="true" auto_hide="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32517216" />
       <window_info id="Structure" order="1" weight="0.24954791" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -738,8 +776,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="charging configuration" />
-    <MESSAGE value="Plotting" />
     <MESSAGE value="BTS procedue" />
     <MESSAGE value="BTS procedure" />
     <MESSAGE value="Charge that B" />
@@ -763,16 +799,11 @@
     <MESSAGE value="Safety" />
     <MESSAGE value="Changed analog inputs inverter" />
     <MESSAGE value="Can plot immediately now" />
-    <option name="LAST_COMMIT_MESSAGE" value="Can plot immediately now" />
+    <MESSAGE value="Changed linetype and color" />
+    <MESSAGE value="Added current input" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added current input" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/General/Plot_Motor_Thermal.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="55" selection-start-line="16" selection-start-column="55" selection-end-line="16" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Cooling/Radiator_Sizing.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -943,16 +974,6 @@
           <caret line="6" selection-start-line="6" selection-end-line="6" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Delta/Delta_comm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1152,35 +1173,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PTSD/Data/StaticPlot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="530">
-          <caret line="114" column="20" selection-start-line="114" selection-start-column="20" selection-end-line="114" selection-end-column="20" />
-          <caret line="115" column="18" selection-start-line="115" selection-start-column="18" selection-end-line="115" selection-end-column="18" />
-          <caret line="116" column="20" selection-start-line="116" selection-start-column="20" selection-end-line="116" selection-end-column="20" />
-          <caret line="117" column="18" selection-start-line="117" selection-start-column="18" selection-end-line="117" selection-end-column="18" />
-          <caret line="118" column="18" selection-start-line="118" selection-start-column="18" selection-end-line="118" selection-end-column="18" />
-          <caret line="121" column="18" selection-start-line="121" selection-start-column="18" selection-end-line="121" selection-end-column="18" />
-          <caret line="125" column="18" selection-start-line="125" selection-start-column="18" selection-end-line="125" selection-end-column="18" />
-          <caret line="126" column="18" selection-start-line="126" selection-start-column="18" selection-end-line="126" selection-end-column="18" />
-          <caret line="127" column="18" selection-start-line="127" selection-start-column="18" selection-end-line="127" selection-end-column="18" />
-          <caret line="128" column="20" selection-start-line="128" selection-start-column="20" selection-end-line="128" selection-end-column="20" />
-          <caret line="129" column="18" selection-start-line="129" selection-start-column="18" selection-end-line="129" selection-end-column="18" />
-          <caret line="134" column="18" selection-start-line="134" selection-start-column="18" selection-end-line="134" selection-end-column="18" />
-          <caret line="135" column="18" selection-start-line="135" selection-start-column="18" selection-end-line="135" selection-end-column="18" />
-          <caret line="136" column="18" selection-start-line="136" selection-start-column="18" selection-end-line="136" selection-end-column="18" />
-          <caret line="137" column="18" selection-start-line="137" selection-start-column="18" selection-end-line="137" selection-end-column="18" />
-          <caret line="138" column="18" selection-start-line="138" selection-start-column="18" selection-end-line="138" selection-end-column="18" />
-          <caret line="139" column="18" selection-start-line="139" selection-start-column="18" selection-end-line="139" selection-end-column="18" />
-          <caret line="140" column="18" selection-start-line="140" selection-start-column="18" selection-end-line="140" selection-end-column="18" />
-          <caret line="141" column="18" selection-start-line="141" selection-start-column="18" selection-end-line="141" selection-end-column="18" />
-          <caret line="142" column="18" selection-start-line="142" selection-start-column="18" selection-end-line="142" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PTSD/power.csv">
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="false" fixedHeaders="false" rowLines="0">
@@ -1196,16 +1188,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PTSD/Power_Management.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="33" column="77" selection-start-line="33" selection-start-column="77" selection-end-line="33" selection-end-column="77" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PTSD/Data/loggerCommands_6.csv">
       <provider selected="true" editor-type-id="LargeFileEditor">
         <state relative-caret-position="15">
@@ -1215,13 +1197,46 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PTSD/Data/LivePlot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="150" column="118" selection-start-line="150" selection-start-column="118" selection-end-line="150" selection-end-column="118" />
+        <state relative-caret-position="1519">
+          <caret line="143" column="27" selection-start-line="143" selection-start-column="27" selection-end-line="143" selection-end-column="27" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PTSD/Data/StaticPlot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="118" column="30" selection-start-line="118" selection-start-column="30" selection-end-line="118" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PTSD/Power_Management.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Delta/Delta_comm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="117" column="19" lean-forward="true" selection-start-line="117" selection-start-column="19" selection-end-line="117" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Delta/watchdog.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>

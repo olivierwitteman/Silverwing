@@ -25,7 +25,7 @@ def log(voltage, current, power):
 
 def precharge():
     print('Precharging...')
-    delta.enable_watchdog()
+    # delta.enable_watchdog()
     delta.set_voltage(V_set)
     delta.set_current(min(pre_I, I_max))
     delta.set_state(1)

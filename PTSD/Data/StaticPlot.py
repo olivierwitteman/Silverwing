@@ -4,13 +4,12 @@ from scipy.signal import lfilter
 import glob
 import os
 
-
 path = './'
-# filename = 'loggerCommands_18.csv'
-# filename = 'loggerCommands_inv2.csv'
+# filename = str(input('filename: '))
 
 list_of_files = glob.glob('./*.csv') # * means all if need specific format then *.csv
 filename = max(list_of_files, key=os.path.getctime)
+print('\nlatest file: {!s}\n'.format(filename))
 
 steps = 10
 
@@ -100,7 +99,6 @@ for i in np.arange(1, len(samples), steps):
 
 # Filters
 timestamp = np.array(timestamp)/1e3
-n = 30
 dc_current_filt = filterfunc(dc_current, type='linear')
 dc_voltage_filt = filterfunc(dc_voltage, type='linear')
 motor_temperature_filt = filterfunc(motor_temperature, type='linear')

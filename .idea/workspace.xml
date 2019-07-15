@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="Watchdog troubleshooting">
+      <change afterPath="$PROJECT_DIR$/PTSD/Charge_Battery.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PTSD/Data/LivePlot.py" beforeDir="false" afterPath="$PROJECT_DIR$/PTSD/Data/LivePlot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PTSD/Data/StaticPlot.py" beforeDir="false" afterPath="$PROJECT_DIR$/PTSD/Data/StaticPlot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PTSD/Power_Management.py" beforeDir="false" afterPath="$PROJECT_DIR$/PTSD/Power_Management.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PTSD/power.csv" beforeDir="false" afterPath="$PROJECT_DIR$/PTSD/power.csv" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,13 +18,46 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PTSD/power.csv">
+          <provider selected="true" editor-type-id="csv-text-editor">
+            <state relative-caret-position="150">
+              <caret line="46733" selection-start-line="46733" selection-end-line="46733" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PTSD/Data/StaticPlot.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="337">
-              <caret line="221" column="68" lean-forward="true" selection-start-line="221" selection-start-column="68" selection-end-line="221" selection-end-column="68" />
+              <caret line="221" column="68" selection-start-line="221" selection-start-column="68" selection-end-line="221" selection-end-column="68" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PTSD/Power_Management.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="197">
+              <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/PTSD/Charge_Battery.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="121">
+              <caret line="67" column="71" selection-start-line="67" selection-start-column="71" selection-end-line="67" selection-end-column="71" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -78,7 +112,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/General/plot_template.py" />
         <option value="$PROJECT_DIR$/BTS/test.py" />
         <option value="$PROJECT_DIR$/BTS/data/BT-B-1_1.log" />
         <option value="$PROJECT_DIR$/BTS/data/final_data/BT-B-1_1.log" />
@@ -126,14 +159,15 @@
         <option value="$PROJECT_DIR$/companion-master/__main__.py" />
         <option value="$PROJECT_DIR$/Delta/Delta_comm.py" />
         <option value="$PROJECT_DIR$/Delta/watchdog.py" />
-        <option value="$PROJECT_DIR$/PTSD/Power_Management.py" />
         <option value="$PROJECT_DIR$/PTSD/Data/StaticPlot.py" />
         <option value="$PROJECT_DIR$/PTSD/Data/LivePlot.py" />
+        <option value="$PROJECT_DIR$/PTSD/Power_Management.py" />
+        <option value="$PROJECT_DIR$/PTSD/Charge_Battery.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="803" />
+    <option name="width" value="1417" />
     <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -158,12 +192,6 @@
               <item name="Silverwing" type="b2602c69:ProjectViewProjectNode" />
               <item name="Silverwing" type="462c0819:PsiDirectoryNode" />
               <item name="PTSD" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Silverwing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Silverwing" type="462c0819:PsiDirectoryNode" />
-              <item name="PTSD" type="462c0819:PsiDirectoryNode" />
-              <item name="Data" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -209,7 +237,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.PlotData">
+  <component name="RunManager" selected="Python.Charge_Battery">
+    <configuration name="Charge_Battery" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Silverwing" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PTSD" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PTSD/Charge_Battery.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="PlotData" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Silverwing" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -223,27 +272,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PTSD/Data/LivePlot.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="ReceivePlot" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Silverwing" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PTSD" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PTSD/ReceivePlot.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -317,18 +345,18 @@
     </configuration>
     <list>
       <item itemvalue="Python.PlotData" />
-      <item itemvalue="Python.ReceivePlot" />
       <item itemvalue="Python.linegenerator" />
       <item itemvalue="Python.StaticPlot" />
       <item itemvalue="Python.__main__" />
+      <item itemvalue="Python.Charge_Battery" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Charge_Battery" />
         <item itemvalue="Python.PlotData" />
         <item itemvalue="Python.StaticPlot" />
         <item itemvalue="Python.__main__" />
         <item itemvalue="Python.linegenerator" />
-        <item itemvalue="Python.ReceivePlot" />
       </list>
     </recent_temporary>
   </component>
@@ -342,13 +370,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532440488607</updated>
-    </task>
-    <task id="LOCAL-00311" summary="Inverter losses">
-      <created>1560176398188</created>
-      <option name="number" value="00311" />
-      <option name="presentableId" value="LOCAL-00311" />
-      <option name="project" value="LOCAL" />
-      <updated>1560176398189</updated>
     </task>
     <task id="LOCAL-00312" summary="Inverter losses">
       <created>1560180414402</created>
@@ -686,7 +707,14 @@
       <option name="project" value="LOCAL" />
       <updated>1562966659853</updated>
     </task>
-    <option name="localTasksCounter" value="360" />
+    <task id="LOCAL-00360" summary="Watchdog troubleshooting">
+      <created>1563117056653</created>
+      <option name="number" value="00360" />
+      <option name="presentableId" value="LOCAL-00360" />
+      <option name="project" value="LOCAL" />
+      <updated>1563117056653</updated>
+    </task>
+    <option name="localTasksCounter" value="361" />
     <servers />
   </component>
   <component name="TodoView">
@@ -699,9 +727,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="803" height="1050" extended-state="0" />
+    <frame x="0" y="0" width="1417" height="1050" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.30221882" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" weight="0.24954791" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -765,9 +793,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Watchdog troubleshooting" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/BTS/data/final_data/Results/disch_BT-E-840_588-70_35_84_78_PCC.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/BTS/data/final_data/disch_BT-E-840_588-70_35_84_78_PCC.log">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="613">
@@ -1138,16 +1163,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PTSD/Power_Management.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="28" column="24" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PTSD/Data/loggerCommands_8.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -1158,21 +1173,6 @@
           <folding>
             <element signature="e#25#36#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PTSD/power.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="false" fixedHeaders="false" rowLines="0">
-          <column index="0" width="100" />
-          <column index="1" width="100" />
-          <column index="2" width="100" />
-          <column index="3" width="100" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="875">
-          <caret line="46733" selection-start-line="46733" selection-end-line="46733" />
         </state>
       </provider>
     </entry>
@@ -1189,9 +1189,44 @@
     <entry file="file://$PROJECT_DIR$/PTSD/Data/StaticPlot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="337">
-          <caret line="221" column="68" lean-forward="true" selection-start-line="221" selection-start-column="68" selection-end-line="221" selection-end-column="68" />
+          <caret line="221" column="68" selection-start-line="221" selection-start-column="68" selection-end-line="221" selection-end-column="68" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PTSD/Power_Management.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PTSD/power.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="false" fixedHeaders="false" rowLines="0">
+          <column index="0" width="100" />
+          <column index="1" width="100" />
+          <column index="2" width="100" />
+          <column index="3" width="100" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="150">
+          <caret line="46733" selection-start-line="46733" selection-end-line="46733" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PTSD/Charge_Battery.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="67" column="71" selection-start-line="67" selection-start-column="71" selection-end-line="67" selection-end-column="71" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>

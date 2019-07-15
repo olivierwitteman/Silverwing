@@ -17,7 +17,6 @@ pre_I = 5.
 # I = 15000./V
 
 
-
 def log(voltage, current, power):
     with open('./power.csv', 'a') as a:
         a.write('{!s},{!s},{!s},{!s}\n'.format(time.time(), voltage, current, power))

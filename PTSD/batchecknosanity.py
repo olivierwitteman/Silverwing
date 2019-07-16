@@ -51,6 +51,23 @@ def log(voltage, current, power):
 
 try:
     check = sanity_check(delta.ask_voltage())
+    if mode == 'charge':
+        v_set = min(BPE['series'] * VTC6['max_cell_volt'], SM3300['max_voltage'])
+        I_set = min(BPE['parallel'] * VTC6['capacity'], SM3300['max_current'])
+
+    elif mode == 'store':
+        v_set = min(BPE['series'] * VTC6['nominal_cell_volt'], SM3300['max_voltage'])
+        I_set = min(BPE['parallel'] * VTC6['capacity'], SM3300['max_current'])
+
+    else:
+        print('That mode is not programmed.')
+        raise KeyboardInterrupt
+
+    print('\n\nPlease review these parameters:\nTarget voltage: {!s} V\nTarget current: {!s}'
+          ' A\n\nBattery pack:\n{!s}S{!s}P\nMax voltage: {!s} V\n\n'.
+          format(v_set, I_set, BPE['series'], BPE['parallel'], BPE['series']*VTC6['max_cell_volt']))
+    time.sleep(10.)
+    
     delta.set_voltage(v_set)
     delta.set_current(I_set)
     delta.set_state(1)

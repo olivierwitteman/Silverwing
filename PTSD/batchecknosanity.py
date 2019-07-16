@@ -52,13 +52,13 @@ def log(voltage, current, power):
 try:
     check = sanity_check(delta.ask_voltage())
     delta.set_voltage(v_set)
-            delta.set_current(I_set)
-            delta.set_state(1)
-            while abs(v_set - delta.ask_voltage()) > 0.1 and delta.ask_current() > 0.1 * BPE['parallel'] *\
+    delta.set_current(I_set)
+    delta.set_state(1)
+    while abs(v_set - delta.ask_voltage()) > 0.1 and delta.ask_current() > 0.1 * BPE['parallel'] *\
                     VTC6['capacity'] and 0.8 * BPE['series'] * VTC6['min_cell_volt'] < delta.ask_voltage() < \
                     1.001 * BPE['series'] * VTC6['max_cell_volt']:
-                log(delta.ask_voltage(), delta.ask_current(), delta.ask_power())
-                time.sleep(1.)
+        log(delta.ask_voltage(), delta.ask_current(), delta.ask_power())
+        time.sleep(1.)
 
 finally:
     delta.set_state(0)

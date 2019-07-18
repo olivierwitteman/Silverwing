@@ -5,13 +5,11 @@ delta = d.DeltaComm()
 print('\n\n!!! Ctr+C anytime to interrupt power !!!\n\n')
 
 print('Parameters are set for battery pack Emrax (BPE)')
-series = 162
-parallel = 8
 
 
 VTC6 = {'max_cell_volt': 4.2, 'min_cell_volt': 2.5, 'nominal_cell_volt': 3.7, 'capacity': 3.1}
-BPE = {'series': 162, 'parallel': 8}
-SM3300 = {'max_voltage': 660., 'min_voltage': 0., 'max_current': 11., 'min_current': 0.}
+BPE = {'series': 160, 'parallel': 8}
+SM3300 = {'max_voltage': 600., 'min_voltage': 0., 'max_current': 11., 'min_current': 0.}
 
 mode = input('Mode [charge, store]: ')
 

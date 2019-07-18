@@ -9,7 +9,7 @@ print('Parameters are set for battery pack Emrax (BPE)')
 
 VTC6 = {'max_cell_volt': 4.2, 'min_cell_volt': 2.5, 'nominal_cell_volt': 3.7, 'capacity': 3.1}
 BPE = {'series': 160, 'parallel': 8}
-SM3300 = {'max_voltage': 600., 'min_voltage': 0., 'max_current': 5.5., 'min_current': 0.}
+SM3300 = {'max_voltage': 600., 'min_voltage': 0., 'max_current': 5.5, 'min_current': 0.}
 
 mode = input('Mode [charge, store]: ')
 

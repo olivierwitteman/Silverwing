@@ -1,4 +1,5 @@
 import time
+import sys
 import delta_sm3300 as d
 delta = d.DeltaComm()
 
@@ -83,6 +84,10 @@ try:
 
     else:
         print('Sanity check failed. Battery voltage: {!s} V'.format(check[1]))
+
+except:
+    error = sys.exc_info()[0]
+    print(error)
 
 finally:
     delta.set_state(0)

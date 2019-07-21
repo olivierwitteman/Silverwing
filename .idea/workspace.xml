@@ -4,11 +4,9 @@
     <bookmark url="file://$PROJECT_DIR$/PTSD/Data/StaticPlot.py" description="# Filters&#10;timestamp = np.array(timestamp)/1e3&#10;dc_c..." line="99" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="Watchdog troubleshooting">
-      <change afterPath="$PROJECT_DIR$/PTSD/Charge_Battery.py" afterDir="false" />
+    <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="Charging sequence">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PTSD/Power_Management.py" beforeDir="false" afterPath="$PROJECT_DIR$/PTSD/Power_Management.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PTSD/power.csv" beforeDir="false" afterPath="$PROJECT_DIR$/PTSD/power.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PTSD/Charge_Battery.py" beforeDir="false" afterPath="$PROJECT_DIR$/PTSD/Charge_Battery.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,7 +19,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PTSD/power.csv">
           <provider selected="true" editor-type-id="csv-text-editor">
-            <state relative-caret-position="150">
+            <state relative-caret-position="700995">
               <caret line="46733" selection-start-line="46733" selection-end-line="46733" />
             </state>
           </provider>
@@ -30,7 +28,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PTSD/Data/StaticPlot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
+            <state relative-caret-position="3255">
               <caret line="221" column="68" selection-start-line="221" selection-start-column="68" selection-end-line="221" selection-end-column="68" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
@@ -42,7 +40,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PTSD/Power_Management.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
+            <state relative-caret-position="285">
               <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
@@ -54,8 +52,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PTSD/Charge_Battery.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
-              <caret line="67" column="71" selection-start-line="67" selection-start-column="71" selection-end-line="67" selection-end-column="71" />
+            <state relative-caret-position="591">
+              <caret line="78" column="12" lean-forward="true" selection-start-line="78" selection-start-column="12" selection-end-line="78" selection-end-column="12" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -371,41 +369,6 @@
       <option name="presentableId" value="Default" />
       <updated>1532440488607</updated>
     </task>
-    <task id="LOCAL-00312" summary="Inverter losses">
-      <created>1560180414402</created>
-      <option name="number" value="00312" />
-      <option name="presentableId" value="LOCAL-00312" />
-      <option name="project" value="LOCAL" />
-      <updated>1560180414403</updated>
-    </task>
-    <task id="LOCAL-00313" summary="Inverter losses">
-      <created>1560184322727</created>
-      <option name="number" value="00313" />
-      <option name="presentableId" value="LOCAL-00313" />
-      <option name="project" value="LOCAL" />
-      <updated>1560184322728</updated>
-    </task>
-    <task id="LOCAL-00314" summary="Inverter losses">
-      <created>1560197619356</created>
-      <option name="number" value="00314" />
-      <option name="presentableId" value="LOCAL-00314" />
-      <option name="project" value="LOCAL" />
-      <updated>1560197619357</updated>
-    </task>
-    <task id="LOCAL-00315" summary="Inverter losses">
-      <created>1560197766890</created>
-      <option name="number" value="00315" />
-      <option name="presentableId" value="LOCAL-00315" />
-      <option name="project" value="LOCAL" />
-      <updated>1560197766890</updated>
-    </task>
-    <task id="LOCAL-00316" summary="Inverter losses">
-      <created>1560200718215</created>
-      <option name="number" value="00316" />
-      <option name="presentableId" value="LOCAL-00316" />
-      <option name="project" value="LOCAL" />
-      <updated>1560200718215</updated>
-    </task>
     <task id="LOCAL-00317" summary="Inverter losses">
       <created>1560246583803</created>
       <option name="number" value="00317" />
@@ -714,7 +677,42 @@
       <option name="project" value="LOCAL" />
       <updated>1563117056653</updated>
     </task>
-    <option name="localTasksCounter" value="361" />
+    <task id="LOCAL-00361" summary="Charging sequence">
+      <created>1563234770416</created>
+      <option name="number" value="00361" />
+      <option name="presentableId" value="LOCAL-00361" />
+      <option name="project" value="LOCAL" />
+      <updated>1563234770417</updated>
+    </task>
+    <task id="LOCAL-00362" summary="Charging sequence">
+      <created>1563461367560</created>
+      <option name="number" value="00362" />
+      <option name="presentableId" value="LOCAL-00362" />
+      <option name="project" value="LOCAL" />
+      <updated>1563461367563</updated>
+    </task>
+    <task id="LOCAL-00363" summary="Charging sequence">
+      <created>1563461505790</created>
+      <option name="number" value="00363" />
+      <option name="presentableId" value="LOCAL-00363" />
+      <option name="project" value="LOCAL" />
+      <updated>1563461505790</updated>
+    </task>
+    <task id="LOCAL-00364" summary="Charging sequence">
+      <created>1563462421944</created>
+      <option name="number" value="00364" />
+      <option name="presentableId" value="LOCAL-00364" />
+      <option name="project" value="LOCAL" />
+      <updated>1563462421945</updated>
+    </task>
+    <task id="LOCAL-00365" summary="Charging sequence">
+      <created>1563462679337</created>
+      <option name="number" value="00365" />
+      <option name="presentableId" value="LOCAL-00365" />
+      <option name="project" value="LOCAL" />
+      <updated>1563462679337</updated>
+    </task>
+    <option name="localTasksCounter" value="366" />
     <servers />
   </component>
   <component name="TodoView">
@@ -728,13 +726,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1417" height="1050" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" weight="0.24954791" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32463464" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4924663" visible="true" weight="0.36638832" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4924663" weight="0.36638832" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -765,7 +764,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Charge that B" />
     <MESSAGE value="Example plot template" />
     <MESSAGE value="Load matrix" />
     <MESSAGE value="Printing stuff" />
@@ -790,7 +788,8 @@
     <MESSAGE value="Added current input" />
     <MESSAGE value="Watchdog test" />
     <MESSAGE value="Watchdog troubleshooting" />
-    <option name="LAST_COMMIT_MESSAGE" value="Watchdog troubleshooting" />
+    <MESSAGE value="Charging sequence" />
+    <option name="LAST_COMMIT_MESSAGE" value="Charging sequence" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/BTS/data/final_data/disch_BT-E-840_588-70_35_84_78_PCC.log">
@@ -874,6 +873,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BTS/BTS.csv">
+      <provider editor-type-id="csv-text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
       <provider selected="true" editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="0">
           <column index="0" width="277" />
@@ -881,11 +885,6 @@
           <column index="2" width="100" />
           <column index="3" width="100" />
           <column index="4" width="100" />
-        </state>
-      </provider>
-      <provider editor-type-id="csv-text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
@@ -917,6 +916,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PTSD/Data/logger_inv1.csv">
+      <provider editor-type-id="csv-text-editor" />
       <provider selected="true" editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="true" rowLines="0">
           <column index="0" width="100" />
@@ -925,7 +925,6 @@
           <column index="3" width="1341" />
         </state>
       </provider>
-      <provider editor-type-id="csv-text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Cooling/PM100DZ_Losses.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -955,6 +954,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PTSD/Data/logger_inv2.csv">
+      <provider editor-type-id="csv-text-editor" />
       <provider selected="true" editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="true" rowLines="0">
           <column index="0" width="100" />
@@ -963,7 +963,6 @@
           <column index="3" width="1338" />
         </state>
       </provider>
-      <provider editor-type-id="csv-text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/PTSD/Data/loggerCommands_inv2.csv">
       <provider selected="true" editor-type-id="csv-text-editor">
@@ -993,14 +992,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PTSD/tempdata.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3">
-          <column index="0" width="100" />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="csv-text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="59" selection-start-line="1" selection-start-column="59" selection-end-line="1" selection-end-column="59" />
+        </state>
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3">
+          <column index="0" width="100" />
         </state>
       </provider>
     </entry>
@@ -1059,6 +1058,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PTSD/Data/loggerCommands_18.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="377">
+          <caret line="89" column="128" selection-start-line="89" selection-start-column="128" selection-end-line="89" selection-end-column="128" />
+        </state>
+      </provider>
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="0">
           <column index="0" width="100" />
@@ -1084,11 +1088,6 @@
           <column index="20" width="100" />
           <column index="21" width="100" />
           <column index="22" width="100" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="377">
-          <caret line="89" column="128" selection-start-line="89" selection-start-column="128" selection-end-line="89" selection-end-column="128" />
         </state>
       </provider>
     </entry>
@@ -1186,9 +1185,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/PTSD/power.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="700995">
+          <caret line="46733" selection-start-line="46733" selection-end-line="46733" />
+        </state>
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="false" fixedHeaders="false" rowLines="0">
+          <column index="0" width="100" />
+          <column index="1" width="100" />
+          <column index="2" width="100" />
+          <column index="3" width="100" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/PTSD/Data/StaticPlot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
+        <state relative-caret-position="3255">
           <caret line="221" column="68" selection-start-line="221" selection-start-column="68" selection-end-line="221" selection-end-column="68" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
@@ -1198,7 +1212,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PTSD/Power_Management.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
+        <state relative-caret-position="285">
           <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
@@ -1206,25 +1220,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PTSD/power.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="false" fixedHeaders="false" rowLines="0">
-          <column index="0" width="100" />
-          <column index="1" width="100" />
-          <column index="2" width="100" />
-          <column index="3" width="100" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="150">
-          <caret line="46733" selection-start-line="46733" selection-end-line="46733" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PTSD/Charge_Battery.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="67" column="71" selection-start-line="67" selection-start-column="71" selection-end-line="67" selection-end-column="71" />
+        <state relative-caret-position="591">
+          <caret line="78" column="12" lean-forward="true" selection-start-line="78" selection-start-column="12" selection-end-line="78" selection-end-column="12" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>

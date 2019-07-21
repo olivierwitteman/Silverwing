@@ -9,10 +9,10 @@ print('Parameters are set for battery pack Emrax (BPE)')
 
 
 VTC6 = {'max_cell_volt': 4.2, 'min_cell_volt': 2.5, 'nominal_cell_volt': 3.7, 'capacity': 3.1}
-BPE = {'series': 160, 'parallel': 8}
-SM3300 = {'max_voltage': 600., 'min_voltage': 0., 'max_current': 5.5, 'min_current': 0.}
+BPE = {'series': 160, 'parallel': 8, 'target_voltage': 620}
+SM3300 = {'max_voltage': 660., 'min_voltage': 0., 'max_current': 5.5, 'min_current': 0.}
 
-mode = input('Mode [charge, store]: ')
+mode = input('Mode [charge, store, fully charge]: ')
 
 # class d:
 #     def __init__(self):
@@ -52,11 +52,16 @@ try:
     check = sanity_check(delta.ask_voltage())
     if check[0]:
         if mode == 'charge':
-            v_set = min(BPE['series'] * VTC6['max_cell_volt'], SM3300['max_voltage'])
+            # v_set = min(BPE['series'] * VTC6['max_cell_volt'], SM3300['max_voltage'])
+            v_set = BPE['target_voltage']
             I_set = min(BPE['parallel'] * VTC6['capacity'], SM3300['max_current'])
 
         elif mode == 'store':
             v_set = min(BPE['series'] * VTC6['nominal_cell_volt'], SM3300['max_voltage'])
+            I_set = min(BPE['parallel'] * VTC6['capacity'], SM3300['max_current'])
+
+        elif mode == 'fully charge':
+            v_set = min(BPE['series'] * VTC6['max_cell_volt'], SM3300['max_voltage'])
             I_set = min(BPE['parallel'] * VTC6['capacity'], SM3300['max_current'])
 
         else:
@@ -73,11 +78,7 @@ try:
             delta.set_current(I_set)
             delta.set_state(1)
             time.sleep(1.)
-            print('{!s} > {!s}'.format(abs(v_set - delta.ask_voltage()), 0.1))
-            print('{!s} > {!s}'.format(delta.ask_current(), 0.1 * BPE['parallel'] *VTC6['capacity']))
-            print('{!s} < {!s} < {!s}'.format(0.8 * BPE['series'] * VTC6['min_cell_volt'], delta.ask_voltage(),  1.001 * BPE['series'] * VTC6['max_cell_volt']))
-
-            while abs(v_set - delta.ask_voltage()) > 0.1 and delta.ask_current() > 0.1 * BPE['parallel'] *\
+            while abs(v_set - delta.ask_voltage()) > 0.1 and delta.ask_current() > 0.005 * BPE['parallel'] *\
                     VTC6['capacity'] and 0.8 * BPE['series'] * VTC6['min_cell_volt'] < delta.ask_voltage() < \
                     1.001 * BPE['series'] * VTC6['max_cell_volt']:
                 log(delta.ask_voltage(), delta.ask_current(), delta.ask_power())

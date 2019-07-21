@@ -74,7 +74,7 @@ try:
             delta.set_state(1)
             time.sleep(1.)
             print('{!s} > {!s}'.format(abs(v_set - delta.ask_voltage()), 0.1))
-            print('{!s} > {!s}'.format(delta.ask_current(), 0.1 * BPE['parallel'] *VTC6['capacity']))
+            print('{!s} > {!s}'.format(delta.ask_current(), 0.1 * BPE['parallel'] * VTC6['capacity']))
             print('{!s} < {!s} < {!s}'.format(0.8 * BPE['series'] * VTC6['min_cell_volt'], delta.ask_voltage(),  1.001 * BPE['series'] * VTC6['max_cell_volt']))
 
             while abs(v_set - delta.ask_voltage()) > 0.1 and delta.ask_current() > 0.1 * BPE['parallel'] *\

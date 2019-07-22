@@ -1,7 +1,7 @@
 import time
 import sys
 import delta_sm3300 as d
-import numpy as np
+import statistics
 delta = d.DeltaComm()
 
 print('\n\n!!! Ctr+C anytime to interrupt power !!!\n\n')
@@ -53,14 +53,14 @@ def filt_current():
     ilst = []
     for _ in range(10):
         ilst.append(delta.ask_current())
-    return np.median(ilst)
+    return statistics.median(ilst)
 
 
 def filt_voltage():
     vlst = []
     for _ in range(10):
         vlst.append(delta.ask_voltage())
-    return np.median(vlst)
+    return statistics.median(vlst)
 
 
 try:

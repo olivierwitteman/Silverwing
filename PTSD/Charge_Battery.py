@@ -1,6 +1,7 @@
 import time
 import sys
 import delta_sm3300 as d
+import numpy as np
 delta = d.DeltaComm()
 
 print('\n\n!!! Ctr+C anytime to interrupt power !!!\n\n')
@@ -48,6 +49,20 @@ def log(voltage, current, power):
         a.write('{!s},{!s},{!s},{!s},charging\n'.format(time.time(), voltage, current, power))
 
 
+def filt_current():
+    ilst = []
+    for _ in range(10):
+        ilst.append(delta.ask_current())
+    return np.median(ilst)
+
+
+def filt_voltage():
+    vlst = []
+    for _ in range(10):
+        vlst.append(delta.ask_voltage())
+    return np.median(vlst)
+
+
 try:
     check = sanity_check(delta.ask_voltage())
     if check[0]:
@@ -77,9 +92,9 @@ try:
             delta.set_voltage(v_set)
             delta.set_current(I_set)
             delta.set_state(1)
-            time.sleep(1.)
-            while delta.ask_current() > 0.005 * BPE['parallel'] *\
-                    VTC6['capacity'] and 0.8 * BPE['series'] * VTC6['min_cell_volt'] < delta.ask_voltage() < \
+            time.sleep(10.)
+            while filt_current() > 0.005 * BPE['parallel'] *\
+                    VTC6['capacity'] and 0.8 * BPE['series'] * VTC6['min_cell_volt'] < filt_voltage() < \
                     1.005 * BPE['series'] * VTC6['max_cell_volt']:
                 log(delta.ask_voltage(), delta.ask_current(), delta.ask_power())
                 time.sleep(1.)

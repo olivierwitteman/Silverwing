@@ -31,11 +31,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PTSD/Charge_Battery.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="521">
-              <caret line="80" column="18" selection-start-line="80" selection-start-column="18" selection-end-line="80" selection-end-column="18" />
+            <state relative-caret-position="561">
+              <caret line="94" column="25" selection-start-line="94" selection-start-column="25" selection-end-line="94" selection-end-column="25" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PTSD/power.csv">
+          <provider selected="true" editor-type-id="csv-text-editor">
+            <state relative-caret-position="543">
+              <caret line="264282" column="47" lean-forward="true" selection-start-line="264282" selection-start-column="47" selection-end-line="264282" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -144,6 +153,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="89" />
     <option name="width" value="1417" />
     <option name="height" value="1050" />
   </component>
@@ -342,20 +352,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532440488607</updated>
-    </task>
-    <task id="LOCAL-00323" summary="Safety">
-      <created>1562355166768</created>
-      <option name="number" value="00323" />
-      <option name="presentableId" value="LOCAL-00323" />
-      <option name="project" value="LOCAL" />
-      <updated>1562355166768</updated>
-    </task>
-    <task id="LOCAL-00324" summary="Safety">
-      <created>1562356037106</created>
-      <option name="number" value="00324" />
-      <option name="presentableId" value="LOCAL-00324" />
-      <option name="project" value="LOCAL" />
-      <updated>1562356037106</updated>
     </task>
     <task id="LOCAL-00325" summary="Safety">
       <created>1562412769069</created>
@@ -686,7 +682,21 @@
       <option name="project" value="LOCAL" />
       <updated>1563725548329</updated>
     </task>
-    <option name="localTasksCounter" value="372" />
+    <task id="LOCAL-00372" summary="Clean the mess">
+      <created>1563782849120</created>
+      <option name="number" value="00372" />
+      <option name="presentableId" value="LOCAL-00372" />
+      <option name="project" value="LOCAL" />
+      <updated>1563782849121</updated>
+    </task>
+    <task id="LOCAL-00373" summary="Clean the mess">
+      <created>1563783285293</created>
+      <option name="number" value="00373" />
+      <option name="presentableId" value="LOCAL-00373" />
+      <option name="project" value="LOCAL" />
+      <updated>1563783285294</updated>
+    </task>
+    <option name="localTasksCounter" value="374" />
     <servers />
   </component>
   <component name="TodoView">
@@ -699,7 +709,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1417" height="1050" extended-state="0" />
+    <frame x="89" y="0" width="1417" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
@@ -1136,21 +1146,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PTSD/logtest.py" />
     <entry file="file://$PROJECT_DIR$/PTSD/tempdata.csv" />
-    <entry file="file://$PROJECT_DIR$/PTSD/power.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="false" fixedHeaders="false" rowLines="0">
-          <column index="0" width="100" />
-          <column index="1" width="100" />
-          <column index="2" width="100" />
-          <column index="3" width="100" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="903">
-          <caret line="46733" selection-start-line="46733" selection-end-line="46733" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PTSD/Broadcast.py" />
     <entry file="file://$PROJECT_DIR$/PTSD/Power_Management.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -1162,10 +1157,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/PTSD/power.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="false" fixedHeaders="false" rowLines="0">
+          <column index="0" width="100" />
+          <column index="1" width="100" />
+          <column index="2" width="100" />
+          <column index="3" width="100" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="543">
+          <caret line="264282" column="47" lean-forward="true" selection-start-line="264282" selection-start-column="47" selection-end-line="264282" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/PTSD/Charge_Battery.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="521">
-          <caret line="80" column="18" selection-start-line="80" selection-start-column="18" selection-end-line="80" selection-end-column="18" />
+        <state relative-caret-position="561">
+          <caret line="94" column="25" selection-start-line="94" selection-start-column="25" selection-end-line="94" selection-end-column="25" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>

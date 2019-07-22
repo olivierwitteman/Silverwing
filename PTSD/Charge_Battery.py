@@ -78,7 +78,7 @@ try:
             delta.set_current(I_set)
             delta.set_state(1)
             time.sleep(1.)
-            while abs(v_set - delta.ask_voltage()) > 0.1 and delta.ask_current() > 0.005 * BPE['parallel'] *\
+            while delta.ask_current() > 0.005 * BPE['parallel'] *\
                     VTC6['capacity'] and 0.8 * BPE['series'] * VTC6['min_cell_volt'] < delta.ask_voltage() < \
                     1.001 * BPE['series'] * VTC6['max_cell_volt']:
                 log(delta.ask_voltage(), delta.ask_current(), delta.ask_power())

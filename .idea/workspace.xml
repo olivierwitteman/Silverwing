@@ -4,7 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/PTSD/Data/_StaticPlot.py" description="# Filters&#10;timestamp = np.array(timestamp)/1e3&#10;dc_c..." line="99" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="Clean the mess">
+    <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="Filters added to current and voltage measurements">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PTSD/Charge_Battery.py" beforeDir="false" afterPath="$PROJECT_DIR$/PTSD/Charge_Battery.py" afterDir="false" />
     </list>
@@ -31,8 +31,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PTSD/Charge_Battery.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="94" column="25" selection-start-line="94" selection-start-column="25" selection-end-line="94" selection-end-column="25" />
+            <state relative-caret-position="219">
+              <caret line="15" column="52" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -352,27 +352,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532440488607</updated>
-    </task>
-    <task id="LOCAL-00325" summary="Safety">
-      <created>1562412769069</created>
-      <option name="number" value="00325" />
-      <option name="presentableId" value="LOCAL-00325" />
-      <option name="project" value="LOCAL" />
-      <updated>1562412769069</updated>
-    </task>
-    <task id="LOCAL-00326" summary="Safety">
-      <created>1562499090854</created>
-      <option name="number" value="00326" />
-      <option name="presentableId" value="LOCAL-00326" />
-      <option name="project" value="LOCAL" />
-      <updated>1562499090854</updated>
-    </task>
-    <task id="LOCAL-00327" summary="Safety">
-      <created>1562499169855</created>
-      <option name="number" value="00327" />
-      <option name="presentableId" value="LOCAL-00327" />
-      <option name="project" value="LOCAL" />
-      <updated>1562499169855</updated>
     </task>
     <task id="LOCAL-00328" summary="Safety">
       <created>1562499260844</created>
@@ -696,7 +675,28 @@
       <option name="project" value="LOCAL" />
       <updated>1563783285294</updated>
     </task>
-    <option name="localTasksCounter" value="374" />
+    <task id="LOCAL-00374" summary="Filters added to current and voltage measurements">
+      <created>1563783738206</created>
+      <option name="number" value="00374" />
+      <option name="presentableId" value="LOCAL-00374" />
+      <option name="project" value="LOCAL" />
+      <updated>1563783738206</updated>
+    </task>
+    <task id="LOCAL-00375" summary="Filters added to current and voltage measurements">
+      <created>1563783889154</created>
+      <option name="number" value="00375" />
+      <option name="presentableId" value="LOCAL-00375" />
+      <option name="project" value="LOCAL" />
+      <updated>1563783889154</updated>
+    </task>
+    <task id="LOCAL-00376" summary="Filters added to current and voltage measurements">
+      <created>1563787368736</created>
+      <option name="number" value="00376" />
+      <option name="presentableId" value="LOCAL-00376" />
+      <option name="project" value="LOCAL" />
+      <updated>1563787368737</updated>
+    </task>
+    <option name="localTasksCounter" value="377" />
     <servers />
   </component>
   <component name="TodoView">
@@ -712,7 +712,7 @@
     <frame x="89" y="0" width="1417" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" weight="0.24954791" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -724,8 +724,8 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32985386" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32881" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.41530612" />
-      <window_info anchor="bottom" id="Python Console" order="9" sideWeight="0.4929841" weight="0.21189979" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5075337" side_tool="true" weight="0.2400835" />
+      <window_info anchor="bottom" id="Python Console" order="9" sideWeight="0.49212036" weight="0.21189979" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5078797" side_tool="true" weight="0.21189979" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -748,7 +748,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="!! Increased maximum temperature !!" />
     <MESSAGE value="Next" />
     <MESSAGE value="Matrix" />
     <MESSAGE value="max temp increased" />
@@ -773,7 +772,8 @@
     <MESSAGE value="Charge to 80%" />
     <MESSAGE value="Option to charge to 100%" />
     <MESSAGE value="Clean the mess" />
-    <option name="LAST_COMMIT_MESSAGE" value="Clean the mess" />
+    <MESSAGE value="Filters added to current and voltage measurements" />
+    <option name="LAST_COMMIT_MESSAGE" value="Filters added to current and voltage measurements" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/BTS/data/final_data/disch_BT-E-840_588-70_35_84_78_PCC.log">
@@ -1174,8 +1174,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PTSD/Charge_Battery.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="94" column="25" selection-start-line="94" selection-start-column="25" selection-end-line="94" selection-end-column="25" />
+        <state relative-caret-position="219">
+          <caret line="15" column="52" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>

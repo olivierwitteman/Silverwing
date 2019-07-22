@@ -15,27 +15,6 @@ SM3300 = {'max_voltage': 660., 'min_voltage': 0., 'max_current': 5., 'min_curren
 
 mode = input('Mode [charge, store, fully charge]: ')
 
-# class d:
-#     def __init__(self):
-#         pass
-#     def ask_voltage(self):
-#         return 394.
-#     def set_voltage(self, volt):
-#         print('Voltage set to {!s}'.format(volt))
-#     def set_state(self, state):
-#         print('State set to {!s}'.format(state))
-#     def set_current(self, cur):
-#         print('Current set to {!s}'.format(cur))
-#     def ask_current(self):
-#         return 2.5
-#     def close_connection(self):
-#         print('connection closed')
-#
-#     def ask_power(self):
-#         return 2.5*620
-#
-# delta = d()
-
 
 def sanity_check(batt_voltage):
     if BPE['series'] * VTC6['max_cell_volt'] > batt_voltage > 0.95 * BPE['series'] * VTC6['min_cell_volt']:

@@ -5,9 +5,10 @@ import glob
 import os
 
 path = './'
-filename = str(input('filename: '))
+
 
 list_of_files = glob.glob('./*.csv') # * means all if need specific format then *.csv
+filename = str(input('filename: '))
 # filename = max(list_of_files, key=os.path.getctime)
 print('\nlatest file: {!s}\n'.format(filename))
 
@@ -42,7 +43,7 @@ with open('{!s}{!s}'.format(path, filename), 'r') as data:
     samples = data.readlines()
     timestamp, rel_time, data_id, p_mech, dc_current, ac_current, ac_voltage, dc_voltage, set_speed, feedback_speed, \
     timestamp_feedback_speed, set_torque, feedback_torque, timestamp_feedback_torque, PCB_temperature, \
-    motor_temperature, ain1, ain5, ain3, ain4, ain6, inv_temp_A, inv_temp_B, inv_temp_C = [], [], [], [], [], [], [], [], \
+    motor_temperature, IGBT_A, IGBT_B, IGBT_C, ain4, ain6, inv_temp_A, inv_temp_B, inv_temp_C = [], [], [], [], [], [], [], [], \
                                                                                     [], [], [], [], [], [], [], [], \
                                                                                     [], [], [], [], [], [], [], []
 
@@ -86,11 +87,11 @@ for i in np.arange(1, len(samples), steps):
     # Motor temperature
     motor_temperature.append(float(samples[i].split(',')[18][:].strip()))
     # Analog input 1
-    ain1.append(float(samples[i].split(',')[19][:].strip()))
+    IGBT_A.append(float(samples[i].split(',')[19][:].strip()))
     # Analog input 5
-    ain5.append(float(samples[i].split(',')[20][:].strip()))
+    IGBT_B.append(float(samples[i].split(',')[20][:].strip()))
     # Analog input 3
-    ain3.append(float(samples[i].split(',')[21][:].strip()))
+    IGBT_C.append(float(samples[i].split(',')[21][:].strip()))
     # Analog input 4
     ain4.append(float(samples[i].split(',')[22][:].strip()))
     # Analog input 6
@@ -109,10 +110,10 @@ inv_temp_C_filt = filterfunc(inv_temp_C, type='linear')
 feedback_torque_filt = filterfunc(feedback_torque, type='linear')
 ac_current_filt = filterfunc(np.abs(ac_current), type='linear')
 ac_voltage_filt = filterfunc(ac_voltage, type='linear')
-ain1_temp = temperature_calibration(ain1)[0]
-ain3_temp = temperature_calibration(ain3)[0]
+# ain1_temp = temperature_calibration(IGBT_A)[0]
+# ain3_temp = temperature_calibration(IGBT_B)[0]
 ain4_temp = temperature_calibration(ain4)[0]
-ain5_temp = temperature_calibration(ain5)[0]
+# ain5_temp = temperature_calibration(IGBT_C)[0]
 ain6_temp = temperature_calibration(ain6)[0]
 
 feedback_speed_filt = filterfunc(feedback_speed, m=10)
@@ -164,7 +165,7 @@ ax1.plot(timestamp, np.abs(feedback_torque_filt), label='feedback torque (filter
 ax1.plot(timestamp, np.array(dc_current_filt)*np.array(dc_voltage_filt)/1000., label='Power (filtered) [kW]', c=colors[2])
 
 # ax2.set_ylabel('rotational velocity')
-# ax2.plot(timestamp, set_speed, label='set speed [rpm]', c=colors[3], linestyle=linestyles[1])
+ax2.plot(timestamp, set_speed, label='set speed [rpm]', c=colors[3], linestyle=linestyles[1])
 ax2.plot(timestamp, feedback_speed_filt, label='feedback speed [rpm]', c=colors[4], linestyle=linestyles[1])
 
 
@@ -173,16 +174,16 @@ ax2.plot(timestamp, feedback_speed_filt, label='feedback speed [rpm]', c=colors[
 # Battery, ax3, ax4
 # ax4.set_ylabel('dc voltage\ncurrent')
 ax4.plot(timestamp, dc_voltage, label='DC voltage [V]', c=colors[5], linestyle=linestyles[1])
-ax4.plot(timestamp, dc_current_filt, label='DC current (filtered) [I]', c=colors[7], linestyle=linestyles[1])
+ax3.plot(timestamp, dc_current_filt, label='DC current (filtered) [A]', c=colors[7], linestyle=linestyles[1])
 
-ax3.set_ylim([10., 80])
-ax3.plot([timestamp[0], timestamp[-1]], [60, 60], c='r', linestyle=linestyles[3], linewidth=2.)
+# ax3.set_ylim([10., 80])
+# ax3.plot([timestamp[0], timestamp[-1]], [60, 60], c='r', linestyle=linestyles[3], linewidth=2.)
 ax3.set_ylabel('Battery', fontweight='bold')
-ax3.plot(timestamp, ain4_temp, label='AIN 4 [deg C]', c=colors[0], linestyle=linestyles[0])
-ax3.plot(timestamp, ain6_temp, label='AIN 6 [deg C]', c=colors[1], linestyle=linestyles[0])
-ax3.plot(timestamp, ain1_temp, label='AIN 1 [deg C]', c=colors[2], linestyle=linestyles[0])
-ax3.plot(timestamp, ain5_temp, label='AIN 5 [deg C]', c=colors[3], linestyle=linestyles[0])
-ax3.plot(timestamp, ain3_temp, label='AIN 3 [deg C]', c=colors[4], linestyle=linestyles[0])
+# ax3.plot(timestamp, ain4_temp, label='AIN 4 [deg C]', c=colors[0], linestyle=linestyles[0])
+# ax3.plot(timestamp, ain6_temp, label='AIN 6 [deg C]', c=colors[1], linestyle=linestyles[0])
+ax3.plot(timestamp, IGBT_A, label='IGBT A [deg C]', c=colors[2], linestyle=linestyles[0])
+ax3.plot(timestamp, IGBT_B, label='IGBT B [deg C]', c=colors[3], linestyle=linestyles[0])
+ax3.plot(timestamp, IGBT_C, label='IGBT C [deg C]', c=colors[4], linestyle=linestyles[0])
 
 
 
@@ -191,9 +192,9 @@ ax5.set_ylim([20., 150.])
 ax5.plot([timestamp[0], timestamp[-1]], [120, 120], c='r', linestyle=linestyles[3], linewidth=2.)
 ax5.set_ylabel('Inverter', fontweight='bold')
 ax5.plot(timestamp, PCB_temperature_filt, label='Inv. PCB temp. (filtered) [deg C]', c=colors[0], linestyle=linestyles[0])
-ax5.plot(timestamp, inv_temp_A_filt, label='Inv. temp. A (filtered) [deg C]', c=colors[1], linestyle=linestyles[0])
-ax5.plot(timestamp, inv_temp_B_filt, label='Inv. temp. B (filtered) [deg C]', c=colors[2], linestyle=linestyles[0])
-ax5.plot(timestamp, inv_temp_C_filt, label='Inv. temp. C (filtered) [deg C]', c=colors[3], linestyle=linestyles[0])
+ax5.plot(timestamp, inv_temp_A, label='Inv. temp. A (filtered) [deg C]', c=colors[1], linestyle=linestyles[0])
+ax5.plot(timestamp, inv_temp_B, label='Inv. temp. B (filtered) [deg C]', c=colors[2], linestyle=linestyles[0])
+ax5.plot(timestamp, inv_temp_C, label='Inv. temp. C (filtered) [deg C]', c=colors[3], linestyle=linestyles[0])
 
 
 
@@ -201,7 +202,7 @@ ax5.plot(timestamp, inv_temp_C_filt, label='Inv. temp. C (filtered) [deg C]', c=
 ax7.set_ylim([20, 150.])
 ax7.plot([timestamp[0], timestamp[-1]], [120, 120], c='r', linestyle=linestyles[3], linewidth=2.)
 ax7.set_ylabel('Motor', fontweight='bold')
-ax7.plot(timestamp, motor_temperature_filt, label='Motor temp. (filtered) [deg C]', c=colors[0], linestyle=linestyles[0])
+ax7.plot(timestamp, motor_temperature, label='Motor temp. (filtered) [deg C]', c=colors[0], linestyle=linestyles[0])
 
 # ax8.set_ylabel('ac voltage, current')
 ax8.plot(timestamp, ac_voltage_filt, label='AC voltage [V]', c=colors[1], linestyle=linestyles[1])
@@ -224,5 +225,5 @@ ax8.legend(loc='upper right', fontsize=7., bbox_to_anchor=(1., 1.18))
 # ax9.legend(loc='upper left', fontsize=7., bbox_to_anchor=(0., 1.18))
 # ax10.legend(loc='upper right', fontsize=7., bbox_to_anchor=(1., 1.18))
 
-plt.savefig('./{!s}.png'.format(filename[:-4]), dpi=255, format='png')
+plt.savefig('./PNG/{!s}.png'.format(filename[:-4]), dpi=255, format='png')
 plt.show()

@@ -5,7 +5,8 @@ import time
 class DeltaComm:
 
     def __init__(self):
-        self.IP = "192.168.2.17"  # Assigned IP to Delta SM3300
+        # self.IP = "192.168.2.17"  # Assigned IP to Delta SM3300
+        self.IP = "192.168.1.3"
         self.PORT = 8462  # Fixed port on Delta SM3300
         try:
             self.open_connection()
@@ -64,6 +65,9 @@ class DeltaComm:
 
     def set_voltage(self, voltage):
         self.send(str.encode("SOURce:VOLtage " + str(voltage) + "\n"))
+
+    def set_power(self, power):
+        self.send(str.encode("SOURce:POWer " + str(power) + "\n"))
 
     def last_voltage(self):
         self.send(b"SOURce:VOLtage?\n")

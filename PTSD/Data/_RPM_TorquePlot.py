@@ -16,7 +16,7 @@ print(files)
 # filename = files[index]
 # print('\nlatest file: {!s}\n'.format(filename))
 
-steps = 10
+steps = 1
 
 
 def filterfunc(data, type='outlier', m=2, n=30):
@@ -41,6 +41,7 @@ def temperature_calibration(v0):
     T = 1./(a + b * np.log(r) + c * (np.log(r))**3) - 273.15
 
     return T, r
+
 
 for i in range(len(files)):
     filename = files[i]
@@ -163,7 +164,7 @@ for i in range(len(files)):
     ax1.set_ylabel('General', fontweight='bold')
     ax1.plot(timestamp, set_torque, label='set torque [Nm]', c=colors[0])
     # ax1.plot(timestamp, np.abs(feedback_torque), label='feedback torque [Nm]', c=colors[9])
-    ax1.plot(timestamp, np.abs(feedback_torque_filt), label='feedback torque (filtered) [Nm]', c=colors[1])
+    ax1.plot(timestamp, np.abs(feedback_torque), label='feedback torque [Nm]', c=colors[1])
     ax1.plot(timestamp, np.array(dc_current_filt)*np.array(dc_voltage_filt)/1000., label='Power (filtered) [kW]', c=colors[2])
 
     # ax2.set_ylabel('rotational velocity')

@@ -1,8 +1,8 @@
 from __future__ import print_function
 import time
 import sys
-# import delta_sm3300 as d
-import Delta_comm as d
+import delta_sm3300 as d
+# import Delta_comm as d
 
 delta = d.DeltaComm()
 

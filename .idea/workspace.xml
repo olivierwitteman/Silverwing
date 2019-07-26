@@ -6,11 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="Unfiltered">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Delta/Delta_comm.py" beforeDir="false" afterPath="$PROJECT_DIR$/Delta/Delta_comm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Delta/Delta_control.py" beforeDir="false" afterPath="$PROJECT_DIR$/Delta/Delta_control.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Delta/Manual_control.py" beforeDir="false" afterPath="$PROJECT_DIR$/Delta/Manual_control.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Delta/Monitor.py" beforeDir="false" afterPath="$PROJECT_DIR$/Delta/Monitor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PTSD/Data/_StaticPlot.py" beforeDir="false" afterPath="$PROJECT_DIR$/PTSD/Data/_StaticPlot.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Delta/Delta_comm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
+            <state relative-caret-position="240">
+              <caret line="16" column="38" lean-forward="true" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -35,8 +32,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Delta/Manual_control.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="26" column="32" lean-forward="true" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
+            <state relative-caret-position="75">
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -44,11 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Delta/Monitor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="22" lean-forward="true" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+            <state relative-caret-position="60">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -152,10 +149,10 @@
         <option value="$PROJECT_DIR$/PTSD/Charge_Battery.py" />
         <option value="$PROJECT_DIR$/PTSD/Data/_RPM_TorquePlot.py" />
         <option value="$PROJECT_DIR$/PTSD/Data/_StaticPlot.py" />
-        <option value="$PROJECT_DIR$/Delta/Monitor.py" />
         <option value="$PROJECT_DIR$/Delta/Delta_control.py" />
-        <option value="$PROJECT_DIR$/Delta/Manual_control.py" />
         <option value="$PROJECT_DIR$/Delta/Delta_comm.py" />
+        <option value="$PROJECT_DIR$/Delta/Manual_control.py" />
+        <option value="$PROJECT_DIR$/Delta/Monitor.py" />
       </list>
     </option>
   </component>
@@ -182,17 +179,6 @@
               <item name="Silverwing" type="b2602c69:ProjectViewProjectNode" />
               <item name="Silverwing" type="462c0819:PsiDirectoryNode" />
               <item name="Delta" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Silverwing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Silverwing" type="462c0819:PsiDirectoryNode" />
-              <item name="PTSD" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Silverwing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Silverwing" type="462c0819:PsiDirectoryNode" />
-              <item name="PTSD" type="462c0819:PsiDirectoryNode" />
-              <item name="Data" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -370,27 +356,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532440488607</updated>
-    </task>
-    <task id="LOCAL-00331" summary="Safety">
-      <created>1562499876570</created>
-      <option name="number" value="00331" />
-      <option name="presentableId" value="LOCAL-00331" />
-      <option name="project" value="LOCAL" />
-      <updated>1562499876570</updated>
-    </task>
-    <task id="LOCAL-00332" summary="Safety">
-      <created>1562500381352</created>
-      <option name="number" value="00332" />
-      <option name="presentableId" value="LOCAL-00332" />
-      <option name="project" value="LOCAL" />
-      <updated>1562500381352</updated>
-    </task>
-    <task id="LOCAL-00333" summary="Safety">
-      <created>1562504872983</created>
-      <option name="number" value="00333" />
-      <option name="presentableId" value="LOCAL-00333" />
-      <option name="project" value="LOCAL" />
-      <updated>1562504872983</updated>
     </task>
     <task id="LOCAL-00334" summary="Safety">
       <created>1562505016860</created>
@@ -714,7 +679,28 @@
       <option name="project" value="LOCAL" />
       <updated>1564057327543</updated>
     </task>
-    <option name="localTasksCounter" value="380" />
+    <task id="LOCAL-00380" summary="Unfiltered">
+      <created>1564165838892</created>
+      <option name="number" value="00380" />
+      <option name="presentableId" value="LOCAL-00380" />
+      <option name="project" value="LOCAL" />
+      <updated>1564165838894</updated>
+    </task>
+    <task id="LOCAL-00381" summary="Unfiltered">
+      <created>1564166057929</created>
+      <option name="number" value="00381" />
+      <option name="presentableId" value="LOCAL-00381" />
+      <option name="project" value="LOCAL" />
+      <updated>1564166057929</updated>
+    </task>
+    <task id="LOCAL-00382" summary="Unfiltered">
+      <created>1564167016190</created>
+      <option name="number" value="00382" />
+      <option name="presentableId" value="LOCAL-00382" />
+      <option name="project" value="LOCAL" />
+      <updated>1564167016190</updated>
+    </task>
+    <option name="localTasksCounter" value="383" />
     <servers />
   </component>
   <component name="TodoView">
@@ -728,14 +714,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="252" y="0" width="1417" height="1050" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" weight="0.24954791" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32463464" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4924663" weight="0.36638832" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4924663" visible="true" weight="0.36638832" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1167,32 +1152,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Delta/Monitor.py">
+    <entry file="file://$PROJECT_DIR$/Delta/Delta_comm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="22" lean-forward="true" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+        <state relative-caret-position="240">
+          <caret line="16" column="38" lean-forward="true" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
           <folding>
-            <element signature="e#0#37#0" expanded="true" />
+            <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Delta/Manual_control.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="26" column="32" lean-forward="true" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
+        <state relative-caret-position="75">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Delta/Delta_comm.py">
+    <entry file="file://$PROJECT_DIR$/Delta/Monitor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
+        <state relative-caret-position="60">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#0#37#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -8,11 +8,11 @@ path = './'
 
 
 list_of_files = glob.glob('./*.csv') # * means all if need specific format then *.csv
-filename = str(input('filename: '))
-# filename = max(list_of_files, key=os.path.getctime)
+# filename = str(input('filename: '))
+filename = max(list_of_files, key=os.path.getctime)
 print('\nlatest file: {!s}\n'.format(filename))
 
-steps = 10
+steps = 1
 
 
 def filterfunc(data, type='outlier', m=2, n=30):

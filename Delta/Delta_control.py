@@ -4,7 +4,7 @@ import Delta_comm as d
 
 delta = d.DeltaComm()
 
-name = 'esc_left'
+# name = 'esc_left'
 
 
 def clear_log(filename):
@@ -46,15 +46,15 @@ try:
 
 finally:
     delta.set_state(0)
-    mst = min(len(vlst), len(ilst))
-    vlst = vlst[:mst]
-    ilst = ilst[:mst]
-    tlst = tlst[:mst]
+    # mst = min(len(vlst), len(ilst))
+    # vlst = vlst[:mst]
+    # ilst = ilst[:mst]
+    # tlst = tlst[:mst]
 
-    print('Saving sample data')
-    clear_log(name)
-    for i in range(len(tlst)):
-        log(name, tlst[i], vlst[i], ilst[i])
+    # print('Saving sample data')
+    # clear_log(name)
+    # for i in range(len(tlst)):
+    #     log(name, tlst[i], vlst[i], ilst[i])
 
     delta.close_connection()
     print('Connection closed')

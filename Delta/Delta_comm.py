@@ -5,19 +5,20 @@ import time
 class DeltaComm:
 
     def __init__(self):
-        self.IP = "192.168.2.17"  # Assigned IP to Delta SM3300
-        # self.IP = "192.168.2.71"
         self.PORT = 8462  # Fixed port on Delta SM3300
         try:
+            self.IP = "192.168.2.17"  # Assigned IP to Delta SM3300
+            # self.IP = "192.168.1.3"
             self.open_connection()
         except socket.error:
+            # self.IP = "192.168.2.86"
             try:
-                # self.IP = "192.168.2.86"
                 self.IP = "192.168.2.96"
+                self.open_connection()
             except socket.error:
                 self.IP = "192.168.2.71"
                 self.open_connection()
-            self.open_connection()
+
         # self.set_method()
 
     def open_connection(self):

@@ -5,8 +5,8 @@ delta = d.DeltaComm()
 print('\n\n!!! Ctr+C anytime to switch off power !!!\n\n')
 
 # V_set = 120.
-V_set = float(input('Voltage [V] (0-650): '))
-I_max = float(input('Current [A] (0-11): '))
+V_set = float(input('Voltage [V] (0-672): '))
+I_max = float(input('Current [A] (0-300): '))
 
 if V_set > 60.:
     print('\n\nYou have entered a high voltage, make sure you follow the guidelines for safety!\n\n')

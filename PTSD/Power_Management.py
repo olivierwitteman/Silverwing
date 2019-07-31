@@ -31,7 +31,7 @@ def precharge():
 
     t0_pre, t = time.time(), time.time()
 
-    while t - t0_pre < 3.:
+    while t - t0_pre < 5.:
         print('\rPrecharge Voltage: {!s}, precharge current: {!s}, precharge power: {!s}'.format(round(delta.ask_voltage(), 2),
                                                                           round(delta.ask_current(), 2),
                                                                           round(delta.ask_power(), 2)), end='')
@@ -39,7 +39,7 @@ def precharge():
         time.sleep(0.1)
         t = time.time()
 
-    if abs(delta.ask_voltage() - V_set) < 40.:
+    if abs(delta.ask_voltage() - V_set) < 60.:
         precharged = True
         delta.set_current(I_max)
         print('\r', end='')

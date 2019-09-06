@@ -208,14 +208,7 @@
       <workItem from="1567426831562" duration="48000" />
       <workItem from="1567595216083" duration="281000" />
       <workItem from="1567685423199" duration="234000" />
-      <workItem from="1567757962542" duration="7440000" />
-    </task>
-    <task id="LOCAL-00338" summary="Safety">
-      <created>1562509449326</created>
-      <option name="number" value="00338" />
-      <option name="presentableId" value="LOCAL-00338" />
-      <option name="project" value="LOCAL" />
-      <updated>1562509449326</updated>
+      <workItem from="1567757962542" duration="7703000" />
     </task>
     <task id="LOCAL-00339" summary="Safety">
       <created>1562510647771</created>
@@ -553,7 +546,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567790368264</updated>
     </task>
-    <option name="localTasksCounter" value="387" />
+    <task id="LOCAL-00387" summary="Implemented temperature target between discharge bursts">
+      <created>1567790629220</created>
+      <option name="number" value="00387" />
+      <option name="presentableId" value="LOCAL-00387" />
+      <option name="project" value="LOCAL" />
+      <updated>1567790629220</updated>
+    </task>
+    <option name="localTasksCounter" value="388" />
     <servers />
   </component>
   <component name="TodoView">

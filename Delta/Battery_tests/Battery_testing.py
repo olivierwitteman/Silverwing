@@ -26,7 +26,7 @@ gp.setup(pin, gp.OUT)
 if not safe_operation:
     print('\n\nWARNING, lowered cutoff voltage to allow for higher discharge rate. Do not leave this process ' \
           'unattended.\n\nBattery degradation will be accelerated in this mode.')
-maxvolt, series, parallel, crate_char = 4.2, 1, 1, 1.
+maxvolt, series, parallel, crate_char = 4.2, 1, 1, 0.7
 print('Maximum cell voltage: {!s}V\nMinimum cell voltage: {!s}V\nCells in series: {!s}\nCells in parallel: {!s}\n' \
       'Discharge rate: {!s}C\nCharge rate: {!s}C'.format(maxvolt, minvolt, series, parallel, crate_dischar, crate_char))
 
@@ -72,7 +72,7 @@ def charge():
 
             log(time.time(), c_voltage, c_current, c_temp)
             time.sleep(10.)
-            if c_current < t_current/15. and time.time() - t0 > 22:
+            if c_current < t_current/5. and time.time() - t0 > 22:
                 print('Charging complete')
                 break
             elif 0. > c_temp > 60.:

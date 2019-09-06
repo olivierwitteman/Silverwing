@@ -72,7 +72,7 @@ def charge():
 
             log(time.time(), c_voltage, c_current, c_temp)
             time.sleep(10.)
-            if c_current < t_current/5. and time.time() - t0 > 22:
+            if c_current < t_current/15. and time.time() - t0 > 22:
                 print('Charging complete')
                 break
             elif 0. > c_temp > 60.:

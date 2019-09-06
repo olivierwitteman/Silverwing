@@ -14,6 +14,7 @@ capacity = 2.8
 crate_dischar = [(10., 60), (10., 60), (10., 60), (10., 60), (10., 60), (10., 60), (10., 60),]
 # (C, duration [s]) duration=0 for full discharge
 name = str(input('Cell name: '))
+print(name)
 minvolt = 2.5  # OCV
 R_sys = 0.03
 

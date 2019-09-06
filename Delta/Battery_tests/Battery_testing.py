@@ -9,9 +9,9 @@ pat = subprocess.Popen(['python', '/home/pi/Silverwing/General/Temp_sens.py'])  
 delta = d.DeltaComm()
 
 safe_operation = False
-capacity = 3.0
+capacity = 2.8
 # crate_dischar = [(6., 80), (1.71, 1080), (6., 40), (1.71, 0)]
-crate_dischar = [(6., 0)]
+crate_dischar = [(10., 60), (10., 60), (10., 60), (10., 60), (10., 60), (10., 60), (10., 60),]
 # (C, duration [s]) duration=0 for full discharge
 name = 'VTC6_vacuum_insulated_PCC_hard_discharge'
 minvolt = 2.5  # OCV
@@ -86,8 +86,14 @@ def charge():
 
 
 def discharge(c_rate, duration=0, status='empty'):
+    # Temperature timeout
+    while temp_read() > 25:
+        time.sleep(60.)
+
     Kp, Ki, Kd, c_current_error, c_temp, dt = 0.025/capacity, 0*5/capacity, 0.004/capacity, 0, 0., 0.1
+    c_power_error = 0
     t_current = -c_rate * capacity * parallel
+    t_power = t_current * series * 3.7
 
     if safe_operation:
         minv = minvolt
@@ -118,8 +124,16 @@ def discharge(c_rate, duration=0, status='empty'):
                 c_current_error = t_current - delta.ask_current()
                 dc_current_error = c_current_error - p_current_error
 
-                set_voltage = min(maxvolt*series, max(minv * series, set_voltage + c_current_error * Kp +
-                                                      dc_current_error * Kd/dt))
+                p_power_error = c_power_error
+                c_power_error = t_power - delta.ask_power()
+                dc_power_error = c_power_error - p_power_error
+
+                set_voltage = min(maxvolt * series, max(minv * series, set_voltage + (c_power_error * Kp / 3.7) +
+                                                        (dc_power_error * Kd / 3.7) / dt))
+
+                # set_voltage = min(maxvolt*series, max(minv * series, set_voltage + c_current_error * Kp +
+                #                                       dc_current_error * Kd/dt))
+
                 delta.set_voltage(set_voltage)
 
                 c_voltage = delta.ask_voltage()

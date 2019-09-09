@@ -18,6 +18,7 @@ print(name)
 minvolt = 2.5  # OCV
 # R_sys = 0.03
 target_temp = 30.
+max_cell_temp = 80.
 
 pin = 4
 gp.setmode(gp.BCM)
@@ -150,7 +151,7 @@ def discharge(c_rate, duration=0, status='empty'):
                     status = 'discharged'
                     break
 
-                if c_temp > 100.:
+                if c_temp > max_cell_temp:
                     print('Temperature threshold exceeded at {!s}'.format(c_temp))
                     status = 'temp'
                     break

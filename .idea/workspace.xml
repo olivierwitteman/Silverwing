@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="Updated internal resistances system, wiring and estimator for batteries">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Delta/Battery_tests/Analyze.py" beforeDir="false" afterPath="$PROJECT_DIR$/Delta/Battery_tests/Analyze.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Delta/Battery_tests/Battery_testing.py" beforeDir="false" afterPath="$PROJECT_DIR$/Delta/Battery_tests/Battery_testing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Delta/Battery_tests/Data/ass.log" beforeDir="false" afterPath="$PROJECT_DIR$/Delta/Battery_tests/Data/ass.log" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -213,14 +210,7 @@
       <workItem from="1567685423199" duration="234000" />
       <workItem from="1567757962542" duration="10598000" />
       <workItem from="1567861119604" duration="657000" />
-      <workItem from="1568030366658" duration="246000" />
-    </task>
-    <task id="LOCAL-00342" summary="Safety">
-      <created>1562513518447</created>
-      <option name="number" value="00342" />
-      <option name="presentableId" value="LOCAL-00342" />
-      <option name="project" value="LOCAL" />
-      <updated>1562513518447</updated>
+      <workItem from="1568030366658" duration="550000" />
     </task>
     <task id="LOCAL-00343" summary="Safety">
       <created>1562600650043</created>
@@ -558,7 +548,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568030610316</updated>
     </task>
-    <option name="localTasksCounter" value="391" />
+    <task id="LOCAL-00391" summary="Updated internal resistances system, wiring and estimator for batteries">
+      <created>1568030838017</created>
+      <option name="number" value="00391" />
+      <option name="presentableId" value="LOCAL-00391" />
+      <option name="project" value="LOCAL" />
+      <updated>1568030838017</updated>
+    </task>
+    <option name="localTasksCounter" value="392" />
     <servers />
   </component>
   <component name="TodoView">

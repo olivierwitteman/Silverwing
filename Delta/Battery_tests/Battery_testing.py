@@ -17,6 +17,7 @@ name = str(input('Cell name: '))
 print(name)
 minvolt = 2.5  # OCV
 # R_sys = 0.03
+target_temp = 30.
 
 pin = 4
 gp.setmode(gp.BCM)
@@ -89,7 +90,7 @@ def charge():
 
 def discharge(c_rate, duration=0, status='empty'):
     # Temperature timeout
-    while temp_read() > 25:
+    while temp_read() > target_temp:
         time.sleep(60.)
 
     Kp, Ki, Kd, c_current_error, c_temp, dt = 0.025/capacity, 0*5./capacity, 0.004/capacity, 0, 0., 0.1

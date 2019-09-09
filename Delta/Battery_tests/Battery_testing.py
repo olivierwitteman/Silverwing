@@ -9,14 +9,14 @@ pat = subprocess.Popen(['python', '/home/pi/Silverwing/General/Temp_sens.py'])  
 delta = d.DeltaComm()
 
 safe_operation = False
-capacity = 2.8
+capacity = float(input('Capacity [Ah]: '))
 # crate_dischar = [(6., 80), (1.71, 1080), (6., 40), (1.71, 0)]
-crate_dischar = [(10., 60), (10., 60), (10., 60), (10., 60), (10., 60), (10., 60), (10., 60),]
+crate_dischar = [(10., 40), (10., 40), (10., 40), (10., 40), (10., 40), (10., 40), (10., 40)]
 # (C, duration [s]) duration=0 for full discharge
 name = str(input('Cell name: '))
 print(name)
 minvolt = 2.5  # OCV
-R_sys = 0.03
+# R_sys = 0.03
 
 pin = 4
 gp.setmode(gp.BCM)
@@ -27,6 +27,7 @@ if not safe_operation:
     print('\n\nWARNING, lowered cutoff voltage to allow for higher discharge rate. Do not leave this process ' \
           'unattended.\n\nBattery degradation will be accelerated in this mode.')
 maxvolt, series, parallel, crate_char = 4.2, 1, 1, 0.7
+R_sys = 0.33/40. + 0.0128 * series/parallel
 print('Maximum cell voltage: {!s}V\nMinimum cell voltage: {!s}V\nCells in series: {!s}\nCells in parallel: {!s}\n' \
       'Discharge rate: {!s}C\nCharge rate: {!s}C'.format(maxvolt, minvolt, series, parallel, crate_dischar, crate_char))
 
@@ -91,7 +92,7 @@ def discharge(c_rate, duration=0, status='empty'):
     while temp_read() > 25:
         time.sleep(60.)
 
-    Kp, Ki, Kd, c_current_error, c_temp, dt = 0.025/capacity, 0*5/capacity, 0.004/capacity, 0, 0., 0.1
+    Kp, Ki, Kd, c_current_error, c_temp, dt = 0.025/capacity, 0*5./capacity, 0.004/capacity, 0, 0., 0.1
     c_power_error = 0
     t_current = -c_rate * capacity * parallel
     t_power = t_current * series * 3.7

@@ -154,7 +154,7 @@ def discharge(c_rate, duration=0, status='empty'):
                 c_current = delta.ask_current()
                 log(time.time(), c_voltage, c_current, temperature=c_temp)
 
-                if iterate % 100 == 0:
+                if iterate % 50 == 0:
                     print('\rVoltage: {!s}V, Current: {!s}A, Power: {!s}W, Temperature: {!s} C'.
                           format(c_voltage, c_current, c_voltage*c_current, c_temp), end='')
 

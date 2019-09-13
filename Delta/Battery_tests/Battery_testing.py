@@ -102,6 +102,7 @@ def discharge(c_rate, duration=0, status='empty'):
     iterate = 0
     # Temperature timeout
     while temp_read() > target_temp:
+        print('Cooling off. Current temperature: {!s}C'.format(temp_read()))
         time.sleep(60.)
 
     Kp, Ki, Kd, c_current_error, c_temp, dt = 0.025*0.5/capacity, 0*5./capacity, 0.004*0.5/capacity, 0, 0., 0.1

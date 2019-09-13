@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="Bongiorno">
-      <change beforePath="$PROJECT_DIR$/Delta/Battery_tests/Battery_testing.py" beforeDir="false" afterPath="$PROJECT_DIR$/Delta/Battery_tests/Battery_testing.py" afterDir="false" />
-    </list>
+    <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="Bongiorno" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -217,28 +215,7 @@
       <workItem from="1568290526534" duration="1114000" />
       <workItem from="1568293290310" duration="592000" />
       <workItem from="1568309076434" duration="597000" />
-      <workItem from="1568380504757" duration="6886000" />
-    </task>
-    <task id="LOCAL-00353" summary="Changed linetype and color">
-      <created>1562681458937</created>
-      <option name="number" value="00353" />
-      <option name="presentableId" value="LOCAL-00353" />
-      <option name="project" value="LOCAL" />
-      <updated>1562681458938</updated>
-    </task>
-    <task id="LOCAL-00354" summary="Added current input">
-      <created>1562763938025</created>
-      <option name="number" value="00354" />
-      <option name="presentableId" value="LOCAL-00354" />
-      <option name="project" value="LOCAL" />
-      <updated>1562763938025</updated>
-    </task>
-    <task id="LOCAL-00355" summary="Watchdog test">
-      <created>1562764678864</created>
-      <option name="number" value="00355" />
-      <option name="presentableId" value="LOCAL-00355" />
-      <option name="project" value="LOCAL" />
-      <updated>1562764678864</updated>
+      <workItem from="1568380504757" duration="7127000" />
     </task>
     <task id="LOCAL-00356" summary="Watchdog test">
       <created>1562764797485</created>
@@ -562,7 +539,28 @@
       <option name="project" value="LOCAL" />
       <updated>1568400643421</updated>
     </task>
-    <option name="localTasksCounter" value="402" />
+    <task id="LOCAL-00402" summary="Bongiorno">
+      <created>1568400862141</created>
+      <option name="number" value="00402" />
+      <option name="presentableId" value="LOCAL-00402" />
+      <option name="project" value="LOCAL" />
+      <updated>1568400862142</updated>
+    </task>
+    <task id="LOCAL-00403" summary="Bongiorno">
+      <created>1568400979055</created>
+      <option name="number" value="00403" />
+      <option name="presentableId" value="LOCAL-00403" />
+      <option name="project" value="LOCAL" />
+      <updated>1568400979056</updated>
+    </task>
+    <task id="LOCAL-00404" summary="Bongiorno">
+      <created>1568401089427</created>
+      <option name="number" value="00404" />
+      <option name="presentableId" value="LOCAL-00404" />
+      <option name="project" value="LOCAL" />
+      <updated>1568401089427</updated>
+    </task>
+    <option name="localTasksCounter" value="405" />
     <servers />
   </component>
   <component name="TodoView">

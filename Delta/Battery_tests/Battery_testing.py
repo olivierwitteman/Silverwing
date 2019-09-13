@@ -202,7 +202,7 @@ def cycle():
 
 try:
     gp.output(pin, 1)
-    charge()
+    # charge()
     print('Sequence will start in 10s')
     time.sleep(10)
     cycle()

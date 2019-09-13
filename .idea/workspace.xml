@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="Bongiorno">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Delta/Battery_tests/Analyze.py" beforeDir="false" afterPath="$PROJECT_DIR$/Delta/Battery_tests/Analyze.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Delta/Battery_tests/Battery_testing.py" beforeDir="false" afterPath="$PROJECT_DIR$/Delta/Battery_tests/Battery_testing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Delta/Battery_tests/Data/VTC5A_t40_T30.0_P60.0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Delta/Battery_tests/Data/VTC5A_t40_T30.0_P60.0.log" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -220,14 +217,7 @@
       <workItem from="1568290526534" duration="1114000" />
       <workItem from="1568293290310" duration="592000" />
       <workItem from="1568309076434" duration="597000" />
-      <workItem from="1568380504757" duration="5089000" />
-    </task>
-    <task id="LOCAL-00348" summary="Changed analog inputs inverter">
-      <created>1562678136330</created>
-      <option name="number" value="00348" />
-      <option name="presentableId" value="LOCAL-00348" />
-      <option name="project" value="LOCAL" />
-      <updated>1562678136330</updated>
+      <workItem from="1568380504757" duration="5336000" />
     </task>
     <task id="LOCAL-00349" summary="Changed analog inputs inverter">
       <created>1562678663963</created>
@@ -565,7 +555,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568389441999</updated>
     </task>
-    <option name="localTasksCounter" value="397" />
+    <task id="LOCAL-00397" summary="Bongiorno">
+      <created>1568398961574</created>
+      <option name="number" value="00397" />
+      <option name="presentableId" value="LOCAL-00397" />
+      <option name="project" value="LOCAL" />
+      <updated>1568398961574</updated>
+    </task>
+    <option name="localTasksCounter" value="398" />
     <servers />
   </component>
   <component name="TodoView">

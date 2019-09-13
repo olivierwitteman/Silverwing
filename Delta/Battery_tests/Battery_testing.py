@@ -17,7 +17,7 @@ discharge_time = int(input('Discharge time [s]: '))
 
 crate_dischar = 10 * [(power_per_cell_target/(capacity * 3.7), discharge_time)]
 # (C, duration [s]) duration=0 for full discharge
-name = '{!s}_{!s}_{!s}_{!s}'.format(input('Cell name: '), discharge_time, target_temp, power_per_cell_target)
+name = '{!s}_t{!s}_T{!s}_P{!s}'.format(input('Cell name: '), discharge_time, target_temp, power_per_cell_target)
 print(name)
 minvolt = 2.5  # OCV
 # R_sys = 0.03

@@ -42,6 +42,7 @@ print('Please review below parameters carefully within 60 seconds.\n\nMaximum ce
 
 time.sleep(60.)
 
+
 def log(timestamp, voltage, current, temperature=0.0, remark=''):
     with open('/home/pi/Silverwing/Delta/Battery_tests/Data/{!s}.log'.format(name), 'a') as d:
         d.write('t{!s} U{!s} I{!s} T{!s}, {!s}\n'.format(timestamp, voltage, current, temperature, remark))
@@ -98,6 +99,7 @@ def charge():
 
 
 def discharge(c_rate, duration=0, status='empty'):
+    iterate = 0
     # Temperature timeout
     while temp_read() > target_temp:
         time.sleep(60.)
@@ -151,9 +153,12 @@ def discharge(c_rate, duration=0, status='empty'):
                 c_voltage = delta.ask_voltage()
                 c_current = delta.ask_current()
                 log(time.time(), c_voltage, c_current, temperature=c_temp)
-                print('\rVoltage: {!s}V, Current: {!s}A, Power: {!s}W, Temperature: {!s} C'.
-                      format(c_voltage, c_current, c_voltage*c_current, c_temp), end='')
 
+                if iterate % 50 == 0:
+                    print('\rVoltage: {!s}V, Current: {!s}A, Power: {!s}W, Temperature: {!s} C'.
+                          format(c_voltage, c_current, c_voltage*c_current, c_temp), end='')
+
+                iterate += 1
                 time.sleep(dt)
 
                 if abs((c_voltage/series - minv)) < 0.1 and c_current > t_current/2.:

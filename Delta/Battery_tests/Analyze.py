@@ -11,7 +11,7 @@ modes = ['reg', 'fp', 'cycle']
 # R_battery = 0.013/4.
 # R_battery = 0.0016
 R_battery = 0
-filename = 'ass'
+filename = 'VTC5A_t40_T30.0_P60.0'
 with open('./Data/{!s}.log'.format(filename), 'r') as data:
     samples = data.readlines()
 

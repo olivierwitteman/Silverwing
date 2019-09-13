@@ -104,7 +104,7 @@ def discharge(c_rate, duration=0, status='empty'):
     while temp_read() > target_temp:
         time.sleep(60.)
 
-    Kp, Ki, Kd, c_current_error, c_temp, dt = 0.025*0.65/capacity, 0*5./capacity, 0.004*0.65/capacity, 0, 0., 0.1
+    Kp, Ki, Kd, c_current_error, c_temp, dt = 0.025*0.5/capacity, 0*5./capacity, 0.004*0.5/capacity, 0, 0., 0.1
     c_power_error = 0
     t_current = -c_rate * capacity * parallel
     t_power = t_current * series * 3.7
@@ -154,7 +154,7 @@ def discharge(c_rate, duration=0, status='empty'):
                 c_current = delta.ask_current()
                 log(time.time(), c_voltage, c_current, temperature=c_temp)
 
-                if iterate % 50 == 0:
+                if iterate % 100 == 0:
                     print('\rVoltage: {!s}V, Current: {!s}A, Power: {!s}W, Temperature: {!s} C'.
                           format(c_voltage, c_current, c_voltage*c_current, c_temp), end='')
 

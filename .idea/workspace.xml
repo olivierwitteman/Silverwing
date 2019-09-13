@@ -217,14 +217,7 @@
       <workItem from="1568290526534" duration="1114000" />
       <workItem from="1568293290310" duration="592000" />
       <workItem from="1568309076434" duration="597000" />
-      <workItem from="1568380504757" duration="2483000" />
-    </task>
-    <task id="LOCAL-00345" summary="Changed analog inputs inverter">
-      <created>1562675654421</created>
-      <option name="number" value="00345" />
-      <option name="presentableId" value="LOCAL-00345" />
-      <option name="project" value="LOCAL" />
-      <updated>1562675654421</updated>
+      <workItem from="1568380504757" duration="2642000" />
     </task>
     <task id="LOCAL-00346" summary="Changed analog inputs inverter">
       <created>1562676160484</created>
@@ -562,7 +555,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568388456354</updated>
     </task>
-    <option name="localTasksCounter" value="394" />
+    <task id="LOCAL-00394" summary="Bongiorno">
+      <created>1568388863962</created>
+      <option name="number" value="00394" />
+      <option name="presentableId" value="LOCAL-00394" />
+      <option name="project" value="LOCAL" />
+      <updated>1568388863962</updated>
+    </task>
+    <option name="localTasksCounter" value="395" />
     <servers />
   </component>
   <component name="TodoView">

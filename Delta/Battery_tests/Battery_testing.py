@@ -12,12 +12,12 @@ safe_operation = False
 capacity = float(input('Capacity [Ah]: '))
 # crate_dischar = [(6., 80), (1.71, 1080), (6., 40), (1.71, 0)]
 power_per_cell_target = float(input('Power per cell target [W]: '))
-target_temp = float(input('Target cell temperature [W]: '))
+target_temp = float(input('Target cell temperature [C]: '))
 discharge_time = int(input('Discharge time [s]: '))
 
 crate_dischar = 10 * [(power_per_cell_target/(capacity * 3.7), discharge_time)]
 # (C, duration [s]) duration=0 for full discharge
-name = str(input('Cell name: '))
+name = '{!s}_{!s}_{!s}_{!s}'.format(input('Cell name: '), discharge_time, target_temp, power_per_cell_target)
 print(name)
 minvolt = 2.5  # OCV
 # R_sys = 0.03

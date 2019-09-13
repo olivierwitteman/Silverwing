@@ -11,7 +11,9 @@ delta = d.DeltaComm()
 safe_operation = False
 capacity = float(input('Capacity [Ah]: '))
 # crate_dischar = [(6., 80), (1.71, 1080), (6., 40), (1.71, 0)]
-crate_dischar = [(10., 40), (10., 40), (10., 40), (10., 40), (10., 40), (10., 40), (10., 40)]
+power_per_cell_target = float(input('Power per cell target [W]: '))
+
+crate_dischar = 10 * [(power_per_cell_target/(capacity * 3.7), 40)]
 # (C, duration [s]) duration=0 for full discharge
 name = str(input('Cell name: '))
 print(name)
@@ -30,9 +32,13 @@ if not safe_operation:
           'unattended.\n\nBattery degradation will be accelerated in this mode.')
 maxvolt, series, parallel, crate_char = 4.2, 1, 1, 0.7
 R_sys = 0.33/40. + 0.0128 * series/parallel
-print('Maximum cell voltage: {!s}V\nMinimum cell voltage: {!s}V\nCells in series: {!s}\nCells in parallel: {!s}\n' \
-      'Discharge rate: {!s}C\nCharge rate: {!s}C'.format(maxvolt, minvolt, series, parallel, crate_dischar, crate_char))
+print('Please review below parameters carefully within 60 seconds.\n\nMaximum cell voltage: {!s}V\nMinimum cell '
+      'voltage: {!s}V\nCells in series: {!s}\nCells in parallel: {!s}\n'
+      'Discharge rate: {!s}C\nCharge rate: {!s}C\nCell capacity {!s}Ah'.format(maxvolt, minvolt, series, parallel,
+                                                                               crate_dischar, crate_char, capacity))
 
+
+time.sleep(60.)
 
 def log(timestamp, voltage, current, temperature=0.0, remark=''):
     with open('/home/pi/Silverwing/Delta/Battery_tests/Data/{!s}.log'.format(name), 'a') as d:
@@ -143,6 +149,8 @@ def discharge(c_rate, duration=0, status='empty'):
                 c_voltage = delta.ask_voltage()
                 c_current = delta.ask_current()
                 log(time.time(), c_voltage, c_current, temperature=c_temp)
+                print('\rVoltage: {!s}V, Current: {!s}A, Power: {!s}W, Temperature: {!s} C'.
+                      format(c_voltage, c_current, c_voltage*c_current, c_temp), end='')
 
                 time.sleep(dt)
 

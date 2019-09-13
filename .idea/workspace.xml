@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="Updated internal resistances system, wiring and estimator for batteries">
+      <change afterPath="$PROJECT_DIR$/PTSD/Data/D4.A4.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Delta/Battery_tests/Battery_testing.py" beforeDir="false" afterPath="$PROJECT_DIR$/Delta/Battery_tests/Battery_testing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PTSD/Data/_StaticPlot.py" beforeDir="false" afterPath="$PROJECT_DIR$/PTSD/Data/_StaticPlot.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,16 +46,16 @@
     </option>
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/BTS/data/final_data" />
-      <recent name="$PROJECT_DIR$/BTS/data" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/PTSD/Data/PNG" />
       <recent name="$PROJECT_DIR$/PTSD/Data" />
+      <recent name="$PROJECT_DIR$/PTSD/Data/PNG" />
       <recent name="$PROJECT_DIR$/BTS/data" />
       <recent name="$PROJECT_DIR$/BTS/data/final_data/Results" />
       <recent name="$PROJECT_DIR$/BTS/data/final_data" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/BTS/data/final_data" />
+      <recent name="$PROJECT_DIR$/BTS/data" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -67,7 +70,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Analyze">
+  <component name="RunManager" selected="Python.StaticPlot">
     <configuration name="Analyze" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Silverwing" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -187,11 +190,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.StaticPlot" />
         <item itemvalue="Python.Analyze" />
         <item itemvalue="Python.PowerPlot" />
         <item itemvalue="Python.Manual_control" />
         <item itemvalue="Python.Monitor" />
-        <item itemvalue="Python.StaticPlot" />
       </list>
     </recent_temporary>
   </component>
@@ -210,14 +213,14 @@
       <workItem from="1567685423199" duration="234000" />
       <workItem from="1567757962542" duration="10598000" />
       <workItem from="1567861119604" duration="657000" />
-      <workItem from="1568030366658" duration="550000" />
-    </task>
-    <task id="LOCAL-00343" summary="Safety">
-      <created>1562600650043</created>
-      <option name="number" value="00343" />
-      <option name="presentableId" value="LOCAL-00343" />
-      <option name="project" value="LOCAL" />
-      <updated>1562600650044</updated>
+      <workItem from="1568030366658" duration="631000" />
+      <workItem from="1568055866640" duration="10000" />
+      <workItem from="1568104928045" duration="215000" />
+      <workItem from="1568126039454" duration="1644000" />
+      <workItem from="1568290526534" duration="1114000" />
+      <workItem from="1568293290310" duration="592000" />
+      <workItem from="1568309076434" duration="597000" />
+      <workItem from="1568380504757" duration="2230000" />
     </task>
     <task id="LOCAL-00344" summary="Changed analog inputs inverter">
       <created>1562675188117</created>
@@ -555,7 +558,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568030838017</updated>
     </task>
-    <option name="localTasksCounter" value="392" />
+    <task id="LOCAL-00392" summary="Updated internal resistances system, wiring and estimator for batteries">
+      <created>1568030934753</created>
+      <option name="number" value="00392" />
+      <option name="presentableId" value="LOCAL-00392" />
+      <option name="project" value="LOCAL" />
+      <updated>1568030934753</updated>
+    </task>
+    <option name="localTasksCounter" value="393" />
     <servers />
   </component>
   <component name="TodoView">
@@ -629,6 +639,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Silverwing$PowerPlot.coverage" NAME="PowerPlot Coverage Results" MODIFIED="1567771739705" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PTSD" />
+    <SUITE FILE_PATH="coverage/Silverwing$StaticPlot.coverage" NAME="StaticPlot Coverage Results" MODIFIED="1568200130482" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PTSD/Data" />
     <SUITE FILE_PATH="coverage/Silverwing$Analyze.coverage" NAME="Analyze Coverage Results" MODIFIED="1567795884654" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Delta/Battery_tests" />
   </component>
 </project>

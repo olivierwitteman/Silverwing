@@ -141,7 +141,7 @@ ax2.grid()
 ax3.grid()
 ax4.grid()
 ax5.grid()
-ax6.grid()
+# ax6.grid()
 ax7.grid()
 ax8.grid()
 # ax9.grid()
@@ -181,9 +181,9 @@ ax3.plot(timestamp, dc_current_filt, label='DC current (filtered) [A]', c=colors
 ax3.set_ylabel('Battery', fontweight='bold')
 # ax3.plot(timestamp, ain4_temp, label='AIN 4 [deg C]', c=colors[0], linestyle=linestyles[0])
 # ax3.plot(timestamp, ain6_temp, label='AIN 6 [deg C]', c=colors[1], linestyle=linestyles[0])
-ax3.plot(timestamp, IGBT_A, label='IGBT A [deg C]', c=colors[2], linestyle=linestyles[0])
-ax3.plot(timestamp, IGBT_B, label='IGBT B [deg C]', c=colors[3], linestyle=linestyles[0])
-ax3.plot(timestamp, IGBT_C, label='IGBT C [deg C]', c=colors[4], linestyle=linestyles[0])
+# ax3.plot(timestamp, IGBT_A, label='IGBT A [deg C]', c=colors[2], linestyle=linestyles[0])
+# ax3.plot(timestamp, IGBT_B, label='IGBT B [deg C]', c=colors[3], linestyle=linestyles[0])
+# ax3.plot(timestamp, IGBT_C, label='IGBT C [deg C]', c=colors[4], linestyle=linestyles[0])
 
 
 

@@ -9,20 +9,14 @@ pat = subprocess.Popen(['python', '/home/pi/Silverwing/General/Temp_sens.py'])  
 delta = d.DeltaComm()
 
 safe_operation = False
-capacity = float(input('Capacity [Ah]: '))
+capacity = 2.8
 # crate_dischar = [(6., 80), (1.71, 1080), (6., 40), (1.71, 0)]
-power_per_cell_target = float(input('Power per cell target [W]: '))
-target_temp = float(input('Target cell temperature [C]: '))
-discharge_time = int(input('Discharge time [s]: '))
-
-crate_dischar = 10 * [(power_per_cell_target/(capacity * 3.7), discharge_time)]
+crate_dischar = 5 * [(6., 40)]
 # (C, duration [s]) duration=0 for full discharge
-name = '{!s}_t{!s}_T{!s}_P{!s}'.format(input('Cell name: '), discharge_time, target_temp, power_per_cell_target)
+name = str(input('Cell name: '))
 print(name)
 minvolt = 2.5  # OCV
-# R_sys = 0.03
-
-max_cell_temp = 80.
+R_sys = 0.03
 
 pin = 4
 gp.setmode(gp.BCM)
@@ -33,14 +27,8 @@ if not safe_operation:
     print('\n\nWARNING, lowered cutoff voltage to allow for higher discharge rate. Do not leave this process ' \
           'unattended.\n\nBattery degradation will be accelerated in this mode.')
 maxvolt, series, parallel, crate_char = 4.2, 1, 1, 0.7
-R_sys = 0.33/40. + 0.0128 * series/parallel
-print('Please review below parameters carefully within 60 seconds.\n\nMaximum cell voltage: {!s}V\nMinimum cell '
-      'voltage: {!s}V\nCells in series: {!s}\nCells in parallel: {!s}\n'
-      'Discharge rate: {!s}C\nCharge rate: {!s}C\nCell capacity {!s}Ah'.format(maxvolt, minvolt, series, parallel,
-                                                                               crate_dischar, crate_char, capacity))
-
-
-time.sleep(60.)
+print('Maximum cell voltage: {!s}V\nMinimum cell voltage: {!s}V\nCells in series: {!s}\nCells in parallel: {!s}\n' \
+      'Discharge rate: {!s}C\nCharge rate: {!s}C'.format(maxvolt, minvolt, series, parallel, crate_dischar, crate_char))
 
 
 def log(timestamp, voltage, current, temperature=0.0, remark=''):
@@ -84,7 +72,7 @@ def charge():
 
             log(time.time(), c_voltage, c_current, c_temp)
             time.sleep(10.)
-            if c_current < t_current/15. and time.time() - t0 > 22:
+            if c_current < t_current/5. and time.time() - t0 > 22:
                 print('Charging complete')
                 break
             elif 0. > c_temp > 60.:
@@ -99,12 +87,11 @@ def charge():
 
 
 def discharge(c_rate, duration=0, status='empty'):
-    iterate = 0
     # Temperature timeout
-    while temp_read() > target_temp:
+    while temp_read() > 25:
         time.sleep(60.)
 
-    Kp, Ki, Kd, c_current_error, c_temp, dt = 0.025/capacity, 0*5./capacity, 0.004/capacity, 0, 0., 0.1
+    Kp, Ki, Kd, c_current_error, c_temp, dt = 0.025/capacity, 0*5/capacity, 0.004/capacity, 0, 0., 0.1
     c_power_error = 0
     t_current = -c_rate * capacity * parallel
     t_power = t_current * series * 3.7
@@ -154,11 +141,6 @@ def discharge(c_rate, duration=0, status='empty'):
                 c_current = delta.ask_current()
                 log(time.time(), c_voltage, c_current, temperature=c_temp)
 
-                if iterate % 50 == 0:
-                    print('\rVoltage: {!s}V, Current: {!s}A, Power: {!s}W, Temperature: {!s} C'.
-                          format(c_voltage, c_current, c_voltage*c_current, c_temp), end='')
-
-                iterate += 1
                 time.sleep(dt)
 
                 if abs((c_voltage/series - minv)) < 0.1 and c_current > t_current/2.:
@@ -166,7 +148,7 @@ def discharge(c_rate, duration=0, status='empty'):
                     status = 'discharged'
                     break
 
-                if c_temp > max_cell_temp:
+                if c_temp > 100.:
                     print('Temperature threshold exceeded at {!s}'.format(c_temp))
                     status = 'temp'
                     break
@@ -202,7 +184,7 @@ def cycle():
 
 try:
     gp.output(pin, 1)
-    # charge()
+    charge()
     print('Sequence will start in 10s')
     time.sleep(10)
     cycle()

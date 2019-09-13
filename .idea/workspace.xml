@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="Updated internal resistances system, wiring and estimator for batteries">
-      <change afterPath="$PROJECT_DIR$/PTSD/Data/D4.A4.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="Bongiorno">
       <change beforePath="$PROJECT_DIR$/Delta/Battery_tests/Battery_testing.py" beforeDir="false" afterPath="$PROJECT_DIR$/Delta/Battery_tests/Battery_testing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PTSD/Data/_StaticPlot.py" beforeDir="false" afterPath="$PROJECT_DIR$/PTSD/Data/_StaticPlot.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -220,14 +217,7 @@
       <workItem from="1568290526534" duration="1114000" />
       <workItem from="1568293290310" duration="592000" />
       <workItem from="1568309076434" duration="597000" />
-      <workItem from="1568380504757" duration="2230000" />
-    </task>
-    <task id="LOCAL-00344" summary="Changed analog inputs inverter">
-      <created>1562675188117</created>
-      <option name="number" value="00344" />
-      <option name="presentableId" value="LOCAL-00344" />
-      <option name="project" value="LOCAL" />
-      <updated>1562675188118</updated>
+      <workItem from="1568380504757" duration="2483000" />
     </task>
     <task id="LOCAL-00345" summary="Changed analog inputs inverter">
       <created>1562675654421</created>
@@ -565,7 +555,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568030934753</updated>
     </task>
-    <option name="localTasksCounter" value="393" />
+    <task id="LOCAL-00393" summary="Bongiorno">
+      <created>1568388456353</created>
+      <option name="number" value="00393" />
+      <option name="presentableId" value="LOCAL-00393" />
+      <option name="project" value="LOCAL" />
+      <updated>1568388456354</updated>
+    </task>
+    <option name="localTasksCounter" value="394" />
     <servers />
   </component>
   <component name="TodoView">
@@ -610,7 +607,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="i2c" />
     <MESSAGE value="test matrix BTS" />
     <MESSAGE value="test matrix BTS (ADDCELLS)" />
     <MESSAGE value="test matrix BTS (PCC)" />
@@ -635,7 +631,8 @@
     <MESSAGE value="SM15K support" />
     <MESSAGE value="Implemented temperature target between discharge bursts" />
     <MESSAGE value="Updated internal resistances system, wiring and estimator for batteries" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated internal resistances system, wiring and estimator for batteries" />
+    <MESSAGE value="Bongiorno" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bongiorno" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Silverwing$PowerPlot.coverage" NAME="PowerPlot Coverage Results" MODIFIED="1567771739705" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PTSD" />

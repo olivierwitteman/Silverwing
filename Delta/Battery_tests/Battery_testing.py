@@ -34,13 +34,13 @@ if not safe_operation:
           'unattended.\n\nBattery degradation will be accelerated in this mode.')
 maxvolt, series, parallel, crate_char = 4.2, 1, 1, 0.7
 R_sys = 0.33/40. + 0.0128 * series/parallel
-print('Please review below parameters carefully within 60 seconds.\n\nMaximum cell voltage: {!s}V\nMinimum cell '
+print('Please review below parameters carefully within 10 seconds.\n\nMaximum cell voltage: {!s}V\nMinimum cell '
       'voltage: {!s}V\nCells in series: {!s}\nCells in parallel: {!s}\n'
       'Discharge rate: {!s}C\nCharge rate: {!s}C\nCell capacity {!s}Ah'.format(maxvolt, minvolt, series, parallel,
                                                                                crate_dischar, crate_char, capacity))
 
 
-time.sleep(60.)
+time.sleep(10.)
 
 
 def log(timestamp, voltage, current, temperature=0.0, remark=''):

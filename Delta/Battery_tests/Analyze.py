@@ -11,6 +11,7 @@ modes = ['reg', 'fp', 'cycle']
 # R_battery = 0.013/4.
 # R_battery = 0.0016
 R_battery = 0
+# filename = 'VTC5A_t40_T30.0_P60.0'
 filename = 'VTC5A_t40_T30.0_P60.0'
 with open('./Data/{!s}.log'.format(filename), 'r') as data:
     samples = data.readlines()
@@ -59,7 +60,7 @@ av_current = abs(round(sum(Is[start:stop]) / (stop - start), 1))
 av_voltage = round(sum(Us[start:stop]) / (stop - start), 1)
 caps = []
 
-R_sys = 0.03
+R_sys = 0.33/40.
 R_total = R_sys + R_battery
 
 # print R_sys
@@ -95,8 +96,8 @@ for j in lst:
     energy = round(capacity * sum(smooth_Us)/len(smooth_Us), 1)
 
     if modes[mode] == 'reg':
-        ax1.plot(As_i, smooth_Us, c='b', ls='-', label='I_avg = {!s}A, E_extracted = {!s}Wh'.
-                 format(av_current, actual_energy))
+        ax1.plot(As_i, smooth_Us, c='b', ls='-', label='Voltage [V], E_extracted = {!s}Wh'.
+                 format(actual_energy))
 
         ax2.plot(As_i, np.array(smooth_Us)*np.array(smooth_Is), label='Power [W]', c='g')
         ax1.plot(np.nan, np.nan, label='Power [W]', c='g', lw=1.5)
@@ -112,7 +113,7 @@ for j in lst:
         ax1.set_ylabel('Open Circuit Voltage [V]')
         ax2.set_ylabel('Temperature [deg C], Current [A]')
         ax1.set_xlim(0, max(caps))
-        ax1.set_ylim(2.0, 4.5)
+        ax1.set_ylim(1.5, 4.5)
         ax2.set_ylim(0, 120)
         # if j == len(d_s_mark)-1:
         ax1.plot(np.nan, np.nan, ls=':', label='Current', c='k', lw=2.)

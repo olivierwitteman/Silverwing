@@ -13,10 +13,10 @@ def set_parameters():
     try:
         V = float(input('Voltage [V]: '))
         I = float(input('Current [A]: '))
-        # P = 1e3 * float(input('Power [kW]: '))
+        P = 1e3 * float(input('Power [kW]: '))
         delta.set_voltage(V)
         delta.set_current(I)
-        # delta.set_power(P)
+        delta.set_power(P)
         return 1
 
     except KeyboardInterrupt:

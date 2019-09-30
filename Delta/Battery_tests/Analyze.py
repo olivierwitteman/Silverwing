@@ -12,7 +12,7 @@ modes = ['reg', 'fp', 'cycle']
 # R_battery = 0.0016
 R_battery = 0
 # filename = 'VTC5A_t40_T30.0_P60.0'
-filename = 'VTC5A_t40_T30.0_P60.0'
+filename = 'VTC6LV_t40_T30.0_P80.0'
 with open('./Data/{!s}.log'.format(filename), 'r') as data:
     samples = data.readlines()
 

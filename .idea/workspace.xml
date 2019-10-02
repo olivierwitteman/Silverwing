@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="Minvolt naar 1.5V">
-      <change afterPath="$PROJECT_DIR$/Delta/Battery_tests/Data/VTC6LV_t40_T30.0_P80.0.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Delta/Battery_tests/Analyze.py" beforeDir="false" afterPath="$PROJECT_DIR$/Delta/Battery_tests/Analyze.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Delta/Battery_tests/Data/VTC6_t40_T30.0_P80.0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Delta/Battery_tests/Data/VTC6_t40_T30.0_P80.0.log" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -224,14 +221,10 @@
       <workItem from="1569261725163" duration="1322000" />
       <workItem from="1569421870523" duration="122000" />
       <workItem from="1569513658295" duration="252000" />
-      <workItem from="1569782203980" duration="611000" />
-    </task>
-    <task id="LOCAL-00360" summary="Watchdog troubleshooting">
-      <created>1563117056653</created>
-      <option name="number" value="00360" />
-      <option name="presentableId" value="LOCAL-00360" />
-      <option name="project" value="LOCAL" />
-      <updated>1563117056653</updated>
+      <workItem from="1569782203980" duration="663000" />
+      <workItem from="1569849793627" duration="53000" />
+      <workItem from="1570008449948" duration="793000" />
+      <workItem from="1570026196486" duration="538000" />
     </task>
     <task id="LOCAL-00361" summary="Charging sequence">
       <created>1563234770416</created>
@@ -569,7 +562,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569421903027</updated>
     </task>
-    <option name="localTasksCounter" value="409" />
+    <task id="LOCAL-00409" summary="Minvolt naar 1.5V">
+      <created>1569825613497</created>
+      <option name="number" value="00409" />
+      <option name="presentableId" value="LOCAL-00409" />
+      <option name="project" value="LOCAL" />
+      <updated>1569825613499</updated>
+    </task>
+    <option name="localTasksCounter" value="410" />
     <servers />
   </component>
   <component name="TodoView">

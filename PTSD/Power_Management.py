@@ -27,6 +27,7 @@ def precharge():
     # delta.enable_watchdog()
     delta.set_voltage(V_set)
     delta.set_current(min(pre_I, I_max))
+    delta.set_power(V_set*I_max)
     delta.set_state(1)
 
     t0_pre, t = time.time(), time.time()

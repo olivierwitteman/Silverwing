@@ -5,15 +5,15 @@ delta = d.DeltaComm()
 print('\n\n!!! Ctr+C anytime to switch off power !!!\n\n')
 
 # V_set = 120.
-V_set = float(input('Voltage [V] (0-672): '))
-I_max = float(input('Current [A] (0-300): '))
+#V_set = float(input('Voltage [V] (0-672): '))
+#I_max = float(input('Current [A] (0-300): '))
 
-if V_set > 60.:
-    print('\n\nYou have entered a high voltage, make sure you follow the guidelines for safety!\n\n')
-    time.sleep(5.)
-    print('Engaging HV')
+#if V_set > 60.:
+#    print('\n\nYou have entered a high voltage, make sure you follow the guidelines for safety!\n\n')
+#    time.sleep(5.)
+#    print('Engaging HV')
 
-pre_I = 5.
+#pre_I = 5.
 # I = 15000./V
 
 
@@ -92,7 +92,7 @@ def monitor():
 
 
 try:
-    precharge()
+#    precharge()
     monitor()
 
 

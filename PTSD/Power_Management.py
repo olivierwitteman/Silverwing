@@ -18,7 +18,7 @@ pre_I = 5.
 
 
 def log(voltage, current, power):
-    with open('./power.csv', 'a') as a:
+    with open('./power1.csv', 'a') as a:
         a.write('{!s},{!s},{!s},{!s}\n'.format(time.time(), voltage, current, power))
 
 
@@ -27,7 +27,7 @@ def precharge():
     # delta.enable_watchdog()
     delta.set_voltage(V_set)
     delta.set_current(min(pre_I, I_max))
-    delta.set_power(V_set*I_max)
+    #delta.set_power(V_set*I_max)
     delta.set_state(1)
 
     t0_pre, t = time.time(), time.time()

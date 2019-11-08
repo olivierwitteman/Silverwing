@@ -2,7 +2,8 @@ __author__ = "Olivier Witteman"
 __email__ = "olivier@2001.net"
 
 
-import socket, time
+import socket
+import time
 import matplotlib.pyplot as plt
 
 plots = {}
@@ -30,12 +31,13 @@ try:
         s.connect(ap)
         t0 = time.time()
         tplot = time.time()
+
         while True:
             time.sleep(0.03)
-            data = list(list(s.recv(1024).split(',')))
-            print data
+            data = list(list(str(s.recv(1024)).split(',')))
+            print(data)
             if not data:
-                print 'Data format error'
+                print('Data format error')
                 break
             else:
                 try:
@@ -54,9 +56,9 @@ try:
                         plt.pause(0.01)
                         tplot = time.time()
                 except KeyboardInterrupt:
-                    print 'Ctr+c again to kill'
+                    print('Ctr+c again to kill')
                     break
-                    time.sleep(1)
+                    # time.sleep(1)
                 except:
                     trim = min(len(tlst), len(alst), len(blst), len(clst), len(dlst))
                     tlst = tlst[:trim]

@@ -1,9 +1,10 @@
 import time
-import delta_sm3300 as d
+# import delta_sm3300 as d
+import Delta_comm as d
 
 delta = d.DeltaComm()
 
-name = 'esc_left'
+# name = 'esc_left'
 
 
 def clear_log(filename):
@@ -20,13 +21,16 @@ dt = 0.01
 vlst, ilst, tlst = [], [], []
 delta.set_voltage(input('Voltage: '))
 delta.set_current(input('Current: '))
+delta.set_power(input('Power: '))
+delta.set_state(1)
 
-state = input('Are you sure [yes]? ')
-if state == 'yes':
-    state = 1
+state = bool(input('Are you sure [1/0]? '))
+if state:
+    print('ok')
 else:
     state = 0
-    'Aborted'
+    print('Aborted')
+    raise KeyboardInterrupt
 
 delta.set_state(state)
 
@@ -42,18 +46,18 @@ try:
 
 finally:
     delta.set_state(0)
-    mst = min(len(vlst), len(ilst))
-    vlst = vlst[:mst]
-    ilst = ilst[:mst]
-    tlst = tlst[:mst]
+    # mst = min(len(vlst), len(ilst))
+    # vlst = vlst[:mst]
+    # ilst = ilst[:mst]
+    # tlst = tlst[:mst]
 
-    print 'Saving sample data'
-    clear_log(name)
-    for i in range(len(tlst)):
-        log(name, tlst[i], vlst[i], ilst[i])
+    # print('Saving sample data')
+    # clear_log(name)
+    # for i in range(len(tlst)):
+    #     log(name, tlst[i], vlst[i], ilst[i])
 
     delta.close_connection()
-    print 'Connection closed'
+    print('Connection closed')
 
 
 

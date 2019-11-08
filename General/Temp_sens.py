@@ -24,3 +24,4 @@ while True:
         print('Error getting temperature: {!s}'.format(sys.exc_info()[0]))
 
     time.sleep(1.)
+

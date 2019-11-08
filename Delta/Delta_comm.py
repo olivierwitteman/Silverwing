@@ -5,13 +5,20 @@ import time
 class DeltaComm:
 
     def __init__(self):
-        self.IP = "192.168.2.17"  # Assigned IP to Delta SM3300
         self.PORT = 8462  # Fixed port on Delta SM3300
         try:
+            self.IP = "192.168.2.17"  # Assigned IP to Delta SM3300
+            # self.IP = "192.168.1.3"
             self.open_connection()
         except socket.error:
-            self.IP = "192.168.2.86"
-            self.open_connection()
+            # self.IP = "192.168.2.86"
+            try:
+                self.IP = "192.168.2.96"
+                self.open_connection()
+            except socket.error:
+                self.IP = "192.168.2.71"
+                self.open_connection()
+
         # self.set_method()
 
     def open_connection(self):
@@ -21,13 +28,15 @@ class DeltaComm:
 
     def close_connection(self):
         # self.set_method('Local')
+        self.set_state(0)
         self.srvsock.close()
 
     def send(self, message):
         self.srvsock.send(message)
 
     def set_state(self, state):
-        self.send(b"OUTP "+ str(state) + "\n")
+        msg = "OUTP "+ str(state) + "\n"
+        self.send(msg.encode('ascii'))
         print('State set to {!s}'.format(bool(self.ask_state())))
 
     def ask_state(self):
@@ -62,6 +71,9 @@ class DeltaComm:
     def set_voltage(self, voltage):
         self.send(str.encode("SOURce:VOLtage " + str(voltage) + "\n"))
 
+    def set_power(self, power):
+        self.send(str.encode("SOURce:POWer " + str(power) + "\n"))
+
     def last_voltage(self):
         self.send(b"SOURce:VOLtage?\n")
         last_voltage = float(self.srvsock.recv(4096))
@@ -78,7 +90,7 @@ class DeltaComm:
     def discharge(self, current, minvolt, mincurrent):
         setcurrent = current
         self.current = abs(current)
-        print 'discharge'
+        print('discharge')
         self.set_voltage(self.ask_voltage())
         step = 0.1
         try:
@@ -90,7 +102,7 @@ class DeltaComm:
                         voltage = self.ask_voltage()
                         if self.ask_current() >= current:
                             self.set_voltage(voltage-step*self.delta_current())
-                            print "check: ", self.delta_current()
+                            print("check: ", self.delta_current())
                             time.sleep(0.001*self.series)
                         elif self.ask_current() < current:
                             self.set_voltage(voltage+step*self.delta_current())
@@ -102,7 +114,7 @@ class DeltaComm:
                             self.data_aq("discharge")
                             self.plot()
                         self.set_state(0)
-                        print 'Battery is empty'
+                        print('Battery is empty')
                         current = 0
                 except socket.timeout:
                     self.open_connection()
@@ -111,27 +123,37 @@ class DeltaComm:
             self.finalplot(setcurrent)
             self.finalsave('discharge')
             avgvolt = float(sum(self.vlst)/len(self.vlst))
-            print "temperature (C): ", self.temp
-            print "Capacity (Ah): ", round(self.caplst[-1], 2)
-            print "Average Voltage (V): ", round(avgvolt, 2)
+            print("temperature (C): {!s}".format(self.temp))
+            print("Capacity (Ah): {!s}".format(round(self.caplst[-1], 2)))
+            print("Average Voltage (V): {!s}".format(round(avgvolt, 2)))
 
-        print "temperature (C): ", self.temp
+        print("temperature (C): ", self.temp)
 
     def sink(self):
-        self.send(str.encode(b"SYSTem:POWersink present?\n"))
+        self.send(str.encode("SYSTem:POWersink present?\n"))
         response = self.srvsock.recv(4096)
         return response
 
     def set_method(self, method='Remote'):  # 'Remote' or 'Local'
-        self.send(str.encode(b"SYSTem:REMote:CV[:STAtus] {!s}\n".format(method)))
-        self.send(str.encode(b"SYSTem:REMote:CC[:STAtus] {!s}\n".format(method)))
-        print 'Method set to {!s}'.format(method)
+        self.send(str.encode("SYSTem:REMote:CV[:STAtus] {!s}\n".format(method)))
+        self.send(str.encode("SYSTem:REMote:CC[:STAtus] {!s}\n".format(method)))
+        print('Method set to {!s}'.format(method))
 
     def ask_method(self):
-        self.send(str.encode(b"SYSTem:REMote:CV[:STAtus]?\n"))
+        self.send(str.encode("SYSTem:REMote:CV[:STAtus]?\n"))
         cv_method = self.srvsock.recv(4096)
-        print cv_method
-        self.send(str.encode(b"SYSTem:REMote:CC[:STAtus]?\n"))
+        print(cv_method)
+        self.send(str.encode("SYSTem:REMote:CC[:STAtus]?\n"))
         cc_method = self.srvsock.recv(4096)
         return cv_method, cc_method
 
+    def enable_watchdog(self):
+        timeout = 5000
+        msg = 'SYSTem: COMmunicate:WATchdog SET,{!s}\n'.format(timeout)
+        self.send(msg.encode('ascii'))
+        print('Watchdog set with timeout of {!s}s'.format(round(timeout/1000.), 2))
+
+    def ask_watchdog(self):
+        self.send(str.encode("SYSTem: COMmunicate:WATchdog SET?\n"))
+        cv_method = self.srvsock.recv(4096)
+        print(cv_method)

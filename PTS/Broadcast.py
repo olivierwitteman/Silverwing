@@ -4,13 +4,9 @@ __email__ = "olivier@2001.net"
 
 import socket
 import time
-import smbus
 
-bus = smbus.SMBus(1)
-DEVICE_ADDRESS = 0x28
-DEVICE_REG_MODE1 = 0
-DEVICE_REG_MODE2 = 1
-
+path = './'
+filename = 'tempdata'
 
 def connect():
     ap = ('', 50002)
@@ -21,13 +17,19 @@ def connect():
     return s.accept()
 
 
+def read_data():
+    with open('{!s}{!s}.csv'.format(path, filename)) as d:
+        lastline = d.readlines()[-1]
+
+    return lastline
+
+
 conn, addr = connect()
 
 try:
     while True:
-        a = bus.read_i2c_block_data(0x28, 0, 32)
-        print a
-        conn.sendall('{!s}'.format(a))
+        a = read_data()
+        conn.sendall(bytes(a))
         time.sleep(0.1)
 
 finally:

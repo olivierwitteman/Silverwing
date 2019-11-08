@@ -10,14 +10,23 @@ mode = 0
 
 # R_battery = 0.0
 R_battery = 6.*0.0128/4.
+# R_battery = 0
 textsize = 17.5
-width = 7.5
+# width = 7.5
+width = 10.
 
 path = './'
-# path = '/Users/olivierwitteman/Downloads/'
-# name = 'BT-B-1_1'
-name = 'disch_BT-E-1200_800-80_40-8'
+# name = 'disch_BT-E-840_588-70_35_84_78_PCC'
 # name = 'disch_BT-E-1800_1200-80_40-6_PCC'
+# name = 'disch_BT-P-121000_46000-70_35_800_PCC_2'
+# name = 'disch_BT-E-1200_800-80_40-8'
+# name = 'disch_BT-E-1800_1200-80_40-6.5'
+# name = 'disch_BT-B-1_1'
+# name = 'disch_BT-P-121000_46000-70_35_800_ADDCELLS'
+# name = 'disch_BT-CP-EMRAX-66.5_26.5_PCC'
+name = 'disch_BT-CP-EMRAX-66.5_26.5_PCC_short'
+# name = 'disch_BT-CP-CUSTOM-70.5_25_PCC'
+# name = 'disch_BT-CP-CUSTOM-70.5_25_PCC_short'
 
 
 def butter_lowpass(cutoff, fs, order=5):
@@ -81,7 +90,6 @@ for i in np.arange(0, len(samples), 1):
                 raise KeyboardInterrupt
 
     except:
-        # print('ass\n\n\n')
         Tsa = [0, 0]
         Us, ts, Is, Tsp, Tsa, As = remove_last(Us, ts, Is, Tsp, Tsa, As)
         pass
@@ -145,14 +153,18 @@ c = np.array(smooth_Is)/capacity
 
 ax1.scatter(np.nan, np.nan, label='$E$ = {!s} Wh'.format(actual_energy))
 ax1.scatter(np.nan, np.nan, label='$t$ = {!s} mins'.format(endurance))
-ax1.plot(As_i, smooth_Us, c=colors[0], ls='-', label='Voltage')
+# ax1.plot(As_i, smooth_Us, c=colors[0], ls='-', label='Voltage')
+ax1.plot(As_i, OCV, c=colors[0], ls='-', label='Voltage')
 ax2.plot(As_i, Tsp_butter, c='r', ls='-.', label='Temperature'.format(av_current))
-ax1.plot(As_i, c, c='g', ls=':', label='C-rate'.format(av_current), lw=2.)
+# ax2.plot(As_i, smooth_Is, c='g', ls=':', label='Current'.format(av_current), lw=2.)
+ax2.plot(As_i, -np.array(Is)*np.array(OCV)/24., c='g', ls=':', label='Current'.format(av_current), lw=2.)
+
+ax2.plot(As_i, )
 
 
 ax1.set_xlabel('Capacity [Ah]', fontsize=textsize)
-ax1.set_ylabel('Voltage [V], Disch. Rate', fontsize=textsize)
-ax2.set_ylabel('Temperature [deg C]', fontsize=textsize)
+ax1.set_ylabel('Voltage [V]', fontsize=textsize)
+ax2.set_ylabel('Temperature [deg C], Power/cell [W]', fontsize=textsize)
 
 label1 = 'I_avg = {!s}A, E_extracted = {!s}Wh, endurance = {!s}min'\
     .format(av_current, actual_energy, endurance)
@@ -166,9 +178,9 @@ label1 = 'I_avg = {!s}A, E_extracted = {!s}Wh, endurance = {!s}min'\
 
 ax1.set_xlim(0, 1.02*max(caps))
 ax1.set_ylim(0, 28)
-ax2.set_ylim(10, 75)
+ax2.set_ylim(15, 100)
 
-# ax1.plot(np.nan, np.nan, ls=':', label='Current', c='k', lw=2.)
+ax1.plot(np.nan, np.nan, ls=':', label='Power/cell', c='g', lw=2.)
 ax1.plot(np.nan, np.nan, ls='-.', label='Temperature', c='r')
 
 # plt.title('ID: {!s}, charged CC-CV at 0.7C with cutoff at 0.05C'.format(name))
@@ -184,5 +196,6 @@ ax2.tick_params(labelsize=14)
 plt.tight_layout()
 
 ax1.grid(True)
-plt.savefig('./{!s}.png'.format(name), dpi=255, format='png')  # Use eps for LaTeX, other options: png, pdf, ps, eps
+plt.title(name)
+plt.savefig('./Results/{!s}.png'.format(name), dpi=255, format='png')  # Use eps for LaTeX, other options: png, pdf, ps, eps
 plt.show()

@@ -2,6 +2,7 @@ from __future__ import print_function
 import time
 import sys
 import delta_sm3300 as d
+# import Delta_comm as d
 
 delta = d.DeltaComm()
 
@@ -10,10 +11,12 @@ print('Ctr+C anytime to switch off power')
 
 def set_parameters():
     try:
-        V = float(input('Voltage: '))
-        I = float(input('Current: '))
+        V = float(input('Voltage [V]: '))
+        I = float(input('Current [A]: '))
+        P = 1e3 * float(input('Power [kW]: '))
         delta.set_voltage(V)
         delta.set_current(I)
+        delta.set_power(P)
         return 1
 
     except KeyboardInterrupt:
@@ -30,8 +33,8 @@ try:
 
     while True:
         set_parameters()
-        print('\rVoltage: {!s}, actual current: {!s}, power: {!s}' \
-            .format(delta.ask_voltage(), delta.ask_current(), delta.ask_power()), end='')
+        time.sleep(1.)
+        print('\rVoltage: {!s}, actual current: {!s}, power: {!s}\n'.format(delta.ask_voltage(), delta.ask_current(), delta.ask_power()), end='')
 
 finally:
     delta.set_state(0)

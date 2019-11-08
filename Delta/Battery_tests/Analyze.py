@@ -11,7 +11,8 @@ modes = ['reg', 'fp', 'cycle']
 # R_battery = 0.013/4.
 # R_battery = 0.0016
 R_battery = 0
-filename = 'VTC6_vacuum_insulated_PCC_hard_discharge'
+# filename = 'VTC5A_t40_T30.0_P60.0'
+filename = 'VTC6LV_t40_T30.0_P80.0'
 with open('./Data/{!s}.log'.format(filename), 'r') as data:
     samples = data.readlines()
 
@@ -59,7 +60,7 @@ av_current = abs(round(sum(Is[start:stop]) / (stop - start), 1))
 av_voltage = round(sum(Us[start:stop]) / (stop - start), 1)
 caps = []
 
-R_sys = 0.03
+R_sys = 0.33/40.
 R_total = R_sys + R_battery
 
 # print R_sys
@@ -82,8 +83,8 @@ for j in lst:
     dOCV = np.array([R_total * -x for x in Is[start:stop]])
     OCV = np.array(Us[start:stop]) + dOCV
 
-    # smooth_Us = lfilter([1.0 / n] * n, 1, Us[start:stop])
-    smooth_Us = lfilter([1.0 / n] * n, 1, OCV)
+    smooth_Us = lfilter([1.0 / n] * n, 1, Us[start:stop])
+    # smooth_Us = lfilter([1.0 / n] * n, 1, OCV)
     smooth_Is = -lfilter([1.0 / n] * n, 1, Is[start:stop])
     smooth_Ts = lfilter([1.0 / n] * n, 1, Ts[start:stop])
 
@@ -95,22 +96,25 @@ for j in lst:
     energy = round(capacity * sum(smooth_Us)/len(smooth_Us), 1)
 
     if modes[mode] == 'reg':
-        ax1.plot(As_i, smooth_Us, c=colors[j], ls='-', label='I_avg = {!s}A, E_extracted = {!s}Wh'.
-                 format(av_current, actual_energy))
+        ax1.plot(As_i, smooth_Us, c='b', ls='-', label='Voltage [V], E_extracted = {!s}Wh'.
+                 format(actual_energy))
+
+        ax2.plot(As_i, np.array(smooth_Us)*np.array(smooth_Is), label='Power [W]', c='g')
+        ax1.plot(np.nan, np.nan, label='Power [W]', c='g', lw=1.5)
 
     elif modes[mode] == 'fp':
         ax1.plot(As_i, smooth_Us, c=colors[j], ls='-', label='I_avg = {!s}A, E_extracted = {!s}Wh, endurance = {!s}min'.
                  format(av_current, actual_energy, endurance))
 
     if modes[mode] == 'reg' or modes[mode] == 'fp':
-        ax2.plot(As_i, smooth_Ts, c=colors[j], ls='-.', label='{!s}A [T]'.format(av_current))
-        ax2.plot(As_i, smooth_Is, c=colors[j], ls=':', label='{!s}A [A]'.format(av_current), lw=2.)
+        ax2.plot(As_i, smooth_Ts, c='r', ls='-.', label='{!s}A [T]'.format(av_current))
+        ax2.plot(As_i, smooth_Is, c='b', ls=':', label='{!s}A [A]'.format(av_current), lw=2.)
         ax1.set_xlabel('Capacity [Ah]')
         ax1.set_ylabel('Open Circuit Voltage [V]')
         ax2.set_ylabel('Temperature [deg C], Current [A]')
         ax1.set_xlim(0, max(caps))
-        ax1.set_ylim(2.0, 4.5)
-        ax2.set_ylim(0, 80)
+        ax1.set_ylim(1.5, 4.5)
+        ax2.set_ylim(0, 120)
         # if j == len(d_s_mark)-1:
         ax1.plot(np.nan, np.nan, ls=':', label='Current', c='k', lw=2.)
         ax1.plot(np.nan, np.nan, ls='-.', label='Temperature', c='k', lw=1.5)

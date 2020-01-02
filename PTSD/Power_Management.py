@@ -18,7 +18,7 @@ print('\n\n!!! Ctr+C anytime to switch off power !!!\n\n')
 
 
 def log(voltage, current, power):
-    with open('./power_07_11.csv', 'a') as a:
+    with open('./power_30_11.csv', 'a') as a:
         a.write('{!s},{!s},{!s},{!s}\n'.format(time.time(), voltage, current, power))
 
 

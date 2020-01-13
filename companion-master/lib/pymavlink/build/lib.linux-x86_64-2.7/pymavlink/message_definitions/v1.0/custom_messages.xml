@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<mavlink>
+
+    <include>common.xml</include>
+
+    <!-- NOTE: If the included file already contains a version tag, remove the version tag here, else uncomment to enable. -->
+    <!-- <version>6</version> -->
+
+    <dialect>8</dialect>
+
+    <enums>
+        <!-- Enums are defined here (optional) -->
+    </enums>
+        <!-- IDs 12 t/m 19 are still free -->
+    <messages>
+      <message id="12" name="AEROPROBE">
+            <description>Data from the Aeroprobe Serenity</description>
+            <field type="uint8_t" name="hour" units="hr">Timestamp (hours)</field>
+            <field type="uint8_t" name="min">Timestamp (minutes)</field>
+            <field type="uint8_t" name="sec">Timestamp (seconds)</field>
+            <field type="uint16_t" name="mil">Timestamp (mils)</field>
+            <field type="float" name="airspeed"> Airspeed (m/s)</field>
+            <field type="float" name="ind_airspeed">Indicated Airspeed (m/s)</field>
+            <field type="float" name="angle_of_attack">Angle of Attack (deg)</field>
+            <field type="float" name="angle_of_sideslip">Angle of Sideslip (deg)</field>
+            <field type="int32_t" name="press_alt"> Pressure Altitude (m)</field>
+            <field type="float" name="press_static">Static Pressure (Pascals)</field>
+            <field type="float" name="press_tot"> Total Pressure (Pascals)</field>
+            <field type="float" name="ext_temp"> External Temperature (deg C)</field>
+      </message>
+
+      <message id="14" name="SERVO_FEEDBACK">
+            <description>Feedback from the Servos as registered by ADCs</description>
+            <field type="float" name="servo_feedback1">Feedback from servo 1</field>
+            <field type="float" name="servo_feedback2">Feedback from servo 2</field>
+            <field type="float" name="servo_feedback3">Feedback from servo 3</field>
+      </message>
+
+      <message id="15" name="SERVO_CURRENTSENSOR">
+            <description>Servo current sensor values as registered by ADCs</description>
+            <field type="float" name="servo_current1">Current from servo 1</field>
+            <field type="float" name="servo_current2">Current from servo 2</field>
+            <field type="float" name="servo_current3">Current from servo 3</field>
+      </message>
+
+      <message id="16" name="COOLING_CURRENTSENSOR">
+            <description>Cooling system current value as registered by ADC</description>
+            <field type="float" name="cooling_currentsensor">Current from the cooling system</field>
+      </message>
+
+      <message id="13" name="BMS_CONTACTOR">
+          <description> Controls the contactor of the BMS</description>
+          <field type="uint8_t" name="main"> Main contactor on (1) or off (0)</field>
+      </message>
+
+    </messages>
+
+</mavlink>

@@ -1,10 +1,10 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-checktime = int(1572106718250/1e3)
+checktime = int(12700/1e3)
 
 path = './'
-filename = 'power1'
+filename = 'power_08_01_raw'
 
 steps = 1
 
@@ -40,7 +40,7 @@ print('Current at lookup time: {!s}A'.format(current_at_time))
 print('dT = {!s}'.format(round(min(dt)), 2))
 # plt.scatter(timestamp[loc], power[loc], c='r', s=10)
 # plt.annotate('P = {!s}kW'.format(power_at_time), (timestamp[loc], power[loc]))
-# plt.plot(timestamp, power)
+plt.plot(timestamp, power)
 plt.plot(timestamp, voltage)
 plt.grid(True)
 plt.show()

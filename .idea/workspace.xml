@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="Added logging to monitor script">
+    <list default="true" id="229e7c57-39e1-4c6e-802d-8d65170421cb" name="Default" comment="Increased logging speed">
+      <change afterPath="$PROJECT_DIR$/PTSD/haha.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PTSD/Power_Management.py" beforeDir="false" afterPath="$PROJECT_DIR$/PTSD/Power_Management.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Delta/Battery_tests/Data/MOLICELLLv_t40_T30.0_P80.0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Delta/Battery_tests/Data/MOLICELLLv_t40_T30.0_P80.0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PTSD/PowerPlot.py" beforeDir="false" afterPath="$PROJECT_DIR$/PTSD/PowerPlot.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -68,7 +70,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Analyze">
+  <component name="RunManager" selected="Python.haha">
     <configuration name="Analyze" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Silverwing" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -105,28 +107,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Delta/Manual_control.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Monitor" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Silverwing" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Delta" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Delta/Monitor.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -179,20 +159,42 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="haha" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Silverwing" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PTSD" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PTSD/haha.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.StaticPlot" />
       <item itemvalue="Python.Manual_control" />
-      <item itemvalue="Python.Monitor" />
       <item itemvalue="Python.PowerPlot" />
       <item itemvalue="Python.Analyze" />
+      <item itemvalue="Python.haha" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.haha" />
+        <item itemvalue="Python.PowerPlot" />
         <item itemvalue="Python.Analyze" />
         <item itemvalue="Python.StaticPlot" />
-        <item itemvalue="Python.PowerPlot" />
         <item itemvalue="Python.Manual_control" />
-        <item itemvalue="Python.Monitor" />
       </list>
     </recent_temporary>
   </component>
@@ -228,20 +230,12 @@
       <workItem from="1570026196486" duration="1079000" />
       <workItem from="1570118512322" duration="1176000" />
       <workItem from="1570255090755" duration="567000" />
-    </task>
-    <task id="LOCAL-00362" summary="Charging sequence">
-      <created>1563461367560</created>
-      <option name="number" value="00362" />
-      <option name="presentableId" value="LOCAL-00362" />
-      <option name="project" value="LOCAL" />
-      <updated>1563461367563</updated>
-    </task>
-    <task id="LOCAL-00363" summary="Charging sequence">
-      <created>1563461505790</created>
-      <option name="number" value="00363" />
-      <option name="presentableId" value="LOCAL-00363" />
-      <option name="project" value="LOCAL" />
-      <updated>1563461505790</updated>
+      <workItem from="1572098409081" duration="1111000" />
+      <workItem from="1572531141660" duration="44000" />
+      <workItem from="1575109336755" duration="1490000" />
+      <workItem from="1577975148886" duration="1360000" />
+      <workItem from="1578318288239" duration="213000" />
+      <workItem from="1578496172825" duration="503000" />
     </task>
     <task id="LOCAL-00364" summary="Charging sequence">
       <created>1563462421944</created>
@@ -572,7 +566,21 @@
       <option name="project" value="LOCAL" />
       <updated>1570028919021</updated>
     </task>
-    <option name="localTasksCounter" value="411" />
+    <task id="LOCAL-00411" summary="Increased logging speed">
+      <created>1577975220484</created>
+      <option name="number" value="00411" />
+      <option name="presentableId" value="LOCAL-00411" />
+      <option name="project" value="LOCAL" />
+      <updated>1577975220485</updated>
+    </task>
+    <task id="LOCAL-00412" summary="Increased logging speed, added raw logging and name convention log files (new log file on a daily basis)">
+      <created>1577975868116</created>
+      <option name="number" value="00412" />
+      <option name="presentableId" value="LOCAL-00412" />
+      <option name="project" value="LOCAL" />
+      <updated>1577975868116</updated>
+    </task>
+    <option name="localTasksCounter" value="413" />
     <servers />
   </component>
   <component name="TodoView">
@@ -617,8 +625,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="test matrix BTS (PCC)" />
-    <MESSAGE value="fuck" />
     <MESSAGE value="Inverter losses" />
     <MESSAGE value="Safety" />
     <MESSAGE value="Changed analog inputs inverter" />
@@ -642,10 +648,13 @@
     <MESSAGE value="Bongiorno" />
     <MESSAGE value="Minvolt naar 1.5V" />
     <MESSAGE value="Added logging to monitor script" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added logging to monitor script" />
+    <MESSAGE value="Increased logging speed" />
+    <MESSAGE value="Increased logging speed, added raw logging and name convention log files (new log file on a daily basis)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Increased logging speed, added raw logging and name convention log files (new log file on a daily basis)" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Silverwing$PowerPlot.coverage" NAME="PowerPlot Coverage Results" MODIFIED="1567771739705" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PTSD" />
+    <SUITE FILE_PATH="coverage/Silverwing$PowerPlot.coverage" NAME="PowerPlot Coverage Results" MODIFIED="1578496412380" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PTSD" />
+    <SUITE FILE_PATH="coverage/Silverwing$haha.coverage" NAME="haha Coverage Results" MODIFIED="1578496579971" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PTSD" />
     <SUITE FILE_PATH="coverage/Silverwing$StaticPlot.coverage" NAME="StaticPlot Coverage Results" MODIFIED="1568200130482" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PTSD/Data" />
     <SUITE FILE_PATH="coverage/Silverwing$Analyze.coverage" NAME="Analyze Coverage Results" MODIFIED="1569825200740" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Delta/Battery_tests" />
   </component>

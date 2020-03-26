@@ -16,9 +16,16 @@ print('\n\n!!! Ctr+C anytime to switch off power !!!\n\n')
 #pre_I = 5.
 # I = 15000./V
 
+date = time.strftime('%d_%m')
+
 
 def log(voltage, current, power):
-    with open('./power1.csv', 'a') as a:
+    with open('./power_{!s}.csv'.format(date), 'a') as a:
+        a.write('{!s},{!s},{!s},{!s}\n'.format(time.time(), voltage, current, power))
+
+
+def rawlog(voltage, current, power):
+    with open('./power_{!s}_raw.csv'.format(date), 'a') as a:
         a.write('{!s},{!s},{!s},{!s}\n'.format(time.time(), voltage, current, power))
 
 
@@ -80,6 +87,7 @@ def monitor():
             vlst.append(delta.ask_voltage())
             ilst.append(delta.ask_current())
             plst.append(delta.ask_power())
+            rawlog(vlst[-1], ilst[-1], plst[-1])
 
         u = sum(vlst)/len(vlst)
         i = sum(ilst)/len(ilst)
@@ -88,7 +96,7 @@ def monitor():
         print('\rVoltage: {!s}, actual current: {!s}, power: {!s}'.format(round(u, 2), round(i, 2), round(p, 2)), end='')
 
         log(u, i, p)
-        time.sleep(0.2)
+        time.sleep(0.001)
 
 
 try:
